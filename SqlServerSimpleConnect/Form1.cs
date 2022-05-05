@@ -6,9 +6,11 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static ConfigurationLibrary.Classes.ConfigurationHelper;
+using SqlServerSimpleConnect.Classes;
+
 
 namespace SqlServerSimpleConnect
 {
@@ -18,12 +20,26 @@ namespace SqlServerSimpleConnect
         {
             InitializeComponent();
         }
-
-        private void ConnectButton_Click(object sender, EventArgs e)
+        private CancellationTokenSource _cancellationTokenSource =
+            new CancellationTokenSource(TimeSpan.FromSeconds(2));
+        private async void ConnectButton_Click(object sender, EventArgs e)
         {
-            using var cn = new SqlConnection(ConnectionString());
-            cn.Open();
-            MessageBox.Show("Open");
+            if (_cancellationTokenSource.IsCancellationRequested)
+            {
+                _cancellationTokenSource.Dispose();
+            }
+
+            _cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(2));
+
+            var (success, exception) = await Operations.Connect(_cancellationTokenSource.Token);
+            if (success)
+            {
+                MessageBox.Show("Opened");
+            }
+            else
+            {
+                MessageBox.Show("Failed to open");
+            }
         }
     }
 }

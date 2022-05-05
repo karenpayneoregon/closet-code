@@ -1,4 +1,7 @@
-﻿Open `appsettings.json`, place `your` connection string in `Development` property
+﻿Simple example for connecting to a SQL-Server database with a timeout. On failure we lose the reason code but end result is we can't connect.
+
+
+Open `appsettings.json`, place `your` connection string in `Development` property
 
 ```json
 {
