@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageIcon>StringExtensions.png</PackageIcon>
+		<PackageIconUrl />
+		<Description>Common language extensions for string using .NET Core 5, C#9</Description>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<RepositoryType>C# Class project</RepositoryType>
+		<RepositoryUrl>https://github.com/karenpayneoregon/KP-String-Extensions-core5</RepositoryUrl>
+		<PackageId>KP.StringLanguageExtensions</PackageId>
+		<PackageTags>C# string extensions</PackageTags>
+		<PackageProjectUrl>https://github.com/karenpayneoregon/KP-String-Extensions-core5</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+
+
+</Project>

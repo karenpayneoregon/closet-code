@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Customizing BootStrap with shared style sheet</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <script src="Scripts/jquery-3.0.0.js"></script>
+
+    <script src="Scripts/Local/classes/applicationSettings.js"></script>
+    <script src="Scripts/Local/classes/clientSettings.js"></script>
+    <script src="Scripts/Local/classes/commonUtils.js"></script>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    
+
+    <script src="Scripts/bootstrap.js"></script>
+
+    <link href="Content/local/animate.css" rel="stylesheet" />
+
+    <link href="Content/bootstrap-oed-master.css" rel="stylesheet" />
+    <link href="Content/local/kendo/kendoConsole.css" rel="stylesheet" />
+
+    <script src="Scripts/Local/index1.js"></script>
+    <link href="Content/local/index1.css" rel="stylesheet" />
+
+    <script src="Scripts/Local/kendo/kenoConsole.js"></script>
+
+</head>
+<body>
+
+    <div class="topAlert">
+        <div class="alert alert-primary" role="alert">
+            Peek
+        </div>
+    </div>
+
+    <div class="container">
+
+        <img class="oops mt-4" src="Images/oops.png" />
+
+        <div class="well-container">
+            <div class="col text-center">
+                <button type="button" class="btn btn-primary" id="btnNotifications">
+                    Claims Notifications <span class="badge badge-light" id="lblIncrement">0</span>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="well-container">
+                <div class="col text-center">
+                    <button class="btn btn-primary" id="btnGetNotificationCount">Get notification count</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="well-container">
+                <div class="col text-center">
+                    <div class="console" style="overflow-y: scroll; height:100px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

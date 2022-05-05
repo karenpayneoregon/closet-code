@@ -1,0 +1,1 @@
+﻿:warning: Models/classes should be in their own class projects for an application. They are here to in short, keep things simple.

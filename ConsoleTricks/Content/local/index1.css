@@ -1,0 +1,36 @@
+﻿.well-container {
+    display: none;
+}
+
+.topAlert {
+    display: none;
+}
+
+@media (min-width:502px) {
+    .well-container {
+        display: block;
+    }
+}
+
+.well-container {
+    padding: 35px;
+    padding-left: 30px;
+    box-shadow: 0 0 15px #666666;
+    margin: 2% auto 0;
+    width: 475px;
+    background: floralwhite;
+}
+
+.well-header {
+    background-color: #FF3838;
+}
+
+.oops {
+    display: none;
+}
+
+@media (max-width:500px) {
+    .oops, .topAlert {
+        display: block;
+    }
+}

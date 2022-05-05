@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net5.0</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="readme.md" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<Reference Include="CoreExtensions">
+			<HintPath>C:\OED\Dotnetland\VS2019\LearningVisualStudio\WindowsFormsSolution\CoreExtensions\bin\Debug\net5.0\CoreExtensions.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<!--<PropertyGroup>
+		<RunArguments>-mode dryrun</RunArguments>
+	</PropertyGroup>-->
+
+	<!--<Target Name="ZipOutputPath" AfterTargets="Build">
+		<ZipDirectory 
+			SourceDirectory="$(OutputPath)" 
+			DestinationFile="$(MSBuildProjectDirectory)\output.zip" />
+	</Target>-->
+
+
+	<!--<Target Name="MakeLogFolder" AfterTargets="Build">
+		<MakeDir Directories="$(OutDir)Logs" />
+	</Target>-->
+	<!--<PropertyGroup>
+		<DebugDirectory>\Debug\</DebugDirectory>
+	</PropertyGroup>-->
+
+
+	<!--<Target Name="AfterClean">
+		<RemoveDir Directories="$(DebugDirectory)" />
+	</Target>-->
+
+
+<!--
+Get-ChildItem .\ -include bin,obj -Recurse | foreach ($_) { remove-item $_.fullname -Force -Recurse }
+dotnet restore
+-->
+</Project>
