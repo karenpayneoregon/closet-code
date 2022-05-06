@@ -66,5 +66,20 @@ namespace FluentValidationLibrary
             Check.That(result.IsValid).IsFalse();
         }
 
+        /// <summary>
+        /// Test PreValidate override for custom message when a <see cref="Customer"/> is null
+        /// </summary>
+        [TestMethod]
+        [TestTraits(Trait.FluentValidation)]
+        public async Task NullCustomer()
+        {
+            Customer thisCustomer = null;
+            // ReSharper disable once ExpressionIsAlwaysNull
+            ValidationResult result = await CustomerValidator.ValidateAsync(thisCustomer);
+
+            result.ShowErrorMessage();
+        }
+
+
     }
 }
