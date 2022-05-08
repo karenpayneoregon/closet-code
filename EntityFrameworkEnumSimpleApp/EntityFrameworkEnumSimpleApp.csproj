@@ -7,6 +7,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\EntityFrameworkEnumSimple\EntityFrameworkEnumSimple.csproj" />
 	</ItemGroup>
 
