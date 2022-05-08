@@ -2,6 +2,8 @@
 
 An example for using an `enum` as a property with EF Core.
 
+Run using the console project `EntityFrameworkEnumSimpleApp`.
+
 ```csharp
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
