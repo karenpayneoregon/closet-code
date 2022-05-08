@@ -17,3 +17,9 @@ This line indicates that the namespace does not match it's location and should n
 **Windows forms**
 
 Some examples are windows form specific while others simply can be understood better in a form rather than a console or test project.
+
+# Credits
+
+- In some cases code samples are from Stackoverflow questions were I've written out the solution or taken someone elses solution.
+- Other code samples are from [Khalid Abuhakmeh](https://khalidabuhakmeh.com/about)
+- 98 percent of code presented have been written by Karen Payne.

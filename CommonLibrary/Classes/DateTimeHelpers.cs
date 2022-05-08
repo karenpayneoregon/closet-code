@@ -110,7 +110,7 @@ namespace CommonLibrary.Classes
 		/// Is it afternoon currently
 		/// </summary>
 		public static bool IsAfternoon 
-            => Now.Hour <= 16 && DateTime.Now.Hour > 12;
+            => Now.Hour <= 16 && Now.Hour > 12;
 
         /// <summary>
 		/// 

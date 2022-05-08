@@ -37,14 +37,11 @@ namespace FluentValidationLibrary.Validators
                 from: customer => customer.SocialSecurity,
                 to: value => value.IsSocialSecurityNumberValid()).Must(value => value)
                 .WithMessage("SSN is required");
-
-
-            
         }
 
         protected override bool PreValidate(ValidationContext<Customer> context, ValidationResult result)
         {
-            if (context.InstanceToValidate == null)
+            if (context.InstanceToValidate is null)
             {
                 result.Errors.Add(new ValidationFailure("", $"Dude, must have a none null instance of {nameof(Customer)}"));
                 return false;

@@ -123,6 +123,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationUnitTestPro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerSimpleConnect", "SqlServerSimpleConnect\SqlServerSimpleConnect.csproj", "{7702C778-DCC1-4645-9F86-D1C8769014C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkEnumSimple", "EntityFrameworkEnumSimple\EntityFrameworkEnumSimple.csproj", "{CAE4D509-AFB0-45FB-BD5B-036F23ABA51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkEnumSimpleApp", "EntityFrameworkEnumSimpleApp\EntityFrameworkEnumSimpleApp.csproj", "{4A524E93-AB5F-4C46-8358-A1A0E9674180}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -289,6 +293,14 @@ Global
 		{7702C778-DCC1-4645-9F86-D1C8769014C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7702C778-DCC1-4645-9F86-D1C8769014C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7702C778-DCC1-4645-9F86-D1C8769014C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAE4D509-AFB0-45FB-BD5B-036F23ABA51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE4D509-AFB0-45FB-BD5B-036F23ABA51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE4D509-AFB0-45FB-BD5B-036F23ABA51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE4D509-AFB0-45FB-BD5B-036F23ABA51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A524E93-AB5F-4C46-8358-A1A0E9674180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A524E93-AB5F-4C46-8358-A1A0E9674180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A524E93-AB5F-4C46-8358-A1A0E9674180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A524E93-AB5F-4C46-8358-A1A0E9674180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -339,6 +351,8 @@ Global
 		{63ECAC78-A065-4A1B-952F-B2D8F602BC25} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{A5E4E004-67DB-4E16-92AA-B60AC6CD31D2} = {244EAEB2-F968-4793-A47C-78FE0351165F}
 		{7702C778-DCC1-4645-9F86-D1C8769014C4} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{CAE4D509-AFB0-45FB-BD5B-036F23ABA51C} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
+		{4A524E93-AB5F-4C46-8358-A1A0E9674180} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

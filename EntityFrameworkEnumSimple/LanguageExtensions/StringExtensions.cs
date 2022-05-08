@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FluentValidationLibrary.LanguageExtensions
+namespace EntityFrameworkEnumSimple.LanguageExtensions
 {
     /// <summary>
     /// Common string extensions 

@@ -58,11 +58,13 @@ namespace FluentValidationLibrary
         [TestTraits(Trait.FluentValidation)]
         public async Task InvalidPinCustomerTest()
         {
+            // arrange
             Customer thisCustomer = MockOperations.Customers.FirstOrDefault(cust => cust.Id == 2);
             
+            // act
             ValidationResult result = await CustomerValidator.ValidateAsync(thisCustomer);
             
-            result.ShowErrorMessage();
+            // assert
             Check.That(result.IsValid).IsFalse();
         }
 
@@ -73,11 +75,16 @@ namespace FluentValidationLibrary
         [TestTraits(Trait.FluentValidation)]
         public async Task NullCustomer()
         {
+            // arrange
             Customer thisCustomer = null;
+            
+            // act
             // ReSharper disable once ExpressionIsAlwaysNull
             ValidationResult result = await CustomerValidator.ValidateAsync(thisCustomer);
 
+            // assert
             result.ShowErrorMessage();
+            Check.That(result.IsValid).IsFalse();
         }
 
 
