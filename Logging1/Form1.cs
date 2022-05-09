@@ -32,13 +32,13 @@ namespace NLogForms1
         private void ExecuteMethodButton_Click(object sender, EventArgs e)
         {
             var fooService = serviceProvider.GetService<ICommonService>();
-            fooService.Execute();
+            fooService!.Execute();
         }
 
         private void WorkerMethodButton_Click(object sender, EventArgs e)
         {
             var fooService = serviceProvider.GetService<ICommonService>();
-            fooService.Worker();
+            fooService!.Worker();
         }
 
         private void FinderButton_Click(object sender, EventArgs e)
