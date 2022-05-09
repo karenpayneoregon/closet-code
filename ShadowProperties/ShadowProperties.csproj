@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>9.0</LangVersion>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Scripts\RestoredDeleted.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Scripts\RestoredDeleted.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EntityFrameworkCoreHelpers" Version="1.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+		<PackageReference Include="Bogus" Version="34.0.2" />
+	</ItemGroup>
+
+
+
+</Project>
