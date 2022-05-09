@@ -14,9 +14,9 @@ namespace SwitchExpressions
             //Console.WriteLine();
             //Examples.RecursivePatternMatching();
 
-            LikesExample.Run();
-
-            //Console.ReadLine();
+            //LikesExample.Run();
+            Examples.MonthsIndexed();
+            Console.ReadLine();
         }
 
         

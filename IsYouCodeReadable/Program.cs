@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -9,10 +10,10 @@ namespace IsYouCodeReadable
     {
         static void Main(string[] args)
         {
-            Ambiguous();
+            string[] fileContent = new[] { ""};
+            //Ambiguous();
             //DayNamesIndexing();
             //StopUsingSingleCharVariableNames();
-
             Console.ReadLine();
         }
 
@@ -143,15 +144,24 @@ namespace IsYouCodeReadable
 
         }
 
+        private static void IsDateAndNotMinValue()
+        {
+            string value = "1/1/0001 12:00:00 AM";
+            Debug.WriteLine(value);
+            if (DateTime.TryParse(value, out var date) && date == DateTime.MinValue)
+            {
+                Console.WriteLine($"No good {date:d}"); // ❌
+            }
+            else
+            {
+                Console.WriteLine($"Date is {date:d} "); // ✔
+            }
+        }
+
         [ModuleInitializer]
         public static void Init()
         {
             Console.Title = "Does code make sense?";
         }
-    }
-
-    public class Person
-    {
-        public string FirstName { get; set; }
     }
 }

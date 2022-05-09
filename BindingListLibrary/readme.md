@@ -24,3 +24,5 @@ public static void AddRange<T>(this BindingList<T> list, IEnumerable<T> data)
     }
 }
 ```
+
+Or if used in many projects consider the following [package](https://www.nuget.org/packages/BindingListLibrary/).

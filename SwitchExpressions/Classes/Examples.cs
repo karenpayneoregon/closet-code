@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using Spectre.Console;
 
 namespace SwitchExpressions.Classes
 {
@@ -12,6 +15,25 @@ namespace SwitchExpressions.Classes
     /// </summary>
     public static class Examples
     {
+        public static void MonthsIndexed()
+        {
+            var table = new Table()
+                .RoundedBorder().BorderColor(Color.LightSlateGrey)
+                .AddColumn("[b]Name[/]").AddColumn("[b]Index[/]").Alignment(Justify.Center)
+                .Title("[yellow]Months index reverse[/]");
+
+            var months = DateTimeFormatInfo.CurrentInfo.MonthNames[..^1].ToList();
+
+
+            for (int index = months.Count; index != 0; index--)
+            {
+                var currentIndex = new Index(index, true);
+                table.AddRow(months[currentIndex].ToString(), currentIndex.ToString());
+            }
+
+            AnsiConsole.Write(table);
+
+        }
         public static double GetRating(this Person sender) =>
             sender switch
             {
