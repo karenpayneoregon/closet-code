@@ -12,12 +12,12 @@ namespace MenuConsoleApp
 
         static void Main(string[] args)
         {
+            var selection = ConfigureSelectionPrompt();
 
             while (true)
             {
                 Categories categories = AnsiConsole.Prompt(
-                    new SelectionPrompt<Categories>()
-                        .Title("Select[b] [white]category[/][/] to show products")
+                    selection.Title("Select[b] [white]category[/][/] to show products")
                         .PageSize(10)
                         .AddChoices(DataOperations.Categories()));
 
@@ -25,7 +25,9 @@ namespace MenuConsoleApp
                 if (categories.CategoryId != -1)
                 {
                     Console.Clear();
+
                     var products = DataOperations.ProductsList(categories.CategoryId);
+
                     if (products.Count > 0)
                     {
                         WriteLineForSelected(categories);
@@ -45,7 +47,8 @@ namespace MenuConsoleApp
                     return;
                 }
             }
-
         }
+
+
     }
 }

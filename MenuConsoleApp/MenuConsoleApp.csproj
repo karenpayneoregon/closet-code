@@ -7,6 +7,16 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="readme.md" />
+	  <None Remove="Scripts\NorthWind2020.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="readme.md" />
+	  <Content Include="Scripts\NorthWind2020.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Spectre.Console" Version="0.44.0" />
 	</ItemGroup>
 	<ItemGroup>
