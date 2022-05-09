@@ -29,4 +29,8 @@
 		</None>
 	</ItemGroup>
 
+	
+	<ItemGroup>
+		<ProjectProperty Include="SomeProperty" />
+	</ItemGroup>
 </Project>

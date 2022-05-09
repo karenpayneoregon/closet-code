@@ -35,9 +35,9 @@ namespace HasQueryFilterApp
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ContactCountsButton = new System.Windows.Forms.Button();
             this.UnDeleteButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
-            this.ContactCountsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +90,17 @@ namespace HasQueryFilterApp
             this.panel1.Size = new System.Drawing.Size(348, 38);
             this.panel1.TabIndex = 1;
             // 
+            // ContactCountsButton
+            // 
+            this.ContactCountsButton.Enabled = false;
+            this.ContactCountsButton.Location = new System.Drawing.Point(96, 6);
+            this.ContactCountsButton.Name = "ContactCountsButton";
+            this.ContactCountsButton.Size = new System.Drawing.Size(75, 23);
+            this.ContactCountsButton.TabIndex = 3;
+            this.ContactCountsButton.Text = "Counts";
+            this.ContactCountsButton.UseVisualStyleBackColor = true;
+            this.ContactCountsButton.Click += new System.EventHandler(this.ContactCountsButton_Click);
+            // 
             // UnDeleteButton
             // 
             this.UnDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -113,17 +124,6 @@ namespace HasQueryFilterApp
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
-            // ContactCountsButton
-            // 
-            this.ContactCountsButton.Enabled = false;
-            this.ContactCountsButton.Location = new System.Drawing.Point(96, 6);
-            this.ContactCountsButton.Name = "ContactCountsButton";
-            this.ContactCountsButton.Size = new System.Drawing.Size(75, 23);
-            this.ContactCountsButton.TabIndex = 3;
-            this.ContactCountsButton.Text = "Counts";
-            this.ContactCountsButton.UseVisualStyleBackColor = true;
-            this.ContactCountsButton.Click += new System.EventHandler(this.ContactCountsButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -131,6 +131,7 @@ namespace HasQueryFilterApp
             this.ClientSize = new System.Drawing.Size(348, 317);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

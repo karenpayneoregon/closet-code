@@ -5,10 +5,12 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HasQueryFilterApp.Classes;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using ShadowProperties.Models;
 using WindowsFormsLibrary.Classes;
 using WindowsFormsLibrary.LanguageExtensions;
@@ -53,6 +55,8 @@ namespace HasQueryFilterApp
                 return;
             }
 
+            FunStuff.Shake(this);
+
             Operations.Remove(_bindingList[_bindingSource.Position]);
             _bindingList.RemoveAt(_bindingSource.Position);
 
@@ -77,5 +81,13 @@ namespace HasQueryFilterApp
             var (all, filter) = await Operations.GetContact1Counts();
             Dialogs.Information(this, $"All: {all} Filtered: {filter}");
         }
+
+        [ModuleInitializer]
+        public static void Init()
+        {
+            //Console.Title = "Code sample for EF Core";
+        }
+
+
     }
 }

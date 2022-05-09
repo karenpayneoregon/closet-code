@@ -143,6 +143,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShadowProperties", "ShadowP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HasQueryFilterApp", "HasQueryFilterApp\HasQueryFilterApp.csproj", "{BB8201E9-09D6-4898-962A-A7D8881E071D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLogForms1", "Logging1\NLogForms1.csproj", "{92F78E7D-B87F-455C-B01C-F02B6D40BEF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -345,6 +347,10 @@ Global
 		{BB8201E9-09D6-4898-962A-A7D8881E071D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB8201E9-09D6-4898-962A-A7D8881E071D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB8201E9-09D6-4898-962A-A7D8881E071D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F78E7D-B87F-455C-B01C-F02B6D40BEF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F78E7D-B87F-455C-B01C-F02B6D40BEF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F78E7D-B87F-455C-B01C-F02B6D40BEF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F78E7D-B87F-455C-B01C-F02B6D40BEF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -405,6 +411,7 @@ Global
 		{F95639BF-B397-4C28-A2C9-7EB553D3DAD1} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{BA4FC3CE-EFB4-401F-9C7A-C1F41F32F854} = {F95639BF-B397-4C28-A2C9-7EB553D3DAD1}
 		{BB8201E9-09D6-4898-962A-A7D8881E071D} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{92F78E7D-B87F-455C-B01C-F02B6D40BEF1} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
