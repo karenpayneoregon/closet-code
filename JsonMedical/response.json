@@ -1,0 +1,40 @@
+﻿{
+  "claimAssessment": {
+    "medicalEvent": [
+      {
+        "service": [
+          {
+            "error": {
+              "code": 9635,
+              "text": "Check Servicing Provider.  May not be able to provide the service for this item at date of service."
+            },
+            "id": "A000",
+            "assessmentCode": "UNACCEPTABLE_ERROR",
+            "chargeAmount": "15600",
+            "itemNumber": "110"
+          }
+        ],
+        "eventDate": "2022-04-16",
+        "id": "01"
+      },
+      {
+        "service": [
+          {
+            "error": {
+              "code": 9635,
+              "text": "Check Servicing Provider.  May not be able to provide the service for this item at date of service."
+            },
+            "id": "A001",
+            "assessmentCode": "UNACCEPTABLE_ERROR",
+            "chargeAmount": "78000",
+            "itemNumber": "110"
+          }
+        ],
+        "eventDate": "2022-04-16",
+        "id": "02"
+      }
+    ],
+    "claimId": "THO0000010052022155354"
+  },
+  "status": "MEDICARE_REJECTED"
+}

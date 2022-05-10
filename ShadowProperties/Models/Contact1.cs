@@ -46,48 +46,6 @@ namespace ShadowProperties.Models
                 OnPropertyChanged();
             }
         }
-        #region Not needed for shadow properties only for displaying in DataGridView
-
-        public DateTime? LastUpdated
-        {
-            get => _lastUpdated;
-            set
-            {
-                _lastUpdated = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string LastUser
-        {
-            get => _lastUser;
-            set
-            {
-                _lastUser = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public DateTime? CreatedAt
-        {
-            get => _createdAt;
-            set
-            {
-                _createdAt = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public string CreatedBy
-        {
-            get => _createdBy;
-            set
-            {
-                _createdBy = value;
-                OnPropertyChanged();
-            }
-        }
-        #endregion
 
         public Contact1(int id)
         {

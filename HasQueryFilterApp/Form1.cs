@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HasQueryFilterApp.Classes;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using ShadowProperties.Classes;
 using ShadowProperties.Models;
 using WindowsFormsLibrary.Classes;
 using WindowsFormsLibrary.LanguageExtensions;
@@ -25,6 +26,7 @@ namespace HasQueryFilterApp
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
+            
             Shown += OnShown;
         }
 
@@ -32,6 +34,8 @@ namespace HasQueryFilterApp
         {
             await Task.Run(async () =>
             {
+                //await SetupOperations.Initialize();
+
                 _bindingList = new BindingList<Contact1>(await Operations.Contacts());
                 _bindingSource.DataSource = _bindingList;
             });
@@ -42,6 +46,8 @@ namespace HasQueryFilterApp
             UnDeleteButton.Enabled = true;
             DeleteButton.Enabled = true;
             ContactCountsButton.Enabled = true;
+
+
         }
 
         /// <summary>
@@ -56,6 +62,7 @@ namespace HasQueryFilterApp
             }
 
             FunStuff.Shake(this);
+    
 
             Operations.Remove(_bindingList[_bindingSource.Position]);
             _bindingList.RemoveAt(_bindingSource.Position);

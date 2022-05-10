@@ -20,8 +20,10 @@ namespace SqlServerSimpleConnect
         {
             InitializeComponent();
         }
+
+        private static int _timeOut = 2;
         private CancellationTokenSource _cancellationTokenSource =
-            new CancellationTokenSource(TimeSpan.FromSeconds(2));
+            new CancellationTokenSource(TimeSpan.FromSeconds(_timeOut));
         private async void ConnectButton_Click(object sender, EventArgs e)
         {
             if (_cancellationTokenSource.IsCancellationRequested)
@@ -29,7 +31,7 @@ namespace SqlServerSimpleConnect
                 _cancellationTokenSource.Dispose();
             }
 
-            _cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(2));
+            _cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(_timeOut));
 
             var (success, exception) = await Operations.Connect(_cancellationTokenSource.Token);
             if (success)
