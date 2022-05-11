@@ -18,7 +18,7 @@ namespace BaseDataValidatorLibrary.Helpers
         /// Model is valid
         /// </summary>
         public bool IsValid => Errors.Count == 0;
-
+        public bool IsNotValid => Errors.Count > 0;
         public EntityValidationResult(IList<ValidationResult> errors = null)
         {
             Errors = errors ?? new List<ValidationResult>();
