@@ -145,11 +145,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HasQueryFilterApp", "HasQue
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLogForms1", "Logging1\NLogForms1.csproj", "{92F78E7D-B87F-455C-B01C-F02B6D40BEF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateExpirationApp", "CalculateExpirationApp\CalculateExpirationApp.csproj", "{0133B541-446A-468E-A17E-C30DC39DD19E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculateExpirationApp", "CalculateExpirationApp\CalculateExpirationApp.csproj", "{0133B541-446A-468E-A17E-C30DC39DD19E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{53CF6F8F-2F95-4793-979D-D51F5AAFE938}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewCalc", "DataGridViewCalc\DataGridViewCalc.csproj", "{EAC77917-B83C-48FD-8ADB-C3DE236444AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectoryHelpersLibrary", "DirectoryHelpersLibrary\DirectoryHelpersLibrary.csproj", "{0B86A2C5-45D2-4C7B-9FF1-4237EFF634C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -365,6 +367,10 @@ Global
 		{EAC77917-B83C-48FD-8ADB-C3DE236444AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAC77917-B83C-48FD-8ADB-C3DE236444AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAC77917-B83C-48FD-8ADB-C3DE236444AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B86A2C5-45D2-4C7B-9FF1-4237EFF634C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B86A2C5-45D2-4C7B-9FF1-4237EFF634C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B86A2C5-45D2-4C7B-9FF1-4237EFF634C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B86A2C5-45D2-4C7B-9FF1-4237EFF634C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -428,6 +434,7 @@ Global
 		{92F78E7D-B87F-455C-B01C-F02B6D40BEF1} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{0133B541-446A-468E-A17E-C30DC39DD19E} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{EAC77917-B83C-48FD-8ADB-C3DE236444AB} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
+		{0B86A2C5-45D2-4C7B-9FF1-4237EFF634C2} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
