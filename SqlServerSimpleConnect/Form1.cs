@@ -22,8 +22,8 @@ namespace SqlServerSimpleConnect
         }
 
         private static int _timeOut = 2;
-        private CancellationTokenSource _cancellationTokenSource =
-            new CancellationTokenSource(TimeSpan.FromSeconds(_timeOut));
+        private CancellationTokenSource _cancellationTokenSource = new (TimeSpan.FromSeconds(_timeOut));
+
         private async void ConnectButton_Click(object sender, EventArgs e)
         {
             if (_cancellationTokenSource.IsCancellationRequested)
@@ -33,14 +33,23 @@ namespace SqlServerSimpleConnect
 
             _cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(_timeOut));
 
-            var (success, exception) = await Operations.Connect(_cancellationTokenSource.Token);
+            var (success, generalException, exception) = await Operations.Connect(_cancellationTokenSource.Token);
+
             if (success)
             {
-                MessageBox.Show("Opened");
+                MessageBox.Show(@"Opened");
             }
             else
             {
-                MessageBox.Show("Failed to open");
+                if (generalException)
+                {
+                    MessageBox.Show($@"Encountered: {exception.Message}");
+                }
+                else
+                {
+                    MessageBox.Show(@"Failed to open");
+                }
+                
             }
         }
     }

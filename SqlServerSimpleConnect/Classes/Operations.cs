@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.DirectoryServices.ActiveDirectory;
 using System.Threading;
 using System.Threading.Tasks;
 using static ConfigurationLibrary.Classes.ConfigurationHelper;
@@ -14,18 +15,22 @@ namespace SqlServerSimpleConnect.Classes
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        public static async Task<(bool success, Exception exception)> Connect(CancellationToken cancellationToken)
+        public static async Task<(bool success, bool generalException, Exception exception)> Connect(CancellationToken cancellationToken)
         {
-   
+
             try
             {
                 await using var cn = new SqlConnection(ConnectionString());
                 await cn.OpenAsync(cancellationToken);
-                return (true, null);
+                return (true, false, null);
             }
-            catch (Exception e)
+            catch (TaskCanceledException tce)
             {
-                return (false, e);
+                return (false,false, tce);
+            }
+            catch (Exception localException)
+            {
+                return (false, true, localException);
             }
 
         }
