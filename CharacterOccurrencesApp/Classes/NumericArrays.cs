@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CharacterOccurrencesApp.Classes
@@ -44,5 +45,48 @@ namespace CharacterOccurrencesApp.Classes
             return intArray;
 
         }
+
+        public static int[] ToIntegerArray(this List<string> sender)
+        {
+
+            var intArray = Array
+                .ConvertAll(sender.ToArray(),
+                    (input) => new
+                    {
+                        IsInteger = int.TryParse(input, out var integerValue),
+                        Value = integerValue
+                    })
+                .Where(result => result.IsInteger)
+                .Select(result => result.Value)
+                .ToArray();
+
+            return intArray;
+
+        }
+        public static int[] ToIntegerPreserveArray(this List<string> sender)
+        {
+
+            var intArray = Array.ConvertAll(sender.ToArray(), (input) =>
+            {
+                int.TryParse(input, out var integerValue);
+                return integerValue;
+            });
+
+            return intArray;
+
+        }
+        /// <summary>
+        /// Get indices in list which can not represent an int
+        /// </summary>
+        public static int[] GetNonIntegerIndexes(this List<string> sender) =>
+            sender.Select(
+                    (item, index) => int.TryParse(item, out var tResult) ?
+                        new { IsInteger = true, Index = index } :
+                        new { IsInteger = false, Index = index })
+                .ToArray()
+                .Where(item => item.IsInteger == false)
+                .Select(item => item.Index).ToArray();
     }
+
+
 }
