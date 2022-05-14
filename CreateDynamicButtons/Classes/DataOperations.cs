@@ -80,7 +80,9 @@ namespace CreateDynamicButtons.Classes
             var selectStatement = "SELECT EmployeeID, TitleOfCourtesy, FirstName, LastName, BirthDate FROM dbo.Employees;";
 
             using var cmd = new SqlCommand() { Connection = cn, CommandText = selectStatement };
+
             cn.Open();
+
             var reader = cmd.ExecuteReader();
 
             while (reader.Read())

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -58,6 +59,19 @@ namespace CreateDynamicButtons
             _productBindingSource.DataSource = _productsBindingList;
             ProductsListBox.DataSource = _productBindingSource;
 
+        }
+        /// <summary>
+        /// For forum question
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DeleteLast_Click(object sender, EventArgs e)
+        {
+            if (ButtonOperations.ButtonsList.Count <= 0) return;
+            var button = ButtonOperations.ButtonsList[^1];
+            
+            Controls.Remove(button);
+            ButtonOperations.ButtonsList.Remove(button);
         }
     }
 }
