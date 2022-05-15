@@ -24,7 +24,7 @@ namespace SqlServerAsyncReadCore
         }
         private readonly CancellationTokenSource _cancellationTokenSource = new();
 
-        private async void OnShown(object? sender, EventArgs e)
+        private async void OnShown(object sender, EventArgs e)
         {
 
             try

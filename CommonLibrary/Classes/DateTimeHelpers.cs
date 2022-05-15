@@ -118,8 +118,7 @@ namespace CommonLibrary.Classes
 		public static bool IsEvening 
             => Now.Hour is <= 20 and > 16;
 
-
-        public static string TimeOfDay() =>
+		public static string TimeOfDay() =>
             Now.Hour switch
             {
                 <= 12 => "Good Morning",

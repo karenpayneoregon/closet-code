@@ -163,6 +163,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidatorLibraryTestProject
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewReadonlyCheckBox", "DataGridViewReadonlyCheckBox\DataGridViewReadonlyCheckBox.csproj", "{F836C25E-806D-46DF-9122-54095F249211}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeComboboxApp", "TimeComboboxApp\TimeComboboxApp.csproj", "{4A619FC2-B8BF-4803-85BF-599E830E0A1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -397,6 +399,10 @@ Global
 		{F836C25E-806D-46DF-9122-54095F249211}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F836C25E-806D-46DF-9122-54095F249211}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F836C25E-806D-46DF-9122-54095F249211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A619FC2-B8BF-4803-85BF-599E830E0A1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A619FC2-B8BF-4803-85BF-599E830E0A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A619FC2-B8BF-4803-85BF-599E830E0A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A619FC2-B8BF-4803-85BF-599E830E0A1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -466,6 +472,7 @@ Global
 		{68723BA7-E73C-45EE-9E56-4CF942B86CD4} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
 		{365799DD-9171-4627-B4AE-29E4BFBD6588} = {68723BA7-E73C-45EE-9E56-4CF942B86CD4}
 		{F836C25E-806D-46DF-9122-54095F249211} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{4A619FC2-B8BF-4803-85BF-599E830E0A1C} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

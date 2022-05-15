@@ -52,7 +52,7 @@ namespace DataGridViewCalc
             {
                 return;
             }
-
+            
             var row = ((DataRowView)_bindingSource.Current).Row;
             MessageBox.Show($@"Total is {row.Field<int>("Total")}");
         }
