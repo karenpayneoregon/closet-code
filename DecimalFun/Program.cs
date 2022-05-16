@@ -15,7 +15,7 @@ namespace DecimalFun
 
             decimal fraction = 2.78m;
      
-            Console.WriteLine(fraction.GetFraction());
+            Console.WriteLine($"{fraction.GetFraction()} from {fraction}");
 
             Console.ReadLine();
         }

@@ -27,6 +27,7 @@ namespace EntityFrameworkEnumSimple.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
+                // for this demo we are not concerned about security
                 optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=ForumExample;Integrated Security=True");
             }
         }

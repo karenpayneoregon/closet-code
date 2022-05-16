@@ -135,6 +135,8 @@ namespace SwitchExpressions.Classes
             {
                 Console.WriteLine($"{person.FirstName,-8}{person.GetRatingGuarded(),-5}{person.GetType().Name}");
             }
+
+            Console.ReadLine();
         }
 
         /// <summary>

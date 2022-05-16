@@ -10,13 +10,14 @@ namespace SwitchExpressions
     {
         static void Main(string[] args)
         {
-            //Examples.GuardedUnGuarded();
+            Examples.GuardedUnGuarded();
             //Console.WriteLine();
             //Examples.RecursivePatternMatching();
 
             //LikesExample.Run();
-            Examples.MonthsIndexed();
-            Console.ReadLine();
+            //Examples.MonthsIndexed();
+            //Console.ReadLine();
+            //ProjectOperations.Demo();
         }
 
         
