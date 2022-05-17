@@ -31,8 +31,8 @@ namespace FilteredInclude.Data
             if (!optionsBuilder.IsConfigured)
             {
                 // for this demo we are not concerned about security
-                //optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=NorthWindAzure3;Integrated Security=True");
-                optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=NorthWindAzure3;Trusted_Connection=True");
+                optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=NorthWindAzure3;Integrated Security=True");
+                //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=NorthWindAzure3;Trusted_Connection=True");
             }
         }
 

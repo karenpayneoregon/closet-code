@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using FilteredInclude.Data;
 using FilteredInclude.LanguageExtensions;
@@ -10,11 +11,23 @@ using Newtonsoft.Json;
 
 namespace FilteredInclude.Classes
 {
+    /// <summary>
+    /// Responsible for
+    /// 1. Creating our database
+    /// 2. Populating tables
+    ///
+    /// There are several gotcha points
+    /// * SET IDENTITY_INSERT SomeTable ON needs to be used as the json data has keys
+    ///   Since we can only set one table per-session table operations are done separately 
+    /// * Needed to bypass ALTER TABLE [OrderDetails] NOCHECK CONSTRAINT ALL for inserts
+    /// </summary>
+    /// <remarks>
+    /// As this is for teaching and not an application, some usual checks are not in place
+    /// </remarks>
     public class CreateOperations
     {
         public static async Task<(bool success, Exception exception)> NewDatabase()
         {
-
             try
             {
                 await using var context = new NorthWindContext();
@@ -26,61 +39,26 @@ namespace FilteredInclude.Classes
             }
             catch (Exception localException)
             {
-
                 return (false, localException);
-
             }
         }
 
+        /// <summary>
+        /// Each table must be populated individually as per a restriction on
+        /// SET IDENTITY_INSERT
+        /// </summary>
         public static void Populate()
         {
-            var customers = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "Customers.json")).JSonToList<Customers>();
-            Console.WriteLine(customers.Count);
-            var orderDetails = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "OrderDetails.json")).JSonToList<OrderDetails>();
-            Console.WriteLine(orderDetails.Count);
-
-            List<Orders> orders = JsonConvert.DeserializeObject<List<Orders>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "Orders.json")));
-            Console.WriteLine(orders.Count);
-
-            var products = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "products.json")).JSonToList<Products>();
-            Console.WriteLine(products.Count);
-
-
-            using var context = new NorthWindContext();
-            context.Customers.AddRange(customers);
-            //context.OrderDetails.AddRange(orderDetails);
-            //context.Orders.AddRange(orders);
-            context.Products.AddRange(products);
-
-            context.Database.OpenConnection();
-            try
-            {
-                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products ON");
-                //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Orders ON");
-                //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Customers ON");
-                //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT OrderDetails ON");
-                context.SaveChanges();
-                //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products OFF");
-                //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Orders OFF");
-                //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Customers OFF");
-                //context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT OrderDetails OFF");
-
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
-            finally
-            {
-                context.Database.CloseConnection();
-            }
+            CreateProducts();
+            CreateCustomers();
+            CreateOrders();
+            CreateOrderDetails();
         }
 
         public static void CreateProducts()
         {
-            var products = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "products.json")).JSonToList<Products>();
-            Console.WriteLine(products.Count);
-
+            var products = File.ReadAllText(
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "products.json")).JSonToList<Products>();
 
             using var context = new NorthWindContext();
             context.Products.AddRange(products);
@@ -91,11 +69,10 @@ namespace FilteredInclude.Classes
                 context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products ON");
                 context.SaveChanges();
                 context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Products OFF");
-
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.Message);
+                Console.WriteLine($"{nameof(CreateProducts)}: {exception.Message}");
             }
             finally
             {
@@ -105,7 +82,8 @@ namespace FilteredInclude.Classes
 
         public static void CreateCustomers()
         {
-            var customers = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "Customers.json")).JSonToList<Customers>();
+            var customers = File.ReadAllText(
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "Customers.json")).JSonToList<Customers>();
 
             using var context = new NorthWindContext();
             context.Customers.AddRange(customers);
@@ -120,7 +98,7 @@ namespace FilteredInclude.Classes
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.Message);
+                Console.WriteLine($"{nameof(CreateCustomers)}: {exception.Message}");
             }
             finally
             {
@@ -130,8 +108,8 @@ namespace FilteredInclude.Classes
 
         public static void CreateOrders()
         {
-
-            List<Orders> orders = JsonConvert.DeserializeObject<List<Orders>>(File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "Orders.json")));
+            List<Orders> orders = JsonConvert.DeserializeObject<List<Orders>>(
+                File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "Orders.json")));
             
             using var context = new NorthWindContext();
 
@@ -147,10 +125,38 @@ namespace FilteredInclude.Classes
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.Message);
+                Console.WriteLine($"{nameof(CreateOrders)}: {exception.Message}");
             }
             finally
             {
+                context.Database.CloseConnection();
+            }
+        }
+        public static void CreateOrderDetails()
+        {
+
+            List<OrderDetails> orderDetails = JsonConvert.DeserializeObject<List<OrderDetails>>(
+                File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "OrderDetails.json")));
+
+            using var context = new NorthWindContext();
+
+            context.OrderDetails.AddRange(orderDetails);
+
+            context.Database.OpenConnection();
+            try
+            {
+
+                context.Database.ExecuteSqlRaw("ALTER TABLE [OrderDetails] NOCHECK CONSTRAINT ALL");
+                Console.WriteLine($"Details {context.SaveChanges()}");
+
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine($"{nameof(CreateOrderDetails)}: {exception.Message}");
+            }
+            finally
+            {
+                context.Database.ExecuteSqlRaw("ALTER TABLE [OrderDetails] NOCHECK CONSTRAINT ALL");
                 context.Database.CloseConnection();
             }
         }

@@ -160,14 +160,13 @@ namespace FilteredIncludeUnitTestProject
 
         [TestMethod]
         [TestTraits(Trait.PlaceHolder)]
+        //[Ignore]
         public async Task Setup()
         {
             await Task.Delay(0);
             var (success, exception) = await CreateOperations.NewDatabase();
             Console.WriteLine(success);
-            CreateOperations.CreateProducts();
-            CreateOperations.CreateCustomers();
-            CreateOperations.CreateOrders();
+            CreateOperations.Populate();
         }
 
     }
