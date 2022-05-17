@@ -5,6 +5,24 @@
 }
 $(document).ready(function () {
 
+    class CaseInsensitiveSet extends Set {
+        constructor(values) {
+            super(Array.from(values, it => it.toLowerCase()));
+        }
+
+        add(value) {
+            return super.add(value.toLowerCase());
+        }
+
+        has(value) {
+            return super.has(value.toLowerCase());
+        }
+
+        delete(value) {
+            return super.delete(value.toLowerCase());
+        }
+    }
+
     var getUrlParameter = function getUrlParameter(pParameter) {
 
         var pageUrl = window.location.search.substring(1),
@@ -28,7 +46,7 @@ $(document).ready(function () {
 
     $applicationSettings.init(getUrlParameter('lang'));
 
-     
+
     // Increment counter
     $('#btnNotifications').click(function () {
         var value = parseInt($('#lblIncrement').text());
@@ -37,14 +55,29 @@ $(document).ready(function () {
         kendoConsole.log("Notification count is " + newValue, true);
     });
 
+    $('#btnNotifications').click(function () {
+        let arr = ['Movies', 'Cars', 'Games', 'Hike'];
+
+        kendoConsole.log(arr.includes('games'));
+        kendoConsole.log(arr.includes('Games'));
+
+    });
 
     //
     // get count from #lblIncrement
     //
     $('#btnGetNotificationCount').click(function (event) {
 
-        var value = parseInt($('#lblIncrement').text());
-        kendoConsole.log("Notification count is " + value);
+        //var value = parseInt($('#lblIncrement').text());
+        //kendoConsole.log("Notification count is " + value);
+
+        var countryArray = ["Usa", "Canada", "France"];
+        const countries = new CaseInsensitiveSet(countryArray);
+
+        var country = "usa";
+        console.log(`countries contains '${country}' ${countries.has(country)}`);
+        country = "Russia";
+        console.log(`countries contains '${country}' ${countries.has(country)}`);
 
     });
 
@@ -85,5 +118,8 @@ $(document).ready(function () {
         preText: 'You have ',
         postText: ' chars remaining.'
     });
+
+
+
 
 });

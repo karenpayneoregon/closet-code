@@ -26,15 +26,17 @@ namespace FilteredIncludeUnitTestProject
             using var context = new NorthWindContext(ConnectionOption.mssqllocaldb);
             // act
 
-            var results = context.Customers
+            List<Customers> results = context.Customers
                 .Include(customer => customer.Orders)
                 .ThenInclude(order => order.OrderDetails)
-                .ThenInclude(x => x.Product)
-                .Where(x => x.Orders.Any(o => o.IsDeleted.Value)).ToList();
+                .ThenInclude(orderDetails => orderDetails.Product)
+                .Where(customer => customer.Orders.Any(o => o.IsDeleted.Value)).ToList();
 
             foreach (var result in results)
             {
+                
                 Console.WriteLine($"{result.CustomerIdentifier, -5}");
+
                 foreach (var order in result.Orders)
                 {
                     Console.WriteLine($"\t{order.OrderID}");
@@ -71,11 +73,14 @@ namespace FilteredIncludeUnitTestProject
 
             foreach (var customers in example1)
             {
+                
                 Console.WriteLine(customers.CompanyName);
+
                 foreach (var order in customers.Orders)
                 {
                     Console.WriteLine($"Order # {order.OrderID}");
                     Console.WriteLine($"\t\tIs deleted? {order.IsDeleted?.ToYesNo()}");
+
                     foreach (var detail in order.OrderDetails)
                     {
                         Console.WriteLine($"\t\t\t{detail.Product.ProductName}");
@@ -87,6 +92,7 @@ namespace FilteredIncludeUnitTestProject
             // all records 👎
             var example3 = context.Customers
                 .Include(c => c.Orders.Where(o => !o.IsDeleted.Value)).ToList();
+
             Console.WriteLine($"Example 3 count {example3.Count}");
 
 
@@ -98,10 +104,12 @@ namespace FilteredIncludeUnitTestProject
                 .Include(customer => customer.Orders.Where(order => order.IsDeleted.Value == true))
                 .ThenInclude(order => order.OrderDetails)
                 .ThenInclude(orderDetails => orderDetails.Product)
-                .Select(customer => customer.Orders.Where(order => order.IsDeleted.Value)).ToList();
+                .Select(customer => customer.Orders.Where(order => order.IsDeleted.Value))
+                .ToList();
 
             Console.WriteLine($"The following is correctly done ✔: count {filteredOnIsDeletedCustomers.Count}");
             StringBuilder builder = new();
+
             foreach (IEnumerable<Orders> orders in filteredOnIsDeletedCustomers)
             {
                 

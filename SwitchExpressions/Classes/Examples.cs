@@ -39,7 +39,7 @@ namespace SwitchExpressions.Classes
             {
                 Employee => 2,
                 Manager  => 3,
-                { }      => 1, // null check
+                { }      => 1, 
                 null     => throw new ArgumentNullException(nameof(sender))
             };
 
@@ -124,6 +124,7 @@ namespace SwitchExpressions.Classes
                 new Developer() { FirstName = "Karen", Experience = Experience.Guru},
                 new Person()    { FirstName = "Sam" }
             };
+
             foreach (var person in peopleList)
             {
                 Console.WriteLine($"{person.FirstName,-8}{person.GetRating()}");

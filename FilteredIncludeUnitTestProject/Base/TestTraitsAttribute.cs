@@ -7,9 +7,6 @@ namespace FilteredIncludeUnitTestProject.Base
 {
     public enum Trait
     {
-        /// <summary>
-        /// Place holder 
-        /// </summary>
         PlaceHolder,
         DatabaseSetup,
         BetweenExtension,

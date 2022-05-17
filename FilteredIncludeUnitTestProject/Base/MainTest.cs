@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 
@@ -11,9 +10,7 @@ namespace FilteredIncludeUnitTestProject
 {
     public partial class MainTest
     {
-        /// <summary>
-        /// Perform initialization before test runs using assertion on current test name.
-        /// </summary>
+
         [TestInitialize]
         public void Initialization()
         {
@@ -42,14 +39,6 @@ namespace FilteredIncludeUnitTestProject
         public static void ClassInitialize(TestContext testContext)
         {
             TestResults = new List<TestContext>();
-        }
-    }
-
-    public static class Extensions
-    {
-        public static void AppendIndented(this StringBuilder sender, string value)
-        {
-            sender.AppendLine($"\t{value}");
         }
     }
 }

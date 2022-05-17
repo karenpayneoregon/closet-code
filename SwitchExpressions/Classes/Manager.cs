@@ -6,7 +6,7 @@ namespace SwitchExpressions.Classes
     {
         public int ManagerId { get; set; }
         public int Years { get; set; }
-        public List<Employee> Employees = new List<Employee>();
+        public List<Employee> Employees = new();
     }
 
 
