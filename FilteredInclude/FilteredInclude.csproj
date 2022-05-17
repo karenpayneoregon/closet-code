@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="C:\Users\paynek\.nuget\packages\entityframeworkcorehelpers\1.0.1\contentFiles\any\net5.0\Classes\readme.md" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Scripts\Script1.sql" />
     <None Remove="Scripts\Script2.sql" />
     <None Remove="Scripts\Script3.sql" />

@@ -11,11 +11,30 @@
 		<PackageReference Include="MSTest.TestAdapter" Version="2.1.1" />
 		<PackageReference Include="MSTest.TestFramework" Version="2.1.1" />
 		<PackageReference Include="coverlet.collector" Version="1.3.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 		<PackageReference Include="NFluent" Version="2.8.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\FilteredInclude\FilteredInclude.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Json\ContactType.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Json\Customers.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Json\OrderDetails.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Json\Orders.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Json\Products.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 

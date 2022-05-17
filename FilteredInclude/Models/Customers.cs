@@ -34,8 +34,8 @@ namespace FilteredInclude.Models
         public string Country { get; set; }
         [StringLength(24)]
         public string Phone { get; set; }
-        [StringLength(24)]
-        public string Fax { get; set; }
+        //[StringLength(24)]
+        //public string Fax { get; set; }
         public int? ContactTypeIdentifier { get; set; }
 
         [InverseProperty("CustomerIdentifierNavigation")]

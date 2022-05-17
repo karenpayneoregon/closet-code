@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Channels;
+using System.Threading.Tasks;
 using FilteredInclude.Classes;
 using FilteredInclude.Data;
 using FilteredInclude.LanguageExtensions;
@@ -134,10 +135,39 @@ namespace FilteredIncludeUnitTestProject
                 .Where(order => order.Freight >10m)
                 .ToList();
 
-            foreach (var order  in results)
+
+            foreach (var order in results)
             {
                 Console.WriteLine(order.Freight.Value.ToString("C"));
             }
+
+            Console.WriteLine();
+
+            var ordersList = context.Orders
+                .Between(x => x.OrderDate.Value, lowDate, highDate)
+                .Where(order => order.Freight > 10m)
+                .ToList();
+
+            foreach (var order in ordersList)
+            {
+                if (order.Freight != null) Console.WriteLine(order.Freight.Value.ToString("C"));
+            }
+
+
+            var productsList = context.Products.Between(p => p.UnitsInStock.Value, 0, 13).ToList();
+            Console.WriteLine(productsList.Count);
+        }
+
+        [TestMethod]
+        [TestTraits(Trait.PlaceHolder)]
+        public async Task Setup()
+        {
+            await Task.Delay(0);
+            var (success, exception) = await CreateOperations.NewDatabase();
+            Console.WriteLine(success);
+            CreateOperations.CreateProducts();
+            CreateOperations.CreateCustomers();
+            CreateOperations.CreateOrders();
         }
 
     }
