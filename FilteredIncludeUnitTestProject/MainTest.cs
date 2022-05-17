@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Channels;
 using FilteredInclude.Classes;
 using FilteredInclude.Data;
@@ -59,17 +60,14 @@ namespace FilteredIncludeUnitTestProject
              * And incorrect orders
              */
             var example1 = context.Customers
-                .Where(c => c.Orders.Any(o => o.IsDeleted.Value))
-                .Include(c => c.Orders)
+                .Where(customer => customer.Orders.Any(order => order.IsDeleted.Value))
+                .Include(customer => customer.Orders)
                 .ThenInclude(order => order.OrderDetails)
                 .ThenInclude(orderDetails => orderDetails.Product)
                 .ToList();
 
             Console.WriteLine($"Example 1 count {example1.Count}");
-            int[] expected = new[] { 10258, 10336, 10319 };
-
-            //Check.That(orderIdentifiers).ContainsExactly(expected);
-            
+           
 
             foreach (var customers in example1)
             {
@@ -94,6 +92,7 @@ namespace FilteredIncludeUnitTestProject
 
             Console.WriteLine();
 
+            // This is best done with Global Query Filters
             List<IEnumerable<Orders>> filteredOnIsDeletedCustomers = context.Customers
                 .Where(customer => customer.Orders.Any(order => order.IsDeleted.Value))
                 .Include(customer => customer.Orders.Where(order => order.IsDeleted.Value == true))
@@ -102,22 +101,22 @@ namespace FilteredIncludeUnitTestProject
                 .Select(customer => customer.Orders.Where(order => order.IsDeleted.Value)).ToList();
 
             Console.WriteLine($"The following is correctly done ✔: count {filteredOnIsDeletedCustomers.Count}");
-
-            foreach (IEnumerable<Orders> parent in filteredOnIsDeletedCustomers)
+            StringBuilder builder = new();
+            foreach (IEnumerable<Orders> orders in filteredOnIsDeletedCustomers)
             {
                 
-                foreach (Orders od in parent)
+                foreach (Orders order in orders)
                 {
-                    Console.WriteLine(od.OrderID);
-                    foreach (OrderDetails detail in od.OrderDetails)
+
+                    builder.AppendLine(order.OrderID.ToString());
+                    foreach (OrderDetails detail in order.OrderDetails)
                     {
-                        Console.WriteLine($"\t{detail.Product}");
+                        builder.AppendIndented(detail.Product.ProductName);
                     }
                 }
-
-        
-
             }
+
+            Console.WriteLine(builder);
 
         }
 

@@ -44,4 +44,12 @@ namespace FilteredIncludeUnitTestProject
             TestResults = new List<TestContext>();
         }
     }
+
+    public static class Extensions
+    {
+        public static void AppendIndented(this StringBuilder sender, string value)
+        {
+            sender.AppendLine($"\t{value}");
+        }
+    }
 }
