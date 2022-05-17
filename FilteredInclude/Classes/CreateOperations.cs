@@ -30,7 +30,7 @@ namespace FilteredInclude.Classes
         {
             try
             {
-                await using var context = new NorthWindContext();
+                await using var context = new NorthWindContext(ConnectionOption.mssqllocaldb);
                 await context.Database.EnsureDeletedAsync();
                 await context.Database.EnsureCreatedAsync();
 
@@ -60,7 +60,7 @@ namespace FilteredInclude.Classes
             var products = File.ReadAllText(
                 Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "products.json")).JSonToList<Products>();
 
-            using var context = new NorthWindContext();
+            using var context = new NorthWindContext(ConnectionOption.mssqllocaldb);
             context.Products.AddRange(products);
 
             context.Database.OpenConnection();
@@ -85,7 +85,7 @@ namespace FilteredInclude.Classes
             var customers = File.ReadAllText(
                 Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "Customers.json")).JSonToList<Customers>();
 
-            using var context = new NorthWindContext();
+            using var context = new NorthWindContext(ConnectionOption.mssqllocaldb);
             context.Customers.AddRange(customers);
 
             context.Database.OpenConnection();
@@ -111,7 +111,7 @@ namespace FilteredInclude.Classes
             List<Orders> orders = JsonConvert.DeserializeObject<List<Orders>>(
                 File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "Orders.json")));
             
-            using var context = new NorthWindContext();
+            using var context = new NorthWindContext(ConnectionOption.mssqllocaldb);
 
             context.Orders.AddRange(orders);
 
@@ -138,7 +138,7 @@ namespace FilteredInclude.Classes
             List<OrderDetails> orderDetails = JsonConvert.DeserializeObject<List<OrderDetails>>(
                 File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json", "OrderDetails.json")));
 
-            using var context = new NorthWindContext();
+            using var context = new NorthWindContext(ConnectionOption.mssqllocaldb);
 
             context.OrderDetails.AddRange(orderDetails);
 

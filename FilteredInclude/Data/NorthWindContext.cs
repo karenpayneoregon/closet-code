@@ -12,10 +12,15 @@ namespace FilteredInclude.Data
 {
     public partial class NorthWindContext : DbContext
     {
+        private readonly ConnectionOption _express;
+
         public NorthWindContext()
         {
         }
-
+        public NorthWindContext(ConnectionOption option = ConnectionOption.mssqllocaldb)
+        {
+            _express = option;
+        }
         public NorthWindContext(DbContextOptions<NorthWindContext> options)
             : base(options)
         {
@@ -30,9 +35,15 @@ namespace FilteredInclude.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // for this demo we are not concerned about security
-                //optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=NorthWindAzure3;Integrated Security=True");
-                optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=NorthWindAzure3;Trusted_Connection=True");
+               
+                if ( _express is ConnectionOption.SqlExpress )
+                {
+                    optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=NorthWindAzure3;Integrated Security=True");
+                }
+                else
+                {
+                    optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=NorthWindAzure3;Trusted_Connection=True");
+                }
             }
         }
 

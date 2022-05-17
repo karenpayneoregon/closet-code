@@ -11,6 +11,9 @@ namespace FilteredIncludeUnitTestProject.Base
         /// Place holder 
         /// </summary>
         PlaceHolder,
+        DatabaseSetup,
+        BetweenExtension,
+        IncludeFilter
     }
     /// <summary>
     /// Declarative class for using Trait enum about for traits on test method.

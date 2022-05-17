@@ -11,7 +11,6 @@ using FilteredInclude.Models;
 using FilteredIncludeUnitTestProject.Base;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NFluent;
 
 namespace FilteredIncludeUnitTestProject
 {
@@ -19,12 +18,12 @@ namespace FilteredIncludeUnitTestProject
     public partial class MainTest : TestBase
     {
         [TestMethod]
-        [TestTraits(Trait.PlaceHolder)]
+        [TestTraits(Trait.IncludeFilter)]
         public void SimpleGetAnyOrdersIsDeletedTest()
         {
             // arrange
 
-            using var context = new NorthWindContext();
+            using var context = new NorthWindContext(ConnectionOption.mssqllocaldb);
             // act
 
             var results = context.Customers
@@ -48,11 +47,11 @@ namespace FilteredIncludeUnitTestProject
             // assert
         }
         [TestMethod]
-        [TestTraits(Trait.PlaceHolder)]
+        [TestTraits(Trait.IncludeFilter)]
         public void GetOrdersFilterIncludeTest()
         {
 
-            using var context = new NorthWindContext();
+            using var context = new NorthWindContext(ConnectionOption.mssqllocaldb);
 
 
             /*
@@ -122,10 +121,10 @@ namespace FilteredIncludeUnitTestProject
         }
 
         [TestMethod]
-        [TestTraits(Trait.PlaceHolder)]
+        [TestTraits(Trait.BetweenExtension)]
         public void BetweenDates()
         {
-            using var context = new NorthWindContext();
+            using var context = new NorthWindContext(ConnectionOption.mssqllocaldb);
 
             var lowDate = new DateTime(2014, 4, 7);
             var highDate = new DateTime(2014, 7, 8);
@@ -161,14 +160,22 @@ namespace FilteredIncludeUnitTestProject
         }
 
         [TestMethod]
-        [TestTraits(Trait.PlaceHolder)]
+        [TestTraits(Trait.DatabaseSetup)]
         [Ignore]
         public async Task Setup()
         {
-            await Task.Delay(0);
+            
             var (success, exception) = await CreateOperations.NewDatabase();
-            Console.WriteLine(success);
-            CreateOperations.Populate();
+            
+            if (success)
+            {
+                CreateOperations.Populate();
+            }
+            else
+            {
+                Console.WriteLine(exception.Message);
+            }
+            
         }
 
     }
