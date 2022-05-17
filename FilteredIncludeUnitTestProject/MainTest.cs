@@ -76,7 +76,7 @@ namespace FilteredIncludeUnitTestProject
                 foreach (var order in customers.Orders)
                 {
                     Console.WriteLine($"Order # {order.OrderID}");
-                    Console.WriteLine($"\t\tIs deleted? {order.IsDeleted.Value.ToYesNo()}");
+                    Console.WriteLine($"\t\tIs deleted? {order.IsDeleted?.ToYesNo()}");
                     foreach (var detail in order.OrderDetails)
                     {
                         Console.WriteLine($"\t\t\t{detail.Product.ProductName}");
@@ -138,13 +138,13 @@ namespace FilteredIncludeUnitTestProject
 
             foreach (var order in results)
             {
-                Console.WriteLine(order.Freight.Value.ToString("C"));
+                Console.WriteLine(order.Freight?.ToString("C"));
             }
 
             Console.WriteLine();
 
             var ordersList = context.Orders
-                .Between(x => x.OrderDate.Value, lowDate, highDate)
+                .Between(order => order.OrderDate.Value, lowDate, highDate)
                 .Where(order => order.Freight > 10m)
                 .ToList();
 
@@ -154,13 +154,15 @@ namespace FilteredIncludeUnitTestProject
             }
 
 
-            var productsList = context.Products.Between(p => p.UnitsInStock.Value, 0, 13).ToList();
+            var productsList = context.Products.Between(product => 
+                product.UnitsInStock.Value, 0, 13).ToList();
+
             Console.WriteLine(productsList.Count);
         }
 
         [TestMethod]
         [TestTraits(Trait.PlaceHolder)]
-        //[Ignore]
+        [Ignore]
         public async Task Setup()
         {
             await Task.Delay(0);
