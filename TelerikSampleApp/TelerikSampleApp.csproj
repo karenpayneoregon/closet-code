@@ -30,4 +30,12 @@
 		<None Remove="Templates\**" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="readme.md" />
+	</ItemGroup>
+
 </Project>
