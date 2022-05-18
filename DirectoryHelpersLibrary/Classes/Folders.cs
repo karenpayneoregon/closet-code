@@ -45,16 +45,21 @@ namespace DirectoryHelpersLibrary.Classes
         public static string UpOneLevel(string sender)
             => UpperFolder(Path.GetDirectoryName(sender), 1);
 
-        /// <summary>
-        /// From project folder, get the solution folder path
-        /// </summary>
-        /// <returns>folder name</returns>
-        public static string SolutionFolder()
-            => AppDomain.CurrentDomain.BaseDirectory.UpperFolder(5);
+        ///// <summary>
+        ///// From project folder, get the solution folder path
+        ///// </summary>
+        ///// <returns>folder name</returns>
+        //public static string SolutionFolder() => AppDomain.CurrentDomain.BaseDirectory.UpperFolder(5);
 
         public static string CurrentSolutionName()
         {
             return Path.GetFileNameWithoutExtension(Directory.GetFiles(SolutionFolder(), "*.sln").FirstOrDefault());
         }
+
+        /// <summary>
+        /// From project folder, get the solution folder path
+        /// </summary>
+        /// <returns>folder name</returns>
+        public static string SolutionFolder() => AppDomain.CurrentDomain.BaseDirectory.UpperFolder(5);
     }
 }
