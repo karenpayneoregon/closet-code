@@ -9,7 +9,7 @@ namespace MenuConsoleApp
 
         static void Main(string[] args)
         {
-            var categorySelection = MenuOperations.ConfigureCategorySelectionPrompt();
+            //var categorySelection = MenuOperations.ConfigureCategorySelectionPrompt();
             var productContinue = true;
 
             while (true)
