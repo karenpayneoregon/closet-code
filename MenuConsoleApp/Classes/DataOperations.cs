@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using MenuConsoleApp.Data;
 using MenuConsoleApp.Models;
+using Newtonsoft.Json;
 
 namespace MenuConsoleApp.Classes
 {
@@ -22,6 +25,23 @@ namespace MenuConsoleApp.Classes
             return list.ToArray();
         }
 
+        public static Categories[] CategoriesArray() => 
+            JsonConvert.DeserializeObject<List<Categories>>(
+                File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "json", "categories.json")))
+                .ToArray();
+
+        public static Products[] ProductsArray() =>
+            JsonConvert.DeserializeObject<List<Products>>(
+                    File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "json", "products.json")))
+                .ToArray();
+
+        public static List<Products> ProductListFromJson(int categoryIdentifier)
+        {
+            var list = ProductsArray().Where(product => product.CategoryId == categoryIdentifier).ToList();
+            list.Insert(list.Count, new Products() { ProductId = -1, ProductName = "Go back" });
+            return list;
+        }
+
         /// <summary>
         /// For main menu
         /// </summary>
@@ -29,8 +49,9 @@ namespace MenuConsoleApp.Classes
         public static List<Products> ProductsList(int categoryIdentifier)
         {
             using var context = new NorthwindContext();
-            return context.Products.Where(product => product.CategoryId == categoryIdentifier).ToList();
-
+            var list = context.Products.Where(product => product.CategoryId == categoryIdentifier).ToList();
+            list.Insert(list.Count, new Products() { ProductId = -1, ProductName = "Go back" });
+            return list;
         }
 
         /// <summary>
@@ -41,7 +62,7 @@ namespace MenuConsoleApp.Classes
         {
             using var context = new NorthwindContext();
             var list = context.Products.Where(product => product.CategoryId == categoryIdentifier).ToList();
-            list.Insert(list.Count, new Products() {ProductId = -1, ProductName = "Exit"});
+            list.Insert(list.Count, new Products() {ProductId = -1, ProductName = "Go back"});
             return list.ToArray();
         }
     }

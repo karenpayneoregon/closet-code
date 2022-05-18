@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using TelerikSampleApp.Models
+
+<br />
+<div><h2>Menu for page Navigation</h2></div>
+<br />
+
+@(Html.Kendo().Menu()
+            .Name("Menu")
+            .Items(items =>
+            {
+                items.Add().Text("About").Action("About", "Home");
+                items.Add().Text("Telerik UI Demos").Url("https://demos.telerik.com/aspnet-core/");
+            })
+)
+
+<script type="text/x-kendo-tmpl" id="template">
+    <div class="product">
+        <h2>Id: #=Id#</h2>
+        <div><h3>ContactName: #=ContactName#</h3></div>
+        <div><h7>ContactType: #=ContactType#</h7></div>
+        <div><h7>HomePhone: #=HomePhone#</h7></div>
+        <div><h7>CellPhone: #=CellPhone#</h7></div>
+        <div><h7>OfficePhone: #=OfficePhone#</h7></div>
+        <div><h7>ContactType: #=ContactType#</h7></div>
+        <hr />
+    </div>
+</script>
+<br />
+<div><h2>ListView visualizing data from joined tables.</h2></div>
+<br />
+<div class="demo-section k-content wide">
+    @(Html.Kendo().ListView<ContactItem>()
+        .Name("listView")
+        .TagName("div")
+        .HtmlAttributes(new {style="height: 450px;" })
+        .ClientTemplateId("template")
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("Contacts_Read", "Grid"))
+            .PageSize(5)
+        )
+        .Scrollable()
+        .Pageable()
+    )
+</div>
+<br />
+<div><h2>Grid with CRUD operations.</h2></div>
+<br />
+<div class="row mb-lg-5">
+    <div class="col-12">
+        @(Html.Kendo().Grid <Product>()
+                .Name("grid")
+                .Columns(columns =>
+                {
+                    //columns.Bound(p => p.ProductId).Filterable(false);
+                    columns.Bound(product => product.ProductName)
+                        .Width(300);
+
+                    columns.Bound(product => product.DiscontinuedDate)
+                        .Format("{0:MM/dd/yyyy}")
+                        .Title("Dis Date").Width(100);
+
+                    columns.Bound(product => product.UnitPrice);
+
+                    columns.Command(c=> {c.Edit();c.Destroy();
+
+                    });
+                })
+                .ToolBar(toolBar=>toolBar.Create())
+                .Pageable()
+                .Sortable()
+                .Resizable(r => r.Columns(true))
+                .Scrollable()
+                .Filterable()
+                .HtmlAttributes(new { style = "height:550px;" })
+                .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .PageSize(25)
+                        .Model(factory=>
+                        {
+                            factory.Id(id => id.ProductId);
+                            factory.Field(f => f.ProductId).Editable(false);
+                        })
+                        .Read(read => read.Action("Products_Read", "Grid"))
+                        .Create(create => create.Action("Products_Create", "Grid"))
+                        .Update(update => update.Action("Products_Update", "Grid"))
+                        .Destroy(destroy=> destroy.Action("Products_Destroy", "Grid"))
+                    )
+        )
+    </div>
+</div>

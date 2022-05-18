@@ -40,8 +40,8 @@
     "Description": "Seaweed and fish"
   },
   {
-    "CategoryID": 9,
-    "CategoryName": "Wine",
-    "Description": "Wine"
+    "CategoryID": -1,
+    "CategoryName": "Exit",
+    "Description": ""
   }
 ]

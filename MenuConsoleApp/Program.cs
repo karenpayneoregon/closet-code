@@ -9,23 +9,24 @@ namespace MenuConsoleApp
 
         static void Main(string[] args)
         {
-            var categorySelection = ConfigureCategorySelectionPrompt();
+            var categorySelection = MenuOperations.ConfigureCategorySelectionPrompt();
             var productContinue = true;
 
             while (true)
             {
-                var categories = AnsiConsole.Prompt(CategoryMenu());
+
+                var categories = AnsiConsole.Prompt(MenuOperations.CategoryMenu());
 
                 if (categories.CategoryId != -1)
                 {
                     Console.Clear();
 
-                    var products = DataOperations.ProductsList(categories.CategoryId);
+                    var products = DataOperations.ProductListFromJson(categories.CategoryId);
 
                     if (products.Count > 0)
                     {
                         productContinue = true;
-                        ProductMenuWork(productContinue, categories);
+                        MenuOperations.ProductMenu(productContinue, categories);
                     }
                     else
                     {
