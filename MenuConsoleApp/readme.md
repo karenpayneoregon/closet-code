@@ -18,3 +18,14 @@ private static SelectionPrompt<Categories> ConfigureSelectionPrompt()
 ```
 
 ![image](../assets/ConsoleMenu.png)
+
+# Update
+
+Have refactored the entire code set so that it's
+
+1. Easier to understand code
+2. Modular code set
+
+Also, there are several methods not used which I left as they may assist those who get into the code that are new to `Spectre.Console`.
+
+![image](assets/menu.png)

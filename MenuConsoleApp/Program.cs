@@ -1,8 +1,5 @@
 ﻿using System;
-using System.IO;
-using System.Runtime.CompilerServices;
 using MenuConsoleApp.Classes;
-using MenuConsoleApp.Models;
 using Spectre.Console;
 
 namespace MenuConsoleApp
@@ -12,15 +9,12 @@ namespace MenuConsoleApp
 
         static void Main(string[] args)
         {
-            var selection = ConfigureSelectionPrompt();
+            var categorySelection = ConfigureCategorySelectionPrompt();
+            var productContinue = true;
 
             while (true)
             {
-                Categories categories = AnsiConsole.Prompt(
-                    selection.Title("Select[b] [white]category[/][/] to show products")
-                        .PageSize(10)
-                        .AddChoices(DataOperations.Categories()));
-
+                var categories = AnsiConsole.Prompt(CategoryMenu());
 
                 if (categories.CategoryId != -1)
                 {
@@ -30,16 +24,14 @@ namespace MenuConsoleApp
 
                     if (products.Count > 0)
                     {
-                        WriteLineForSelected(categories);
-                        products.ForEach(Console.WriteLine);
+                        productContinue = true;
+                        ProductMenuWork(productContinue, categories);
                     }
                     else
                     {
                         AnsiConsole.MarkupLine($"No products for [b]{categories.CategoryName}[/]");
                     }
 
-                    WriteLineForContinue();
-                    Console.ReadLine();
                     Console.Clear();
                 }
                 else
@@ -48,7 +40,5 @@ namespace MenuConsoleApp
                 }
             }
         }
-
-
     }
 }
