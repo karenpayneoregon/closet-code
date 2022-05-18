@@ -167,9 +167,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeComboboxApp", "TimeComb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilteredInclude", "FilteredInclude\FilteredInclude.csproj", "{D56A89E7-F3D6-4223-993B-7D29001369DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteredIncludeUnitTestProject", "FilteredIncludeUnitTestProject\FilteredIncludeUnitTestProject.csproj", "{4F922D2B-CC96-4F08-A814-6CB0D7120DDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilteredIncludeUnitTestProject", "FilteredIncludeUnitTestProject\FilteredIncludeUnitTestProject.csproj", "{4F922D2B-CC96-4F08-A814-6CB0D7120DDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetInformationForModel", "GetInformationForModel\GetInformationForModel.csproj", "{D5BD589B-AB7D-4B42-B449-73D356787235}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetInformationForModel", "GetInformationForModel\GetInformationForModel.csproj", "{D5BD589B-AB7D-4B42-B449-73D356787235}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectAll", "DataGridViewCheckAllCodeProject\SelectAll.csproj", "{5D6FF39E-44E7-4B68-933D-558C9CA45D9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -421,6 +423,10 @@ Global
 		{D5BD589B-AB7D-4B42-B449-73D356787235}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5BD589B-AB7D-4B42-B449-73D356787235}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5BD589B-AB7D-4B42-B449-73D356787235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D6FF39E-44E7-4B68-933D-558C9CA45D9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6FF39E-44E7-4B68-933D-558C9CA45D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6FF39E-44E7-4B68-933D-558C9CA45D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6FF39E-44E7-4B68-933D-558C9CA45D9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -494,6 +500,7 @@ Global
 		{D56A89E7-F3D6-4223-993B-7D29001369DB} = {F95639BF-B397-4C28-A2C9-7EB553D3DAD1}
 		{4F922D2B-CC96-4F08-A814-6CB0D7120DDC} = {244EAEB2-F968-4793-A47C-78FE0351165F}
 		{D5BD589B-AB7D-4B42-B449-73D356787235} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{5D6FF39E-44E7-4B68-933D-558C9CA45D9C} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
