@@ -177,9 +177,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobbingProject", "Globbing
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelerikSampleApp", "TelerikSampleApp\TelerikSampleApp.csproj", "{C29BBCDA-866F-4317-B383-6CD05726833E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuSimpleApp", "MenuSimpleApp\MenuSimpleApp.csproj", "{C43C8A6E-DBA7-4185-899C-ADF86FDC568C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuSimpleApp", "MenuSimpleApp\MenuSimpleApp.csproj", "{C43C8A6E-DBA7-4185-899C-ADF86FDC568C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursivePatterns", "RecursivePatterns\RecursivePatterns.csproj", "{BD26A4C3-125F-42D5-A1F1-727E45F66A6C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind2020ConsoleApp", "NorthWind2020ConsoleApp\NorthWind2020ConsoleApp.csproj", "{4B9EBBFD-62D9-4979-948F-12D02ED6D471}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -451,6 +453,10 @@ Global
 		{BD26A4C3-125F-42D5-A1F1-727E45F66A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD26A4C3-125F-42D5-A1F1-727E45F66A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD26A4C3-125F-42D5-A1F1-727E45F66A6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B9EBBFD-62D9-4979-948F-12D02ED6D471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B9EBBFD-62D9-4979-948F-12D02ED6D471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B9EBBFD-62D9-4979-948F-12D02ED6D471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B9EBBFD-62D9-4979-948F-12D02ED6D471}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -529,6 +535,7 @@ Global
 		{C29BBCDA-866F-4317-B383-6CD05726833E} = {85EDE1FD-DE28-4B56-96F9-76D0D1836E32}
 		{C43C8A6E-DBA7-4185-899C-ADF86FDC568C} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{BD26A4C3-125F-42D5-A1F1-727E45F66A6C} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{4B9EBBFD-62D9-4979-948F-12D02ED6D471} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
