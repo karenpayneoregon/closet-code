@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 namespace LoginConsoleApp.Classes
 {
     /// <summary>
-    /// Serializer to encrypt/decrypt objects using AES.
+    /// Serializer to encrypt/decrypt objects.
     /// </summary>
     /// <typeparam name="T">Type of object to serialize/deserialize.</typeparam>
     public class CryptoSerializer<T>
@@ -27,7 +27,7 @@ namespace LoginConsoleApp.Classes
         /// Serialization callback that can be registered with 
         /// a cache using CacheBuilder.SetSerialization
         /// </summary>
-        public void Serialize(List<T> obj, Stream stream)
+        public void Serialize(List<T> list, Stream stream)
         {
             // The first 16 bytes of the serialized stream is the 
             // AES initialization vector. (An IV does not need to be
@@ -44,7 +44,7 @@ namespace LoginConsoleApp.Classes
 
             // Using protobuf-net for serialization
             // (but any serializer can be used to write to this CryptoStream).
-            ProtoBuf.Serializer.Serialize(cryptoStream, obj);
+            ProtoBuf.Serializer.Serialize(cryptoStream, list);
 
             cryptoStream.FlushFinalBlock();
         }
@@ -56,25 +56,25 @@ namespace LoginConsoleApp.Classes
         public List<T> Deserialize(Stream stream)
         {
             // First 16 bytes is the initialization vector.
-            byte[] iv = new byte[16];
-            stream.Read(iv, 0, 16);
+            byte[] ivBytes = new byte[16];
+            stream.Read(ivBytes, 0, 16);
 
             using AesCryptoServiceProvider aes = new();
             aes.Key = _secretKey;
-            aes.IV = iv;
+            aes.IV = ivBytes;
 
             CryptoStream cryptoStream = new(stream, aes.CreateDecryptor(), CryptoStreamMode.Read);
 
             return ProtoBuf.Serializer.Deserialize<List<T>>(cryptoStream);
         }
 
-        // This RNG is thread safe. Used to generate IV.
-        private static readonly RNGCryptoServiceProvider rng = new ();
+
+        private static readonly RNGCryptoServiceProvider provider = new();
 
         private static byte[] GenerateRandomBytes(int length)
         {
             byte[] randomBytes = new byte[length];
-            rng.GetBytes(randomBytes);
+            provider.GetBytes(randomBytes);
             return randomBytes;
         }
     }

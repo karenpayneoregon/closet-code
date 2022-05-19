@@ -42,19 +42,21 @@ namespace LoginConsoleApp
         {
             Render(
                 new Rule()
-                    .RuleStyle(Style.Parse("yellow"))
+                    .RuleStyle(Style.Parse("white"))
                     .HeavyBorder()
                     .LeftAligned());
 
-            AnsiConsole.Write(new FigletText("Welcome").Centered().Color(Color.Yellow));
+            AnsiConsole.Write(new FigletText("Welcome")
+                .Centered()
+                .Color(Color.White));
 
             Render(
                 new Rule()
-                    .RuleStyle(Style.Parse("yellow"))
+                    .RuleStyle(Style.Parse("white"))
                     .HeavyBorder()
                     .LeftAligned());
         }
-        public static void DrawGowayHeader()
+        public static void DrawGoAwayHeader()
         {
             Render(
                 new Rule()
@@ -62,7 +64,9 @@ namespace LoginConsoleApp
                     .HeavyBorder()
                     .LeftAligned());
 
-            AnsiConsole.Write(new FigletText("Guards, an intruder ").Centered().Color(Color.Yellow));
+            AnsiConsole.Write(new FigletText("Guards, an intruder ")
+                .Centered()
+                .Color(Color.Yellow));
 
             Render(
                 new Rule()
@@ -79,7 +83,7 @@ namespace LoginConsoleApp
         [ModuleInitializer]
         public static void Init()
         {
-            Console.Title = "Code sample - Spectre.Console login";
+            Console.Title = "Code sample - Spectre.Console/protobuf-net login";
         }
     }
 }

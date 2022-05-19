@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using LoginConsoleApp.Classes;
+using static LoginConsoleApp.Classes.ConsoleHelpers;
 
 namespace LoginConsoleApp
 {
@@ -25,14 +26,14 @@ namespace LoginConsoleApp
 
             if (user is null)
             {
-                SpectreOperations.DrawGowayHeader();
+                SpectreOperations.DrawGoAwayHeader();
             }
             else
             {
                 SpectreOperations.DrawWelcomeHeader();
             }
 
-            Console.ReadLine();
+            ReadLineAsStringTimeout();
         }
     }
 }
