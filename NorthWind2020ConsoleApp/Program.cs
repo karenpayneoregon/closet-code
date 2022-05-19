@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using NorthWind2020ConsoleApp.Classes;
+using NorthWind2020ConsoleApp.Models;
 
 
 namespace NorthWind2020ConsoleApp
@@ -10,7 +12,9 @@ namespace NorthWind2020ConsoleApp
         static void Main(string[] args)
         {
             EmployeeOperations.EmployeeReportsTo();
+            
             Console.ReadLine();
+
         }
     }
 }

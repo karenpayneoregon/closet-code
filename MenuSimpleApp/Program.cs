@@ -17,12 +17,12 @@ namespace MenuSimpleApp
                 Console.Clear();
                 
                 var menuItem = AnsiConsole.Prompt(MenuOperations.SelectionPrompt());
+
                 if (menuItem.Id == -1)
                 {
                     
                     AnsiConsole.Write(new FigletText("Bye").LeftAligned().Color(Color.Red));
                     ReadLineAsStringTimeout();
-
                     return;
 
                 }

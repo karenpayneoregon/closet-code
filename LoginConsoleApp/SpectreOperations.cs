@@ -38,11 +38,37 @@ namespace LoginConsoleApp
                     .HeavyBorder()
                     .LeftAligned());
         }
-
-        public static void GoAway()
+        public static void DrawWelcomeHeader()
         {
-            AnsiConsole.Write(new Panel(new Text("Go away").LeftAligned()).SquareBorder());
-            Console.ReadLine();
+            Render(
+                new Rule()
+                    .RuleStyle(Style.Parse("yellow"))
+                    .HeavyBorder()
+                    .LeftAligned());
+
+            AnsiConsole.Write(new FigletText("Welcome").Centered().Color(Color.Yellow));
+
+            Render(
+                new Rule()
+                    .RuleStyle(Style.Parse("yellow"))
+                    .HeavyBorder()
+                    .LeftAligned());
+        }
+        public static void DrawGowayHeader()
+        {
+            Render(
+                new Rule()
+                    .RuleStyle(Style.Parse("red"))
+                    .HeavyBorder()
+                    .LeftAligned());
+
+            AnsiConsole.Write(new FigletText("Guards, an intruder ").Centered().Color(Color.Yellow));
+
+            Render(
+                new Rule()
+                    .RuleStyle(Style.Parse("red"))
+                    .HeavyBorder()
+                    .LeftAligned());
         }
         public static void Render(Rule rule)
         {

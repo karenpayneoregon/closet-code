@@ -21,7 +21,7 @@ namespace MenuSimpleApp.Classes
             menu.Title("Select a [B]category[/]");
             menu.PageSize = 14;
             menu.MoreChoicesText("[grey](Move up and down to reveal more categories)[/]");
-            menu.AddChoices(MockOperations.MenuItems());
+            menu.AddChoices(MockOperations.GetMenuItems());
 
             return menu;
 

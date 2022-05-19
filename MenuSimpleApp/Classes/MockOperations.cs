@@ -10,19 +10,29 @@ namespace MenuSimpleApp.Classes
     public class MockOperations
     {
         /// <summary>
-        /// Create a list of months
+        /// Name of the json file to read from
         /// </summary>
-        /// <returns></returns>
+        private static string _fileName => Path.Combine(
+            AppDomain.CurrentDomain.BaseDirectory, "Menu.json");
+
+        /// <summary>
+        /// Create a list of months
+        /// Information property is not need as we get details from the .json file
+        /// </summary>
+        /// <returns>List of <see cref="MenuItem"/></returns>
         public static List<MenuItem> MenuItems()
         {
 
             var list = DateTimeFormatInfo.CurrentInfo.MonthNames[..^1]
-                .Select((value, index) => new { Name = value, Id = index + 1 })
+                .Select((value, index) => new
+                {
+                    Name = value, 
+                    Id = index + 1
+                })
                 .ToList().Select(anonymous => new MenuItem()
                 {
                     Id = anonymous.Id, 
-                    Name = anonymous.Name,
-                    Information = "TODO"
+                    Name = anonymous.Name
                 })
                 .ToList();
 
@@ -32,14 +42,14 @@ namespace MenuSimpleApp.Classes
         }
 
         /// <summary>
-        /// Name of the json file to read from
+        /// Read month details from json file
         /// </summary>
-        private static string _fileName => Path.Combine(
-            AppDomain.CurrentDomain.BaseDirectory, "Menu.json");
+        /// <returns>List of <see cref="MenuItem"/></returns>
+        public static List<MenuItem> GetMenuItems() 
+            => JsonSerializer.Deserialize<List<MenuItem>>(File.ReadAllText(_fileName));
 
         /// <summary>
         /// Create .json file and note the .Information property is set to
-        /// `TODO` for all items
         /// </summary>
         public static void SerializeMonths()
         {
@@ -51,12 +61,5 @@ namespace MenuSimpleApp.Classes
             File.WriteAllText(_fileName, json);
 
         }
-
-        /// <summary>
-        /// Read month details from json file
-        /// </summary>
-        /// <returns>List of <see cref="MenuItem"/></returns>
-        public static List<MenuItem> GetMenuItems() 
-            => JsonSerializer.Deserialize<List<MenuItem>>(File.ReadAllText(_fileName));
     }
 }

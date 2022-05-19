@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using NorthWind2020ConsoleApp.Data;
 using NorthWind2020ConsoleApp.Models;
 
@@ -43,5 +44,6 @@ namespace NorthWind2020ConsoleApp.Classes
             }
 
         }
+        
     }
 }
