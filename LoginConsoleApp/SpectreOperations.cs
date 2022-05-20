@@ -74,6 +74,24 @@ namespace LoginConsoleApp
                     .HeavyBorder()
                     .LeftAligned());
         }
+        public static void CanNotContinueHeader()
+        {
+            Render(
+                new Rule()
+                    .RuleStyle(Style.Parse("red"))
+                    .HeavyBorder()
+                    .LeftAligned());
+
+            AnsiConsole.Write(new FigletText("Error 1X")
+                .Centered()
+                .Color(Color.Red));
+
+            Render(
+                new Rule()
+                    .RuleStyle(Style.Parse("red"))
+                    .HeavyBorder()
+                    .LeftAligned());
+        }
         public static void Render(Rule rule)
         {
             AnsiConsole.Write(rule);

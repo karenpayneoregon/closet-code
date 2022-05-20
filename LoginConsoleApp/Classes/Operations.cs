@@ -1,18 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 using LoginConsoleApp.Models;
 
 namespace LoginConsoleApp.Classes
 {
     public class Operations
     {
-        public static string _fileName => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DataLibrary.dll");
+        public static string FileName => 
+            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DataLibrary.dll");
+
+        public static bool FileCheck()
+        {
+            try
+            {
+                DeserializeUsers();
+                return true;
+            }
+            catch 
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// Create encrypted file with users
@@ -20,10 +30,8 @@ namespace LoginConsoleApp.Classes
         public static void SerializeUsers()
         {
             CryptoSerializer<User> cryptoSerializer = new(Secrets.Key);
-            
-            using FileStream fileStream = new(_fileName, FileMode.OpenOrCreate);
+            using FileStream fileStream = new(FileName, FileMode.OpenOrCreate);
             cryptoSerializer.Serialize(Users, fileStream);
-
         }
 
         /// <summary>
@@ -32,9 +40,10 @@ namespace LoginConsoleApp.Classes
         /// <returns></returns>
         public static List<User> DeserializeUsers()
         {
-            CryptoSerializer<User> cryptoSerializer = new CryptoSerializer<User>(Secrets.Key);
-            using FileStream fileStream = new FileStream(_fileName, FileMode.Open);
+            CryptoSerializer<User> cryptoSerializer = new(Secrets.Key);
+            using FileStream fileStream = new(FileName, FileMode.Open);
             return cryptoSerializer.Deserialize(fileStream);
+
         }
 
         /// <summary>
@@ -44,7 +53,7 @@ namespace LoginConsoleApp.Classes
         {
             new() { Name = "karenpayne", Password = "@miata2019" },
             new() { Name = "bartsimpson", Password = "StupidPassword" },
-            new() { Name = "betsy", Password = "myFlag" },
+            new() { Name = "betsy", Password = "@myFlag1776" },
         };
 
         public static void CreateReadUsers()

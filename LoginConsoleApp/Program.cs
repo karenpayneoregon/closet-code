@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using LoginConsoleApp.Classes;
 using static LoginConsoleApp.Classes.ConsoleHelpers;
@@ -9,7 +10,20 @@ namespace LoginConsoleApp
     {
         static void Main(string[] args)
         {
-            Menu();
+            Operations.SerializeUsers();
+
+
+            if (Operations.FileCheck())
+            {
+                Menu();
+            }
+            else
+            {
+                SpectreOperations.CanNotContinueHeader();
+                Console.WriteLine("Contact support, press any key to terminate");
+                Console.ReadLine();
+            }
+           
         }
 
         private static void Menu()
@@ -18,6 +32,7 @@ namespace LoginConsoleApp
 
             var name = SpectreOperations.AskName();
             var password = SpectreOperations.AskPassword();
+
             var users = Operations.DeserializeUsers();
 
             var user = users.FirstOrDefault(user => user.Name == name && user.Password == password);
