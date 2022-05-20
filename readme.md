@@ -1,4 +1,7 @@
-# Karen's closet code space
+
+![image](assets/header.png)
+
+# About
 
 This repository is home to useful and obscure code samples.
 
