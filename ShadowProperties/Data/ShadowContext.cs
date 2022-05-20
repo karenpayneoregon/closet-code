@@ -32,6 +32,10 @@ namespace ShadowProperties.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
+                /*
+                 * Uses NuGet package
+                 * https://www.nuget.org/packages/EntityFrameworkCoreHelpers/
+                 */
                 DbContextConnections.NoLogging(optionsBuilder);
             }
         }
