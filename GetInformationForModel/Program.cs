@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace GetInformationForModel
@@ -19,5 +20,11 @@ namespace GetInformationForModel
             person.IterateClassProperties();
             Console.ReadLine();
         }
+        [ModuleInitializer]
+        public static void Init()
+        {
+            Console.Title = "Code sample model info";
+        }
+
     }
 }

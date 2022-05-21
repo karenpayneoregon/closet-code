@@ -25,12 +25,11 @@ namespace CalculateExpirationApp
 
         private static async Task ElapsedTime()
         {
-            DateTime startDate;
             var endDate = DateTime.Now;
 
             for (int index = 1; index < 5; index++)
             {
-                startDate = DateTime.Now.AddHours(-index).AddMinutes(1).AddSeconds(-index);
+                var startDate = DateTime.Now.AddHours(-index).AddMinutes(1).AddSeconds(-index);
                 Console.WriteLine($"{(endDate - startDate).FormatElapsed()}");
                 await Task.Delay(20);
             }

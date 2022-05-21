@@ -23,6 +23,7 @@
             int exponent = (bits[3] & 0x00FF0000) >> 16;
             int result = exponent;
             ulong lowDecimal = lowInt | (midInt << 32);
+
             while (result > 0 && (lowDecimal % 10) == 0)
             {
                 result--;

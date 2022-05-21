@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using EnhancedPatternMatching.LanguageExtensions;
+using EnhancedPatternMatching.Models;
 
 namespace EnhancedPatternMatching
 {
@@ -8,7 +9,7 @@ namespace EnhancedPatternMatching
     {
         static void Main(string[] args)
         {
-            IterateCharactersInString();
+            //IterateCharactersInString();
             WelcomePerson();
 
             Console.ReadLine();
@@ -27,18 +28,9 @@ namespace EnhancedPatternMatching
         private static void WelcomePerson()
         {
             var visitor = new Visitor() { FirstName = "Karen", Country = "Mexico" };
-            Console.WriteLine($"{Greetings(visitor)} {visitor.FirstName}");
+            Console.WriteLine($"{Howdy.TimeOfDay()}, {visitor.Greetings()} {visitor.FirstName}");
         }
-
-        static string Greetings(Visitor visitor) => visitor switch
-            {
-                { Country: "USA" } => "Hello",
-                { Country: "Germany" } => "hallo",
-                { Country: "Mexico" } => "Hola",
-                _ => "Whazzup"
-            };
-
-
+        
         
         [ModuleInitializer]
         public static void Init()
@@ -48,9 +40,5 @@ namespace EnhancedPatternMatching
 
     }
 
-    public class Visitor
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
+
 }

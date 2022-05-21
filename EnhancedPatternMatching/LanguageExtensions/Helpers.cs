@@ -1,4 +1,6 @@
-﻿namespace EnhancedPatternMatching.LanguageExtensions
+﻿using EnhancedPatternMatching.Models;
+
+namespace EnhancedPatternMatching.LanguageExtensions
 {
     public static class Helpers
     {
@@ -14,5 +16,13 @@
         /// </summary>
         public static bool IsLetterSeparator(this char character) => 
             char.IsLetter(character) || char.IsSeparator(character) && !char.IsWhiteSpace(character);
+
+        public static string Greetings(this Visitor visitor) => visitor switch
+        {
+            { Country: "USA" } => "Hello",
+            { Country: "Germany" } => "hallo",
+            { Country: "Mexico" } => "Hola",
+            _ => "Whazzup"
+        };
     }
 }
