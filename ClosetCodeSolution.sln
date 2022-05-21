@@ -213,6 +213,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryHelpersConsoleApp", "Q
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewCombo1", "DataGridViewCombo\DataGridViewCombo1.csproj", "{585DF517-D420-41C0-AA75-7FCB7C69B167}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayNoDuplicates", "ArrayNoDuplicates\ArrayNoDuplicates.csproj", "{F04B3C86-C513-48FD-9093-54DDD0ECA079}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -527,6 +529,10 @@ Global
 		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04B3C86-C513-48FD-9093-54DDD0ECA079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04B3C86-C513-48FD-9093-54DDD0ECA079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04B3C86-C513-48FD-9093-54DDD0ECA079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04B3C86-C513-48FD-9093-54DDD0ECA079}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -621,6 +627,7 @@ Global
 		{378C195B-E676-4152-BDF7-9F519CCC6CE2} = {4E4EF6DA-E585-4453-BE33-146FD67A19EE}
 		{71921405-795C-4123-AC46-FD7E3784D748} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{585DF517-D420-41C0-AA75-7FCB7C69B167} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
+		{F04B3C86-C513-48FD-9093-54DDD0ECA079} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
