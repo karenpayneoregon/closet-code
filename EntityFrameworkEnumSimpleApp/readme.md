@@ -1,5 +1,7 @@
 ﻿# About
 
+[![](https://img.shields.io/badge/EF%20Core-Code-green)]()
+
 Example for using an `enum` as a property for a model.
 
 ## Table

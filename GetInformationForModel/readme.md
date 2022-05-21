@@ -2,6 +2,8 @@
 
 Partly generic code to iterate an instance of a model/class
 
+[![name](https://img.shields.io/badge/Cool-Code-green)](https://img.shields.io/badge/Cool-Code-green)
+
 ```csharp
 public static class Helpers
 {
@@ -23,3 +25,4 @@ public static class Helpers
     }
 }
 ```
+
