@@ -7,23 +7,23 @@ Add the following to .csproj
 Slim down to, in this case three
 
 ```xml
-	<PropertyGroup>
-		<LangVersion>9.0</LangVersion>
-		<TargetFramework>net5.0</TargetFramework>
-		<IsPackable>false</IsPackable>
-		<SatelliteResourceLanguages>en;de;pt</SatelliteResourceLanguages>
-	</PropertyGroup>
+<PropertyGroup>
+	<LangVersion>9.0</LangVersion>
+	<TargetFramework>net5.0</TargetFramework>
+	<IsPackable>false</IsPackable>
+	<SatelliteResourceLanguages>en;de;pt</SatelliteResourceLanguages>
+</PropertyGroup>
 ```
 
 Slim down to one
 
 ```xml
-	<PropertyGroup>
-		<LangVersion>9.0</LangVersion>
-		<TargetFramework>net5.0</TargetFramework>
-		<IsPackable>false</IsPackable>
-		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
-	</PropertyGroup>
+<PropertyGroup>
+	<LangVersion>9.0</LangVersion>
+	<TargetFramework>net5.0</TargetFramework>
+	<IsPackable>false</IsPackable>
+	<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+</PropertyGroup>
 ```
 
 ![Satellite Resource Languages](assets/TipsTricks/SatelliteResourceLanguages.png)

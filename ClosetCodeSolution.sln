@@ -219,6 +219,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwnedEntities", "OwnedEntit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagnosticListeners", "DiagnosticListeners\DiagnosticListeners.csproj", "{5C61C018-0CAD-46B9-96A8-6012324E4868}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersOnlyTextBox", "NumbersOnlyTextBox\NumbersOnlyTextBox.csproj", "{21116E15-482D-4A29-991C-2D77EFD01303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassStringFromChildToParentForm", "PassStringFromChildToParentForm\PassStringFromChildToParentForm.csproj", "{2C2FBC23-6739-4FA1-9455-E9CF08BA7067}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -545,6 +549,14 @@ Global
 		{5C61C018-0CAD-46B9-96A8-6012324E4868}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C61C018-0CAD-46B9-96A8-6012324E4868}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C61C018-0CAD-46B9-96A8-6012324E4868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21116E15-482D-4A29-991C-2D77EFD01303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21116E15-482D-4A29-991C-2D77EFD01303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21116E15-482D-4A29-991C-2D77EFD01303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21116E15-482D-4A29-991C-2D77EFD01303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C2FBC23-6739-4FA1-9455-E9CF08BA7067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2FBC23-6739-4FA1-9455-E9CF08BA7067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2FBC23-6739-4FA1-9455-E9CF08BA7067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2FBC23-6739-4FA1-9455-E9CF08BA7067}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -642,6 +654,8 @@ Global
 		{F04B3C86-C513-48FD-9093-54DDD0ECA079} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{38CDED00-1675-4922-BC36-EDE55D9E1C8B} = {AC3B9674-F6F0-447D-A392-72344A74EB17}
 		{5C61C018-0CAD-46B9-96A8-6012324E4868} = {AC3B9674-F6F0-447D-A392-72344A74EB17}
+		{21116E15-482D-4A29-991C-2D77EFD01303} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
+		{2C2FBC23-6739-4FA1-9455-E9CF08BA7067} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
