@@ -4,6 +4,8 @@
 
 Example for using an `enum` as a property for a model.
 
+![Book Category](assets/bookCategory.png)
+
 ## Table
 
 ```csharp
