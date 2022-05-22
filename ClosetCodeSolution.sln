@@ -225,6 +225,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassStringFromChildToParent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewAddRowsRaw", "DataGridViewAddRowsRaw\DataGridViewAddRowsRaw.csproj", "{1B0F3224-8FD4-4D42-BF43-E9760A61B067}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewExport", "DataGridViewExport\DataGridViewExport.csproj", "{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -563,6 +565,10 @@ Global
 		{1B0F3224-8FD4-4D42-BF43-E9760A61B067}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B0F3224-8FD4-4D42-BF43-E9760A61B067}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B0F3224-8FD4-4D42-BF43-E9760A61B067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -663,6 +669,7 @@ Global
 		{21116E15-482D-4A29-991C-2D77EFD01303} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
 		{2C2FBC23-6739-4FA1-9455-E9CF08BA7067} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
 		{1B0F3224-8FD4-4D42-BF43-E9760A61B067} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
+		{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
