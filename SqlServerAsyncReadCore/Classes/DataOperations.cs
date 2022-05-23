@@ -32,7 +32,7 @@ namespace SqlServerAsyncReadCore.Classes
                 {
                     return null;
                 }
-                catch (Exception exception) // consider adapting the return type to tuple and include the exception
+                catch // consider adapting the return type to tuple and include the exception
                 {
                     return null;
                 }
