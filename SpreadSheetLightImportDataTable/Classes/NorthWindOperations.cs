@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using DocumentFormat.OpenXml.Spreadsheet;
 using FastMember;
 using SpreadsheetLight;
+using Color = System.Drawing.Color;
 
 namespace SpreadSheetLightImportDataTable.Classes
 {
@@ -22,30 +23,60 @@ namespace SpreadSheetLightImportDataTable.Classes
         {
             // SpreadSheetLight also has a DataTable so we must point to the correct class.
             System.Data.DataTable table = new();
-
+            int dateColumnIndex = 5;
             // 
             using var reader = ObjectReader.Create(list);
 
             table.Load(reader);
 
             table.Columns["Title"].SetOrdinal(1);
+            table.Columns["Modified"].SetOrdinal(dateColumnIndex);
             table.Columns["CompanyName"].ColumnName = "Company";
 
             using var document = new SLDocument();
+            var headerStyle = HeaderStye(document);
 
-            SLStyle headerStyle = document.CreateStyle();
-            headerStyle.Font.Bold = true;
-            headerStyle.Alignment.Horizontal = HorizontalAlignmentValues.Right;
+            SLStyle dateStyle = document.CreateStyle();
+            dateStyle.FormatCode = "mm-dd-yyyy";
 
             var stats = document.GetWorksheetStatistics();
 
             document.ImportDataTable(1, SLConvert.ToColumnIndex("A"), table, true);
-            document.AutoFitColumn(1, stats.EndColumnIndex);
+            document.SetColumnStyle(dateColumnIndex +1, dateStyle);
+
+            for (int index = 1; index < table.Columns.Count; index++)
+            {
+                document.AutoFitColumn(index);
+            }
+            document.AutoFitColumn(dateColumnIndex + 1);
+            
             document.RenameWorksheet(SLDocument.DefaultFirstSheetName, "Customers");
-            document.SetRowStyle(1, headerStyle);
+
+            document.SetCellStyle(1, 1, 1, 6, headerStyle);
+
+            // one row below header
+            document.SetActiveCell("A2");
+
+            // ensure header is visible when scrolling down
+            document.FreezePanes(1,6);
 
             document.SaveAs(fileName);
             
+        }
+
+        public static SLStyle HeaderStye(SLDocument document)
+        {
+            
+            SLStyle headerStyle = document.CreateStyle();
+
+            headerStyle.Font.Bold = true;
+            headerStyle.Font.FontColor = Color.White;
+            headerStyle.Fill.SetPattern(
+                PatternValues.LightGray,
+                SLThemeColorIndexValues.Accent1Color,
+                SLThemeColorIndexValues.Accent5Color);
+
+            return headerStyle;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace NorthWind2020Library.Classes
                     current.CountryIdentifierNavigation.Name, 
                     current.Contact.ContactTypeIdentifierNavigation.ContactTitle, 
                     $"{current.Contact.FirstName} {current.Contact.LastName}", 
-                    current.Phone))
+                    current.Phone, current.ModifiedDate))
                 .ToList();
 
         }
