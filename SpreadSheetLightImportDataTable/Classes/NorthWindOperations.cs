@@ -20,9 +20,14 @@ namespace SpreadSheetLightImportDataTable.Classes
         /// </remarks>
         public static void CustomersToExcel(List<CustomersForExcel> list, string fileName)
         {
+            // SpreadSheetLight also has a DataTable so we must point to the correct class.
             System.Data.DataTable table = new();
+
+            // 
             using var reader = ObjectReader.Create(list);
+
             table.Load(reader);
+
             table.Columns["Title"].SetOrdinal(1);
             table.Columns["CompanyName"].ColumnName = "Company";
 

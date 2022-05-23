@@ -91,7 +91,20 @@ namespace SpreadSheetLightImportDataTable.Classes
             }
 
         }
-
+        /// <summary>
+        /// Create a new Excel file, rename the default sheet from
+        /// Sheet1 to the value in pSheetName
+        /// </summary>
+        /// <param name="pFileName"></param>
+        /// <param name="pSheetName"></param>
+        /// <returns></returns>
+        public bool CreateNewFile(string pFileName, string pSheetName)
+        {
+            using var document = new SLDocument();
+            document.RenameWorksheet("Sheet1", pSheetName);
+            document.SaveAs(pFileName);
+            return true;
+        }
         /// <summary>
         /// Framework for
         /// * Create a new Excel file
@@ -142,7 +155,28 @@ namespace SpreadSheetLightImportDataTable.Classes
                 return (false, exception);
             }
         }
+        /// <summary>
+        /// Get last row in <see cref="pFileName"/> for <see cref="pSheetName"/>
+        /// </summary>
+        /// <param name="pFileName">Existing file name</param>
+        /// <param name="pSheetName">Existing sheet</param>
+        /// <returns>Last row or zero</returns>
+        /// <remarks>
+        /// if unsure if sheet exists use <see cref="SheetExists"/> first
+        /// </remarks>
+        public int GetWorkSheetLastRow(string pFileName, string pSheetName)
+        {
+            var lastRow = 0;
 
+            using var document = new SLDocument(pFileName, pSheetName);
+            /*
+             * get statistics, in this case we want the last used row so we
+             * simply index into EndRowIndex yet there are more properties.
+             */
+            lastRow = document.GetWorksheetStatistics().EndRowIndex;
+
+            return lastRow;
+        }
     }
 }
 
