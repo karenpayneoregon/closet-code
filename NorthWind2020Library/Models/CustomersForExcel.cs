@@ -7,6 +7,7 @@ namespace NorthWind2020Library.Models
     /// </summary>
     public class CustomersForExcel
     {
+        public int Id { get; set; }
         public string CompanyName { get; }
         public string Country { get; }
         public string Title { get; }
@@ -15,7 +16,7 @@ namespace NorthWind2020Library.Models
         public DateTime Modified { get; set; }
         public override string ToString() => CompanyName;
 
-        public CustomersForExcel(string companyName, string country, string title, string contact, string phone, DateTime? modifiedDateTime)
+        public CustomersForExcel(string companyName, string country, string title, string contact, string phone, DateTime? modifiedDateTime, int id)
         {
             CompanyName = companyName;
             Country = country;
@@ -23,6 +24,7 @@ namespace NorthWind2020Library.Models
             Contact = contact;
             Phone = phone;
             if (modifiedDateTime != null) Modified = modifiedDateTime.Value;
+            Id = id;
         }
     }
 }

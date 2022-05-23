@@ -23,14 +23,15 @@ namespace SpreadSheetLightImportDataTable.Classes
         {
             // SpreadSheetLight also has a DataTable so we must point to the correct class.
             System.Data.DataTable table = new();
-            int dateColumnIndex = 5;
+            int dateColumnIndex = 6;
             // 
             using var reader = ObjectReader.Create(list);
 
             table.Load(reader);
-
+            
             table.Columns["Title"].SetOrdinal(1);
             table.Columns["Modified"].SetOrdinal(dateColumnIndex);
+            table.Columns["id"].SetOrdinal(6);
             table.Columns["CompanyName"].ColumnName = "Company";
 
             using var document = new SLDocument();
@@ -39,10 +40,9 @@ namespace SpreadSheetLightImportDataTable.Classes
             SLStyle dateStyle = document.CreateStyle();
             dateStyle.FormatCode = "mm-dd-yyyy";
 
-            var stats = document.GetWorksheetStatistics();
-
             document.ImportDataTable(1, SLConvert.ToColumnIndex("A"), table, true);
-            document.SetColumnStyle(dateColumnIndex +1, dateStyle);
+            document.HideColumn(7, 7);
+            document.SetColumnStyle(dateColumnIndex, dateStyle);
 
             for (int columnIndex = 1; columnIndex < table.Columns.Count; columnIndex++)
             {
