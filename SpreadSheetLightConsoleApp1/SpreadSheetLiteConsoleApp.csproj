@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<LangVersion>9.0</LangVersion>
+		<TargetFramework>net5.0</TargetFramework>
+		<ApplicationIcon>Excel.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="SpreadsheetLight.Core" Version="3.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Demo1.xlsx">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>

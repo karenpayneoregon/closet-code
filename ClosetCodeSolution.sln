@@ -239,6 +239,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Excel", "Excel", "{ED062B06
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Excel console", "Excel console", "{0382228E-C56D-42B3-AD4D-AC5F164C1BDC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpreadSheetLiteConsoleApp", "SpreadSheetLightConsoleApp1\SpreadSheetLiteConsoleApp.csproj", "{F3219D37-F972-43AB-9641-CA16B8121B4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -597,6 +599,10 @@ Global
 		{8DC3A253-A0F3-4E98-A64B-2241AF3A07C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DC3A253-A0F3-4E98-A64B-2241AF3A07C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DC3A253-A0F3-4E98-A64B-2241AF3A07C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3219D37-F972-43AB-9641-CA16B8121B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3219D37-F972-43AB-9641-CA16B8121B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3219D37-F972-43AB-9641-CA16B8121B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3219D37-F972-43AB-9641-CA16B8121B4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -704,6 +710,7 @@ Global
 		{8DC3A253-A0F3-4E98-A64B-2241AF3A07C4} = {0382228E-C56D-42B3-AD4D-AC5F164C1BDC}
 		{ED062B06-C9DB-4797-AFA8-A168C7C19BE9} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{0382228E-C56D-42B3-AD4D-AC5F164C1BDC} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{F3219D37-F972-43AB-9641-CA16B8121B4A} = {0382228E-C56D-42B3-AD4D-AC5F164C1BDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
