@@ -44,10 +44,11 @@ namespace SpreadSheetLightImportDataTable.Classes
             document.ImportDataTable(1, SLConvert.ToColumnIndex("A"), table, true);
             document.SetColumnStyle(dateColumnIndex +1, dateStyle);
 
-            for (int index = 1; index < table.Columns.Count; index++)
+            for (int columnIndex = 1; columnIndex < table.Columns.Count; columnIndex++)
             {
-                document.AutoFitColumn(index);
+                document.AutoFitColumn(columnIndex);
             }
+
             document.AutoFitColumn(dateColumnIndex + 1);
             
             document.RenameWorksheet(SLDocument.DefaultFirstSheetName, "Customers");

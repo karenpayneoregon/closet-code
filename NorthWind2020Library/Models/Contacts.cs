@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using NorthWind2020Library.Models;
 
 namespace NorthWind2020ConsoleApp.Models
 {

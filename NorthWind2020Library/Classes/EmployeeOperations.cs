@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NorthWind2020ConsoleApp.Data;
 using NorthWind2020ConsoleApp.Models;
+using NorthWind2020Library.Models;
 
 namespace NorthWind2020Library.Classes
 {

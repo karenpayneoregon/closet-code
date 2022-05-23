@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using NorthWind2020ConsoleApp.Data;
 using NorthWind2020ConsoleApp.Models;
 using System;
+using NorthWind2020Library.Models;
 
 namespace NorthWind2020ConsoleApp.Data.Configurations
 {
