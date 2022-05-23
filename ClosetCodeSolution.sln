@@ -209,15 +209,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{4E4EF6DA-E58
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VendorsApp", "VendorsApp\VendorsApp.csproj", "{378C195B-E676-4152-BDF7-9F519CCC6CE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryHelpersConsoleApp", "QueryHelpersConsoleApp\QueryHelpersConsoleApp.csproj", "{71921405-795C-4123-AC46-FD7E3784D748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryHelpersConsoleApp", "QueryHelpersConsoleApp\QueryHelpersConsoleApp.csproj", "{71921405-795C-4123-AC46-FD7E3784D748}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewCombo1", "DataGridViewCombo\DataGridViewCombo1.csproj", "{585DF517-D420-41C0-AA75-7FCB7C69B167}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayNoDuplicates", "ArrayNoDuplicates\ArrayNoDuplicates.csproj", "{F04B3C86-C513-48FD-9093-54DDD0ECA079}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayNoDuplicates", "ArrayNoDuplicates\ArrayNoDuplicates.csproj", "{F04B3C86-C513-48FD-9093-54DDD0ECA079}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwnedEntities", "OwnedEntities\OwnedEntities.csproj", "{38CDED00-1675-4922-BC36-EDE55D9E1C8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OwnedEntities", "OwnedEntities\OwnedEntities.csproj", "{38CDED00-1675-4922-BC36-EDE55D9E1C8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagnosticListeners", "DiagnosticListeners\DiagnosticListeners.csproj", "{5C61C018-0CAD-46B9-96A8-6012324E4868}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiagnosticListeners", "DiagnosticListeners\DiagnosticListeners.csproj", "{5C61C018-0CAD-46B9-96A8-6012324E4868}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersOnlyTextBox", "NumbersOnlyTextBox\NumbersOnlyTextBox.csproj", "{21116E15-482D-4A29-991C-2D77EFD01303}"
 EndProject
@@ -225,7 +225,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassStringFromChildToParent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewAddRowsRaw", "DataGridViewAddRowsRaw\DataGridViewAddRowsRaw.csproj", "{1B0F3224-8FD4-4D42-BF43-E9760A61B067}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewExport", "DataGridViewExport\DataGridViewExport.csproj", "{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGridViewExport", "DataGridViewExport\DataGridViewExport.csproj", "{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransformingConsoleCodeSample", "TransformingConsoleCodeSample\TransformingConsoleCodeSample.csproj", "{687A8075-203A-488D-8231-5797C2E1C4E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -569,6 +571,10 @@ Global
 		{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{687A8075-203A-488D-8231-5797C2E1C4E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{687A8075-203A-488D-8231-5797C2E1C4E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{687A8075-203A-488D-8231-5797C2E1C4E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{687A8075-203A-488D-8231-5797C2E1C4E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -670,6 +676,7 @@ Global
 		{2C2FBC23-6739-4FA1-9455-E9CF08BA7067} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
 		{1B0F3224-8FD4-4D42-BF43-E9760A61B067} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
 		{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{687A8075-203A-488D-8231-5797C2E1C4E8} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

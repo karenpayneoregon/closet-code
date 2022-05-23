@@ -26,6 +26,19 @@ namespace DataGridViewExport.Extensions
                 ))
                 .Select(@row => @row.RowItem));
         }
+        /// <summary>
+        /// Create a string array from DataGridView rows using by default a comma
+        /// between cell data.
+        /// </summary>
+        /// <param name="sender"><see cref="DataGridView"/></param>
+        /// <param name="delimiter">default is a comma, change if another character is desired</param>
+        /// <returns>string array representing rows and cells</returns>
+        public static string[] CreateRowsArray(this DataGridView sender, string delimiter = ",") =>
+            sender.Rows.Cast<DataGridViewRow>()
+                .Where(row => !row.IsNewRow)
+                .Select(row => new { row, rowItem = string.Join(delimiter, Array.ConvertAll(row.Cells.Cast<DataGridViewCell>().ToArray(), cell => (cell.Value == null) ? "" : cell.Value.ToString())) })
+                .Select(@t => @t.rowItem)
+                .ToArray();
 
         public static void ExpandColumns(this DataGridView source, bool sizable = false)
         {

@@ -1,5 +1,10 @@
 # Various tips and tricks
 
+- [.NET Core 5 TaskDialog](https://social.technet.microsoft.com/wiki/contents/articles/54366.net-core-5-taskdialog-c.aspx)
+- [How to unfork a GitHub repository (2022 official method)](https://ralphjsmit.com/unfork-github-repo)
+- GitHub [emoji-cheat-sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+- 
+
 **How to not generate language folders.**
 
 Add the following to .csproj
