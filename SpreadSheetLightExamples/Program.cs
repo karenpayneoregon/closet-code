@@ -13,7 +13,8 @@ namespace SpreadSheetLightExamples
     {
         static void Main(string[] args)
         {
-            List<CustomersForExcel> list = CustomerOperations.ToExcel();
+
+            List<CustomersForExcel> list = CustomerOperations.FromJson();
 
             try
             {
