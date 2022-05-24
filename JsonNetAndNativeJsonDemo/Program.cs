@@ -1,7 +1,7 @@
 ﻿using System;
-using JsonNetBlooper.Classes;
+using JsonNetNativeJsonDemo1.Classes;
 
-namespace JsonNetBlooper
+namespace JsonNetNativeJsonDemo1
 {
     partial class Program
     {

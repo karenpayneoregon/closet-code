@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using JsonNetNativeJsonDemo1.Models;
-using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
-namespace JsonNetBlooper.Classes
+namespace JsonNetNativeJsonDemo1.Classes
 {
     class NativeDataOperations
     {

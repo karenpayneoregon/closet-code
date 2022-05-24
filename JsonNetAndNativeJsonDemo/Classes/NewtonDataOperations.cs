@@ -3,7 +3,7 @@ using System.IO;
 using JsonNetNativeJsonDemo1.Models;
 using Newtonsoft.Json;
 
-namespace JsonNetBlooper.Classes
+namespace JsonNetNativeJsonDemo1.Classes
 {
     class NewtonDataOperations
     {
