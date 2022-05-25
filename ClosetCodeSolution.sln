@@ -227,13 +227,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewAddRowsRaw", "D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGridViewExport", "DataGridViewExport\DataGridViewExport.csproj", "{E52C3E8A-DEBC-41D5-B1B7-3E296FD2630A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransformingConsoleCodeSample", "TransformingConsoleCodeSample\TransformingConsoleCodeSample.csproj", "{687A8075-203A-488D-8231-5797C2E1C4E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransformingConsoleCodeSample", "TransformingConsoleCodeSample\TransformingConsoleCodeSample.csproj", "{687A8075-203A-488D-8231-5797C2E1C4E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadSheetLightImportDataTable", "SpreadSheetLightImportDataTable\SpreadSheetLightImportDataTable.csproj", "{BE51EFE9-53BB-4CBB-BF6C-9E737D000001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpreadSheetLightImportDataTable", "SpreadSheetLightImportDataTable\SpreadSheetLightImportDataTable.csproj", "{BE51EFE9-53BB-4CBB-BF6C-9E737D000001}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind2020Library", "NorthWind2020Library\NorthWind2020Library.csproj", "{9AF7B21E-08EE-4443-A735-27CE55A7AC96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind2020Library", "NorthWind2020Library\NorthWind2020Library.csproj", "{9AF7B21E-08EE-4443-A735-27CE55A7AC96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadSheetLightExamples", "SpreadSheetLightExamples\SpreadSheetLightExamples.csproj", "{8DC3A253-A0F3-4E98-A64B-2241AF3A07C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpreadSheetLightExamples", "SpreadSheetLightExamples\SpreadSheetLightExamples.csproj", "{8DC3A253-A0F3-4E98-A64B-2241AF3A07C4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Excel", "Excel", "{ED062B06-C9DB-4797-AFA8-A168C7C19BE9}"
 EndProject
@@ -245,9 +245,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TableAdapter", "TableAdapte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Access1", "Access1\Access1.csproj", "{16977A41-77CB-4EDF-8BD2-FA1DDDD35CC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullCoalescingOperatorApp", "NullCoalescingOperatorApp\NullCoalescingOperatorApp.csproj", "{8B8FF9B4-B888-4723-BD5F-697406BD29E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullCoalescingOperatorApp", "NullCoalescingOperatorApp\NullCoalescingOperatorApp.csproj", "{8B8FF9B4-B888-4723-BD5F-697406BD29E2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonNetNativeJsonDemo1", "JsonNetAndNativeJsonDemo\JsonNetNativeJsonDemo1.csproj", "{35217EFE-CB7E-4228-9D34-0ABF13DBC475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddSelectToComboBox", "AddSelectToComboBox\AddSelectToComboBox.csproj", "{12AA1274-7043-43A8-B626-0A43ECD39224}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -623,6 +625,10 @@ Global
 		{35217EFE-CB7E-4228-9D34-0ABF13DBC475}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35217EFE-CB7E-4228-9D34-0ABF13DBC475}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35217EFE-CB7E-4228-9D34-0ABF13DBC475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12AA1274-7043-43A8-B626-0A43ECD39224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12AA1274-7043-43A8-B626-0A43ECD39224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12AA1274-7043-43A8-B626-0A43ECD39224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12AA1274-7043-43A8-B626-0A43ECD39224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -735,6 +741,7 @@ Global
 		{16977A41-77CB-4EDF-8BD2-FA1DDDD35CC0} = {8879AE67-14C6-4002-91DB-8CC2E421B128}
 		{8B8FF9B4-B888-4723-BD5F-697406BD29E2} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{35217EFE-CB7E-4228-9D34-0ABF13DBC475} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{12AA1274-7043-43A8-B626-0A43ECD39224} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
