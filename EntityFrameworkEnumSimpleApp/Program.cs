@@ -15,6 +15,10 @@ namespace EntityFrameworkEnumSimpleApp
         {
             using (var context = new BookContext())
             {
+                
+                //context.Database.EnsureDeleted();
+                //context.Database.EnsureCreated();
+
                 AddRecords(context);
                 ShowRecords(context);
             }
@@ -24,23 +28,49 @@ namespace EntityFrameworkEnumSimpleApp
 
         private static void ShowRecords(BookContext context)
         {
-            var table = new Table()
+            var allBooksTable = new Table()
                 .RoundedBorder()
                 .AddColumn("[b]Id[/]")
                 .AddColumn("[b]Title[/]")
                 .AddColumn("[b]Category[/]")
                 .Alignment(Justify.Center)
                 .BorderColor(Color.LightSlateGrey)
-                .Title("[yellow]Books[/]");
+                .Title("[yellow]All books[/]");
 
             var books = context.Book.ToList();
 
             foreach (var book in books)
             {
-                table.AddRow(book.BookId.ToString(), book.Title, Enum.GetName(typeof(BookCategory), book.BookCategory)!);
+                allBooksTable.AddRow(
+                    book.BookId.ToString(),
+                    book.Title, 
+                    Enum.GetName(typeof(BookCategory), book.BookCategory)!
+                    );
             }
 
-            AnsiConsole.Write(table);
+            AnsiConsole.Write(allBooksTable);
+
+            var adventureTable = new Table()
+                .RoundedBorder()
+                .AddColumn("[b]Id[/]")
+                .AddColumn("[b]Title[/]")
+                .AddColumn("[b]Category[/]")
+                .Alignment(Justify.Center)
+                .BorderColor(Color.LightSlateGrey)
+                .Title("[yellow]Adventure books[/]");
+
+
+
+            var list = books.Where(x => x.BookCategory == BookCategory.Adventure).ToList();
+            foreach (var book in list)
+            {
+                adventureTable.AddRow(
+                    book.BookId.ToString(), 
+                    book.Title, 
+                    book.BookCategory.ToString());
+            }
+
+            AnsiConsole.Write(adventureTable);
         }
 
         private static void AddRecords(BookContext context)
@@ -49,9 +79,9 @@ namespace EntityFrameworkEnumSimpleApp
             {
                 List<Book> list = new()
                 {
-                    new() { BookCategory = 5, Title = "First book" },
-                    new() { BookCategory = 3, Title = "Second book" },
-                    new() { BookCategory = 1, Title = "Third book" }
+                    new() { BookCategory = BookCategory.Adventure, Title = "First book" },
+                    new() { BookCategory = BookCategory.Automobile, Title = "Second book" },
+                    new() { BookCategory = BookCategory.Adventure, Title = "Third book" }
                 };
 
                 context.AddRange(list);

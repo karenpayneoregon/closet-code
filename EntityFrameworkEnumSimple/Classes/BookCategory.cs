@@ -1,7 +1,7 @@
 ﻿
 namespace EntityFrameworkEnumSimple.Classes
 {
-    public enum BookCategory
+    public enum BookCategory : int
     {
         SpaceTravel = 1,
         Adventure = 2,

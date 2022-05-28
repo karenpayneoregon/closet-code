@@ -2,6 +2,8 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using EntityFrameworkEnumSimple.Classes;
 
 namespace EntityFrameworkEnumSimple.Models
 {
@@ -9,6 +11,15 @@ namespace EntityFrameworkEnumSimple.Models
     {
         public int BookId { get; set; }
         public string Title { get; set; }
-        public int BookCategory { get; set; }
+        public BookCategory BookCategory { get; set; }
+    }
+
+    public class BookVariant
+    {
+        [Key]
+        public BookCategory BookCategoryId { get; set; }
+        public string Name { get; set; }
+
+        public List<Book> Books { get; set; }
     }
 }
