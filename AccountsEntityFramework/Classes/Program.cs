@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using AccountsHasConversion.Models;
+using AccountsEntityFramework.Context;
+using AccountsEntityFramework.Models;
 using Newtonsoft.Json;
 
 
@@ -17,10 +18,16 @@ namespace AccountsHasConversion
         {
             Account account = new()
             {
+                UserName = "karenpayne",
                 Active = true,
-                CreatedDate = new DateTime(2013, 1, 20),
-                Email = "james@example.com",
-                Roles = new[] { "User", "Admin" }
+                CreatedDate = new DateTime(2022, 5, 2),
+                Email = "payne@gmail.com",
+                Roles = new[]
+                {
+                    "User", 
+                    "Admin", 
+                    "Owner"
+                }
             };
 
             return JsonConvert.DeserializeObject<Account>(
@@ -29,15 +36,15 @@ namespace AccountsHasConversion
 
         private static void ViewAccounts()
         {
-            using var context = new Context.Context();
+            using var context = new Context();
             var accountList = context.Account.ToList();
 
             foreach (var account in accountList)
             {
-                Console.WriteLine($"Id: {account.Id}");
+                Console.WriteLine($"Id: {account.Id,-5}{account.UserName}");
                 foreach (var role in account.Roles)
                 {
-                    Console.WriteLine($"\t{role}");
+                    Console.WriteLine($"{role,14}");
                 }
 
                 Console.WriteLine();
@@ -46,27 +53,12 @@ namespace AccountsHasConversion
         }
         private static void NewAccountRecord()
         {
-            using var context = new Context.Context();
+            using var context = new Context();
 
             var account = IncomingAccount();
             context.Add(account);
             context.SaveChanges();
-
             Console.WriteLine($"Id for new account {account.Id}");
-
-
-            var accountList = context.Account.ToList();
-
-            foreach (var item in accountList)
-            {
-                Console.WriteLine($"Id: {item.Id}");
-                foreach (var role in item.Roles)
-                {
-                    Console.WriteLine($"\t{role}");
-                }
-
-                Console.WriteLine();
-            }
         }
 
         [ModuleInitializer]

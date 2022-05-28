@@ -1,11 +1,12 @@
 ﻿#nullable disable
 using System;
-using AccountsHasConversion.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+using AccountsEntityFramework.Models;
 
 #nullable disable
 
-namespace AccountsHasConversion.Context
+namespace AccountsEntityFramework.Context
 {
     public partial class Context : DbContext
     {
@@ -24,22 +25,20 @@ namespace AccountsHasConversion.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
+
                 optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=EntityFrameworkCoreSamples;Integrated Security=True");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
-
             modelBuilder.Entity<Account>()
                 .Property(e => e.Roles)
                 .HasConversion(
                     value => string.Join(',', value),
-                    value => value.Split(',', 
+                    value => value.Split(',',
                         StringSplitOptions.RemoveEmptyEntries));
-
             OnModelCreatingPartial(modelBuilder);
         }
 
