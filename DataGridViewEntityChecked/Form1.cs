@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
+using DataGridViewEntityChecked.Classes;
 using DataGridViewEntityChecked.Data;
 using DataGridViewEntityChecked.Models;
 
@@ -11,11 +11,14 @@ namespace DataGridViewEntityChecked
     public partial class Form1 : Form
     {
         private readonly BindingSource _bindingSource = new();
+
         public Form1()
         {
             InitializeComponent();
+
             dataGridView1.AutoGenerateColumns = false;
             Shown += OnShown;
+
         }
 
         private void OnShown(object sender, EventArgs e)
@@ -24,6 +27,7 @@ namespace DataGridViewEntityChecked
 
             _bindingSource.DataSource = context.Categories.ToList();
             dataGridView1.DataSource = _bindingSource;
+
         }
 
         private void GetCheckedButton_Click(object sender, EventArgs e)
@@ -48,7 +52,9 @@ namespace DataGridViewEntityChecked
 
                 if (Dialogs.Question($"Remove {checkedCategories.Count} items?"))
                 {
-                    var (success, exception) = DataOperations.CategoriesRemoveRange(checkedCategories);
+                    var (success, exception) = DataOperations
+                        .RemoveRange(checkedCategories);
+
                     if (success)
                     {
                         for (int index = 0; index < checkedCategories.Count; index++)
@@ -62,34 +68,6 @@ namespace DataGridViewEntityChecked
                     }
                 }
             }
-        }
-    }
-
-    public class DataOperations
-    {
-        public static (bool success, Exception exception) CategoriesRemoveRange(List<Categories> list)
-        {
-            try
-            {
-                // remove items here
-                return (true, null);
-            }
-            catch (Exception e)
-            {
-                return (false, e);
-            }
-        }
-    }
-    public static class Dialogs
-    {
-        public static bool Question(string text)
-        {
-            return (MessageBox.Show(
-                text,
-                "Question",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button2) == DialogResult.Yes);
         }
     }
 }

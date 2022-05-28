@@ -8,12 +8,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataGridViewEntityChecked.Models
 {
-    public partial class Categories
+    public class Categories
     {
         [NotMapped]
         [DefaultValue(false)]
         public bool Checked { get; set; }
-
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
     }
