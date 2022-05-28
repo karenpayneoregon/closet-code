@@ -253,6 +253,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddSelectToComboBox", "AddS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountsHasConversion", "AccountsEntityFramework\AccountsHasConversion.csproj", "{EFE34A35-316F-44A6-93DC-2C6217752A67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewEntityChecked", "DataGridViewEntityChecked\DataGridViewEntityChecked.csproj", "{0F8414F0-C3AC-4A18-BAA6-23954314B8D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -635,6 +637,10 @@ Global
 		{EFE34A35-316F-44A6-93DC-2C6217752A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFE34A35-316F-44A6-93DC-2C6217752A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFE34A35-316F-44A6-93DC-2C6217752A67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F8414F0-C3AC-4A18-BAA6-23954314B8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F8414F0-C3AC-4A18-BAA6-23954314B8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F8414F0-C3AC-4A18-BAA6-23954314B8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F8414F0-C3AC-4A18-BAA6-23954314B8D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -749,6 +755,7 @@ Global
 		{35217EFE-CB7E-4228-9D34-0ABF13DBC475} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{12AA1274-7043-43A8-B626-0A43ECD39224} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{EFE34A35-316F-44A6-93DC-2C6217752A67} = {AC3B9674-F6F0-447D-A392-72344A74EB17}
+		{0F8414F0-C3AC-4A18-BAA6-23954314B8D5} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

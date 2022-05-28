@@ -30,13 +30,16 @@ namespace AccountsHasConversion.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
             modelBuilder.Entity<Account>()
                 .Property(e => e.Roles)
                 .HasConversion(
                     value => string.Join(',', value),
                     value => value.Split(',', 
                         StringSplitOptions.RemoveEmptyEntries));
+
             OnModelCreatingPartial(modelBuilder);
         }
 
