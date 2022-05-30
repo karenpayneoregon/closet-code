@@ -9,7 +9,8 @@ namespace LoginConsoleApp.Classes
     public class Operations
     {
         public static string FileName => 
-            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DataLibrary.dll");
+            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, 
+                "DataLibrary.dll");
 
         public static bool FileCheck()
         {
@@ -47,7 +48,8 @@ namespace LoginConsoleApp.Classes
         }
 
         /// <summary>
-        /// Mocked users
+        /// Mocked users, change one that works for you or leave as is.
+        /// Used in <see cref="SerializeUsers"/>
         /// </summary>
         public static List<User> Users => new()
         {
@@ -56,6 +58,9 @@ namespace LoginConsoleApp.Classes
             new() { Name = "betsy", Password = "@myFlag1776" },
         };
 
+        /// <summary>
+        /// Uses <see cref="DeserializeUsers"/> to read back users from a file.
+        /// </summary>
         public static void CreateReadUsers()
         {
             SerializeUsers();

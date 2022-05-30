@@ -30,7 +30,7 @@ namespace LoginConsoleApp
         {
             SpectreOperations.DrawHeader();
 
-            var name = SpectreOperations.AskName();
+            var name = SpectreOperations.AskLoginName();
             var password = SpectreOperations.AskPassword();
 
             var users = Operations.DeserializeUsers();
@@ -49,6 +49,7 @@ namespace LoginConsoleApp
             }
 
             ReadLineAsStringTimeout();
+
         }
     }
 }

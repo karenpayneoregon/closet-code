@@ -36,7 +36,7 @@ namespace LoginConsoleApp.Classes
             byte[] iv = GenerateRandomBytes(16);
             stream.Write(iv, 0, 16);
 
-            using AesCryptoServiceProvider aes = new AesCryptoServiceProvider();
+            using AesCryptoServiceProvider aes = new();
             aes.Key = _secretKey;
             aes.IV = iv;
 

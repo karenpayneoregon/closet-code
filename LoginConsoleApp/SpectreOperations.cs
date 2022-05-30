@@ -5,15 +5,16 @@ using Spectre.Console;
 namespace LoginConsoleApp
 {
     /// <summary>
-    /// Basic code taken from their GitHub repo.
+    /// Helper methods for asking for input from user along with displaying banners
     /// </summary>
     public class SpectreOperations
     {
-        public static string AskName()
+        public static string AskLoginName()
         {
             var name = AnsiConsole.Ask<string>("[thistle1]Login name[/]?");
             return name;
         }
+
         public static string AskPassword()
         {
             return AnsiConsole.Prompt(
@@ -38,6 +39,7 @@ namespace LoginConsoleApp
                     .HeavyBorder()
                     .LeftAligned());
         }
+
         public static void DrawWelcomeHeader()
         {
             Render(
@@ -56,6 +58,7 @@ namespace LoginConsoleApp
                     .HeavyBorder()
                     .LeftAligned());
         }
+
         public static void DrawGoAwayHeader()
         {
             Render(

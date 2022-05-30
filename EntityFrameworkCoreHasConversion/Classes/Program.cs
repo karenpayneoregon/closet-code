@@ -9,7 +9,7 @@ using Spectre.Console;
 
 
 // ReSharper disable once CheckNamespace
-namespace AccountsHasConversion
+namespace HasConversion
 {
     partial class Program
     {

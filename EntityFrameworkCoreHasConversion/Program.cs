@@ -8,8 +8,8 @@ namespace HasConversion
         static void Main(string[] args)
         {
             //NewAccountRecord();
-            //ViewAccounts();
-            WineOperations.Add();
+            ViewAccounts();
+            //WineOperations.Add();
 
             Console.ReadLine();
         }
