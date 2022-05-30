@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace NorthWind2020ConsoleApp.Classes
         ///
         /// <see cref="Employees.WorkersNavigation"/> for a manager will contain their employees.
         /// </summary>
+        [SuppressMessage("ReSharper", "All")]
         public static void EmployeeReportsTo()
         {
             using var context = new Context();
