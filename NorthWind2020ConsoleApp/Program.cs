@@ -12,7 +12,7 @@ namespace NorthWind2020ConsoleApp
     {
         static void Main(string[] args)
         {
-            EmployeeOperations.EmployeeReportsTo();
+            EmployeeOperations.EmployeeReportsToManager();
             Console.ReadLine();
         }
 
