@@ -11,6 +11,7 @@ namespace NorthWind2020ConsoleApp.Classes
 {
     public class EmployeeOperations
     {
+
         /// <summary>
         /// Example for self-referencing table where the property <see cref="Employees.ReportsTo"/> is null
         /// this indicates the <see cref="Employees"/> is a manager.
@@ -26,8 +27,6 @@ namespace NorthWind2020ConsoleApp.Classes
             //List<Employees> managers = employees
             //    .Where(employee => !employee.ReportsTo.HasValue)
             //    .ToList();
-
-            //var workers = employees.Where(x => x.ReportsTo.HasValue).ToList();
 
             List<IGrouping<int?, Employees>> groupedData = employees
                 .Where(x => x.ReportsTo.HasValue)

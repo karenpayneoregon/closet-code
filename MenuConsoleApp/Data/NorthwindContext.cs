@@ -4,6 +4,8 @@ using MenuConsoleApp.Models;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore;
 using System;
+using ConfigurationLibrary.Classes;
+
 #nullable disable
 
 #nullable disable
@@ -28,8 +30,8 @@ namespace MenuConsoleApp.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                // best not to have a connection string here but for this code sample it does not matter
-                optionsBuilder.UseSqlServer("Data Source=.\\SQLEXPRESS;Initial Catalog=NorthWind2020;Integrated Security=True");
+                // https://www.nuget.org/packages/ConfigurationLibrary/
+                optionsBuilder.UseSqlServer(ConfigurationHelper.ConnectionString());
             }
         }
 

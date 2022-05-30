@@ -24,11 +24,18 @@
 
 	<ItemGroup>
 		<PackageReference Include="Spectre.Console" Version="0.44.0" />
+		<PackageReference Include="ConfigurationLibrary" Version="1.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="assets\" />
 	  <Folder Include="Scripts\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="appsettings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 

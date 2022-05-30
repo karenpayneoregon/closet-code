@@ -14,8 +14,8 @@ namespace NorthWind2020ConsoleApp
         {
             EmployeeOperations.EmployeeReportsTo();
             Console.ReadLine();
-
         }
+
         [ModuleInitializer]
         public static void Init()
         {
