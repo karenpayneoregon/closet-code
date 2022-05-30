@@ -5,5 +5,6 @@ Public Class Form1
 
         BindingSource1.DataSource = BogusOperations.PeopleList(10)
         DataGridView1.DataSource = BindingSource1
+
     End Sub
 End Class
