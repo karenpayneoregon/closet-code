@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NorthWind2020ConsoleApp.Data;
 using NorthWind2020ConsoleApp.Models;
+using Spectre.Console;
 
 namespace NorthWind2020ConsoleApp.Classes
 {
@@ -20,28 +21,46 @@ namespace NorthWind2020ConsoleApp.Classes
         {
             using var context = new Context();
 
-            List<Employees> allEmployeesList = context.Employees.ToList();
+            List<Employees> employees = context.Employees.ToList();
 
-            List<Employees> managers = allEmployeesList
-                .Where(employee => !employee.ReportsTo.HasValue)
+            //List<Employees> managers = employees
+            //    .Where(employee => !employee.ReportsTo.HasValue)
+            //    .ToList();
+
+            //var workers = employees.Where(x => x.ReportsTo.HasValue).ToList();
+
+            List<IGrouping<int?, Employees>> groupedData = employees
+                .Where(x => x.ReportsTo.HasValue)
+                .ToList()
+                .GroupBy(x => x.ReportsTo)
                 .ToList();
 
-            Console.WriteLine("Managers/workers");
-            foreach (Employees manager in managers)
+            var table = CreateViewTable();
+
+            foreach (var group in groupedData)
             {
-                Console.WriteLine($"{manager.FullName} - {manager.WorkersNavigation.Count}");
+                var groupKey = group.Key;
+
+                table.AddRow(employees.Find(x => x.EmployeeId == groupKey.Value)!.FullName);
+
+                foreach (var groupedItem in group)
+                {
+                    table.AddRow("", groupedItem.FullName);
+                }
             }
 
-            Console.WriteLine();
+            AnsiConsole.Write(table);
 
-            Console.WriteLine("Workers");
-            var workers = allEmployeesList.Where(x => x.ReportsTo.HasValue).ToList();
+        }
 
-            foreach (var worker in workers)
-            {
-                Console.WriteLine($"{worker.FullName} {worker.ReportsToNavigation.FullName}");
-            }
-
+        private static Table CreateViewTable()
+        {
+            return new Table()
+                .Border(TableBorder.Square)
+                .BorderColor(Color.Grey100)
+                .Title("[yellow][B]Employees[/][/]")
+                .AddColumn(new TableColumn("[u]Manager[/]"))
+                .AddColumn(new TableColumn("[u]Workers[/]"));
         }
 
     }

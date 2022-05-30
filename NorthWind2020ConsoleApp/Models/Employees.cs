@@ -32,6 +32,9 @@ namespace NorthWind2020ConsoleApp.Models
         public string Notes { get; set; }
         public int? ReportsTo { get; set; }
 
+        public override string ToString() => FullName;
+
+
         public virtual ContactType ContactTypeIdentifierNavigation { get; set; }
         public virtual Countries CountryIdentifierNavigation { get; set; }
         public virtual Employees ReportsToNavigation { get; set; }
