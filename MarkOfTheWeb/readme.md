@@ -6,7 +6,7 @@ If after downloading and un-zipping a archive file with perhaps a Visual Studio 
 
 Current arguments (change to suite your environment)
 
-![img](../assets/figure1.png)
+
 
 ##  Next level
 
