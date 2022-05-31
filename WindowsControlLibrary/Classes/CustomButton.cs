@@ -5,7 +5,7 @@ namespace WindowsControlLibrary.Classes
 {
     public class CustomButton : Button
     {
-        [Category("Behavior"), Description("Constant identifier")]
+        [Category("Behavior"), Description("Store a string")]
         public string Information { get; set; }
     }
 }
