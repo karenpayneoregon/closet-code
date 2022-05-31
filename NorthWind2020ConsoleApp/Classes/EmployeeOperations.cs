@@ -61,14 +61,16 @@ namespace NorthWind2020ConsoleApp.Classes
 
         }
 
+        /// <summary>
+        /// Little extra work than above to perform an outer sort
+        /// </summary>
         [SuppressMessage("ReSharper", "All")]
         public static void EmployeeReportsToManager()
         {
             using var context = new Context();
 
             List<Employees> employees = context.Employees.ToList();
-
-
+            
             List<IGrouping<int?, Employees>> groupedData = employees
                 .Where(employee => employee.ReportsTo.HasValue)
                 .ToList()
