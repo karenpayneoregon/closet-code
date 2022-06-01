@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using CodeWithNoForesight_grouping.Models;
 
 namespace CodeWithNoForesight_grouping.Classes
 {
-    class Operations
+    class JsonOperations
     {
         private static string _fileName = "books.json";
 
@@ -26,10 +27,10 @@ namespace CodeWithNoForesight_grouping.Classes
 
         private static List<Book> Books { get; } = new()
         {
-            new Book { Id = 1, Name = "Learn EF Core", Price = 19.0000M },
-            new Book { Id = 2, Name = "C# Basics", Price = 18.0000M },
-            new Book { Id = 3, Name = "ASP.NET Core advance", Price = 30.0000M },
-            new Book { Id = 4, Name = "VB.NET To C#", Price = 9.0000M, },
+            new Book { Id = 1, Title = "Learn EF Core", Price = 19.0000M },
+            new Book { Id = 2, Title = "C# Basics", Price = 18.0000M },
+            new Book { Id = 3, Title = "ASP.NET Core advance", Price = 30.0000M },
+            new Book { Id = 4, Title = "VB.NET To C#", Price = 9.0000M, },
         };
     }
 }

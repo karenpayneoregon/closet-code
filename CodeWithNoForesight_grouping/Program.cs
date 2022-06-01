@@ -10,8 +10,14 @@ namespace CodeWithNoForesight_grouping
     {
         static void Main(string[] args)
         {
+            BooksFromDatabase();
+            BooksFromJson();
+            Console.ReadLine();
+        }
 
-            var books = Operations.BookList();
+        private static void BooksFromJson()
+        {
+            var books = JsonOperations.BookList();
 
             var result1 = books
                 .GroupBy(book => book.Price < 10 ? 10 : (book.Price < 20 ? 20 : 30))
@@ -25,7 +31,7 @@ namespace CodeWithNoForesight_grouping
 
                 foreach (var book in item)
                 {
-                    Console.WriteLine($"\t{book.Name,-30}{book.Price}");
+                    Console.WriteLine($"\t{book.Title,-30}{book.Price}");
                 }
             }
 
@@ -36,9 +42,8 @@ namespace CodeWithNoForesight_grouping
             decimal expensive = 30;
 
             var result2 = books
-                .GroupBy(book => book.Price <= cheap ? cheap : 
-                    (book.Price > cheap && book.Price <= middle ? middle : expensive))
-                .Select(group => (group.Key, group.ToList()))
+                .GroupBy(book => book.Price <= cheap ? cheap : (book.Price > cheap && book.Price <= middle ? middle : expensive))
+                .Select(group => (@group.Key, @group.ToList()))
                 .OrderBy(x => x.Key)
                 .ToList();
 
@@ -47,7 +52,7 @@ namespace CodeWithNoForesight_grouping
                 Console.WriteLine(tuple.Key);
                 foreach (var book in tuple.Item2)
                 {
-                    Console.WriteLine($"\t{book.Name,-30}{book.Price}");
+                    Console.WriteLine($"\t{book.Title,-30}{book.Price}");
                 }
             }
 
@@ -55,7 +60,7 @@ namespace CodeWithNoForesight_grouping
 
 
             var results3 = books
-                .GroupBy(book => book.Price switch 
+                .GroupBy(book => book.Price switch
                 {
                     <= 10 => "Cheap",
                     > 10 and <= 20 => "Medium",
@@ -69,23 +74,32 @@ namespace CodeWithNoForesight_grouping
                 Console.WriteLine(item.Key);
                 foreach (var book in item.Value)
                 {
-                    Console.WriteLine($"\t{book.Name,-30}{book.Price}");
+                    Console.WriteLine($"\t{book.Title,-30}{book.Price}");
                 }
             }
 
             Console.WriteLine(new string('-', 50));
 
             var mediumPriced = results3
-                .FirstOrDefault(kvp => 
+                .FirstOrDefault(kvp =>
                     kvp.Value.Key == "Medium");
-            
+
             foreach (var book in mediumPriced.Value)
             {
-                Console.WriteLine($"\t{book.Name,-30}{book.Price}");
+                Console.WriteLine($"\t{book.Title,-30}{book.Price}");
             }
 
-            Console.ReadLine();
-            
+        }
+
+        private static void BooksFromDatabase()
+        {
+            var bookItems = DataOperations.ReadBooks();
+
+            foreach (var item in bookItems)
+            {
+                Console.WriteLine($"{item.Id,-3}{item.PriceRange,-20}{item.Title,-28}{item.Price:C}");
+            }
+
         }
     }
 }

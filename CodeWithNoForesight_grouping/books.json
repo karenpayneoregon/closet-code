@@ -1,27 +1,27 @@
 [
   {
     "Id": 1,
-    "Name": "Learn EF Core",
+    "Title": "Learn EF Core",
     "Price": 19.0000
   },
   {
     "Id": 2,
-    "Name": "C# Basics",
+    "Title": "C# Basics",
     "Price": 18.0000
   },
   {
     "Id": 3,
-    "Name": "ASP.NET Core advance",
+    "Title": "ASP.NET Core advance",
     "Price": 30.0000
   },
   {
     "Id": 4,
-    "Name": "VB.NET To C#",
+    "Title": "VB.NET To C#",
     "Price": 9.0000
   },
   {
     "Id": 5,
-    "Name": "Basic Azure",
+    "Title": "Basic Azure",
     "Price": 59.0000
   }
 
