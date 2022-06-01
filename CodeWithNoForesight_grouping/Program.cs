@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using CodeWithNoForesight_grouping.Classes;
+using Spectre.Console;
 
 namespace CodeWithNoForesight_grouping
 {
@@ -11,7 +12,7 @@ namespace CodeWithNoForesight_grouping
         static void Main(string[] args)
         {
             BooksFromDatabase();
-            BooksFromJson();
+            //BooksFromJson();
             Console.ReadLine();
         }
 
@@ -59,17 +60,19 @@ namespace CodeWithNoForesight_grouping
             Console.WriteLine(new string('-', 50));
 
 
-            var results3 = books
+            var results = books
                 .GroupBy(book => book.Price switch
                 {
                     <= 10 => "Cheap",
                     > 10 and <= 20 => "Medium",
                     _ => "Expensive"
                 })
-                .ToDictionary(g => g.Key, g => g);
+                .ToDictionary(gb => 
+                    gb.Key, 
+                    g => g);
 
 
-            foreach (var item in results3)
+            foreach (var item in results)
             {
                 Console.WriteLine(item.Key);
                 foreach (var book in item.Value)
@@ -80,7 +83,7 @@ namespace CodeWithNoForesight_grouping
 
             Console.WriteLine(new string('-', 50));
 
-            var mediumPriced = results3
+            var mediumPriced = results
                 .FirstOrDefault(kvp =>
                     kvp.Value.Key == "Medium");
 
@@ -95,10 +98,14 @@ namespace CodeWithNoForesight_grouping
         {
             var bookItems = DataOperations.ReadBooks();
 
+            var table = CreateViewTable();
+
             foreach (var item in bookItems)
             {
-                Console.WriteLine($"{item.Id,-3}{item.PriceRange,-20}{item.Title,-28}{item.Price:C}");
+                table.AddRow(item.Id.ToString(), item.PriceRange, item.Title, item.Price.ToString("C"));
             }
+
+            AnsiConsole.Write(table);
 
         }
     }
