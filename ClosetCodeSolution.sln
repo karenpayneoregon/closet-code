@@ -253,6 +253,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BindingNavigatorVBWinForms"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryFormatUtility", "QueryFormatUtility\QueryFormatUtility.csproj", "{2B6D623E-043D-479B-828D-6871ED9D1BE7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Not thinking code", "Not thinking code", "{FEE9F98E-D316-4A95-B7E6-86003477C32A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWithNoForesight_grouping", "CodeWithNoForesight_grouping\CodeWithNoForesight_grouping.csproj", "{1F8F2B74-8731-4D41-9ED7-A276485D1556}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -643,6 +647,10 @@ Global
 		{2B6D623E-043D-479B-828D-6871ED9D1BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B6D623E-043D-479B-828D-6871ED9D1BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B6D623E-043D-479B-828D-6871ED9D1BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F8F2B74-8731-4D41-9ED7-A276485D1556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F8F2B74-8731-4D41-9ED7-A276485D1556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F8F2B74-8731-4D41-9ED7-A276485D1556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F8F2B74-8731-4D41-9ED7-A276485D1556}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -757,6 +765,8 @@ Global
 		{698B886E-4ADE-4722-8292-FD460F7730A5} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{BB7C1B03-D811-460E-9159-0D8513F22CE0} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{2B6D623E-043D-479B-828D-6871ED9D1BE7} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{FEE9F98E-D316-4A95-B7E6-86003477C32A} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{1F8F2B74-8731-4D41-9ED7-A276485D1556} = {FEE9F98E-D316-4A95-B7E6-86003477C32A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
