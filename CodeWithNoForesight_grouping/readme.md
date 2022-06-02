@@ -7,6 +7,7 @@ Inspired by a forum question were the question was how to group by price of book
 :heavy_check_mark: All code presented accounts for over thirty
 
 
+![Screen Shot](assets/ScreenShot.png)
 
 What they ended up using
 
