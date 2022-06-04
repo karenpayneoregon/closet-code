@@ -37,6 +37,8 @@ namespace GenericExtensionsForFormControls
             this.ProductCommonButton = new System.Windows.Forms.Button();
             this.CurrentProductGeneric = new System.Windows.Forms.Button();
             this.CurrentProductIBaseButton = new System.Windows.Forms.Button();
+            this.ProductsCheckListBox = new System.Windows.Forms.CheckedListBox();
+            this.GetCheckedButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CategoryListBox
@@ -117,11 +119,31 @@ namespace GenericExtensionsForFormControls
             this.CurrentProductIBaseButton.UseVisualStyleBackColor = true;
             this.CurrentProductIBaseButton.Click += new System.EventHandler(this.CurrentProductIBaseButton_Click);
             // 
+            // ProductsCheckListBox
+            // 
+            this.ProductsCheckListBox.FormattingEnabled = true;
+            this.ProductsCheckListBox.Location = new System.Drawing.Point(421, 12);
+            this.ProductsCheckListBox.Name = "ProductsCheckListBox";
+            this.ProductsCheckListBox.Size = new System.Drawing.Size(171, 148);
+            this.ProductsCheckListBox.TabIndex = 8;
+            // 
+            // GetCheckedButton
+            // 
+            this.GetCheckedButton.Location = new System.Drawing.Point(421, 172);
+            this.GetCheckedButton.Name = "GetCheckedButton";
+            this.GetCheckedButton.Size = new System.Drawing.Size(171, 23);
+            this.GetCheckedButton.TabIndex = 9;
+            this.GetCheckedButton.Text = "Get Checked";
+            this.GetCheckedButton.UseVisualStyleBackColor = true;
+            this.GetCheckedButton.Click += new System.EventHandler(this.GetCheckedButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 268);
+            this.ClientSize = new System.Drawing.Size(604, 268);
+            this.Controls.Add(this.GetCheckedButton);
+            this.Controls.Add(this.ProductsCheckListBox);
             this.Controls.Add(this.ProductCommonButton);
             this.Controls.Add(this.CurrentProductGeneric);
             this.Controls.Add(this.CurrentProductIBaseButton);
@@ -148,6 +170,8 @@ namespace GenericExtensionsForFormControls
         private System.Windows.Forms.Button ProductCommonButton;
         private System.Windows.Forms.Button CurrentProductGeneric;
         private System.Windows.Forms.Button CurrentProductIBaseButton;
+        private System.Windows.Forms.CheckedListBox ProductsCheckListBox;
+        private System.Windows.Forms.Button GetCheckedButton;
     }
 }
 

@@ -17,10 +17,15 @@ namespace GenericExtensionsForFormControls
     {
         public Form1()
         {
+
             InitializeComponent();
 
             CategoryListBox.DataSource = JsonOperations.Categories();
             ProductListBox.DataSource = JsonOperations.Products();
+
+            ProductsCheckListBox.DataSource = JsonOperations.Products()
+                .Take(8)
+                .ToList();
         }
 
         /// <summary>
@@ -32,7 +37,7 @@ namespace GenericExtensionsForFormControls
         private void CurrentCategoryIBaseButton_Click(object sender, EventArgs e)
         {
             var (text, category) = CategoryListBox.CurrentCategory();
-            MessageBox.Show($"{category.Id,-3}{text}");
+            MessageBox.Show($@"{category.Id,-3}{text}");
         }
 
         /// <summary>
@@ -43,31 +48,46 @@ namespace GenericExtensionsForFormControls
         private void CurrentCategoryGenericButton_Click(object sender, EventArgs e)
         {
             var (text, category) = CategoryListBox.Current<Category>();
-            MessageBox.Show($"{category.Id,-3}{text}");
+            MessageBox.Show($@"{category.Id,-3}{text}");
         }
 
         private void CurrentCategoryCommonButton_Click(object sender, EventArgs e)
         {
             Category category = CategoryListBox.SelectedItem as Category;
-            MessageBox.Show($"{category.Id, -3}{category.Name}");
+            MessageBox.Show($@"{category.Id, -3}{category.Name}");
         }
 
         private void CurrentProductIBaseButton_Click(object sender, EventArgs e)
         {
             var (text, product) = ProductListBox.CurrentProduct();
-            MessageBox.Show($"{product.Id,-3}{text}");
+            MessageBox.Show($@"{product.Id,-3}{text}");
         }
 
         private void CurrentProductGeneric_Click(object sender, EventArgs e)
         {
             var (text, product) = ProductListBox.Current<Product>();
-            MessageBox.Show($"{product.Id,-3}{text}");
+            MessageBox.Show($@"{product.Id,-3}{text}");
         }
         private void ProductCommonButton_Click(object sender, EventArgs e)
         {
             var product = ProductListBox.SelectedItem as Product;
-            MessageBox.Show($"{product.Id,-3}{product.Name}");
+            MessageBox.Show($@"{product.Id,-3}{product.Name}");
         }
 
+        private void GetCheckedButton_Click(object sender, EventArgs e)
+        {
+            var checkedList = ProductsCheckListBox.CheckedList<Product>();
+
+            if (!checkedList.Any()) return;
+
+            StringBuilder builder = new();
+            foreach (var product in checkedList)
+            {
+                builder.AppendLine($"{product.Id,-5:D3}{product.Name}");
+            }
+
+            MessageBox.Show(builder.ToString());
+
+        }
     }
 }

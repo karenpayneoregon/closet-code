@@ -20,6 +20,8 @@ namespace GenericExtensionsForFormControls.Extensions
     public static class GenericExtensions
     {
 
+        #region Common but not generic
+
         /// <summary>
         /// Hard-wired to get <see cref="BaseModel"/>
         /// </summary>
@@ -27,6 +29,8 @@ namespace GenericExtensionsForFormControls.Extensions
         /// <returns></returns>
         public static (string text, BaseModel category) CurrentCategory(this ListControl source)
             => (source.Text, (BaseModel)source.SelectedValue);
+
+        #endregion
 
 
         /// <summary>
@@ -37,6 +41,8 @@ namespace GenericExtensionsForFormControls.Extensions
         public static (string text, BaseModel category) CurrentProduct(this ListControl source)
             => (source.Text, (BaseModel)source.SelectedValue);
 
+        #region Generic
+
         /// <summary>
         /// Generic of above
         /// </summary>
@@ -45,6 +51,20 @@ namespace GenericExtensionsForFormControls.Extensions
         /// <returns></returns>
         public static (string text, T item) Current<T>(this ListControl source)
             => (source.Text, (T)source.SelectedValue);
+
+        /// <summary>
+        /// Get checked items as <see cref="T"/>
+        /// </summary>
+        /// <typeparam name="T">Model</typeparam>
+        /// <param name="sender">CheckedListBox</param>
+        /// <returns>List if one or more items are checked</returns>
+        public static List<T> CheckedList<T>(this CheckedListBox sender)
+            => sender.Items.Cast<T>()
+                .Where((item, index) => sender.GetItemChecked(index))
+                .Select(item => item)
+                .ToList();
+
+        #endregion
 
     }
 }

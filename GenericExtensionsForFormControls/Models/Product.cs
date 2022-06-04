@@ -1,8 +1,4 @@
 ﻿namespace GenericExtensionsForFormControls.Models
 {
-    public class Product : BaseModel
-    {
-    }
-
-
+    public class Product : BaseModel { }
 }
