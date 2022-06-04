@@ -7,7 +7,8 @@ namespace CreateLocalDb
     {
         static void Main(string[] args)
         {
-            //DataOperations.Create();
+            // run once then comment out
+            DataOperations.Create();
             DataOperations.Open();
             Console.ReadLine();
 
