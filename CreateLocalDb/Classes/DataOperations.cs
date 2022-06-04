@@ -9,14 +9,12 @@ namespace CreateLocalDb.Classes
         /// Change to match your path for the database
         /// </summary>
         public static string DataPath = @"C:\OED";
-        public static string ConnectionString()
-        {
-            return @$"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TRIAL;Integrated Security=True";
-        }
-        public static string MasterConnectionString()
-        {
-            return @$"Server=(localdb)\MSSQLLocalDB";
-        }
+        public static string ConnectionString() 
+            => @$"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TRIAL;Integrated Security=True";
+
+        public static string MasterConnectionString() 
+            => @$"Server=(localdb)\MSSQLLocalDB";
+
         public static void Create()
         {
             
@@ -51,8 +49,7 @@ namespace CreateLocalDb.Classes
 
             cn.Open();
             Console.WriteLine("Open");
-
-           
+            
         }
 
         /// <summary>
