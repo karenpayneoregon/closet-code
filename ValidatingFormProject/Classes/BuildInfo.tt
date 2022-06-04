@@ -1,0 +1,49 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ Assembly Name="EnvDTE.dll" #>
+<#@ Assembly Name="System.Data" #>
+<#@ import namespace="EnvDTE" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Globalization" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+
+
+<#@ output extension=".cs" #>
+<#
+    var tableName = Path.GetFileNameWithoutExtension(Host.TemplateFile);
+    var path = Path.GetDirectoryName(Host.TemplateFile);
+    const string FMT_DATE_FORMAL            = "";
+    const string FMT_DATE_COMMENT           = "MMMM d, yyyy h:mm:ss.ffffff tt";
+
+    DateTime dtBuildDate            = DateTime.UtcNow;
+    string   strFormatDisplay       = String.IsNullOrEmpty(FMT_DATE_FORMAL) ? CultureInfo.InstalledUICulture.DateTimeFormat.FullDateTimePattern : FMT_DATE_FORMAL;
+
+
+	// Get containing project
+	IServiceProvider serviceProvider = (IServiceProvider)Host;
+	DTE dte = (DTE)serviceProvider.GetService(typeof(DTE));
+	Project project = dte.Solution.FindProjectItem(Host.TemplateFile).ContainingProject;
+
+#>
+using System;
+using System.Reflection;
+
+namespace <#= project.Properties.Item("DefaultNamespace").Value #><#= Path.GetDirectoryName(Host.TemplateFile).Remove(0, Path.GetDirectoryName(project.FileName).Length).Replace("\\", ".") #>
+{
+    public static class BuildInfo
+    {
+        private const long              BUILD_DATE_BINARY_UTC       = 0x<#=dtBuildDate.ToBinary().ToString("x16") #>;    // <#=dtBuildDate.ToString(FMT_DATE_COMMENT) #> UTC
+
+        private static AssemblyName     BuildAssemblyName { get; }  = Assembly.GetExecutingAssembly().GetName();
+        public static DateTimeOffset    BuildDateUtc { get; }       = DateTime.FromBinary(BUILD_DATE_BINARY_UTC);
+        public static string            ModuleText { get; }         =  BuildAssemblyName.Name;
+        public static string            VersionText { get; }        = "v" + BuildAssemblyName.Version.ToString()
+#if DEBUG
+                                                                                + " [DEBUG]"
+#endif
+                                                                                ;
+
+        public static string            BuildDateText { get; }      = "<#=dtBuildDate.ToString(strFormatDisplay) #> UTC";
+        public static string            DisplayText { get; }        = $"{ModuleText} {VersionText} (Build Date: {BuildDateText})";
+    }
+}

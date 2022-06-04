@@ -20,7 +20,7 @@ namespace EnumDescriptions.Extensions
         /// <typeparam name="T"></typeparam>
         /// <param name="source"></param>
         /// <returns></returns>
-        public static (string text, T category) Current<T>(this ListControl source)
+        public static (string text, T item) Current<T>(this ListControl source)
             => (source.Text, (T)source.SelectedValue);
 
     }

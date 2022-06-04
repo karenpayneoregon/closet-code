@@ -1,0 +1,12 @@
+{
+  "FirstNameSettings": {
+    "MinimumLength": 3,
+    "MaximumLength": 10,
+    "WithName": "First name"
+  },
+  "LastNameSettings": {
+    "MinimumLength": 5,
+    "MaximumLength": 30,
+    "WithName": "Last name"
+  }
+}

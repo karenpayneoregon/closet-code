@@ -3,7 +3,7 @@
 
 # About
 
-This repository is home to useful and obscure code samples.
+This repository is home to `useful` and `obscure` code samples.
 
 In regards to obscure, this means fringe case code that is seldom needed but when needed woohoo.
 
@@ -20,6 +20,10 @@ This line indicates that the namespace does not match it's location and should n
 **Windows forms**
 
 Some examples are windows form specific while others simply can be understood better in a form rather than a console or test project.
+
+## .NET Frameworks
+
+The majority of code has been done using .NET Core 5 while a handful use .NET Framework 4.8
 
 # Credits
 

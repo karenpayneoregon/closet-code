@@ -8,7 +8,7 @@ namespace BaseDataValidatorLibrary.CommonRules
     /// Basic SSN validation, see also
     /// FluentValidationUnitTests.LanguageExtensions.IsSSNValid extension for more validation
     /// </summary>
-    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
+    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
     public class SocialSecurityAttribute : ValidationAttribute
     {
         public string SocialValue { get; set; }
@@ -20,7 +20,14 @@ namespace BaseDataValidatorLibrary.CommonRules
                 return false;
             }
 
-            if (sender.ToString().Length == 9 && Regex.IsMatch(sender.ToString()!, @"^\d{9}$"))
+            string tempValue = sender.ToString();
+
+            if (tempValue.Length == 11)
+            {
+                tempValue = tempValue.Replace("-", "");
+            }
+
+            if (tempValue.Length == 9 && Regex.IsMatch(tempValue!, @"^\d{9}$"))
             {
                 return true;
             }

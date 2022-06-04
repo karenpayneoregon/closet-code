@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<!--<Target Name="ZipOutputPath" AfterTargets="Build">
+		<Message Text="Creating .zip for $(SolutionDir)" Importance="High" />
+		<ZipDirectory SourceDirectory="$(SolutionDir)" DestinationFile="C:\OED\Zipped\output.zip" Overwrite="true" />
+	</Target>
+
+	<Target Name="CreateDirectories">
+		<MakeDir Directories="C:\OED\Zipped" />
+	</Target>-->
+
+
+
+	<!--<Target Name="CopyDLLs" AfterTargets="Build">
+		<Message Text="Executing Copy task" Importance="High" />
+
+		<Copy
+			SourceFiles="$(TargetDir)$(ProjectName).dll;$(TargetDir)$(ProjectName).pdb"
+			DestinationFolder="C:\OED\Zipped" />
+
+		<Message Text="Copied build files" Importance="High" />
+	</Target>-->
+
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net5.0</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<ApplicationIcon>csharp.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="readme.md" />
+		<None Remove="Script1.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="readme.md" />
+		<Content Include="Script1.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Spectre.Console" Version="0.44.0" />
+	</ItemGroup>
+
+	<!--<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+	</ItemGroup>-->
+
+</Project>

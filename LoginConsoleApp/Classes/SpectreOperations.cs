@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using Spectre.Console;
 
-namespace LoginConsoleApp
+namespace LoginConsoleApp.Classes
 {
     /// <summary>
     /// Helper methods for asking for input from user along with displaying banners
