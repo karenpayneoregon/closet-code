@@ -87,7 +87,7 @@ namespace ShadowProperties.Data
 
             foreach (var entry in ChangeTracker.Entries())
             {
-                if (entry.State == EntityState.Added || entry.State == EntityState.Modified)
+                if (entry.State is EntityState.Added or EntityState.Modified)
                 {
                     entry.Property("LastUpdated").CurrentValue = DateTime.Now;
                     entry.Property("LastUser").CurrentValue = Environment.UserName;

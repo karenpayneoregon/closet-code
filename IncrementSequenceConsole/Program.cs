@@ -1,6 +1,12 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using IncrementSequenceConsole.Classes;
+
+/*
+ * Aliasing a class is a better idea than a static using statement.
+ * In this case neither aliasing for static using statement helps,
+ * it's here so those who stumble on this code can learn about it.
+ */
+using H = IncrementSequenceConsole.Classes.Helpers;
 
 namespace IncrementSequenceConsole
 {
@@ -8,11 +14,14 @@ namespace IncrementSequenceConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"          F1124   {Helpers.NextValue("F1124")}");
-            Console.WriteLine($"       1278-120   {Helpers.NextValue("1278-120")}");
-            Console.WriteLine($"           F102   {Helpers.NextValue("F102")}");
-            Console.WriteLine($"3999/IKL/VII/21   {Helpers.NextValue("3999/IKL/VII/21")}");
+            
+            Console.WriteLine($"          F1124   {H.NextValue("F1124")}");
+            Console.WriteLine($"       1278-120   {H.NextValue("1278-120")}");
+            Console.WriteLine($"           F102   {H.NextValue("F102")}");
+            Console.WriteLine($"3999/IKL/VII/21   {H.NextValue("3999/IKL/VII/21")}");
+
             Console.ReadLine();
+
         }
 
         [ModuleInitializer]

@@ -10,9 +10,9 @@
 <#
     var tableName = Path.GetFileNameWithoutExtension(Host.TemplateFile);
     var path = Path.GetDirectoryName(Host.TemplateFile);
-    var columnId = "Id";
-    var columnName = "CategoryName";
-    var connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ForumExample;Integrated Security=True";
+    var columnId = "BookVariantId";
+    var columnName = "Name";
+    var connectionString = "Server=(localdb)\\mssqllocaldb;Database=BookLibrary;Trusted_Connection=True";
 
 	// Get containing project
 	IServiceProvider serviceProvider = (IServiceProvider)Host;
