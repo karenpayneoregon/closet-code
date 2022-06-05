@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using IndicesRanges.Classes;
 
 
 // ReSharper disable once CheckNamespace
@@ -11,6 +12,7 @@ namespace IndicesRanges
         public static void Init()
         {
             Console.Title = "Code sample";
+            WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
         }
     }
 }
