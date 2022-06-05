@@ -6,4 +6,12 @@
 	  <TargetFramework>net5.0-windows</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="readme1.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="readme1.md" />
+  </ItemGroup>
+
 </Project>

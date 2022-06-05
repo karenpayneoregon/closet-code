@@ -29,7 +29,7 @@ namespace RangeForEach.Extensions
 
             public RangeEnumerator(int start, int end)
             {
-                _current = start - 1; // - 1 fixes a bug in the original code
+                _current = start - 1; 
                 _end = end;
             }
 
