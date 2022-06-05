@@ -17,5 +17,8 @@
 		<PackageReference Include="protobuf-net" Version="3.1.4" />
 		<PackageReference Include="Spectre.Console" Version="0.44.0" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
+	</ItemGroup>
 
 </Project>

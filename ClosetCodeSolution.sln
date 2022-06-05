@@ -276,6 +276,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RangeForEach", "RangeForEac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndicesRanges", "IndicesRanges\IndicesRanges.csproj", "{E04D96D4-420F-454F-A5A5-124F80214A80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHelperLibrary", "ConsoleHelperLibrary\ConsoleHelperLibrary.csproj", "{4F28DD19-4642-418A-AE21-709AB94CB45E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -705,6 +707,10 @@ Global
 		{E04D96D4-420F-454F-A5A5-124F80214A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E04D96D4-420F-454F-A5A5-124F80214A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E04D96D4-420F-454F-A5A5-124F80214A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F28DD19-4642-418A-AE21-709AB94CB45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F28DD19-4642-418A-AE21-709AB94CB45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F28DD19-4642-418A-AE21-709AB94CB45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F28DD19-4642-418A-AE21-709AB94CB45E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -830,6 +836,7 @@ Global
 		{CB6DCC62-696E-4064-BEE5-1AA5E6C41557} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{B53F544E-EA57-405D-A842-95EDF4712FBB} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{E04D96D4-420F-454F-A5A5-124F80214A80} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{4F28DD19-4642-418A-AE21-709AB94CB45E} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
