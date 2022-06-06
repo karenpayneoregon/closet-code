@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-
+using System.Text.RegularExpressions;
 /*
  * Aliasing a class is a better idea than a static using statement.
  * In this case neither aliasing for static using statement helps,
@@ -14,14 +14,17 @@ namespace IncrementSequenceConsole
     {
         static void Main(string[] args)
         {
-            
+
+            BasicExample();
+            Console.ReadLine();
+        }
+
+        private static void BasicExample()
+        {
             Console.WriteLine($"          F1124   {H.NextValue("F1124")}");
             Console.WriteLine($"       1278-120   {H.NextValue("1278-120")}");
             Console.WriteLine($"           F102   {H.NextValue("F102")}");
             Console.WriteLine($"3999/IKL/VII/21   {H.NextValue("3999/IKL/VII/21")}");
-
-            Console.ReadLine();
-
         }
 
         [ModuleInitializer]
