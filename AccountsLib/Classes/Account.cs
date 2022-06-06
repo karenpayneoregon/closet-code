@@ -20,27 +20,19 @@
 		/// <summary>
 		/// Warning level is when to send an alert via our delegate
 		/// </summary>
-		/// <param name="warningLevel"></param>
-		/// <remarks></remarks>
 		public Account(decimal warningLevel)
 		{
 			_warningLevel = warningLevel;
-			_mnsufficientFunds = _balance <= 0M;
+			_insufficientFunds = _balance <= 0M;
 		}
 		/// <summary>
 		/// Current balance of account
 		/// </summary>
-		/// <value></value>
-		/// <returns></returns>
-		/// <remarks></remarks>
 		public decimal Balance => _balance;
 
         /// <summary>
 		/// Deposit money into account
 		/// </summary>
-		/// <param name="amount"></param>
-		/// <returns></returns>
-		/// <remarks></remarks>
 		public decimal Deposit(decimal amount)
 		{
 			_balance += amount;
@@ -54,14 +46,14 @@
 
 			if ( _balance - amount < 0M)
 			{
-				_mnsufficientFunds = true;
+				_insufficientFunds = true;
                 AccountDenialEvent?.Invoke(
                     this, 
                     new(DenialReasons.InsufficientFunds));
             }
 			else
 			{
-				_mnsufficientFunds = false;
+				_insufficientFunds = false;
 			}
 
 			return _balance;
@@ -70,15 +62,12 @@
 		/// <summary>
 		/// Withdraw from account
 		/// </summary>
-		/// <param name="amount"></param>
-		/// <returns></returns>
-		/// <remarks></remarks>
 		public decimal Debit(decimal amount)
 		{
 			if (_balance - amount < 0M)
 			{
 				// Deny withdraw
-				_mnsufficientFunds = true;
+				_insufficientFunds = true;
                 AccountDenialEvent?.Invoke(
                     this, 
                     new(DenialReasons.InsufficientFunds));
@@ -95,8 +84,8 @@
 			return _balance;
 
 		}
-		private bool _mnsufficientFunds;
-		public bool InsufficientFunds => _mnsufficientFunds;
+		private bool _insufficientFunds;
+		public bool InsufficientFunds => _insufficientFunds;
 
         public override string ToString() => Balance.ToString("c2");
     }
