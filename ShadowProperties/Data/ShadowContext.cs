@@ -77,7 +77,6 @@ namespace ShadowProperties.Data
         public override int SaveChanges()
         {
             DoShadowyStuff();
-
             return base.SaveChanges();
         }
 

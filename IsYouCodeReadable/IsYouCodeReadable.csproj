@@ -13,4 +13,8 @@
     <Content Include="readme.md" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
 </Project>

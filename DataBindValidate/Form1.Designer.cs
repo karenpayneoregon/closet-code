@@ -31,6 +31,7 @@ namespace DataBindValidate
         {
             this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.ValidateButton = new System.Windows.Forms.Button();
+            this.SetSettingToNullButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NombreTextBox
@@ -50,11 +51,22 @@ namespace DataBindValidate
             this.ValidateButton.UseVisualStyleBackColor = true;
             this.ValidateButton.Click += new System.EventHandler(this.ValidateButton_Click);
             // 
+            // SetSettingToNullButton
+            // 
+            this.SetSettingToNullButton.Location = new System.Drawing.Point(172, 65);
+            this.SetSettingToNullButton.Name = "SetSettingToNullButton";
+            this.SetSettingToNullButton.Size = new System.Drawing.Size(75, 23);
+            this.SetSettingToNullButton.TabIndex = 2;
+            this.SetSettingToNullButton.Text = "null setting";
+            this.SetSettingToNullButton.UseVisualStyleBackColor = true;
+            this.SetSettingToNullButton.Click += new System.EventHandler(this.SetSettingToNullButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 143);
+            this.Controls.Add(this.SetSettingToNullButton);
             this.Controls.Add(this.ValidateButton);
             this.Controls.Add(this.NombreTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -70,6 +82,7 @@ namespace DataBindValidate
 
         private System.Windows.Forms.TextBox NombreTextBox;
         private System.Windows.Forms.Button ValidateButton;
+        private System.Windows.Forms.Button SetSettingToNullButton;
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -38,6 +39,21 @@ namespace DataBindValidate
                 modelEntity.Errors.ToList().ForEach(item => builder.AppendLine(item.ErrorMessage));
                 Console.WriteLine(builder.ToString());
             }
+        }
+
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/answers/questions/876927/problem-writing-self-closing-null-value-to-setting.html
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SetSettingToNullButton_Click(object sender, EventArgs e)
+        {
+            //Properties.Settings.Default.Testsetting = "";
+            //Properties.Settings.Default.Save();
+            //Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            //config.AppSettings.Settings.Remove("Testsetting");
+            //config.Save();
+
         }
     }
 }

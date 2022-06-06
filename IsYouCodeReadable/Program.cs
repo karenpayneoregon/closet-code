@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using static System.Globalization.DateTimeFormatInfo;
 
 namespace IsYouCodeReadable
 {
@@ -10,12 +10,30 @@ namespace IsYouCodeReadable
     {
         static void Main(string[] args)
         {
-            string[] fileContent = new[] { ""};
+
             //Ambiguous();
             //DayNamesIndexing();
             //StopUsingSingleCharVariableNames();
+
+
+            var xxx = CurrentInfo?.DayNames[^2..^0];
+            var today = DateTime.Now.DayOfWeek.ToString();
+
+            Console.WriteLine(today);
+            foreach (var name in CurrentInfo?.DayNames)
+            {
+                Console.WriteLine($"Name: {name, -15}Work day: {IsWorkDay(name),-10}Weekend: {IsWeekendDay(name)}");
+            }
+
             Console.ReadLine();
         }
+
+
+        public static bool IsWorkDay(string day) 
+            => CurrentInfo?.DayNames[1..6].Contains(day) == true;
+        public static bool IsWeekendDay(string day) 
+            => !IsWorkDay(day);
+
 
         /// <summary>
         /// There are two techniques for testing if a string is null.
@@ -52,7 +70,7 @@ namespace IsYouCodeReadable
             }
 
             Console.WriteLine("person.FirstName is {Length: >0}");
-            if (person.FirstName is {Length: >0})
+            if (person.FirstName is { Length: > 0 })
             {
                 Console.WriteLine($"\tFirst Name: {person.FirstName}");
             }
@@ -62,8 +80,8 @@ namespace IsYouCodeReadable
             }
 
             person.FirstName = "Karen";
-            Console.WriteLine(person.FirstName is { Length: > 0 } ? 
-                $"\tFirst Name: {person.FirstName}" : 
+            Console.WriteLine(person.FirstName is { Length: > 0 } ?
+                $"\tFirst Name: {person.FirstName}" :
                 "\tFirst name is null");
         }
 
@@ -73,7 +91,7 @@ namespace IsYouCodeReadable
         /// </summary>
         private static void DayNamesIndexing()
         {
-            var days = DateTimeFormatInfo.CurrentInfo?.DayNames;
+            var days = CurrentInfo?.DayNames;
 
             var workDays = days?[1..6];
 
@@ -95,9 +113,9 @@ namespace IsYouCodeReadable
 
 
             // in the same realm, educate or use the conventional path
-            var monthNames1 = DateTimeFormatInfo.CurrentInfo!.MonthNames[..^1];
+            var monthNames1 = CurrentInfo!.MonthNames[..^1];
 
-            var monthNames2 = DateTimeFormatInfo.CurrentInfo.MonthNames
+            var monthNames2 = CurrentInfo.MonthNames
                 .Where(monthName => !string.IsNullOrWhiteSpace(monthName))
                 .ToArray();
 
@@ -112,13 +130,13 @@ namespace IsYouCodeReadable
         /// </summary>
         private static void StopUsingSingleCharVariableNames()
         {
-            var days = DateTimeFormatInfo.CurrentInfo?.DayNames;
+            var days = CurrentInfo?.DayNames;
 
             var wellDoneResult = days!
                 .Select((name, index) => new
                 {
                     Name = name,
-                    Index = index +1
+                    Index = index + 1
                 }).ToArray();
 
 
@@ -134,7 +152,7 @@ namespace IsYouCodeReadable
                 .Select((n, x) => new
                 {
                     Name = n,
-                    Index = x +1
+                    Index = x + 1
                 }).ToArray();
 
             for (int index = 0; index < poorlyDoneResult.Count(); index++)
