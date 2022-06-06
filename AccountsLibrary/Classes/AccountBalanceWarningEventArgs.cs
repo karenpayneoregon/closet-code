@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AccountsLib.Classes
+namespace AccountsLibrary.Classes
 {
     public class AccountBalanceWarningEventArgs : EventArgs
     {

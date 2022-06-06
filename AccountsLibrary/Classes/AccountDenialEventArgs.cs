@@ -1,6 +1,7 @@
 ﻿using System;
+using AccountsLibrary.Models;
 
-namespace AccountsLib.Classes
+namespace AccountsLibrary.Classes
 {
     public class AccountDenialEventArgs : EventArgs
 	{

@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
  * In this case neither aliasing for static using statement helps,
  * it's here so those who stumble on this code can learn about it.
  */
-using H = IncrementSequenceConsole.Classes.Helpers;
+using H = GetLastNumberInString.Classes.Helpers;
 
 namespace GetLastNumberInString
 {

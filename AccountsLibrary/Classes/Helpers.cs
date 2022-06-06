@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace GetLastNumberInString.Classes
+namespace AccountsLibrary.Classes
 {
     public class Helpers
     {
