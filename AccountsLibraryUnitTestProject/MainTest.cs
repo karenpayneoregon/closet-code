@@ -16,6 +16,14 @@ namespace AccountsLibraryUnitTestProject
     {
         [TestMethod]
         [TestTraits(Trait.Banking)]
+        public void ValidateAccountCountLogin()
+        {
+            List<Account> accounts = AO.ReadAccountsFromFile();
+            Check.That(accounts.Count).Equals(2);
+        }
+
+        [TestMethod]
+        [TestTraits(Trait.Banking)]
         public void AccountExistsTest()
         {
             // arrange
@@ -97,14 +105,6 @@ namespace AccountsLibraryUnitTestProject
             Check.That(account.Balance).Equals(AO.AccountBalance(account));
         }
 
-        [TestMethod]
-        [TestTraits(Trait.Banking)]
-        public void ValidateAccountCountLogin()
-        {
-            List<Account> accounts = AO.ReadAccountsFromFile();
-            Check.That(accounts.Count).Equals(2);
-        }
-
 
         private void OnAccountDenial(object sender, AccountDenialEventArgs e)
         {
@@ -128,5 +128,13 @@ namespace AccountsLibraryUnitTestProject
             Console.WriteLine(1.ToEnum<TransactionType>());
             Console.WriteLine(2.ToEnum<TransactionType>());
         }
+
+        [TestMethod]
+        [TestTraits(Trait.PlaceHolder)]
+        public void ViewData()
+        {
+            AO.ViewAccounts();
+        }
+
     }
 }

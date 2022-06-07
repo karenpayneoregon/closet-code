@@ -115,5 +115,25 @@ namespace AccountsLibrary.Classes
         {
             return ReadAccountsFromFile().FirstOrDefault(current => current.AccountId == account.AccountId).Balance;
         }
+
+        public static void ViewAccounts()
+        {
+
+            var results = ReadAccountsFromFile()
+                .GroupBy(account => account.AccountId)
+                .Select(groupAcct => new
+                {
+                    AccountId = groupAcct.Key,
+                    Account = groupAcct.Select(account => account).FirstOrDefault()
+                })
+                .ToList();
+
+
+            foreach (var result in results)
+            {
+                Console.WriteLine($"{result.Account.FirstName}");
+            }
+
+        }
     }
 }
