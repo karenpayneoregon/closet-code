@@ -21,7 +21,7 @@
 
 	<ItemGroup>
 	  <None Update="accounts.json">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
 

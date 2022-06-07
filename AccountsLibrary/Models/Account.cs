@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.Json;
 using AccountsLibrary.Classes;
 using AO = AccountsLibrary.Classes.AccountOperations;
@@ -13,6 +14,9 @@ namespace AccountsLibrary.Models
         public event AccountBalanceWarningEvent AccountBalanceWarningEvent;
         public event AccountDenyingEvent AccountDenialEvent;
 
+        /// <summary>
+        /// Primary key
+        /// </summary>
         public int AccountId { get; set; }
         /// <summary>
         /// Account number alpha numeric
@@ -62,28 +66,31 @@ namespace AccountsLibrary.Models
         /// </summary>
         public decimal Deposit(Transaction transaction)
         {
+            transaction.TransactionId = Transactions.LastOrDefault().TransactionId + 1;
             Transactions.Add(transaction);
-
+            
             Balance += transaction.Amount;
 
             if (Balance < _warningLevel && AccountBalanceWarningEvent is not null)
             {
-                AccountBalanceWarningEvent?.Invoke(
-                    this,
-                    new(Number, _warningLevel, Balance));
+                AccountBalanceWarningEvent?.Invoke(this, new(Number, _warningLevel, Balance));
             }
 
             if (Balance - transaction.Amount < 0M)
             {
                 _insufficientFunds = true;
-                AccountDenialEvent?.Invoke(
-                    this,
-                    new(DenialReasons.InsufficientFunds, Balance));
+                AccountDenialEvent?.Invoke(this, new(DenialReasons.InsufficientFunds, Balance));
             }
             else
             {
                 _insufficientFunds = false;
             }
+
+            IList<Account> list = AO.ReadAccountsFromFile().Clone();
+
+            var current = list.FirstOrDefault(x => x.AccountId == transaction.AccountId);
+            current.Transactions.Add(transaction);
+            AO.Update(current);
 
             return Balance;
 
@@ -93,24 +100,21 @@ namespace AccountsLibrary.Models
         /// </summary>
         public decimal Withdraw(Transaction transaction)
         {
+            transaction.TransactionId = Transactions.LastOrDefault().TransactionId + 1;
             Transactions.Add(transaction);
 
             if (Balance - transaction.Amount < 0M)
             {
                 // Deny withdraw
                 _insufficientFunds = true;
-                AccountDenialEvent?.Invoke(
-                    this,
-                    new(DenialReasons.InsufficientFunds, Balance));
+                AccountDenialEvent?.Invoke(this, new(DenialReasons.InsufficientFunds, Balance));
 
                 return Balance;
             }
 
             Balance -= transaction.Amount;
 
-            AccountBalanceWarningEvent?.Invoke(
-                this,
-                new(Number, _warningLevel, Balance));
+            AccountBalanceWarningEvent?.Invoke(this, new(Number, _warningLevel, Balance));
 
             return Balance;
 

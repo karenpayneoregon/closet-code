@@ -7,6 +7,7 @@ using AccountsLibrary.Models;
 using AccountsLibraryUnitTestProject.Base;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
+using AO = AccountsLibrary.Classes.AccountOperations;
 
 namespace AccountsLibraryUnitTestProject
 {
@@ -21,7 +22,7 @@ namespace AccountsLibraryUnitTestProject
             int accountId = 1;
 
             // act
-            var account = AccountOperations.GetAccount(accountId);
+            var account = AO.GetAccount(accountId);
 
             // assert
             Check.That(account).IsNotNull();
@@ -36,7 +37,7 @@ namespace AccountsLibraryUnitTestProject
             int accountId = 22;
 
             // act
-            var account = AccountOperations.GetAccount(accountId);
+            var account = AO.GetAccount(accountId);
 
             // assert
             Check.That(account).IsNull();
@@ -51,7 +52,7 @@ namespace AccountsLibraryUnitTestProject
             decimal balance = 2900;
 
             // act
-            var account = AccountOperations.GetAccount(accountId);
+            var account = AO.GetAccount(accountId);
             
             // assert
             Check.That(account.Balance).Equals(balance);
@@ -67,7 +68,7 @@ namespace AccountsLibraryUnitTestProject
 
 
             // act
-            var account = AccountOperations.GetAccount(accountId);
+            var account = AO.GetAccount(accountId);
             Console.WriteLine($"Checking funds: {account.InsufficientFunds}");
             account.AccountDenialEvent += OnAccountDenial;
 
@@ -81,10 +82,29 @@ namespace AccountsLibraryUnitTestProject
             });
 
             account.AccountDenialEvent -= OnAccountDenial;
-            AccountOperations.Update(account);
+            AO.Update(account);
             Check.That(account.Balance).Equals(-100);
 
+            account.Deposit(new Transaction()
+            {
+                AccountId = 1,
+                Amount = 2000,
+                TransactionType = TransactionType.Deposit,
+                TransactionDate = DateTime.Now,
+                Description = "Some deposit"
+            });
+
+            Check.That(account.Balance).Equals(AO.AccountBalance(account));
         }
+
+        [TestMethod]
+        [TestTraits(Trait.Banking)]
+        public void ValidateAccountCountLogin()
+        {
+            List<Account> accounts = AO.ReadAccountsFromFile();
+            Check.That(accounts.Count).Equals(2);
+        }
+
 
         private void OnAccountDenial(object sender, AccountDenialEventArgs e)
         {
@@ -108,8 +128,5 @@ namespace AccountsLibraryUnitTestProject
             Console.WriteLine(1.ToEnum<TransactionType>());
             Console.WriteLine(2.ToEnum<TransactionType>());
         }
-
-
-
     }
 }

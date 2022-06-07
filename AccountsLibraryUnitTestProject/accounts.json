@@ -3,12 +3,12 @@
     "AccountId": 1,
     "Number": "KP100",
     "UserName": "KarenPayne",
-    "PIN": null,
+    "PIN": "Payne111",
     "FirstName": "Karen",
     "LastName": "Payne",
     "Transactions": [
       {
-        "Transaction_id": 1,
+        "TransactionId": 1,
         "AccountId": 1,
         "TransactionType": 1,
         "Description": "First deposit",
@@ -16,7 +16,7 @@
         "TransactionDate": "2022-01-12T00:00:00"
       },
       {
-        "Transaction_id": 2,
+        "TransactionId": 2,
         "AccountId": 1,
         "TransactionType": 1,
         "Description": "Second deposit",
@@ -24,7 +24,7 @@
         "TransactionDate": "2022-02-06T00:00:00"
       },
       {
-        "Transaction_id": 3,
+        "TransactionId": 3,
         "AccountId": 1,
         "TransactionType": 1,
         "Description": "Third deposit",
@@ -32,7 +32,7 @@
         "TransactionDate": "2022-03-22T00:00:00"
       },
       {
-        "Transaction_id": 3,
+        "TransactionId": 3,
         "AccountId": 1,
         "TransactionType": 2,
         "Description": "First withdraw",
@@ -47,23 +47,23 @@
     "AccountId": 2,
     "Number": "MA100",
     "UserName": "MikeAdams",
-    "PIN": null,
+    "PIN": "Adams123",
     "FirstName": "Mike",
     "LastName": "Adams",
     "Transactions": [
       {
-        "Transaction_id": 1,
+        "TransactionId": 1,
         "AccountId": 2,
         "TransactionType": 1,
-        "Description": "First deposit",
+        "Description": "First deposit for Mike",
         "Amount": 2000,
         "TransactionDate": "2022-05-02T00:00:00"
       },
       {
-        "Transaction_id": 2,
+        "TransactionId": 2,
         "AccountId": 2,
         "TransactionType": 1,
-        "Description": "Second deposit",
+        "Description": "Second deposit for Mike",
         "Amount": 100,
         "TransactionDate": "2022-05-08T00:00:00"
       }

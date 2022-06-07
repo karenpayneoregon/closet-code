@@ -288,11 +288,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountsLibraryUnitTestProj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountsLibrary", "AccountsLibrary\AccountsLibrary.csproj", "{6FC8F680-7726-408A-B3F9-389E8A0631A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupByMultiplePropertiesFindDuplicates", "GroupByMultiplePropertiesFindDuplicates\GroupByMultiplePropertiesFindDuplicates.csproj", "{9A8EBC26-AC1E-41EE-8045-D298FBE8AEAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupByMultiplePropertiesFindDuplicates", "GroupByMultiplePropertiesFindDuplicates\GroupByMultiplePropertiesFindDuplicates.csproj", "{9A8EBC26-AC1E-41EE-8045-D298FBE8AEAC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAddItemsComboBox", "WpfAddItemsComboBox\WpfAddItemsComboBox.csproj", "{1F0A1570-FAF6-40FF-B03E-7D253EB2DC74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonSimple", "SingletonSimple\SingletonSimple.csproj", "{1FDF3DAA-5C38-4E1D-BE79-618C11811E12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonSimple", "SingletonSimple\SingletonSimple.csproj", "{1FDF3DAA-5C38-4E1D-BE79-618C11811E12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

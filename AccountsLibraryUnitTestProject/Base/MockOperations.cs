@@ -30,7 +30,7 @@ namespace AccountsLibraryUnitTestProject.Base
             account.Deposit(new Transaction()
             {
                 AccountId = 1,
-                Transaction_id = 1,
+                TransactionId = 1,
                 TransactionType = TransactionType.Deposit,
                 Amount = 1000,
                 Description = "First deposit",
@@ -40,7 +40,7 @@ namespace AccountsLibraryUnitTestProject.Base
             account.Deposit(new Transaction()
             {
                 AccountId = 1,
-                Transaction_id = 2,
+                TransactionId = 2,
                 TransactionType = TransactionType.Deposit,
                 Amount = 150,
                 Description = "Second deposit",
@@ -50,7 +50,7 @@ namespace AccountsLibraryUnitTestProject.Base
             account.Deposit(new Transaction()
             {
                 AccountId = 1,
-                Transaction_id = 3,
+                TransactionId = 3,
                 TransactionType = TransactionType.Deposit,
                 Amount = 1800,
                 Description = "Third deposit",
@@ -60,7 +60,7 @@ namespace AccountsLibraryUnitTestProject.Base
             account.Withdraw(new Transaction()
             {
                 AccountId = 1,
-                Transaction_id = 3,
+                TransactionId = 3,
                 TransactionType = TransactionType.Withdraw,
                 Amount = 50,
                 Description = "First withdraw",
@@ -86,7 +86,7 @@ namespace AccountsLibraryUnitTestProject.Base
             account.Deposit(new Transaction()
             {
                 AccountId = 2,
-                Transaction_id = 1,
+                TransactionId = 1,
                 TransactionType = TransactionType.Deposit,
                 Amount = 2000,
                 Description = "First deposit",
@@ -96,7 +96,7 @@ namespace AccountsLibraryUnitTestProject.Base
             account.Deposit(new Transaction()
             {
                 AccountId = 2,
-                Transaction_id = 2,
+                TransactionId = 2,
                 TransactionType = TransactionType.Deposit,
                 Amount = 100,
                 Description = "Second deposit",
