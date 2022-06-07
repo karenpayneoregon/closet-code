@@ -6,12 +6,11 @@ namespace SingletonSimple.Classes
     {
         private static readonly Lazy<Singleton> Lazy = new(() => new Singleton());
         public static Singleton Instance => Lazy.Value;
-        public DateTime DateTime { get; set; }
+        public DateTime DateTime { get; set; } = DateTime.Now;
         public string SomeStringValue { get; set; }
-
-        private Singleton()
-        {
-            DateTime = DateTime.Now;
-        }
+        //private Singleton()
+        //{
+        //    DateTime = DateTime.Now;
+        //}
     }
 }
