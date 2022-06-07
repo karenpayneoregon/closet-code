@@ -1,4 +1,5 @@
 using System;
+using AccountsLibrary;
 using AccountsLibrary.Classes;
 using AccountsLibrary.Models;
 using AccountsLibraryUnitTestProject.Base;
@@ -52,8 +53,18 @@ namespace AccountsLibraryUnitTestProject
             
             // assert
             Check.That(account.Balance).Equals(balance);
-
         }
+
+        [TestMethod]
+        [TestTraits(Trait.Other)]
+        public void ToEnumFromInt()
+        {
+            Console.WriteLine(0.ToEnum<TransactionType>());
+            Console.WriteLine(1.ToEnum<TransactionType>());
+            Console.WriteLine(2.ToEnum<TransactionType>());
+        }
+
+
 
     }
 }

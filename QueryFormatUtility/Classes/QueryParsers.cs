@@ -10,6 +10,8 @@ namespace QueryFormatUtility.Classes
     public class QueryParsers
     {
         public static IList<ParseError> ParseErrors { get; set; }
+
+
         /// <summary>
         /// Format SQL off one line to indented into many lines
         /// </summary>
@@ -22,6 +24,9 @@ namespace QueryFormatUtility.Classes
             var parsedQuery = parser.Parse(
                 new StringReader(query),
                 out var errors);
+
+
+            
 
             if (errors.Count > 0)
             {
