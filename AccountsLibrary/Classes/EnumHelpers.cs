@@ -15,7 +15,7 @@ namespace AccountsLibrary.Classes
         /// </summary>
         /// <typeparam name="T">enum</typeparam>
         /// <returns>list of ItemContainer</returns>
-        public static List<EnumContainer> GetItemsContainer<T>() =>
+        public static List<EnumContainer> GetEnumDetails<T>() =>
             Enum.GetValues(typeof(T)).Cast<T>()
                 .Cast<Enum>()
                 .Select(value => new EnumContainer

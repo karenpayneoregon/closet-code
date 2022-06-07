@@ -8,8 +8,8 @@ namespace AccountsLibrary.Models
     {
         private decimal _warningLevel;
 
-        public event AccountBalanceWarningEventHandler AccountBalanceWarningEvent;
-        public event AccountDenyingEventHandler AccountDenialEvent;
+        public event AccountBalanceWarningEvent AccountBalanceWarningEvent;
+        public event AccountDenyingEvent AccountDenialEvent;
 
         public int AccountId { get; set; }
         /// <summary>
@@ -76,7 +76,7 @@ namespace AccountsLibrary.Models
                 _insufficientFunds = true;
                 AccountDenialEvent?.Invoke(
                     this,
-                    new(DenialReasons.InsufficientFunds));
+                    new(DenialReasons.InsufficientFunds, Balance));
             }
             else
             {
@@ -99,7 +99,7 @@ namespace AccountsLibrary.Models
                 _insufficientFunds = true;
                 AccountDenialEvent?.Invoke(
                     this,
-                    new(DenialReasons.InsufficientFunds));
+                    new(DenialReasons.InsufficientFunds, Balance));
 
                 return Balance;
             }

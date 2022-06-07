@@ -1,6 +1,6 @@
 ﻿namespace AccountsLibrary.Classes
 {
-    public delegate void AccountBalanceWarningEventHandler(
+    public delegate void AccountBalanceWarningEvent(
         object sender, 
         AccountBalanceWarningEventArgs e);
 }

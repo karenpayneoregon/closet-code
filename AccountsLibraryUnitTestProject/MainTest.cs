@@ -68,7 +68,7 @@ namespace AccountsLibraryUnitTestProject
 
             // act
             var account = AccountOperations.GetAccount(accountId);
-            account.AccountDenialEvent += AccountOnAccountDenialEvent;
+            account.AccountDenialEvent += OnAccountDenial;
 
             account.Withdraw(new Transaction()
             {
@@ -79,18 +79,22 @@ namespace AccountsLibraryUnitTestProject
                 Description = "Need money fast"
             });
 
-            Console.WriteLine(account.Balance);
-            account.AccountDenialEvent -= AccountOnAccountDenialEvent;
+            account.AccountDenialEvent -= OnAccountDenial;
+
+            Check.That(account.Balance).Equals(-100);
 
         }
 
-        private void AccountOnAccountDenialEvent(object sender, AccountDenialEventArgs e)
+        private void OnAccountDenial(object sender, AccountDenialEventArgs e)
         {
 
-            var description = EnumHelpers
-                .GetItemsContainer<DenialReasons>().FirstOrDefault(item => Equals(item.Value, e.Reason)).Description;
+            var reason = EnumHelpers
+                .GetEnumDetails<DenialReasons>()
+                .FirstOrDefault(item => Equals(item.Value, e.Reason))
+                .Description;
 
-            Console.WriteLine($"Alert: withdraw denied, {description}");
+            Console.WriteLine(
+                $"Alert: withdraw denied, {reason} with a balance of {e.Balance:C}");
 
         }
 
