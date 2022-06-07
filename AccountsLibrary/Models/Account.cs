@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text.Json;
 using AccountsLibrary.Classes;
 using AO = AccountsLibrary.Classes.AccountOperations;
 
 namespace AccountsLibrary.Models
 {
-    public class Account
+    public class Account : ICloneable
     {
         private decimal _warningLevel;
 
@@ -118,5 +120,13 @@ namespace AccountsLibrary.Models
         public bool InsufficientFunds => _insufficientFunds;
 
         public override string ToString() => Balance.ToString("c2");
+        public object Clone()
+        {
+            // setup
+            var json = JsonSerializer.Serialize(this);
+
+            // get
+            return JsonSerializer.Deserialize<Account>(json)!;
+        }
     }
 }

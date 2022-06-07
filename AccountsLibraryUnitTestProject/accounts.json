@@ -1,0 +1,74 @@
+[
+  {
+    "AccountId": 1,
+    "Number": "KP100",
+    "UserName": "KarenPayne",
+    "PIN": null,
+    "FirstName": "Karen",
+    "LastName": "Payne",
+    "Transactions": [
+      {
+        "Transaction_id": 1,
+        "AccountId": 1,
+        "TransactionType": 1,
+        "Description": "First deposit",
+        "Amount": 1000,
+        "TransactionDate": "2022-01-12T00:00:00"
+      },
+      {
+        "Transaction_id": 2,
+        "AccountId": 1,
+        "TransactionType": 1,
+        "Description": "Second deposit",
+        "Amount": 150,
+        "TransactionDate": "2022-02-06T00:00:00"
+      },
+      {
+        "Transaction_id": 3,
+        "AccountId": 1,
+        "TransactionType": 1,
+        "Description": "Third deposit",
+        "Amount": 1800,
+        "TransactionDate": "2022-03-22T00:00:00"
+      },
+      {
+        "Transaction_id": 3,
+        "AccountId": 1,
+        "TransactionType": 2,
+        "Description": "First withdraw",
+        "Amount": 50,
+        "TransactionDate": "2022-04-15T00:00:00"
+      }
+    ],
+    "Balance": 2900,
+    "InsufficientFunds": false
+  },
+  {
+    "AccountId": 2,
+    "Number": "MA100",
+    "UserName": "MikeAdams",
+    "PIN": null,
+    "FirstName": "Mike",
+    "LastName": "Adams",
+    "Transactions": [
+      {
+        "Transaction_id": 1,
+        "AccountId": 2,
+        "TransactionType": 1,
+        "Description": "First deposit",
+        "Amount": 2000,
+        "TransactionDate": "2022-05-02T00:00:00"
+      },
+      {
+        "Transaction_id": 2,
+        "AccountId": 2,
+        "TransactionType": 1,
+        "Description": "Second deposit",
+        "Amount": 100,
+        "TransactionDate": "2022-05-08T00:00:00"
+      }
+    ],
+    "Balance": 2100,
+    "InsufficientFunds": false
+  }
+]

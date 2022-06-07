@@ -45,7 +45,26 @@ namespace AccountsLibrary.Classes
         /// <param name="account">valid instance of an account</param>
         public static void Update(Account account)
         {
-            // TODO
+            var list = Accounts().Clone();
+            Console.WriteLine(list.Count);
+            var current = list.FirstOrDefault(x => x.AccountId == account.AccountId);
+            if (current is not null)
+            {
+                
+                if (list.Remove(current))
+                {
+                    list.Add(account);
+                    foreach (var account1 in list)
+                    {
+                        Console.WriteLine($"{account1.AccountId,-3}{account1.InsufficientFunds}");
+                        foreach (var trans in account1.Transactions)
+                        {
+                            Console.WriteLine($"\t{trans.TransactionType,-15}{trans.Amount,-15}{trans.TransactionDate:d}");
+                        }
+                    }
+                }
+                
+            }
         }
     }
 }

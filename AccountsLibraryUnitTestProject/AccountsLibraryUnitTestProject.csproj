@@ -4,6 +4,7 @@
 		<LangVersion>9.0</LangVersion>
 		<TargetFramework>net5.0</TargetFramework>
 		<IsPackable>false</IsPackable>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -16,6 +17,12 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\AccountsLibrary\AccountsLibrary.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="accounts.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
 
