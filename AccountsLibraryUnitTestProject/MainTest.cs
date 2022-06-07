@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using AccountsLibrary;
 using AccountsLibrary.Classes;
 using AccountsLibrary.Models;
@@ -41,7 +43,7 @@ namespace AccountsLibraryUnitTestProject
         }
 
         [TestMethod]
-        [TestTraits(Trait.PlaceHolder)]
+        [TestTraits(Trait.Banking)]
         public void ValidateFirstBalance()
         {
             // arrange
@@ -54,6 +56,44 @@ namespace AccountsLibraryUnitTestProject
             // assert
             Check.That(account.Balance).Equals(balance);
         }
+
+        [TestMethod]
+        [TestTraits(Trait.Banking)]
+        public void NegativeBalance()
+        {
+            // arrange
+            int accountId = 1;
+            decimal balance = 2900;
+
+
+            // act
+            var account = AccountOperations.GetAccount(accountId);
+            account.AccountDenialEvent += AccountOnAccountDenialEvent;
+
+            account.Withdraw(new Transaction()
+            {
+                AccountId = 1, 
+                Amount = balance +100, 
+                TransactionType = TransactionType.Withdraw, 
+                TransactionDate = DateTime.Now,
+                Description = "Need money fast"
+            });
+
+            Console.WriteLine(account.Balance);
+            account.AccountDenialEvent -= AccountOnAccountDenialEvent;
+
+        }
+
+        private void AccountOnAccountDenialEvent(object sender, AccountDenialEventArgs e)
+        {
+
+            var description = EnumHelpers
+                .GetItemsContainer<DenialReasons>().FirstOrDefault(item => Equals(item.Value, e.Reason)).Description;
+
+            Console.WriteLine($"Alert: withdraw denied, {description}");
+
+        }
+
 
         [TestMethod]
         [TestTraits(Trait.Other)]

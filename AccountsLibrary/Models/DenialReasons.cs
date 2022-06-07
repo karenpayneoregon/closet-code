@@ -3,10 +3,10 @@
 namespace AccountsLibrary.Models
 {
     public enum DenialReasons
-	{
+    {
         [Description("Insufficient funds")]
-		InsufficientFunds,
+        InsufficientFunds,
         [Description("Detected Suspicious activity")]
-		SuspiciousActivity
-	}
+        SuspiciousActivity
+    }
 }

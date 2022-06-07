@@ -5,38 +5,38 @@ using AO = AccountsLibrary.Classes.AccountOperations;
 namespace AccountsLibrary.Models
 {
     public class Account
-	{
-		private decimal _warningLevel;
+    {
+        private decimal _warningLevel;
 
         public event AccountBalanceWarningEventHandler AccountBalanceWarningEvent;
-		public event AccountDenyingEventHandler AccountDenialEvent;
+        public event AccountDenyingEventHandler AccountDenialEvent;
 
         public int AccountId { get; set; }
-		/// <summary>
-		/// Account number alpha numeric
-		/// </summary>
-		public string Number { get; set; }
+        /// <summary>
+        /// Account number alpha numeric
+        /// </summary>
+        public string Number { get; set; }
 
         public string UserName { get; set; }
         public string PIN { get; set; }
 
-		public string FirstName { get; set; }
-		public string LastName { get; set; }
-		public List<Transaction> Transactions { get; set; } = new();
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public List<Transaction> Transactions { get; set; } = new();
 
-		public Account()
-		{
-			_warningLevel = 10M;
-		}
+        public Account()
+        {
+            _warningLevel = 10M;
+        }
 
-		/// <summary>
-		/// Warning level is when to send an alert via our delegate
-		/// </summary>
-		public Account(decimal warningLevel)
-		{
-			_warningLevel = warningLevel;
-			_insufficientFunds = Balance <= 0M;
-		}
+        /// <summary>
+        /// Warning level is when to send an alert via our delegate
+        /// </summary>
+        public Account(decimal warningLevel)
+        {
+            _warningLevel = warningLevel;
+            _insufficientFunds = Balance <= 0M;
+        }
 
         /// <summary>
         /// Current balance of account
@@ -47,7 +47,7 @@ namespace AccountsLibrary.Models
             get
             {
                 _balance = AO.CalculateBalance(this);
-                return _balance; 
+                return _balance;
 
             }
 
@@ -59,61 +59,61 @@ namespace AccountsLibrary.Models
         /// Deposit money into account
         /// </summary>
         public decimal Deposit(Transaction transaction)
-		{
-			Transactions.Add(transaction);
+        {
+            Transactions.Add(transaction);
 
-			Balance += transaction.Amount;
+            Balance += transaction.Amount;
 
-			if ( Balance < _warningLevel && AccountBalanceWarningEvent is not null)
-			{
+            if (Balance < _warningLevel && AccountBalanceWarningEvent is not null)
+            {
                 AccountBalanceWarningEvent?.Invoke(
-                    this, 
+                    this,
                     new(Number, _warningLevel, Balance));
             }
 
-			if ( Balance - transaction.Amount < 0M)
-			{
-				_insufficientFunds = true;
+            if (Balance - transaction.Amount < 0M)
+            {
+                _insufficientFunds = true;
                 AccountDenialEvent?.Invoke(
-                    this, 
+                    this,
                     new(DenialReasons.InsufficientFunds));
             }
-			else
-			{
-				_insufficientFunds = false;
-			}
+            else
+            {
+                _insufficientFunds = false;
+            }
 
-			return Balance;
+            return Balance;
 
-		}
-		/// <summary>
-		/// Withdraw from account
-		/// </summary>
-		public decimal Withdraw(Transaction transaction)
-		{
-			Transactions.Add(transaction);
+        }
+        /// <summary>
+        /// Withdraw from account
+        /// </summary>
+        public decimal Withdraw(Transaction transaction)
+        {
+            Transactions.Add(transaction);
 
-			if (Balance - transaction.Amount < 0M)
-			{
-				// Deny withdraw
-				_insufficientFunds = true;
+            if (Balance - transaction.Amount < 0M)
+            {
+                // Deny withdraw
+                _insufficientFunds = true;
                 AccountDenialEvent?.Invoke(
-                    this, 
+                    this,
                     new(DenialReasons.InsufficientFunds));
 
                 return Balance;
-			}
+            }
 
-			Balance -= transaction.Amount;
+            Balance -= transaction.Amount;
 
-			AccountBalanceWarningEvent?.Invoke(
-                this, 
+            AccountBalanceWarningEvent?.Invoke(
+                this,
                 new(Number, _warningLevel, Balance));
 
-			return Balance;
+            return Balance;
 
-		}
-		private bool _insufficientFunds;
+        }
+        private bool _insufficientFunds;
         private decimal _balance;
         public bool InsufficientFunds => _insufficientFunds;
 

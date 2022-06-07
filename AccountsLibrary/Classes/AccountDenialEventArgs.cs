@@ -4,15 +4,13 @@ using AccountsLibrary.Models;
 namespace AccountsLibrary.Classes
 {
     public class AccountDenialEventArgs : EventArgs
-	{
-		private DenialReasons mReason;
-		public AccountDenialEventArgs(DenialReasons Reason)
-		{
-			mReason = Reason;
-		}
+    {
+        public AccountDenialEventArgs(DenialReasons Reason)
+        {
+            this.Reason = Reason;
+        }
 
-		public DenialReasons Reason => mReason;
-
+        public DenialReasons Reason { get; }
     }
 
 
