@@ -2,6 +2,9 @@
 
 namespace AccountsLibrary.Models
 {
+    /// <summary>
+    /// Container for Enum member and it's description from data annotation
+    /// </summary>
     public class EnumContainer
     {
         /// <summary>

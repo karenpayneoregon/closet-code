@@ -12,15 +12,9 @@ using AO = AccountsLibrary.Classes.AccountOperations;
 namespace AccountsLibraryUnitTestProject
 {
     [TestClass]
-    public partial class MainTest : TestBase
+    public partial class CheckingAccountTest : TestBase
     {
-        [TestMethod]
-        [TestTraits(Trait.Banking)]
-        public void ValidateAccountCountLogin()
-        {
-            List<Account> accounts = AO.ReadAccountsFromFile();
-            Check.That(accounts.Count).Equals(2);
-        }
+
 
         [TestMethod]
         [TestTraits(Trait.Banking)]
@@ -120,14 +114,7 @@ namespace AccountsLibraryUnitTestProject
         }
 
 
-        [TestMethod]
-        [TestTraits(Trait.Other)]
-        public void ToEnumFromInt()
-        {
-            Console.WriteLine(0.ToEnum<TransactionType>());
-            Console.WriteLine(1.ToEnum<TransactionType>());
-            Console.WriteLine(2.ToEnum<TransactionType>());
-        }
+
 
         [TestMethod]
         [TestTraits(Trait.PlaceHolder)]

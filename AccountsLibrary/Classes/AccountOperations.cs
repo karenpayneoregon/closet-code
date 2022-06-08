@@ -10,18 +10,6 @@ using System.Text.Json;
 
 namespace AccountsLibrary.Classes
 {
-    public class AccountGroupItem
-    {
-        public int AccountId { get; }
-        public Account Account { get; }
-
-        public AccountGroupItem(int accountId, Account account)
-        {
-            AccountId = accountId;
-            Account = account;
-        }
-    }
-
     public class AccountOperations
     {
         /// <summary>
@@ -30,12 +18,12 @@ namespace AccountsLibrary.Classes
         public static string FileName => "accounts.json";
 
         /// <summary>
-        /// Calculate current balance for an <see cref="Account"/>
+        /// Calculate current balance for an <see cref="CheckingAccount"/>
         /// </summary>
-        /// <param name="account">Instance of an <see cref="Account"/></param>
+        /// <param name="account">Instance of an <see cref="CheckingAccount"/></param>
         /// <returns>Current balance</returns>
         [DebuggerStepThrough]
-        public static decimal CalculateBalance(Account account)
+        public static decimal CalculateBalance(CheckingAccount account)
         {
             var deposits = account.Transactions
                 .Where(transaction => transaction.TransactionType == TransactionType.Deposit)
@@ -53,8 +41,8 @@ namespace AccountsLibrary.Classes
         /// </summary>
         /// <returns></returns>
         [DebuggerStepThrough]
-        public static List<Account> ReadAccountsFromFile()
-            => JsonSerializer.Deserialize<List<Account>>(
+        public static List<CheckingAccount> ReadAccountsFromFile()
+            => JsonSerializer.Deserialize<List<CheckingAccount>>(
                 File.ReadAllText(FileName));
 
 
@@ -69,7 +57,7 @@ namespace AccountsLibrary.Classes
         /// </summary>
         /// <param name="accountIdentifier"></param>
         /// <returns></returns>
-        public static Account GetAccount(int accountIdentifier) 
+        public static CheckingAccount GetAccount(int accountIdentifier) 
             => ReadAccountsFromFile()
                 .FirstOrDefault(account => account.AccountId == accountIdentifier);
 
@@ -81,9 +69,9 @@ namespace AccountsLibrary.Classes
         /// <remarks>
         /// TODO make a display info method
         /// </remarks>
-        public static void Update(Account account)
+        public static void Update(CheckingAccount account)
         {
-            IList<Account> list = ReadAccountsFromFile().Clone();
+            IList<CheckingAccount> list = ReadAccountsFromFile().Clone();
             
             var current = list.FirstOrDefault(x => x.AccountId == account.AccountId);
 
@@ -113,7 +101,7 @@ namespace AccountsLibrary.Classes
         /// Save all accounts to file
         /// </summary>
         /// <param name="list">List of current known accounts</param>
-        public static void Save(List<Account> list)
+        public static void Save(List<CheckingAccount> list)
         {
             File.WriteAllText(FileName, JsonSerializer.Serialize(list, Indented));
         }
@@ -123,7 +111,7 @@ namespace AccountsLibrary.Classes
         /// </summary>
         /// <param name="account">instance of a valid account</param>
         /// <returns>Balance for account</returns>
-        public static decimal AccountBalance(Account account)
+        public static decimal AccountBalance(CheckingAccount account)
         {
             return ReadAccountsFromFile().FirstOrDefault(current => current.AccountId == account.AccountId).Balance;
         }

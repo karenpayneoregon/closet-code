@@ -16,9 +16,9 @@ namespace AccountsLibraryUnitTestProject.Base
     public class MockOperations
     {
 
-        public static Account MyAccount()
+        public static CheckingAccount MyAccount()
         {
-            Account account = new()
+            CheckingAccount account = new()
             {
                 AccountId = 1,
                 FirstName = "Karen",
@@ -71,9 +71,9 @@ namespace AccountsLibraryUnitTestProject.Base
             return account;
 
         }
-        public static Account OtherAccount()
+        public static CheckingAccount OtherAccount()
         {
-            Account account = new()
+            CheckingAccount account = new()
             {
                 AccountId = 2,
                 FirstName = "Mike",
@@ -109,7 +109,7 @@ namespace AccountsLibraryUnitTestProject.Base
 
         public static void AccountToJsonFile()
         {
-            List<Account> accounts = new List<Account>()
+            List<CheckingAccount> accounts = new List<CheckingAccount>()
             {
                 MyAccount(),
                 OtherAccount()

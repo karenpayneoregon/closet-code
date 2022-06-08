@@ -10,7 +10,7 @@ using AccountsLibraryUnitTestProject.Base;
 // ReSharper disable once CheckNamespace - do not change
 namespace AccountsLibraryUnitTestProject
 {
-    public partial class MainTest
+    public partial class CheckingAccountTest
     {
 
         [TestInitialize]

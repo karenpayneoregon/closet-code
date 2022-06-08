@@ -2,9 +2,11 @@
 
 namespace AccountsLibrary.Models
 {
+    /// <summary>
+    /// Container for an Account transaction e.g. deposit, withdraw
+    /// </summary>
     public class Transaction
     {
-   
         public int TransactionId { get; set; }
         public int AccountId { get; set; }
         public TransactionType TransactionType { get; set; }
