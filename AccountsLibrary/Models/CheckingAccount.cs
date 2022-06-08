@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using AccountsLibrary.Classes;
+using AccountsLibrary.Classes.Events;
 using AccountsLibrary.Interfaces;
 using AO = AccountsLibrary.Classes.AccountOperations;
 

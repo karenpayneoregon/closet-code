@@ -1,4 +1,4 @@
-﻿namespace AccountsLibrary.Classes
+﻿namespace AccountsLibrary.Classes.Events
 {
     public delegate void AccountBalanceWarningEvent(
         object sender, 
