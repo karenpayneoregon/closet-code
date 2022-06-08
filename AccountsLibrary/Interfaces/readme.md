@@ -1,0 +1,8 @@
+﻿# About
+
+It's common for the `lead programmer` writes interface and `junior programmer` writes its implementation. 
+
+- **Code readability**: An interface constitutes a declaration about intentions. It defines a capability of your class, what your class is capable of doing. If you implement ISortable you're clearly stating that your class can be sorted, same for IRenderable or IConvertible.
+- **Code semantics**: By providing interfaces and implementing them you're actively separating concepts in a similar way HTML and CSS does. A class is a concrete implementation of an "object class" some way of representing the reality by modeling general properties of real life objects or concepts. An interface define a behavioral model, a definition of what an object can do. Separating those concepts keeps the semantics of your code more clear. That way some methods may need an instance of an animal class while other may accept whatever object you throw at them as long as it supports "walking".
+- **Code maintainability**: Interfaces helps to reduce coupling and therefore allow you to easily interchange implementations for the same concept without the underlying code being affected. You can change the implementation of a IMessage easily by defining a new class that implements the interface. Compare that to sistematically replacing all references from CMessage to CMyNewMessageClass.
+- Implement `Dependency injection`
