@@ -10,6 +10,18 @@ using System.Text.Json;
 
 namespace AccountsLibrary.Classes
 {
+    public class AccountGroupItem
+    {
+        public int AccountId { get; }
+        public Account Account { get; }
+
+        public AccountGroupItem(int accountId, Account account)
+        {
+            AccountId = accountId;
+            Account = account;
+        }
+    }
+
     public class AccountOperations
     {
         /// <summary>
@@ -121,17 +133,15 @@ namespace AccountsLibrary.Classes
 
             var results = ReadAccountsFromFile()
                 .GroupBy(account => account.AccountId)
-                .Select(groupAcct => new
-                {
-                    AccountId = groupAcct.Key,
-                    Account = groupAcct.Select(account => account).FirstOrDefault()
-                })
+                .Select(ga => new AccountGroupItem(
+                    ga.Key, ga.Select(account => account)
+                        .FirstOrDefault()))
                 .ToList();
 
 
             foreach (var result in results)
             {
-                Console.WriteLine($"{result.Account.FirstName}");
+                Console.WriteLine($"{result.Account.FirstName} {result.Account.LastName}");
             }
 
         }

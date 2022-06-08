@@ -7,7 +7,7 @@ using AO = AccountsLibrary.Classes.AccountOperations;
 
 namespace AccountsLibrary.Models
 {
-    public class Account : ICloneable
+    public class Account : ICloneable, IBaseAccount
     {
         private decimal _warningLevel;
 
