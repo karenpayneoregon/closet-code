@@ -7,7 +7,7 @@ using AccountsLibrary.Interfaces;
 
 namespace AccountsLibrary.Models
 {
-    class IndividualRetirementAccount : IBaseAccount
+    public class IndividualRetirementAccount : IBaseAccount
     {
         public int AccountId { get; set; }
         public decimal Balance { get; }
@@ -22,5 +22,7 @@ namespace AccountsLibrary.Models
         }
 
         public List<Transaction> Transactions { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }

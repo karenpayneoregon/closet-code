@@ -13,6 +13,8 @@ namespace AccountsLibrary.Interfaces
         public decimal Deposit(Transaction transaction);
         public decimal Withdraw(Transaction transaction);
         public List<Transaction> Transactions { get; set; }
+        string FirstName { get; set; }
+        string LastName { get; set; }
     } 
 
 }

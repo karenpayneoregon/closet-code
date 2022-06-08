@@ -19,5 +19,7 @@ namespace AccountsLibrary.Models
         }
 
         public List<Transaction> Transactions { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }

@@ -113,15 +113,16 @@ namespace AccountsLibrary.Classes
         /// <returns>Balance for account</returns>
         public static decimal AccountBalance(CheckingAccount account)
         {
-            return ReadAccountsFromFile().FirstOrDefault(current => current.AccountId == account.AccountId).Balance;
+            return ReadAccountsFromFile()
+                .FirstOrDefault(current => current.AccountId == account.AccountId)!.Balance;
         }
 
         public static void ViewAccounts()
         {
 
-            var results = ReadAccountsFromFile()
+            List<GroupContainer> results = ReadAccountsFromFile()
                 .GroupBy(account => account.AccountId)
-                .Select(ga => new AccountGroupItem(
+                .Select(ga => new GroupContainer(
                     ga.Key, ga.Select(account => account)
                         .FirstOrDefault()))
                 .ToList();

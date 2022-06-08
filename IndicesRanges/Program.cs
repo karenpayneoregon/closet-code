@@ -12,9 +12,9 @@ namespace IndicesRanges
         static void Main(string[] args)
         {
             DoMonths();
-            DoStringArray();
-            DoIntArray();
-            WorkDayNamesIndexing();
+            //DoStringArray();
+            //DoIntArray();
+            //WorkDayNamesIndexing();
 
             Console.ReadLine();
         }
