@@ -67,7 +67,18 @@ namespace AccountsLibrary.Models
         /// </summary>
         public decimal Deposit(Transaction transaction)
         {
-            transaction.TransactionId = Transactions.LastOrDefault().TransactionId + 1;
+            /*
+             * Initial transaction
+             */
+            if (Transactions.Count == 0)
+            {
+                transaction.TransactionId = 1;
+            }
+            else
+            {
+                transaction.TransactionId = Transactions.LastOrDefault().TransactionId + 1;
+            }
+            
             Transactions.Add(transaction);
             
             Balance += transaction.Amount;
@@ -101,12 +112,16 @@ namespace AccountsLibrary.Models
         /// </summary>
         public decimal Withdraw(Transaction transaction)
         {
+            if (Transactions.Count == 0)
+            {
+                throw new Exception("There is no account for this transaction");
+            }
+
             transaction.TransactionId = Transactions.LastOrDefault().TransactionId + 1;
             Transactions.Add(transaction);
 
             if (Balance - transaction.Amount < 0M)
             {
-                // Deny withdraw
                 _insufficientFunds = true;
                 AccountDenialEvent?.Invoke(this, new(DenialReasons.InsufficientFunds, Balance));
 
@@ -120,16 +135,22 @@ namespace AccountsLibrary.Models
             return Balance;
 
         }
+
         private bool _insufficientFunds;
         private decimal _balance;
         public bool InsufficientFunds => _insufficientFunds;
 
-        public override string ToString() => Balance.ToString("c2");
+        public override string ToString() => $"{AccountId,-4}{Balance:C}";
+
+        /// <summary>
+        /// Normally not needed but here it's needed for methods in AccountOperations. If this had
+        /// data stored in a database no need for this method
+        /// </summary>
+        /// <returns></returns>
         public object Clone()
         {
             // setup
             var json = JsonSerializer.Serialize(this);
-
             // get
             return JsonSerializer.Deserialize<CheckingAccount>(json)!;
         }

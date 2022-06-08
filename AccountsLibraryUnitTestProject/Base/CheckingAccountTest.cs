@@ -17,9 +17,9 @@ namespace AccountsLibraryUnitTestProject
         public void Initialization()
         {
             
+            MockOperations.AccountToJsonFile();
             if (MockOperations.AccountFileDoesNotExists)
             {
-                MockOperations.AccountToJsonFile();
             }
 
         }

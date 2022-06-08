@@ -1,4 +1,5 @@
-﻿using AccountsLibrary.Models;
+﻿using System.Collections.Generic;
+using AccountsLibrary.Models;
 
 namespace AccountsLibrary.Interfaces
 {
@@ -11,6 +12,7 @@ namespace AccountsLibrary.Interfaces
         decimal Balance { get; }
         public decimal Deposit(Transaction transaction);
         public decimal Withdraw(Transaction transaction);
+        public List<Transaction> Transactions { get; set; }
     } 
 
 }

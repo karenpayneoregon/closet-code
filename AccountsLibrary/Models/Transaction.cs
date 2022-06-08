@@ -14,6 +14,9 @@ namespace AccountsLibrary.Models
         public decimal Amount { get; set; }
         public DateTime TransactionDate { get; set; }
 
+        public override string ToString() => $"{AccountId,-4}{TransactionId,-4}{TransactionType}";
+
+
 
     }
 }

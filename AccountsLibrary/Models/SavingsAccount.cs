@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using AccountsLibrary.Interfaces;
 
 namespace AccountsLibrary.Models
@@ -16,5 +17,7 @@ namespace AccountsLibrary.Models
         {
             throw new NotImplementedException();
         }
+
+        public List<Transaction> Transactions { get; set; }
     }
 }

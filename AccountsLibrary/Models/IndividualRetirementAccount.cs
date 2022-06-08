@@ -20,5 +20,7 @@ namespace AccountsLibrary.Models
         {
             throw new NotImplementedException();
         }
+
+        public List<Transaction> Transactions { get; set; }
     }
 }

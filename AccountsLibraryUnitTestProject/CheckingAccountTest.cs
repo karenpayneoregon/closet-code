@@ -68,7 +68,6 @@ namespace AccountsLibraryUnitTestProject
             int accountId = 1;
             decimal balance = 2900;
 
-
             // act
             var account = AO.GetAccount(accountId);
             Console.WriteLine($"Checking funds: {account.InsufficientFunds}");
@@ -97,9 +96,14 @@ namespace AccountsLibraryUnitTestProject
             });
 
             Check.That(account.Balance).Equals(AO.AccountBalance(account));
+
         }
 
-
+        /// <summary>
+        /// View for teller or ATM
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnAccountDenial(object sender, AccountDenialEventArgs e)
         {
 
@@ -113,9 +117,7 @@ namespace AccountsLibraryUnitTestProject
 
         }
 
-
-
-
+        
         [TestMethod]
         [TestTraits(Trait.PlaceHolder)]
         public void ViewData()
