@@ -12,7 +12,6 @@ namespace CodeWithNoForesight_grouping.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=BookLibrary;Trusted_Connection=True");
             optionsBuilder.UseSqlServer(ConnectionString());
         }
 

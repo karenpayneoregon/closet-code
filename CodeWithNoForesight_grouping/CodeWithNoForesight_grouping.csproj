@@ -39,4 +39,8 @@
 		<PackageReference Include="ConfigurationLibrary" Version="1.0.1" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
+	</ItemGroup>
+
 </Project>

@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using Spectre.Console;
-
+using W = ConsoleHelperLibrary.Classes.WindowUtility;
 
 // ReSharper disable once CheckNamespace
 namespace CodeWithNoForesight_grouping
 {
     partial class Program
     {
+        private static void Render(Rule rule)
+        {
+            AnsiConsole.Write(rule);
+            AnsiConsole.WriteLine();
+        }
         private static Table CreateViewTable()
         {
             return new Table()
@@ -24,6 +29,7 @@ namespace CodeWithNoForesight_grouping
         public static void Init()
         {
             Console.Title = "Code sample - grouping data";
+            W.SetConsoleWindowPosition(W.AnchorWindow.Center);
         }
     }
 }
