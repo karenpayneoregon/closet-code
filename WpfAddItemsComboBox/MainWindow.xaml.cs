@@ -24,15 +24,26 @@ namespace WpfAddItemsComboBox
         {
             InitializeComponent();
 
-            ExampleComboBox.ItemsSource = new List<string>() { "First", "Second" };
+            ExampleComboBox.ItemsSource = new List<Category>()
+            {
+                new Category() {Id = 1, Name = "Meat"}, 
+                new Category() { Id = 2, Name = "Fruit" }
+            };
             ExampleComboBox.SelectedIndex = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var list = (List<string>)ExampleComboBox.ItemsSource;
-            list.Add("Last");
-            ExampleComboBox.SelectedIndex = list.Count - 1;
+            var list = (List<Category>)ExampleComboBox.ItemsSource;
+            list.Add(new Category() { Id = 3, Name = "Fish" });
         }
+    }
+
+    public class Category
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public override string ToString() => Name;
+
     }
 }
