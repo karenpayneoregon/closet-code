@@ -26,6 +26,8 @@ Written for a forum question where the asker was getting duplicate records inser
 
 **Next** written also for a forum question, return a grouping strong typed. The key is `item.ToList()`
 
+![Grouped Members Peek](assets/GroupedMembersPeek.png)
+
 ```csharp
 private static List<GroupedMember> Example1(IEnumerable<Member> list) =>
     list
