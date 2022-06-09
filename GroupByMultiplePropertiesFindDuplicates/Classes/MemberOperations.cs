@@ -20,6 +20,12 @@ namespace GroupByMultiplePropertiesFindDuplicates.Classes
                 new Member { Id = 5, Active = true,  Name = "Clair", Surname = "Smith" },
                 new Member { Id = 6, Active = true,  Name = "Mary", Surname = "Adams" },
             };
+
+        /// <summary>
+        /// Get active members strongly typed
+        /// </summary>
+        /// <param name="list">List of <see cref="Member"/></param>
+        /// <returns></returns>
         public static List<GroupedMember> GroupedMembers(IEnumerable<Member> list) =>
             list
                 .Where(member => member.Active)
