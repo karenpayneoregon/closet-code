@@ -123,8 +123,7 @@ namespace AccountsLibrary.Classes
             List<GroupContainer> results = ReadAccountsFromFile()
                 .GroupBy(account => account.AccountId)
                 .Select(ga => new GroupContainer(
-                    ga.Key, ga.Select(account => account)
-                        .FirstOrDefault()))
+                    ga.Key, ga.Select(account => account).FirstOrDefault()))
                 .ToList();
 
 
