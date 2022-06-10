@@ -290,9 +290,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountsLibrary", "Accounts
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupByMultiplePropertiesFindDuplicates", "GroupByMultiplePropertiesFindDuplicates\GroupByMultiplePropertiesFindDuplicates.csproj", "{9A8EBC26-AC1E-41EE-8045-D298FBE8AEAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAddItemsComboBox", "WpfAddItemsComboBox\WpfAddItemsComboBox.csproj", "{1F0A1570-FAF6-40FF-B03E-7D253EB2DC74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAddItemsComboBox", "WpfAddItemsComboBox\WpfAddItemsComboBox.csproj", "{1F0A1570-FAF6-40FF-B03E-7D253EB2DC74}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonSimple", "SingletonSimple\SingletonSimple.csproj", "{1FDF3DAA-5C38-4E1D-BE79-618C11811E12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependency injection", "Dependency injection", "{4CEE5C3B-5A7B-4960-93A0-D8A561B12EBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjectionForms1", "DependencyInjectionForms1\DependencyInjectionForms1.csproj", "{D8B6292C-9429-4CAF-B9B7-9B7F2340E82A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -759,6 +763,10 @@ Global
 		{1FDF3DAA-5C38-4E1D-BE79-618C11811E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FDF3DAA-5C38-4E1D-BE79-618C11811E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FDF3DAA-5C38-4E1D-BE79-618C11811E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B6292C-9429-4CAF-B9B7-9B7F2340E82A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B6292C-9429-4CAF-B9B7-9B7F2340E82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B6292C-9429-4CAF-B9B7-9B7F2340E82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B6292C-9429-4CAF-B9B7-9B7F2340E82A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -893,6 +901,8 @@ Global
 		{9A8EBC26-AC1E-41EE-8045-D298FBE8AEAC} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{1F0A1570-FAF6-40FF-B03E-7D253EB2DC74} = {4E4EF6DA-E585-4453-BE33-146FD67A19EE}
 		{1FDF3DAA-5C38-4E1D-BE79-618C11811E12} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{4CEE5C3B-5A7B-4960-93A0-D8A561B12EBF} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{D8B6292C-9429-4CAF-B9B7-9B7F2340E82A} = {4CEE5C3B-5A7B-4960-93A0-D8A561B12EBF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
