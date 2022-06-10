@@ -10,12 +10,4 @@ namespace DependencyInjectionForms1.Services
             return new UserModel() { Id = Id, Name = "Anakin Skywalker" };
         }
     }
-
-    public class DataConnectionService : IDataConnection
-    {
-        public string GetConnection()
-        {
-            return "Some connection";
-        }
-    }
 }

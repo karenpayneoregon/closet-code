@@ -18,6 +18,7 @@ namespace DependencyInjectionForms1
             var services = new ServiceCollection();
 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IDataConnection, DataConnectionService>();
             ServiceProvider = services.BuildServiceProvider();
         }
 
