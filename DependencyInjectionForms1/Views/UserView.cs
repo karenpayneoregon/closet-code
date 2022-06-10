@@ -14,7 +14,7 @@ namespace DependencyInjectionForms1.Views
             _presenter = new UserPresenter(this);
         }
 
-        public void JustDoIt(string message)
+        public void ShowMessage(string message)
         {
             label1.Text = message;
         }

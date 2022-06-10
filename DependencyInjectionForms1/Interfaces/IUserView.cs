@@ -2,6 +2,6 @@
 {
     public interface IUserView
     {
-        void JustDoIt(string message);
+        void ShowMessage(string message);
     }
 }
