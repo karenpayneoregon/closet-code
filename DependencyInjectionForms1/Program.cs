@@ -17,11 +17,7 @@ namespace DependencyInjectionForms1
         {
             var services = new ServiceCollection();
 
-            //::begin:: User Services
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IDataConnection, DataConnectionService>();
-            //::end:: User Services
-
             ServiceProvider = services.BuildServiceProvider();
         }
 
@@ -29,6 +25,7 @@ namespace DependencyInjectionForms1
         {
             return (T)ServiceProvider.GetService(typeof(T));
         }
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
