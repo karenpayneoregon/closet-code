@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AccountsLibrary.Models;
 using System.Text.Json;
+using AccountsLibrary.LanguageExtensions;
 
 namespace AccountsLibrary.Classes
 {
@@ -111,6 +112,9 @@ namespace AccountsLibrary.Classes
         /// </summary>
         /// <param name="account">instance of a valid account</param>
         /// <returns>Balance for account</returns>
+        /// <remarks>
+        /// This could also be a calculated upon request rather than storing the balance
+        /// </remarks>
         public static decimal AccountBalance(CheckingAccount account)
         {
             return ReadAccountsFromFile()

@@ -1,9 +1,8 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AccountsLibrary
+namespace AccountsLibrary.LanguageExtensions
 {
     public static class Extensions
     {

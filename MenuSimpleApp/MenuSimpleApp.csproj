@@ -17,6 +17,9 @@
 		<PackageReference Include="Spectre.Console" Version="0.44.0" />
 	</ItemGroup>
 	<ItemGroup>
+	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
+	</ItemGroup>
+	<ItemGroup>
 	  <None Update="Menu.json">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>

@@ -17,7 +17,8 @@ private static SelectionPrompt<Categories> ConfigureSelectionPrompt()
 }
 ```
 
-![image](../assets/ConsoleMenu.png)
+![Console Menu](assets/ConsoleMenu.png)
+
 
 # Update
 

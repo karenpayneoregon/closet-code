@@ -71,7 +71,7 @@ namespace AccountsLibraryUnitTestProject
             // act
             var account = AO.GetAccount(accountId);
             Console.WriteLine($"Checking funds: {account.InsufficientFunds}");
-            account.AccountDenialEvent += OnAccountDenial;
+            account.AccountDenial += OnAccountDenial;
 
             account.Withdraw(new Transaction()
             {
@@ -82,7 +82,7 @@ namespace AccountsLibraryUnitTestProject
                 Description = "Need money fast"
             });
 
-            account.AccountDenialEvent -= OnAccountDenial;
+            account.AccountDenial -= OnAccountDenial;
             AO.Update(account);
             Check.That(account.Balance).Equals(-100);
 

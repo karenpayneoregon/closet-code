@@ -15,14 +15,14 @@ namespace MenuSimpleApp.Classes
         {
             SelectionPrompt<MenuItem> menu = new()
             {
-                HighlightStyle = new Style(Color.DodgerBlue1, Color.Black, Decoration.None)
+                HighlightStyle = new Style(Color.Black, Color.White, Decoration.None)
             };
 
             menu.Title("Select a [B]category[/]");
             menu.PageSize = 14;
             menu.MoreChoicesText("[grey](Move up and down to reveal more categories)[/]");
             menu.AddChoices(MockOperations.GetMenuItems());
-
+            
             return menu;
 
         }

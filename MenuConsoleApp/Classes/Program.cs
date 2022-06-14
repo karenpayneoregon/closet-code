@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
-using MenuConsoleApp.Classes;
-using MenuConsoleApp.Models;
-using Spectre.Console;
+using W = ConsoleHelperLibrary.Classes.WindowUtility;
 
 // ReSharper disable once CheckNamespace
 namespace MenuConsoleApp
@@ -13,6 +11,7 @@ namespace MenuConsoleApp
         public static void Init()
         {
             Console.Title = "Code sample - Spectre.Console menu with EF Core";
+            W.SetConsoleWindowPosition(W.AnchorWindow.Center);
         }
     }
 }

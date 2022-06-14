@@ -5,7 +5,7 @@ namespace AccountsLibrary.Classes
     /// <summary>
     /// Not used in this project but could be used for creating new accounts
     /// </summary>
-    public class Helpers
+    public class Utilities
     {
         public static string NextValue(string sender)
         {

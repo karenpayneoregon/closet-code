@@ -5,6 +5,7 @@ using System.Text.Json;
 using AccountsLibrary.Classes;
 using AccountsLibrary.Classes.Events;
 using AccountsLibrary.Interfaces;
+using AccountsLibrary.LanguageExtensions;
 using AO = AccountsLibrary.Classes.AccountOperations;
 
 namespace AccountsLibrary.Models
@@ -13,8 +14,8 @@ namespace AccountsLibrary.Models
     {
         private decimal _warningLevel;
 
-        public event AccountBalanceWarningEvent AccountBalanceWarningEvent;
-        public event AccountDenyingEvent AccountDenialEvent;
+        public event BalanceWarningDelegate BalanceWarning;
+        public event DenyDelegate AccountDenial;
 
         /// <summary>
         /// Primary key
@@ -50,7 +51,7 @@ namespace AccountsLibrary.Models
         /// Current balance of account
         /// </summary>
         /// <remarks>Read-only</remarks>
-        public decimal Balance
+        public virtual decimal Balance
         {
             get
             {
@@ -84,15 +85,15 @@ namespace AccountsLibrary.Models
             
             Balance += transaction.Amount;
 
-            if (Balance < _warningLevel && AccountBalanceWarningEvent is not null)
+            if (Balance < _warningLevel && BalanceWarning is not null)
             {
-                AccountBalanceWarningEvent?.Invoke(this, new(Number, _warningLevel, Balance));
+                BalanceWarning?.Invoke(this, new(Number, _warningLevel, Balance));
             }
 
             if (Balance - transaction.Amount < 0M)
             {
                 _insufficientFunds = true;
-                AccountDenialEvent?.Invoke(this, new(DenialReasons.InsufficientFunds, Balance));
+                AccountDenial?.Invoke(this, new(DenialReasons.InsufficientFunds, Balance));
             }
             else
             {
@@ -124,14 +125,14 @@ namespace AccountsLibrary.Models
             if (Balance - transaction.Amount < 0M)
             {
                 _insufficientFunds = true;
-                AccountDenialEvent?.Invoke(this, new(DenialReasons.InsufficientFunds, Balance));
+                AccountDenial?.Invoke(this, new(DenialReasons.InsufficientFunds, Balance));
 
                 return Balance;
             }
 
             Balance -= transaction.Amount;
 
-            AccountBalanceWarningEvent?.Invoke(this, new(Number, _warningLevel, Balance));
+            BalanceWarning?.Invoke(this, new(Number, _warningLevel, Balance));
 
             return Balance;
 
