@@ -18,6 +18,8 @@ namespace SqlServerAsyncReadCore.Classes
             /// Primary key for Row property
             /// </summary>
             public int Identifier { get; set; }
+
+            public string? Label { get; set; }
         }
     }
 }

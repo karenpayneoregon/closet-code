@@ -44,14 +44,15 @@ namespace SqlServerAsyncReadCore
 
         private void GetCheckedButton_Click(object sender, EventArgs e)
         {
-            List<CheckedData> results = ProductCheckedListBox.IndexList(DataOperations.PrimaryKey);
+            List<CheckedData> results = ProductCheckedListBox.IndexList(DataOperations.PrimaryKey, DataOperations.DisplayColumn);
 
             if (!results.Any()) return;
             StringBuilder builder = new();
 
             foreach (var data in results)
             {
-                builder.AppendLine($"{data.Index},{data.Identifier}, [{string.Join(",", data.Row.ItemArray)}]");
+                builder.AppendLine($"{data.Index},{data.Identifier},'{data.Label}'. [{string.Join(",", data.Row.ItemArray)}]");
+                
             }
 
             textBox1.Text = builder.ToString();
