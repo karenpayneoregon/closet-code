@@ -18,11 +18,17 @@ namespace SequenceIssues.LanguageExtensions
         /// <param name="sequence"></param>
         /// <returns>missing elements</returns>
         /// <remarks>Run <seealso cref="IsSequenceBroken"/> first to determine if elements are missing</remarks>
-        public static IEnumerable SequenceFindMissing(this int[] sequence)
+        public static IEnumerable FindMissing1(this int[] sequence)
         {
             return sequence.Zip(sequence.Skip(1), (valueLeft, valueRight)
                 => Enumerable.Range(valueLeft + 1, (valueRight - valueLeft) - 1)).SelectMany(item => item);
         }
+
+        public static int[] FindMissing2(this int[] sequence)
+            => Enumerable
+                .Range(1, sequence[^1])
+                .Except(sequence)
+                .ToArray();
 
         /// <summary>
         /// Determine if the sequence has missing elements
