@@ -10,7 +10,7 @@ using Spectre.Console;
 
 namespace NorthWind2020ConsoleApp.Classes
 {
-    public class EmployeeOperations
+    public class CoreOperations
     {
 
         /// <summary>
@@ -60,6 +60,43 @@ namespace NorthWind2020ConsoleApp.Classes
             AnsiConsole.Write(table);
 
         }
+
+        /// <summary>
+        /// Get list of random records for <see cref="TModel"/> by <see cref="count"/>
+        /// </summary>
+        /// <typeparam name="TModel">Model to read</typeparam>
+        /// <param name="count">Max records</param>
+        /// <returns>List of <see cref="TModel"/></returns>
+        /// <remarks>
+        /// Not guaranteed to return <see cref="count"/> but will return records
+        /// </remarks>
+        public static List<TModel> Random<TModel>(int count) where TModel : class
+        {
+            using var context = new Context();
+
+            Random rand = new();
+            int skipper = rand.Next(0, context.Set<TModel>().Count());
+            return context.Set<TModel>().ToList()
+                .OrderBy( _ => Guid.NewGuid())
+                .Skip(skipper)
+                .Take(count).ToList();
+        }
+
+        public static List<Products> RandomProducts(int count)
+        {
+            using var context = new Context();
+
+            Random rand = new();
+            int skipper = rand.Next(0, context.Products.Count());
+
+            return context
+                .Products
+                .OrderBy(product => Guid.NewGuid())
+                .Skip(skipper)
+                .Take(count)
+                .ToList();
+        }
+
 
         /// <summary>
         /// Little extra work than above to perform an outer sort

@@ -7,3 +7,7 @@ EF Core code samples using a modified version of NorthWind database, script to c
 - `EmployeeOperations.EmployeeReportsTo` is an example of a self-referencing table for managers and workers.
 
 ![Screenshot](assets/screenshot.png)
+
+| C1        |   C2    |   C3 |
+|:------------- |:-------------|:-------------|
+| q |w  | w |
