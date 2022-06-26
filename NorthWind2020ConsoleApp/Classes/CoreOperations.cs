@@ -75,7 +75,7 @@ namespace NorthWind2020ConsoleApp.Classes
             using var context = new Context();
 
             Random rand = new();
-            int skipper = rand.Next(0, context.Set<TModel>().Count());
+            int skipper = rand.Next(1, context.Set<TModel>().Count());
             return context.Set<TModel>().ToList()
                 .OrderBy( _ => Guid.NewGuid())
                 .Skip(skipper)
@@ -87,7 +87,7 @@ namespace NorthWind2020ConsoleApp.Classes
             using var context = new Context();
 
             Random rand = new();
-            int skipper = rand.Next(0, context.Products.Count());
+            int skipper = rand.Next(1, context.Products.Count());
 
             return context
                 .Products
