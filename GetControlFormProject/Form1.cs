@@ -29,5 +29,11 @@ namespace GetControlFormProject
                 .ToList();
             listBox1.DataSource = textBoxes;
         }
+
+        private List<TextBox> _textBoxes;
+        private void GetAllButtons_Click(object sender, EventArgs e)
+        {
+            _textBoxes = this.TextBoxList();
+        }
     }
 }
