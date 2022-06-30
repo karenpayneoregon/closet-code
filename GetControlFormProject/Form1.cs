@@ -4,6 +4,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GetControlFormProject.Classes;
@@ -20,7 +21,10 @@ namespace GetControlFormProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox1.DataSource = this.TextBoxList().Select(x => new TextBoxItem(x.Name, x.Text)).ToList();
+            listBox1.DataSource = this.TextBoxList()
+                .Select(x => new TextBoxItem(x.Name, x.Text))
+                .OrderBy(x => Regex.Match(x.Name, @"\d+").Value, new SemiNumericComparer())
+                .ToList();
         }
     }
 }
