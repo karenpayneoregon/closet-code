@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Runtime.CompilerServices;
 using CommonLibrary.Classes;
+using CommonLibrary.LanguageExtensions;
 using CreateRandomListConsoleApp.Classes;
 using Spectre.Console;
 using W = ConsoleHelperLibrary.Classes.WindowUtility;
@@ -22,7 +23,7 @@ namespace CreateRandomListConsoleApp
         {
             AnsiConsole.MarkupLine("[yellow]Dates[/]");
             var dates = MockedData.DateTimeList;
-            var randomDates = dates.Shuffle().Take(3);
+            var randomDates = dates.Shuffle(3);
             foreach (var dateTime in randomDates)
             {
                 AnsiConsole.MarkupLine($"{dateTime.Month}/{dateTime.Day}/[cyan]{dateTime.Year}[/]");
