@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -21,10 +22,12 @@ namespace GetControlFormProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox1.DataSource = this.TextBoxList()
-                .Select(x => new TextBoxItem(x.Name, x.Text))
-                .OrderBy(x => Regex.Match(x.Name, @"\d+").Value, new SemiNumericComparer())
+            List<TextBoxItem> textBoxes = this.TextBoxList()
+                .Select(textBox => new TextBoxItem(textBox.Name, textBox.Text))
+                .OrderBy(textBox => Regex.Match(textBox.Name, @"\d+").Value, 
+                    new SemiNumericComparer())
                 .ToList();
+            listBox1.DataSource = textBoxes;
         }
     }
 }
