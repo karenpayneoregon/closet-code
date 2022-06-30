@@ -306,6 +306,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateRandomListConsoleApp"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAdapterFormApp", "DataAdapterFormApp\DataAdapterFormApp.csproj", "{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetControlFormProject", "GetControlFormProject\GetControlFormProject.csproj", "{E645359A-E2FF-4A2D-B79F-27C1DEB48CDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -791,6 +793,10 @@ Global
 		{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E645359A-E2FF-4A2D-B79F-27C1DEB48CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E645359A-E2FF-4A2D-B79F-27C1DEB48CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E645359A-E2FF-4A2D-B79F-27C1DEB48CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E645359A-E2FF-4A2D-B79F-27C1DEB48CDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -931,6 +937,7 @@ Global
 		{2E6CC0CC-33B2-490A-88D6-E0995BF6A305} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{1DE06F50-CB42-44DC-8C9B-CD51D211BA89} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
+		{E645359A-E2FF-4A2D-B79F-27C1DEB48CDC} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
