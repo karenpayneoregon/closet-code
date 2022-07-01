@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using GetControlFormProject.Classes;
@@ -40,7 +42,24 @@ namespace GetControlFormProject
             listBox1.DataSource = textBoxes;
         }
 
-        
+        /// <summary>
+        /// Does not account for those in the GroupBox and the sort order
+        /// is incorrect.
+        /// </summary>
+        private void TypicalButton_Click(object sender, EventArgs e)
+        {
+            var allTexBoxes = Controls.OfType<TextBox>();
+            var sortedTextBoxes = allTexBoxes
+                .OrderBy(textBox => textBox.Name)
+                .ToList();
 
+            StringBuilder builder = new();
+            foreach (var textBox in sortedTextBoxes)
+            {
+                builder.AppendLine(textBox.Name);
+            }
+
+            MessageBox.Show(builder.ToString());
+        }
     }
 }

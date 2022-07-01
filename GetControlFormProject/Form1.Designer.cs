@@ -42,6 +42,7 @@ namespace GetControlFormProject
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.TypicalButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,11 +156,22 @@ namespace GetControlFormProject
             this.listBox1.Size = new System.Drawing.Size(299, 214);
             this.listBox1.TabIndex = 10;
             // 
+            // TypicalButton
+            // 
+            this.TypicalButton.Location = new System.Drawing.Point(416, 291);
+            this.TypicalButton.Name = "TypicalButton";
+            this.TypicalButton.Size = new System.Drawing.Size(299, 23);
+            this.TypicalButton.TabIndex = 11;
+            this.TypicalButton.Text = "Typical";
+            this.TypicalButton.UseVisualStyleBackColor = true;
+            this.TypicalButton.Click += new System.EventHandler(this.TypicalButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 356);
+            this.Controls.Add(this.TypicalButton);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox10);
@@ -197,6 +209,7 @@ namespace GetControlFormProject
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button TypicalButton;
     }
 }
 
