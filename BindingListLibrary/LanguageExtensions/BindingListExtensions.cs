@@ -14,7 +14,7 @@ namespace BindingListLibrary.LanguageExtensions
         /// <param name="data">Add to add</param>
         public static void AddRange<T>(this BindingList<T> list, IEnumerable<T> data)
         {
-            if (list == null || data == null)
+            if (list is null || data is null)
             {
                 return;
             }
