@@ -42,9 +42,9 @@ namespace DataAdapterFormApp.Classes
 
                 return (true, null);
             }
-            catch (Exception ex)
+            catch (Exception localException)
             {
-                return (false, ex);
+                return (false, localException);
             }
         }
 
@@ -75,9 +75,9 @@ namespace DataAdapterFormApp.Classes
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception localException)
             {
-                return (count, ex);
+                return (count, localException);
             }
 
             return (count, null);

@@ -17,7 +17,7 @@ namespace QueryFormatUtility
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GetQueryParamsForm());
+            Application.Run(new FormatOneLinerForm());
         }
     }
 }

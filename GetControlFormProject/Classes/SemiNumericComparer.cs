@@ -4,6 +4,10 @@ using System.Globalization;
 
 namespace GetControlFormProject.Classes
 {
+
+    /// <summary>
+    /// For sorting strings with numbers <see cref="IComparer{T}"/>
+    /// </summary>
     public class SemiNumericComparer : IComparer<string>
     {
         /// <summary>

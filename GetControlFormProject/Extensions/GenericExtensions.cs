@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace GetControlFormProject.Extensions
@@ -28,6 +29,8 @@ namespace GetControlFormProject.Extensions
 
         public static List<TextBox> TextBoxList(this Control control)
             => control.Descendants<TextBox>().ToList();
+
+        public static string DigitsOnly(this string source) => Regex.Match(source, @"\d+").Value;
 
     }
 }
