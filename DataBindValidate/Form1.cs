@@ -21,7 +21,7 @@ namespace DataBindValidate
 
         private void OnShown(object sender, EventArgs e)
         {
-            NombreTextBox.DataBindings.Add("Text", _bindingSource, nameof(Usuarios.Nombre));
+            NumberTextBox.DataBindings.Add("Text", _bindingSource, nameof(Usuarios.NumberValue));
         }
 
         private void ValidateButton_Click(object sender, EventArgs e)
@@ -54,6 +54,15 @@ namespace DataBindValidate
             //config.AppSettings.Settings.Remove("Testsetting");
             //config.Save();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (NumberTextBox.DataBindings.Count >0)
+            {
+                NumberTextBox.DataBindings.Clear();
+                NumberTextBox.DataBindings.Add("Text", _bindingSource, nameof(Usuarios.NumberValue));
+            }
         }
     }
 }
