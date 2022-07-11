@@ -310,6 +310,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetControlFormProject", "Ge
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFormatProviderExample", "IFormatProviderExample\IFormatProviderExample.csproj", "{D77BFD43-21C1-48C7-9A01-05D2ED192163}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractResourceToFile1", "ExtractResourceToFile1\ExtractResourceToFile1.csproj", "{58A35659-65E9-4BB8-8036-6057421D09D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -803,6 +805,10 @@ Global
 		{D77BFD43-21C1-48C7-9A01-05D2ED192163}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D77BFD43-21C1-48C7-9A01-05D2ED192163}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D77BFD43-21C1-48C7-9A01-05D2ED192163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A35659-65E9-4BB8-8036-6057421D09D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A35659-65E9-4BB8-8036-6057421D09D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A35659-65E9-4BB8-8036-6057421D09D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A35659-65E9-4BB8-8036-6057421D09D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -945,6 +951,7 @@ Global
 		{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{E645359A-E2FF-4A2D-B79F-27C1DEB48CDC} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{D77BFD43-21C1-48C7-9A01-05D2ED192163} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{58A35659-65E9-4BB8-8036-6057421D09D6} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
