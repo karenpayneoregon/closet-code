@@ -78,7 +78,7 @@ namespace ToggleSwitchDemo
                 case OperationType.StandbyMode:
                     // TODO
                     break;
-
+                // no need for default here
             }
 
 
