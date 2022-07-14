@@ -152,7 +152,7 @@ namespace SelectAll
         {
             if (RCheckBox != null)
             {
-                //Modifiy Counter;            
+                //Modify Counter;            
                 if ((bool)RCheckBox.Value && TotalCheckedCheckBoxes < TotalCheckBoxes)
                     TotalCheckedCheckBoxes++;
                 else if (TotalCheckedCheckBoxes > 0)
@@ -166,7 +166,7 @@ namespace SelectAll
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void GetCheckedButton_Click(object sender, EventArgs e)
         {
             var table = (DataTable)_bindingSource.DataSource;
             var checkedItems = table.AsEnumerable().Where(row => row.Field<bool>("IsChecked")).ToList();

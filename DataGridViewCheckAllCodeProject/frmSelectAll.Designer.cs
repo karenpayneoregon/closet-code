@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSelectAll = new System.Windows.Forms.DataGridView();
             this.chkBxSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtBxRandomNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBxDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBxTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.GetCheckedButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectAll)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,9 +72,9 @@
             // txtBxDate
             // 
             this.txtBxDate.DataPropertyName = "Date";
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.txtBxDate.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.txtBxDate.DefaultCellStyle = dataGridViewCellStyle1;
             this.txtBxDate.HeaderText = "Date";
             this.txtBxDate.Name = "txtBxDate";
             this.txtBxDate.ReadOnly = true;
@@ -82,29 +82,29 @@
             // txtBxTime
             // 
             this.txtBxTime.DataPropertyName = "Time";
-            dataGridViewCellStyle4.Format = "t";
-            dataGridViewCellStyle4.NullValue = null;
-            this.txtBxTime.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "t";
+            dataGridViewCellStyle2.NullValue = null;
+            this.txtBxTime.DefaultCellStyle = dataGridViewCellStyle2;
             this.txtBxTime.HeaderText = "Time";
             this.txtBxTime.Name = "txtBxTime";
             this.txtBxTime.ReadOnly = true;
             // 
-            // button1
+            // GetCheckedButton
             // 
-            this.button1.Location = new System.Drawing.Point(12, 278);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.GetCheckedButton.Location = new System.Drawing.Point(12, 278);
+            this.GetCheckedButton.Name = "GetCheckedButton";
+            this.GetCheckedButton.Size = new System.Drawing.Size(191, 23);
+            this.GetCheckedButton.TabIndex = 1;
+            this.GetCheckedButton.Text = "Get checked";
+            this.GetCheckedButton.UseVisualStyleBackColor = true;
+            this.GetCheckedButton.Click += new System.EventHandler(this.GetCheckedButton_Click);
             // 
             // frmSelectAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 313);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.GetCheckedButton);
             this.Controls.Add(this.dgvSelectAll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmSelectAll";
@@ -123,7 +123,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtBxRandomNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtBxDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtBxTime;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button GetCheckedButton;
     }
 }
 
