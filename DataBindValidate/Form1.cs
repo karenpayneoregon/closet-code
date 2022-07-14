@@ -32,12 +32,13 @@ namespace DataBindValidate
             if (modelEntity.IsValid)
             {
                 JsonOperation.Serialize(current);
+                MessageBox.Show("Valid");
             }
             else
             {
-                StringBuilder builder = new StringBuilder();
+                var builder = new StringBuilder();
                 modelEntity.Errors.ToList().ForEach(item => builder.AppendLine(item.ErrorMessage));
-                Console.WriteLine(builder.ToString());
+                MessageBox.Show($"Invalid\n{builder}");
             }
         }
 

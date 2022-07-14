@@ -15,9 +15,6 @@ namespace DataAdapterFormApp.Classes
     /// 1. Loading a table from SQL-Server
     /// 2. Saving all changes
     /// </summary>
-    /// <remarks>
-    /// 
-    /// </remarks>
     public class EmployeeOperations
     {
         public static string ConnectionString => 
