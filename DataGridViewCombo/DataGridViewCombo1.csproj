@@ -89,6 +89,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\figure1.png" />
+    <Content Include="assets\figure2.png" />
     <Content Include="databasescript.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

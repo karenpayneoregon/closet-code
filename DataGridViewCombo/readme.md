@@ -23,6 +23,10 @@ Two [BindingSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.f
 
 ![image](assets/figure2.png)
 
+</br>
+
+![image](assets/figure3.png)
+
 ## Before running
 
 **Run** databasescript.sql
