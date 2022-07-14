@@ -19,7 +19,7 @@ namespace SqlServerAsyncReadCore.Classes
             /// </summary>
             public int Identifier { get; set; }
 
-            public string? Label { get; set; }
+            public string Label { get; set; }
         }
     }
 }
