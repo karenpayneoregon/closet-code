@@ -37,27 +37,5 @@ namespace AddSelectToComboBox
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-            using (var conn = new SqlConnection(ConfigurationManager.AppSettings["SqlServerConnection"]))
-            {
-                conn.Open();
-                Console.WriteLine("Opened");
-            }
-            //var settings = ConfigurationManager
-            //    .ConnectionStrings
-            //    .OfType<ConnectionStringSettings>().ToList();
-
-            //StringBuilder builder = new StringBuilder();
-            //for (int index = 0; index < settings.Count(); index++)
-            //{
-            //    Console.WriteLine($"{index,-3}{settings[index].Name,-10}{settings[index].ConnectionString}");
-            //    builder.AppendLine(settings[index].Name);
-            //}
-
-            //MessageBox.Show(builder.ToString());
-        }
     }
 }

@@ -13,7 +13,6 @@ namespace AddSelectToComboBox.Classes
             list.AddRange(MonthList.Select((name, index) => new MonthItem() { Index = index + 1, Name = name }));
 
             return list;
-
         }
 
         public static List<string> MonthList
