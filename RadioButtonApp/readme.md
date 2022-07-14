@@ -2,6 +2,8 @@
 
 Many times a new coder will want a user to select one selection from multiple `CheckBox` controls in a group, this is wrong, instead place `RadioButton` controls in a `GroupBox` and un-selection all RadioButton controls to start unless there should be a default selection.
 
+![image](assets/screenShot.png)
+
 In this code sample, all radio buttons are un-selected and then in a button click assert for a selection.
 
 ```csharp
