@@ -27,11 +27,12 @@ namespace ToggleSwitchDemo
 
         private void ShowChildFormButton_Click(object sender, EventArgs e)
         {
-            
-            var childForm = new ChildForm() { Top = Top, Left = (Left + Width), Tag = "Right" };
+            var test = _container;
+            var childForm = new ChildForm(_container) { Top = Top, Left = (Left + Width), Tag = "Right" };
             childForm.ClickedEvent += ClickedEvent;
             childForm.Show();
             MoveChildForm();
+
         }
         private void OnTheMove(object sender, EventArgs e)
         {
