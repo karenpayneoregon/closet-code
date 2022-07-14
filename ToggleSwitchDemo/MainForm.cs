@@ -60,6 +60,7 @@ namespace ToggleSwitchDemo
             {
                 case OperationType.BPlusRelay:
                     _container[0].BPlusRelay = state;
+                    DoSomethingForPlus(state);
                     break;
                 case OperationType.BMinusRelay:
                     _container[0].BMinusRelay = state;
@@ -83,6 +84,11 @@ namespace ToggleSwitchDemo
             }
 
 
+        }
+
+        private void DoSomethingForPlus(bool state)
+        {
+            // TODO
         }
     }
 }
