@@ -85,6 +85,11 @@ public void SetProperties()
     ToggleSwitch6.Tag = OperationType.TestMode;
     ToggleSwitch7.Tag = OperationType.StandbyMode;
 
+    ToggleSwitch1.Checked = _container[0].BPlusRelay;
+    ToggleSwitch2.Checked = _container[0].BMinusRelay;
+    ToggleSwitch3.Checked = _container[0].PreRelay;
+
+
     var list = Controls.OfType<JCS.ToggleSwitch>().ToList();
 
     foreach (var toggleSwitch in list)
