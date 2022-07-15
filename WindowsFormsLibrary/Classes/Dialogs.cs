@@ -326,7 +326,34 @@ namespace WindowsFormsLibrary.Classes
 
         }
 
+        /// <summary>
+        /// Super basic example, note button positions are controlled by order they
+        /// are added TaskDialogButtonCollection.
+        /// </summary>
+        public static int Demo(Control owner)
+        {
 
+            TaskDialogButton firstButton = new("First");
+            TaskDialogButton secondButton = new("Second");
+            TaskDialogButton thirdButton = new("Third");
+
+            firstButton.Tag = 1;
+            secondButton.Tag = 2;
+            thirdButton.Tag = 3;
+
+            TaskDialogPage page = new()
+            {
+                Caption = "Information",
+                SizeToContent = true,
+                Heading = "Your header",
+                Icon = TaskDialogIcon.Information,
+                Footnote = new TaskDialogFootnote() { Text = "Karen Payne code sample" },
+                Buttons = new TaskDialogButtonCollection() { secondButton, thirdButton, firstButton }
+            };
+
+            return Convert.ToInt32(TaskDialog.ShowDialog(owner, page).Tag);
+
+        }
         /// <summary>
         /// Auto close dialog by specified seconds, if timed out
         /// invoke continue button.

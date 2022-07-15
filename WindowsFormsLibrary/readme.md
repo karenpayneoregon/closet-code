@@ -4,7 +4,7 @@ For those who want more options past MessageBox.Show, the code within offers mor
 
 This project contains code for displaying various forms of TaskDialog for both Windows Forms and WPF projects. 
 
-For more options see the following [GitHub repository](https://github.com/karenpayneoregon/task-dialog-csharp).
+For more options on `TaskDialog` see the following [GitHub repository](https://github.com/karenpayneoregon/task-dialog-csharp).
 
 **Notes** 
 
