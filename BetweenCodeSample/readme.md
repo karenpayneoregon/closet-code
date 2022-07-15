@@ -2,6 +2,7 @@
 
 Generic extensions for [IComparable](https://docs.microsoft.com/en-us/dotnet/api/system.icomparable?view=net-6.0)
 
+![Screen Shot](assets/screenShot.png)
 
 
 ```csharp

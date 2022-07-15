@@ -14,11 +14,22 @@
 		<Content Include="readme.md" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<PackageReference Include="Spectre.Console" Version="0.44.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<Reference Include="CoreExtensions">
 			<HintPath>C:\OED\Dotnetland\VS2019\LearningVisualStudio\WindowsFormsSolution\CoreExtensions\bin\Debug\net5.0\CoreExtensions.dll</HintPath>
 		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="assets\" />
 	</ItemGroup>
 
 	<!--<PropertyGroup>

@@ -9,7 +9,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using BetweenCodeSample.Extensions;
 using CoreExtensions.LanguageExtensions;
-
+using Spectre.Console;
+using W = ConsoleHelperLibrary.Classes.WindowUtility;
 
 namespace BetweenCodeSample
 {
@@ -36,8 +37,7 @@ namespace BetweenCodeSample
         /// </summary>
         private static void SwitchExpression()
         {
-            Console.WriteLine(nameof(SwitchExpression));
-
+            AnsiConsole.MarkupLine($"[yellow]{nameof(SwitchExpression)}[/]");
             Console.WriteLine($"\t{7.CaseWhen()}");
             Console.WriteLine($"\t{5.CaseWhen()}");
             Console.WriteLine($"\t{1.CaseWhen()}");
@@ -52,9 +52,8 @@ namespace BetweenCodeSample
         private static void IComparableExtensionExamples()
         {
 
-            Console.WriteLine(nameof(IComparableExtensionExamples));
-
-            Console.WriteLine("Working with int");
+            AnsiConsole.MarkupLine($"[yellow]{nameof(IComparableExtensionExamples)}[/]");
+            AnsiConsole.MarkupLine("Working with [b]int[/]");
             int age = 29;
 
             Console.WriteLine($"\t{age,-3} is over 30 {age.Between(30, 30).ToYesNo()}");
@@ -71,7 +70,7 @@ namespace BetweenCodeSample
             Console.WriteLine($"\t30.IsOver30() {30.IsOver30()}");
             Console.WriteLine($"\t31.IsOver30() {31.IsOver30()}");
 
-            Console.WriteLine("Working with DateTime");
+            AnsiConsole.MarkupLine("Working with [b]DateTime[/]");
             DateTime lowDateTime = new(2022, 1, 1);
             DateTime someDateTime = new(2022, 1, 2);
             DateTime highDateTime = new(2022, 1, 8);
@@ -88,7 +87,7 @@ namespace BetweenCodeSample
         /// </summary>
         private static void BetweenTwoItemsInStringList()
         {
-            Console.WriteLine(nameof(BetweenTwoItemsInStringList));
+            AnsiConsole.MarkupLine($"[yellow]{nameof(BetweenTwoItemsInStringList)}[/]");
             var months = DateTimeFormatInfo.CurrentInfo.MonthNames[..^1].ToList();
             var result = months.BetweenElements("March", "September");
             Console.WriteLine($"\t{string.Join(",", result)}");
@@ -99,7 +98,7 @@ namespace BetweenCodeSample
         /// </summary>
         private static void BetweenTwoItemsInIntList()
         {
-            Console.WriteLine(nameof(BetweenTwoItemsInIntList));
+            AnsiConsole.MarkupLine($"[yellow]{nameof(BetweenTwoItemsInIntList)}[/]");
             var values = Enumerable.Range(1, 20).ToList();
             var result = values.BetweenElements(2, 8);
 
@@ -110,6 +109,7 @@ namespace BetweenCodeSample
         public static void Init()
         {
             Console.Title = "Code sample - Between";
+            W.SetConsoleWindowPosition(W.AnchorWindow.Center);
         }
     }
 
