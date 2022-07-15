@@ -14,6 +14,9 @@ Custom or missing controls in VS2019
 |  |  |  |
 
 
-TimeComboBox
+:small_orange_diamond: TimeComboBox
 
 ![image](../assets/TimeComoBox.png)
+
+:small_orange_diamond: CustomButton, CustomLabel, CustomPanel as per above add a string property but could be any type.
+
