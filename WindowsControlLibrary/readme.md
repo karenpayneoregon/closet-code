@@ -11,6 +11,7 @@ Custom or missing controls in VS2019
 | CustomPanel | Provides a property of type string  |  |
 | DataButton | Provides several extra properties  |  |
 | TimeComboBox | Provides a ComboBox as shown below | Demo in project TimeComboboxApp |
+| FormatStringConverter | Example for a [StringConverter](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.stringconverter?view=net-6.0) |  Demo in project TimeComboboxApp|
 |  |  |  |
 
 
