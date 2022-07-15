@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "FirstName": "Karen",
+    "LastName": "Payne",
+    "Salary": 100000,
+    "JobType": 2
+  },
+  {
+    "Id": 3,
+    "FirstName": "Anne",
+    "LastName": "Gallagher",
+    "Salary": 99000,
+    "JobType": 2
+  },
+  {
+    "Id": 4,
+    "FirstName": "Mark",
+    "LastName": "Willson",
+    "Salary": 34000,
+    "JobType": 0
+  }
+]
