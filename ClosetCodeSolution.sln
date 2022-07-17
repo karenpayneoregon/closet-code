@@ -344,6 +344,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopThroughFileLibrary", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNumbersApp", "RandomNumbersApp\RandomNumbersApp.csproj", "{C9602891-9F73-4D8E-8C15-1961E4887B5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlServerHelperLibrary", "SqlServerUtilititesLibrary\SqlServerHelperLibrary.csproj", "{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -901,6 +903,10 @@ Global
 		{C9602891-9F73-4D8E-8C15-1961E4887B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9602891-9F73-4D8E-8C15-1961E4887B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9602891-9F73-4D8E-8C15-1961E4887B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1060,6 +1066,7 @@ Global
 		{5360EFCE-E142-4E1C-91A2-ED904536AF3F} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{0D7E52C3-6813-4A77-9E9C-FF9A14C7D4B6} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{C9602891-9F73-4D8E-8C15-1961E4887B5D} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

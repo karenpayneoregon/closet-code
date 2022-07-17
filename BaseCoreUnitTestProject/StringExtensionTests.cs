@@ -39,6 +39,25 @@ namespace BaseCoreUnitTestProject
 
         }
 
+        [TestMethod]
+        [TestTraits(Trait.StringExtensions)]
+        public void SplitCamelCaseTest()
+        {
+            // arrange
+            var token = "GoodMorning";
+            var expected = "Good Morning";
+
+            // act
+            var result = token.SplitCamelCase();
+
+            // assert
+
+            Check.That(result).Equals(expected);
+
+
+        }
+
+
     }
 
 }
