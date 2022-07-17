@@ -190,14 +190,11 @@ namespace StringLanguageExtensions
         }
 
         /// <summary>
-        /// Split string by upper cased chars e.g. KarenAnnePayne becomes Karen Anne Payne
+        /// Use to split on upper cased characters and separate with a single space.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <returns>string split on upper cased characters</returns>
-        public static string SplitCamelCase(this string sender)
-            => Regex.Replace(Regex.Replace(sender,
-                    "(\\P{Ll})(\\P{Ll}\\p{Ll})", "$1 $2"),
-                "(\\p{Ll})(\\P{Ll})", "$1 $2");
+        public static string SplitCamelCase(this string sender) =>
+            string.Join(" ", Regex.Matches(sender, @"([A-Z][a-z]+)")
+                .Select(m => m.Value));
 
         /// <summary>
         /// Get file name only, avoid multiple file extensions e.g. DirectoryGetFilesMultipleFilters.deps.json

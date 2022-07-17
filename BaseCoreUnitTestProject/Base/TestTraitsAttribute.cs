@@ -11,6 +11,8 @@ namespace BaseCoreUnitTestProject.Base
         /// Place holder 
         /// </summary>
         PlaceHolder,
+        LoopingFile,
+        StringExtensions
     }
     /// <summary>
     /// Declarative class for using Trait enum about for traits on test method.

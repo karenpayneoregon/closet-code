@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,13 @@ namespace BaseCoreUnitTestProject
 {
     public partial class GetSumFromFileTest
     {
+
+        private static readonly string _cleanFileName = 
+            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TextFiles", "ExampleClean.txt");
+
+        private static readonly string _malformedFileName = 
+            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TextFiles", "ExampleMalFormed.txt");
+
         [TestInitialize]
         public void Initialization()
         {

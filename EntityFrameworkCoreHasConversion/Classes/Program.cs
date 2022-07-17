@@ -7,7 +7,7 @@ using HasConversion.Data;
 using HasConversion.Models;
 using Newtonsoft.Json;
 using Spectre.Console;
-
+using W = ConsoleHelperLibrary.Classes.WindowUtility;
 
 // ReSharper disable once CheckNamespace
 namespace HasConversion
@@ -94,6 +94,7 @@ namespace HasConversion
         public static void Init()
         {
             Console.Title = "Code sample";
+            W.SetConsoleWindowPosition(W.AnchorWindow.Center);
         }
 
 
