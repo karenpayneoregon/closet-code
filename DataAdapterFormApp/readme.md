@@ -9,6 +9,7 @@ All data operations are in EmployeeOperations.
 - `New rows` the data shown in the DataGridView does not show the primary key, it's there but needs to be brought out with reflection.
 - `Limited exception handling` only in EmployeeOperations, no assertion or try/catch in the form.
 - Coded in `.NET Framework 4.8` so that those who have not transitioned to .NET Core can benefit, will work no different in a .NET Core project.
+- Save button in BindingNavigator added manually
 
 ## Screenshot
 
