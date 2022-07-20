@@ -344,7 +344,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopThroughFileLibrary", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNumbersApp", "RandomNumbersApp\RandomNumbersApp.csproj", "{C9602891-9F73-4D8E-8C15-1961E4887B5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlServerHelperLibrary", "SqlServerUtilititesLibrary\SqlServerHelperLibrary.csproj", "{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerHelperLibrary", "SqlServerUtilititesLibrary\SqlServerHelperLibrary.csproj", "{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithSingletons", "WorkingWithSingletons\WorkingWithSingletons.csproj", "{F1FF2ED9-3F2F-4F4F-B115-ADCCA18F2C79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StackoverFlow questions", "StackoverFlow questions", "{5A6FE928-4343-4B6B-95D7-BDE5432FE093}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSettingsFormApp", "AppSettingsFormApp\AppSettingsFormApp.csproj", "{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -907,6 +913,14 @@ Global
 		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1FF2ED9-3F2F-4F4F-B115-ADCCA18F2C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1FF2ED9-3F2F-4F4F-B115-ADCCA18F2C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1FF2ED9-3F2F-4F4F-B115-ADCCA18F2C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1FF2ED9-3F2F-4F4F-B115-ADCCA18F2C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1067,6 +1081,9 @@ Global
 		{0D7E52C3-6813-4A77-9E9C-FF9A14C7D4B6} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{C9602891-9F73-4D8E-8C15-1961E4887B5D} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
+		{F1FF2ED9-3F2F-4F4F-B115-ADCCA18F2C79} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
+		{5A6FE928-4343-4B6B-95D7-BDE5432FE093} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E} = {5A6FE928-4343-4B6B-95D7-BDE5432FE093}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

@@ -24,6 +24,7 @@ namespace DataAdapterFormApp
             {
                 dataGridView1.DataSource = EmployeeOperations.BindingSource;
                 dataGridView1.Columns[0].ReadOnly = true;
+                bindingNavigator1.BindingSource = EmployeeOperations.BindingSource;
             }
             else
             {
@@ -38,6 +39,11 @@ namespace DataAdapterFormApp
         /// </summary>
         private void SaveChangeButton_Click(object sender, EventArgs e)
         {
+            SaveOperation();
+        }
+
+        private static void SaveOperation()
+        {
             var (affected, exception) = EmployeeOperations.SaveChanges();
             if (exception != null)
             {
@@ -47,6 +53,11 @@ namespace DataAdapterFormApp
             {
                 MessageBox.Show($@"Affected records {affected}");
             }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            SaveOperation();
         }
     }
 }

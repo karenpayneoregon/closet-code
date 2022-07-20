@@ -23,6 +23,24 @@ namespace BetweenCodeSample.Extensions
         public static bool IsLessThan<T>(this T sender, T value) where T : IComparable 
             => sender.CompareTo(value) < 0;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="val"></param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// .NET Core has this but not generic
+        /// </remarks>
+        public static T Clamp<T>(this T val, T min, T max) where T : IComparable<T>
+        {
+            if (val.CompareTo(min) < 0) return min;
+            if (val.CompareTo(max) > 0) return max;
+            return val;
+        }
+
         public static bool IsChild(this int sender)
             => sender.Between(1, 12);
 
