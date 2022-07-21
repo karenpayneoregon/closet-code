@@ -61,7 +61,7 @@ namespace NumbersOnlyExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 230);
+            this.ClientSize = new System.Drawing.Size(227, 77);
             this.Controls.Add(this.CountNumericUpDown);
             this.Controls.Add(this.CountButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
