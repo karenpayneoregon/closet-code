@@ -18,6 +18,14 @@ namespace DataGridViewExportTextFile
         {
             InitializeComponent();
             dataGridView1.DataSource = BogusOperations.People();
+            dataGridView1.FixHeaders();
+            dataGridView1.ExpandColumns();
+            ResizeEnd += OnResizeEnd;
+        }
+
+        private void OnResizeEnd(object sender, EventArgs e)
+        {
+            Console.WriteLine("done");
         }
 
         private void ExportButton_Click(object sender, EventArgs e)
