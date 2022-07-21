@@ -354,6 +354,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppSettingsFormApp", "AppSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewExportTextFile", "DataGridViewExportTextFile\DataGridViewExportTextFile.csproj", "{55366C09-EA91-4083-AA8F-CFDA3EFB95E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTaskProgress2", "AsyncTaskProgress2\AsyncTaskProgress2.csproj", "{52A39CDC-A965-4867-88C7-4131064B761F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -927,6 +929,10 @@ Global
 		{55366C09-EA91-4083-AA8F-CFDA3EFB95E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55366C09-EA91-4083-AA8F-CFDA3EFB95E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55366C09-EA91-4083-AA8F-CFDA3EFB95E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52A39CDC-A965-4867-88C7-4131064B761F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A39CDC-A965-4867-88C7-4131064B761F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A39CDC-A965-4867-88C7-4131064B761F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A39CDC-A965-4867-88C7-4131064B761F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1091,6 +1097,7 @@ Global
 		{5A6FE928-4343-4B6B-95D7-BDE5432FE093} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E} = {5A6FE928-4343-4B6B-95D7-BDE5432FE093}
 		{55366C09-EA91-4083-AA8F-CFDA3EFB95E1} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
+		{52A39CDC-A965-4867-88C7-4131064B761F} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
