@@ -31,6 +31,18 @@ namespace CodeWithNoForesight_grouping
             Console.Title = "Code sample - grouping data";
             W.SetConsoleWindowPosition(W.AnchorWindow.Center);
         }
+
+        public static void TipTheHat()
+        {
+            int[] values = { 10, 11, 12, 13 };
+
+            // ReSharper disable All
+            Console.WriteLine(values[^1] == values[values.Length - 1]);
+            // ReSharper restore All
+            Console.WriteLine(values[^1] == values[values.Length - 1]);
+            Console.WriteLine($"{values[^1]}\t{values[values.Length - 1]}");
+
+        }
     }
 }
 
