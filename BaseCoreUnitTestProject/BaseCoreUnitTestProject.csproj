@@ -25,9 +25,40 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\LoopThroughFileLibrary\LoopThroughFileLibrary.csproj" />
 	  <ProjectReference Include="..\StringLanguageExtensions\StringLanguageExtensions.csproj" />
+	  <ProjectReference Include="..\UtilityLibrary\UtilityLibrary.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Update="TextFilesSorting\01.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="TextFilesSorting\1.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="TextFilesSorting\100.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="TextFilesSorting\11.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="TextFilesSorting\1a1.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="TextFilesSorting\1A2.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="TextFilesSorting\1Atxt.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="TextFilesSorting\2.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="TextFilesSorting\A1.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="TextFilesSorting\Zoo.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	  <None Update="TextFiles\ExampleMalFormed.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
