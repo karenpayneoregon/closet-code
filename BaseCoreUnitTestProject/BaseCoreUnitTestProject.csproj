@@ -23,6 +23,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\LoopThroughFileLibrary\LoopThroughFileLibrary.csproj" />
 	  <ProjectReference Include="..\StringLanguageExtensions\StringLanguageExtensions.csproj" />
 	  <ProjectReference Include="..\UtilityLibrary\UtilityLibrary.csproj" />

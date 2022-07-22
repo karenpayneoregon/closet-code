@@ -13,7 +13,8 @@ namespace BaseCoreUnitTestProject.Base
         PlaceHolder,
         LoopingFile,
         StringExtensions,
-        FileSorting
+        FileSorting,
+        CancellationToken
     }
     /// <summary>
     /// Declarative class for using Trait enum about for traits on test method.
