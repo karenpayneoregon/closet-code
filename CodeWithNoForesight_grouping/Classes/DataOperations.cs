@@ -25,13 +25,6 @@ namespace CodeWithNoForesight_grouping.Classes
 
             while (reader.Read())
             {
-                //BookItem item = new()
-                //{
-                //    Id = reader.GetInt32(0),
-                //    Title = reader.GetString(1),
-                //    Price = reader.GetDecimal(2),
-                //    PriceRange = reader.GetString(3)
-                //};
 
                 list.Add(new()
                 {
@@ -40,6 +33,7 @@ namespace CodeWithNoForesight_grouping.Classes
                     Price = reader.GetDecimal(2),
                     PriceRange = reader.GetString(3)
                 });
+
             }
             return list;
 

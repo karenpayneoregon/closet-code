@@ -12,7 +12,7 @@ namespace CodeWithNoForesight_grouping
     {
         static void Main(string[] args)
         {
-            //BooksFromDatabase();
+            BooksFromDatabase();
             //BooksFromJson();
 
             BooksFromEntityFrameworkCore();
