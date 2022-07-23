@@ -38,7 +38,9 @@ namespace BaseCoreUnitTestProject.Classes
 
                     result.ConnectionFailed = true;
                     result.ExceptionMessage = "Connection Failed";
+
                     return result;
+
                 }
                 catch (Exception ex)
                 {

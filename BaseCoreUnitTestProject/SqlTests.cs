@@ -26,6 +26,9 @@ namespace BaseCoreUnitTestProject
         /// is hard-wired which for a real app would be in appsettings.json
         ///
         /// The test, validate a timeout on a data connection
+        ///
+        /// Based off
+        /// https://github.com/karenpayneoregon/sqlserver-connection-timeout
         /// </summary>
         /// <returns></returns>
         [TestMethod]
