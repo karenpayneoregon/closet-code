@@ -10,20 +10,22 @@ namespace IsYouCodeReadable
     {
         static void Main(string[] args)
         {
+            //Example1();
+            //Ambiguous1();
+            Person person = null;
 
-            //Ambiguous();
             //DayNamesIndexing();
             //StopUsingSingleCharVariableNames();
 
 
-            var xxx = CurrentInfo?.DayNames[^2..^0];
-            var today = DateTime.Now.DayOfWeek.ToString();
+            //var xxx = CurrentInfo?.DayNames[^2..^0];
+            //var today = DateTime.Now.DayOfWeek.ToString();
 
-            Console.WriteLine(today);
-            foreach (var name in CurrentInfo?.DayNames)
-            {
-                Console.WriteLine($"Name: {name, -15}Work day: {IsWorkDay(name),-10}Weekend: {IsWeekendDay(name)}");
-            }
+            //Console.WriteLine(today);
+            //foreach (var name in CurrentInfo?.DayNames)
+            //{
+            //    Console.WriteLine($"Name: {name, -15}Work day: {IsWorkDay(name),-10}Weekend: {IsWeekendDay(name)}");
+            //}
 
             Console.ReadLine();
         }
@@ -31,6 +33,7 @@ namespace IsYouCodeReadable
 
         public static bool IsWorkDay(string day) 
             => CurrentInfo?.DayNames[1..6].Contains(day) == true;
+
         public static bool IsWeekendDay(string day) 
             => !IsWorkDay(day);
 
@@ -47,7 +50,7 @@ namespace IsYouCodeReadable
         {
 
             Person person = new();
-
+            
             Console.WriteLine("person.FirstName is { } firstName");
 
             if (person.FirstName is { } firstName)
@@ -58,6 +61,7 @@ namespace IsYouCodeReadable
             {
                 Console.WriteLine("\tFirst name is null");
             }
+            
 
             Console.WriteLine("!string.IsNullOrWhiteSpace(person.FirstName)");
             if (!string.IsNullOrWhiteSpace(person.FirstName))
@@ -84,6 +88,38 @@ namespace IsYouCodeReadable
                 $"\tFirst Name: {person.FirstName}" :
                 "\tFirst name is null");
         }
+        private static void Ambiguous1()
+        {
+
+            Person person = new();
+
+            if (person.FirstName is { } firstName)
+            {
+                Console.WriteLine($"\tFirst Name: {firstName}");
+            }
+            else
+            {
+                Console.WriteLine("\tFirst name is null");
+            }
+
+   
+
+            Console.WriteLine(!string.IsNullOrWhiteSpace(person.FirstName) ? 
+                $"\tFirst Name: {person.FirstName}" : "\tFirst name is null");
+
+            Console.WriteLine(person.FirstName is { Length: > 0 } ? 
+                $"\tFirst Name: {person.FirstName}" : "\tFirst name is null");
+
+
+            Console.WriteLine(person!.FirstName is not null ? 
+                "\tFirst name is null" : $"\tFirst Name: {person.FirstName}");
+
+            person.FirstName = "Karen";
+            Console.WriteLine(person.FirstName is { Length: > 0 } ?
+                $"\tFirst Name: {person.FirstName}" :
+                "\tFirst name is null");
+        }
+
 
         /// <summary>
         /// Indexing is great as in the first attempt but if developers
@@ -180,6 +216,20 @@ namespace IsYouCodeReadable
         public static void Init()
         {
             Console.Title = "Does code make sense?";
+        }
+
+        public static void Example1()
+        {
+            var example = new Example(out var demo);
+        }
+
+    }
+
+    public class Example
+    {
+        public Example(out Example example)
+        {
+            example = this;
         }
     }
 }
