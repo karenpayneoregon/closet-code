@@ -9,7 +9,8 @@ namespace CalculateExpirationApp
         static async Task Main(string[] args)
         {
 
-            await ElapsedTime();
+            //await ElapsedTime();
+            ExpireCountDown();
             Console.ReadLine();
         }
 
@@ -30,8 +31,9 @@ namespace CalculateExpirationApp
             for (int index = 1; index < 5; index++)
             {
                 var startDate = DateTime.Now.AddHours(-index).AddMinutes(1).AddSeconds(-index);
+                Console.SetCursorPosition(0,0);
                 Console.WriteLine($"{(endDate - startDate).FormatElapsed()}");
-                await Task.Delay(20);
+                await Task.Delay(1000);
             }
             
         }

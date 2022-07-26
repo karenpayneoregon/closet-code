@@ -25,9 +25,6 @@ namespace QueryFormatUtility.Classes
                 new StringReader(query),
                 out var errors);
 
-
-            
-
             if (errors.Count > 0)
             {
                 ParseErrors = errors;

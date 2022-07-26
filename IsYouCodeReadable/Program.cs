@@ -11,7 +11,7 @@ namespace IsYouCodeReadable
         static void Main(string[] args)
         {
             //Example1();
-            //Ambiguous1();
+            Ambiguous1();
             Person person = null;
 
             //DayNamesIndexing();
@@ -93,17 +93,15 @@ namespace IsYouCodeReadable
 
             Person person = new();
 
-            if (person.FirstName is { } firstName)
+            if (person.FirstName is { } )
             {
-                Console.WriteLine($"\tFirst Name: {firstName}");
+                Console.WriteLine($"\tFirst Name: {person.FirstName}");
             }
             else
             {
                 Console.WriteLine("\tFirst name is null");
             }
-
-   
-
+            
             Console.WriteLine(!string.IsNullOrWhiteSpace(person.FirstName) ? 
                 $"\tFirst Name: {person.FirstName}" : "\tFirst name is null");
 
@@ -118,6 +116,15 @@ namespace IsYouCodeReadable
             Console.WriteLine(person.FirstName is { Length: > 0 } ?
                 $"\tFirst Name: {person.FirstName}" :
                 "\tFirst name is null");
+
+            if (person.FirstName is { })
+            {
+                Console.WriteLine($"\tFirst Name: {person.FirstName}");
+            }
+            else
+            {
+                Console.WriteLine("\tFirst name is null");
+            }
         }
 
 
