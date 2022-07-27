@@ -135,15 +135,25 @@ namespace BetweenCodeSample
                 var part1 = Convert.ToDouble(parts[0]);
                 var part2 = Convert.ToDouble(parts[1]);
                 
+                // must use constants 
                 if (part2 > firstAssertion && part1 is >= lowerValue and <= upperValue)
                 {
                     Console.WriteLine($"[{part1}], [{part2}]");
                 }
 
+                // no need for constant
+                if (part2 > firstAssertion &&  48 <= part1 && part1 <= 56)
+                {
+                    Console.WriteLine($"[{part1}], [{part2}]");
+                }
+
+                // no need for constant
                 if (part2 > firstAssertion && part1.Between(lowerValue, upperValue))
                 {
                     Console.WriteLine($"[{part1}], [{part2}]");
                 }
+
+                //48 <= part1 && part1 <= 56
             }
 
         }
