@@ -1,6 +1,6 @@
 ﻿# About
 
-Many coders ask how to remove duplicates, why not prevent them in the first place?
+:small_blue_diamond: Many coders ask how to remove duplicates, why not prevent them in the first place?
 
 ```csharp
 class Program
