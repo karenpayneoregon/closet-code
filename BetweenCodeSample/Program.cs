@@ -23,10 +23,11 @@ namespace BetweenCodeSample
 
         static void Main(string[] args)
         {
-            IComparableExtensionExamples();
-            SwitchExpression();
-            BetweenTwoItemsInStringList();
-            BetweenTwoItemsInIntList();
+            //IComparableExtensionExamples();
+            //SwitchExpression();
+            //BetweenTwoItemsInStringList();
+            //BetweenTwoItemsInIntList();
+            BetweenTwoNumbers();
             Console.ReadLine();
         }
 
@@ -103,6 +104,49 @@ namespace BetweenCodeSample
             var result = values.BetweenElements(2, 8);
 
             Console.WriteLine($"\t{string.Join(",", result)}");
+        }
+
+        /// <summary>
+        /// For a Stackoverflow question
+        /// https://stackoverflow.com/questions/73135309/how-to-find-the-value-in-an-array
+        ///
+        /// - Split elements on ^
+        /// - If left element is greater than 300 and second element between 48 and 56, display
+        ///
+        /// - Uses extension method <see cref="GenericExtensions.Between(x,x,x)"/>
+        ///
+        ///  Notes
+        /// - For a real app we would have to ask, are the values always doubles  and have the ^ char to split on.
+        /// - Should use double.TryParse (not done here to keep code simple, easy to understand)
+        /// </summary>
+        private static void BetweenTwoNumbers()
+        {
+            double firstAssertion = 300; 
+            double lowerValue = 48;
+            double upperValue = 56;
+
+            string[] doubleValues =
+            {
+                "8^10", "16^18", "24^34", 
+                "32^63", "40^116", "48^215", 
+                "56^397", "64^733", "72^1354", 
+                "80^2500"
+            };
+
+            for (int index = 0; index < doubleValues.Length; index++)
+            {
+                var parts = doubleValues[index].Split('^');
+                var part1 = Convert.ToDouble(parts[0]);
+                var part2 = Convert.ToDouble(parts[1]);
+
+
+                if (part2 > firstAssertion && part1.Between(lowerValue, upperValue))
+                {
+                    Console.WriteLine($"[{part1}], [{part2}]");
+                }
+
+            }
+
         }
 
         [ModuleInitializer]
