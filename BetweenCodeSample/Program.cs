@@ -121,30 +121,55 @@ namespace BetweenCodeSample
         /// </summary>
         private static void BetweenTwoNumbers()
         {
-            double firstAssertion = 300; 
-            double lowerValue = 48;
-            double upperValue = 56;
+            const double firstAssertion = 300;
+            const double lowerValue = 48;
+            const double upperValue = 56;
 
-            string[] doubleValues =
-            {
-                "8^10", "16^18", "24^34", 
-                "32^63", "40^116", "48^215", 
-                "56^397", "64^733", "72^1354", 
-                "80^2500"
-            };
+            string[] doubleValues = {
+                "8^10", "16^18", "24^34", "32^63", "40^116", "48^215", 
+                "56^397", "64^733", "72^1354", "80^2500" };
 
-            for (int index = 0; index < doubleValues.Length; index++)
+            for (var index = 0; index < doubleValues.Length; index++)
             {
                 var parts = doubleValues[index].Split('^');
                 var part1 = Convert.ToDouble(parts[0]);
                 var part2 = Convert.ToDouble(parts[1]);
-
+                
+                if (part2 > firstAssertion && part1 is >= lowerValue and <= upperValue)
+                {
+                    Console.WriteLine($"[{part1}], [{part2}]");
+                }
 
                 if (part2 > firstAssertion && part1.Between(lowerValue, upperValue))
                 {
                     Console.WriteLine($"[{part1}], [{part2}]");
                 }
+            }
 
+        }
+        /// <summary>
+        /// Using the above note we can not use the new syntax as a constant is needed
+        /// </summary>
+        /// <param name="firstAssertion"></param>
+        /// <param name="lowerValue"></param>
+        /// <param name="upperValue"></param>
+        private static void BetweenTwoNumbers(double firstAssertion, double lowerValue, double upperValue)
+        {
+
+            string[] doubleValues = {
+                "8^10", "16^18", "24^34", "32^63", "40^116", "48^215",
+                "56^397", "64^733", "72^1354", "80^2500" };
+
+            for (var index = 0; index < doubleValues.Length; index++)
+            {
+                var parts = doubleValues[index].Split('^');
+                var part1 = Convert.ToDouble(parts[0]);
+                var part2 = Convert.ToDouble(parts[1]);
+
+                if (part2 > firstAssertion && part1.Between(lowerValue, upperValue))
+                {
+                    Console.WriteLine($"[{part1}], [{part2}]");
+                }
             }
 
         }
