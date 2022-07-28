@@ -363,6 +363,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YieldReadFileFormDemo", "Yi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JObjectQuestion", "JObjectQuestion\JObjectQuestion.csproj", "{592BCD12-2C52-42A6-8838-61ED9A437F0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSettingsConsole1", "AppSettingsConsole1\AppSettingsConsole1.csproj", "{4A5D1C18-BF95-4BEE-BA17-13688459E83B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -952,6 +954,10 @@ Global
 		{592BCD12-2C52-42A6-8838-61ED9A437F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{592BCD12-2C52-42A6-8838-61ED9A437F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{592BCD12-2C52-42A6-8838-61ED9A437F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A5D1C18-BF95-4BEE-BA17-13688459E83B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5D1C18-BF95-4BEE-BA17-13688459E83B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5D1C18-BF95-4BEE-BA17-13688459E83B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5D1C18-BF95-4BEE-BA17-13688459E83B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1120,6 +1126,7 @@ Global
 		{399B7843-65A8-4F08-878B-42EED4E46179} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{928174BA-4692-4302-BB0F-A7A34412239E} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{592BCD12-2C52-42A6-8838-61ED9A437F0C} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
+		{4A5D1C18-BF95-4BEE-BA17-13688459E83B} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
