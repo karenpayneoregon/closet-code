@@ -33,6 +33,9 @@ namespace CustomerDatabaseFrontend
             // User cancelled
         }
 
+        /// <summary>
+        /// Conventional save
+        /// </summary>
         private void SaveButton_Click(object sender, EventArgs e)
         {
             /*
@@ -55,6 +58,13 @@ namespace CustomerDatabaseFrontend
 
             DataOperations.AddCustomer(_customer);
             MessageBox.Show($"{_customer.Identifier}");
+        }
+
+        /// <summary>
+        /// Entity Framework Core save
+        /// </summary>
+        private void SaveEntityFramework_Click(object sender, EventArgs e)
+        {
         }
     }
 }

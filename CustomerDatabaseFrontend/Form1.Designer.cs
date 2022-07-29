@@ -39,6 +39,7 @@ namespace CustomerDatabaseFrontend
             this.label4 = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.CancelSaveButton = new System.Windows.Forms.Button();
+            this.SaveEntityFramework = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // GenderComboBox
@@ -115,9 +116,9 @@ namespace CustomerDatabaseFrontend
             // 
             this.SaveButton.Location = new System.Drawing.Point(12, 247);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(109, 23);
+            this.SaveButton.Size = new System.Drawing.Size(158, 23);
             this.SaveButton.TabIndex = 8;
-            this.SaveButton.Text = "Save";
+            this.SaveButton.Text = "Save conventional";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
@@ -131,11 +132,22 @@ namespace CustomerDatabaseFrontend
             this.CancelSaveButton.UseVisualStyleBackColor = true;
             this.CancelSaveButton.Click += new System.EventHandler(this.CancelSaveButton_Click);
             // 
+            // SaveEntityFramework
+            // 
+            this.SaveEntityFramework.Location = new System.Drawing.Point(12, 276);
+            this.SaveEntityFramework.Name = "SaveEntityFramework";
+            this.SaveEntityFramework.Size = new System.Drawing.Size(158, 23);
+            this.SaveEntityFramework.TabIndex = 10;
+            this.SaveEntityFramework.Text = "Save conventional";
+            this.SaveEntityFramework.UseVisualStyleBackColor = true;
+            this.SaveEntityFramework.Click += new System.EventHandler(this.SaveEntityFramework_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 297);
+            this.ClientSize = new System.Drawing.Size(310, 307);
+            this.Controls.Add(this.SaveEntityFramework);
             this.Controls.Add(this.CancelSaveButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.label4);
@@ -167,6 +179,7 @@ namespace CustomerDatabaseFrontend
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button CancelSaveButton;
+        private System.Windows.Forms.Button SaveEntityFramework;
     }
 }
 

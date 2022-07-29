@@ -369,6 +369,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerDatabaseLibrary", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerDatabaseFrontend", "CustomerDatabaseFrontend\CustomerDatabaseFrontend.csproj", "{14364391-37B8-4733-889B-AC24693470F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerDatabaseLibraryEntityFramework", "CustomerDatabaseLibraryEntityFramework\CustomerDatabaseLibraryEntityFramework.csproj", "{E9001A11-6044-4D98-8371-E64D1197641B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -970,6 +972,10 @@ Global
 		{14364391-37B8-4733-889B-AC24693470F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14364391-37B8-4733-889B-AC24693470F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14364391-37B8-4733-889B-AC24693470F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9001A11-6044-4D98-8371-E64D1197641B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9001A11-6044-4D98-8371-E64D1197641B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9001A11-6044-4D98-8371-E64D1197641B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9001A11-6044-4D98-8371-E64D1197641B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1141,6 +1147,7 @@ Global
 		{4A5D1C18-BF95-4BEE-BA17-13688459E83B} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{0E0CE69C-A000-4354-80FF-B809E41D9269} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{14364391-37B8-4733-889B-AC24693470F9} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{E9001A11-6044-4D98-8371-E64D1197641B} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
