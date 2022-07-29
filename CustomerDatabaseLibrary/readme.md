@@ -1,7 +1,3 @@
 ﻿# About
 
-Base class project setup for C#9, .NET Core 5
-
-![image](assets/Versions.png)
-
-![img](assets/core_csharp_shield.png)
+Contains data operations for `CustomerDatabaseFrontend` project for adding a new record to a SQL-Server database table.
