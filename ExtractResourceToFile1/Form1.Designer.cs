@@ -49,6 +49,7 @@ namespace ExtractResourceToFile1
             this.FileNameTextBox.Name = "FileNameTextBox";
             this.FileNameTextBox.Size = new System.Drawing.Size(253, 20);
             this.FileNameTextBox.TabIndex = 1;
+            this.FileNameTextBox.Text = "C:\\OED\\ColorCop.exe";
             // 
             // Form1
             // 
