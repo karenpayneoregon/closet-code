@@ -4,6 +4,8 @@
 
 ![a](assets/figure2.png)
 
+![b](assets/figure3.png)
+
 **Language extension**
 
 ```csharp
