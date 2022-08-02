@@ -12,19 +12,25 @@ namespace AsyncSimple
 {
     public partial class Form1 : Form
     {
-        private CancellationTokenSource _cts = new ();
+        private CancellationTokenSource cancellationTokenSource = new ();
         public Form1()
         {
             InitializeComponent();
+            FormClosing += Form1_FormClosing;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            cancellationTokenSource.Cancel();
         }
 
         private async void StartButton_Click(object sender, EventArgs e)
         {
             var cancelled = false;
-            if (_cts.IsCancellationRequested)
+            if (cancellationTokenSource.IsCancellationRequested)
             {
-                _cts.Dispose();
-                _cts = new CancellationTokenSource();
+                cancellationTokenSource.Dispose();
+                cancellationTokenSource = new CancellationTokenSource();
             }
 
 
@@ -32,7 +38,7 @@ namespace AsyncSimple
 
             try
             {
-                await AsyncMethod(progressIndicator, _cts.Token);
+                await AsyncMethod(progressIndicator, cancellationTokenSource.Token);
             }
             catch (OperationCanceledException)
             {
@@ -48,7 +54,7 @@ namespace AsyncSimple
 
         private void CancelButton_Click(object sender, EventArgs egEventArgs)
         {
-            _cts.Cancel();
+            cancellationTokenSource.Cancel();
         }
         private static async Task AsyncMethod(IProgress<int> progress, CancellationToken ct)
         {
