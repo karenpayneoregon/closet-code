@@ -46,5 +46,21 @@ namespace EventsGetInvocationListFormsApp
             listBox1.Items.Add(button1.EventCount("Click").ToString());
             listBox1.SelectedIndex = listBox1.Items.Count - 1;
         }
+
+        public delegate void ExampleEventHandler(string s);
+        public event ExampleEventHandler SomeEvent;
+        private void TinkerButton_Click(object sender, EventArgs e)
+        {
+            void Event(string karen) { }
+
+            SomeEvent += Event;
+            Console.WriteLine(SomeEvent.GetInvocationList().Length);
+
+            SomeEvent += Event;
+            Console.WriteLine(SomeEvent.GetInvocationList().Length);
+
+            SomeEvent -= Event;
+            Console.WriteLine(SomeEvent.GetInvocationList().Length);
+        }
     }
 }
