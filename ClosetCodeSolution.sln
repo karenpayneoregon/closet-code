@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net Core", "Net Core", "{4058082F-1CC9-4DED-B2C1-B99EF75DB851}"
 EndProject
@@ -113,7 +113,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ConsoleTricks", "ConsoleTri
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "30175"
-		SlnRelativePath = "ConsoleTricks\"
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
@@ -247,7 +246,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HasConversion", "EntityFram
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Setters", "Setters\Setters.csproj", "{698B886E-4ADE-4722-8292-FD460F7730A5}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BindingNavigatorVBWinForms", "BindingNavigatorVBWinForms\BindingNavigatorVBWinForms.vbproj", "{BB7C1B03-D811-460E-9159-0D8513F22CE0}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "BindingNavigatorVBWinForms", "BindingNavigatorVBWinForms\BindingNavigatorVBWinForms.vbproj", "{BB7C1B03-D811-460E-9159-0D8513F22CE0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryFormatUtility", "QueryFormatUtility\QueryFormatUtility.csproj", "{2B6D623E-043D-479B-828D-6871ED9D1BE7}"
 EndProject
@@ -263,7 +262,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksConsoleApp", "BooksCon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsBuildCompressSolution", "MsBuildCompressSolution\MsBuildCompressSolution.csproj", "{A43BE259-F150-40F7-A19C-D373B153EC76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateLocalDb", "CreateLocalDb\CreateLocalDb.csproj", "{5C94DDB5-2560-414F-98A6-CFBC30B7346B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateLocalDb", "CreateLocalDb\CreateLocalDb.csproj", "{5C94DDB5-2560-414F-98A6-CFBC30B7346B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeAmPm", "DateTimeAmPm\DateTimeAmPm.csproj", "{F8E4A2FF-43B1-4B44-8B79-E33EB06591C0}"
 EndProject
@@ -301,13 +300,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjectionForms1",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioButtonApp", "RadioButtonApp\RadioButtonApp.csproj", "{72FF9B17-E750-4D39-8DE1-D32980CB0FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiacriticsConsoleApp", "DiacriticsConsoleApp\DiacriticsConsoleApp.csproj", "{2E6CC0CC-33B2-490A-88D6-E0995BF6A305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiacriticsConsoleApp", "DiacriticsConsoleApp\DiacriticsConsoleApp.csproj", "{2E6CC0CC-33B2-490A-88D6-E0995BF6A305}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateRandomListConsoleApp", "CreateRandomListConsoleApp\CreateRandomListConsoleApp.csproj", "{1DE06F50-CB42-44DC-8C9B-CD51D211BA89}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAdapterFormApp", "DataAdapterFormApp\DataAdapterFormApp.csproj", "{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetControlFormProject", "GetControlFormProject\GetControlFormProject.csproj", "{E645359A-E2FF-4A2D-B79F-27C1DEB48CDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetControlFormProject", "GetControlFormProject\GetControlFormProject.csproj", "{E645359A-E2FF-4A2D-B79F-27C1DEB48CDC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFormatProviderExample", "IFormatProviderExample\IFormatProviderExample.csproj", "{D77BFD43-21C1-48C7-9A01-05D2ED192163}"
 EndProject
@@ -343,7 +342,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopThroughFile", "LoopThro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopThroughFileLibrary", "LoopThroughFileLibrary\LoopThroughFileLibrary.csproj", "{0D7E52C3-6813-4A77-9E9C-FF9A14C7D4B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNumbersApp", "RandomNumbersApp\RandomNumbersApp.csproj", "{C9602891-9F73-4D8E-8C15-1961E4887B5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomNumbersApp", "RandomNumbersApp\RandomNumbersApp.csproj", "{C9602891-9F73-4D8E-8C15-1961E4887B5D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerHelperLibrary", "SqlServerUtilititesLibrary\SqlServerHelperLibrary.csproj", "{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}"
 EndProject
@@ -361,7 +360,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersOnlyExample", "Numbe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YieldReadFileFormDemo", "YieldReadFileFormDemo\YieldReadFileFormDemo.csproj", "{928174BA-4692-4302-BB0F-A7A34412239E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JObjectQuestion", "JObjectQuestion\JObjectQuestion.csproj", "{592BCD12-2C52-42A6-8838-61ED9A437F0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JObjectQuestion", "JObjectQuestion\JObjectQuestion.csproj", "{592BCD12-2C52-42A6-8838-61ED9A437F0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
