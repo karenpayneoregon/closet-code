@@ -27,3 +27,7 @@ namespace DataGridViewExportTextFile.Extensions
 }
 
 ```
+
+Also a code sample in Form2 for selecting cells.
+
+![screen](assets/figure1.png)

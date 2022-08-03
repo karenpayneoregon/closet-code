@@ -15,3 +15,7 @@ private const int TimeOutSeconds = 5;
 /// </summary>
 private CancellationTokenSource _cancellationTokenSource = new(TimeSpan.FromSeconds(TimeOutSeconds));
 ```
+
+---
+
+![Figure1](assets/figure1.png)

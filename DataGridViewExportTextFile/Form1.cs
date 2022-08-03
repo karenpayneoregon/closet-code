@@ -17,15 +17,26 @@ namespace DataGridViewExportTextFile
         public Form1()
         {
             InitializeComponent();
+            Shown += OnShown;
+
+        }
+
+        private void OnShown(object sender, EventArgs e)
+        {
             dataGridView1.DataSource = BogusOperations.People();
             dataGridView1.FixHeaders();
             dataGridView1.ExpandColumns();
-            ResizeEnd += OnResizeEnd;
+
+            dataGridView1[0, 0].Selected = false;
+            dataGridView1[2, 2].Selected = true;
+            dataGridView1[3, 3].Selected = true;
+            dataGridView1[0, 4].Selected = true;
+
         }
 
         private void OnResizeEnd(object sender, EventArgs e)
         {
-            Console.WriteLine("done");
+            //Console.WriteLine("done");
         }
 
         private void ExportButton_Click(object sender, EventArgs e)

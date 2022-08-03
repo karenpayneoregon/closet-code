@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,7 @@ namespace ExtractResourceToFile1
             if (!string.IsNullOrWhiteSpace(FileNameTextBox.Text))
             {
                 Resources.ColorCop.FileSave(FileNameTextBox.Text);
+                Process.Start(FileNameTextBox.Text);
             }
            
         }
