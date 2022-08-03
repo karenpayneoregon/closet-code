@@ -25,6 +25,9 @@ namespace EventsGetInvocationListFormsApp
         {
             listBox1.Items.Add(nameof(Button1OnClick));
             listBox1.SelectedIndex = listBox1.Items.Count - 1;
+            
+            // if you want to unsubscribe immediately uncomment
+            //button1.DisableEvents("Click");
         }
 
         private void UnsubscribeButton_Click(object sender, EventArgs e)
