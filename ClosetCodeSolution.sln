@@ -377,7 +377,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsGetInvocationListForm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckedListBoxExtensionsApp1", "CheckedListBoxExtensionsApp1\CheckedListBoxExtensionsApp1.csproj", "{B04ACA07-F3B9-4480-B17C-347560467C1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionStripPathsApp", "ExceptionStripPathsApp\ExceptionStripPathsApp.csproj", "{89F60D80-0036-404A-A680-3064088207F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionStripPathsApp", "ExceptionStripPathsApp\ExceptionStripPathsApp.csproj", "{89F60D80-0036-404A-A680-3064088207F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDynamicControls", "CreateDynamicControls\CreateDynamicControls.csproj", "{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1000,6 +1002,10 @@ Global
 		{89F60D80-0036-404A-A680-3064088207F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89F60D80-0036-404A-A680-3064088207F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89F60D80-0036-404A-A680-3064088207F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1176,6 +1182,7 @@ Global
 		{C7F28B47-EBC0-4098-B453-F09C36491099} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{B04ACA07-F3B9-4480-B17C-347560467C1B} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{89F60D80-0036-404A-A680-3064088207F2} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
