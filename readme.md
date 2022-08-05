@@ -96,6 +96,10 @@ Some examples are windows form specific while others simply can be understood be
 
 The majority of code has been done using .NET Core 5 while a handful use .NET Framework 4.8
 
+# Links
+
+- .NET Source Generators: Finding Class Declarations [![](assets/Link_16x.png)](https://khalidabuhakmeh.com/dotnet-source-generators-finding-class-declarations)
+
 # Credits
 
 - In some cases code samples are from Stackoverflow questions were I've written out the solution or taken someone elses solution.
