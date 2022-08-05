@@ -1,10 +1,10 @@
 ﻿# About
 
-![screen](../assets/checkedListBox1.png)
 
-Simple example for selecting checked items in a CheckedListBox where data is a list of a model.
+- Simple example for selecting checked items in a CheckedListBox where data is a list of a model.
+- Style form (for Stackoverflow questions)
 
-Note that `CheckedListBoxExtensionsApp1` project has code to remove an item from the DataGridView on un-check in the CheckedListBox.
+![Screen Shot](assets/ScreenShot.png)
 
 ```csharp
 public static class CheckedListBoxExtensions
