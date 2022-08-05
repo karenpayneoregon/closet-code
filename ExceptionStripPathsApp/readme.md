@@ -6,7 +6,7 @@ Add the following to your project file
 
 ```xml
 <PropertyGroup>
-	<PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=./</PathMap>
+   <PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=./</PathMap>
 </PropertyGroup>
 ```
 
