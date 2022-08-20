@@ -25,4 +25,23 @@
 	  <PackageReference Include="ConsoleHelperLibrary" Version="1.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="nlog.config">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NLog" Version="4.7.14" />
+		<PackageReference Include="NLog.Extensions.Logging" Version="1.7.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="nlog.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	<PropertyGroup>
+		<PathMap>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))=./</PathMap>
+	</PropertyGroup>
 </Project>

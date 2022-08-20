@@ -1,13 +1,26 @@
 ﻿using System;
+using System.Drawing;
+using ExceptionStripPathsApp.Classes;
 
 namespace ExceptionStripPathsApp
 {
-    partial class Program
+    public partial class Program
     {
         static void Main(string[] args)
         {
-            Convert.ToDateTime(@"Ooops");
+            var (provider, logger) = Logging.Configuration();
+            serviceProvider = provider;
+            _logger = logger;
+
+            var services = new Services(serviceProvider);
             
+            services.ReadFile("NonExistingFile.csv");
+            services.ConvertDate(@"Ooops");
+
+            Convert.ToDateTime(@"Ooops");
+
+
+            Console.ReadLine();
         }
     }
 }
