@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32630.192
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net Core", "Net Core", "{4058082F-1CC9-4DED-B2C1-B99EF75DB851}"
 EndProject
@@ -113,6 +113,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ConsoleTricks", "ConsoleTri
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "30175"
+		SlnRelativePath = "ConsoleTricks\"
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
@@ -362,8 +363,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YieldReadFileFormDemo", "Yi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JObjectQuestion", "JObjectQuestion\JObjectQuestion.csproj", "{592BCD12-2C52-42A6-8838-61ED9A437F0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppSettingsConsole1", "AppSettingsConsole1\AppSettingsConsole1.csproj", "{4A5D1C18-BF95-4BEE-BA17-13688459E83B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerDatabaseLibrary", "CustomerDatabaseLibrary\CustomerDatabaseLibrary.csproj", "{0E0CE69C-A000-4354-80FF-B809E41D9269}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerDatabaseFrontend", "CustomerDatabaseFrontend\CustomerDatabaseFrontend.csproj", "{14364391-37B8-4733-889B-AC24693470F9}"
@@ -375,6 +374,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinkeringConsoleApp", "TinkeringConsoleApp\TinkeringConsoleApp.csproj", "{CB103F65-BC1D-4487-852B-06FB41613396}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsGetInvocationListFormsApp", "EventsGetInvocationListFormsApp\EventsGetInvocationListFormsApp.csproj", "{C7F28B47-EBC0-4098-B453-F09C36491099}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckedListBoxExtensionsApp1", "CheckedListBoxExtensionsApp1\CheckedListBoxExtensionsApp1.csproj", "{B04ACA07-F3B9-4480-B17C-347560467C1B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionStripPathsApp", "ExceptionStripPathsApp\ExceptionStripPathsApp.csproj", "{89F60D80-0036-404A-A680-3064088207F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDynamicControls", "CreateDynamicControls\CreateDynamicControls.csproj", "{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -965,10 +970,6 @@ Global
 		{592BCD12-2C52-42A6-8838-61ED9A437F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{592BCD12-2C52-42A6-8838-61ED9A437F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{592BCD12-2C52-42A6-8838-61ED9A437F0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4A5D1C18-BF95-4BEE-BA17-13688459E83B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A5D1C18-BF95-4BEE-BA17-13688459E83B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A5D1C18-BF95-4BEE-BA17-13688459E83B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A5D1C18-BF95-4BEE-BA17-13688459E83B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0E0CE69C-A000-4354-80FF-B809E41D9269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0E0CE69C-A000-4354-80FF-B809E41D9269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E0CE69C-A000-4354-80FF-B809E41D9269}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -993,6 +994,18 @@ Global
 		{C7F28B47-EBC0-4098-B453-F09C36491099}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7F28B47-EBC0-4098-B453-F09C36491099}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7F28B47-EBC0-4098-B453-F09C36491099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B04ACA07-F3B9-4480-B17C-347560467C1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B04ACA07-F3B9-4480-B17C-347560467C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B04ACA07-F3B9-4480-B17C-347560467C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B04ACA07-F3B9-4480-B17C-347560467C1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89F60D80-0036-404A-A680-3064088207F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89F60D80-0036-404A-A680-3064088207F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89F60D80-0036-404A-A680-3064088207F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89F60D80-0036-404A-A680-3064088207F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1161,13 +1174,15 @@ Global
 		{399B7843-65A8-4F08-878B-42EED4E46179} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{928174BA-4692-4302-BB0F-A7A34412239E} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{592BCD12-2C52-42A6-8838-61ED9A437F0C} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
-		{4A5D1C18-BF95-4BEE-BA17-13688459E83B} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{0E0CE69C-A000-4354-80FF-B809E41D9269} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{14364391-37B8-4733-889B-AC24693470F9} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{E9001A11-6044-4D98-8371-E64D1197641B} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{BA413A9C-0D5A-4D62-BE42-0E9FE6E581CF} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{CB103F65-BC1D-4487-852B-06FB41613396} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{C7F28B47-EBC0-4098-B453-F09C36491099} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
+		{B04ACA07-F3B9-4480-B17C-347560467C1B} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{89F60D80-0036-404A-A680-3064088207F2} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

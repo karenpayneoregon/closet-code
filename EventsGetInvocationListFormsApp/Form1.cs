@@ -32,7 +32,7 @@ namespace EventsGetInvocationListFormsApp
 
         private void UnsubscribeButton_Click(object sender, EventArgs e)
         {
-            button1.DisableEvents("Click");
+            button1.UnsubscribeEvents("Click");
             UpdateCount();
         }
 

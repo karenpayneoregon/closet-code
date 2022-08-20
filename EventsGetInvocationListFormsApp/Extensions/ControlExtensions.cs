@@ -16,7 +16,7 @@ namespace EventsGetInvocationListFormsApp.Extensions
         /// <remarks>
         /// If there are no events subscriptions an empty array is returned
         /// </remarks>
-        public static Delegate[] DisableEvents(this Control control, string eventName)
+        public static Delegate[] UnsubscribeEvents(this Control control, string eventName)
         {
             var eventHandler = GetInformation(control, eventName);
 
