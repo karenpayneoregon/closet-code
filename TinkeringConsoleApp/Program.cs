@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Spectre.Console;
 using TinkeringConsoleApp.Extensions;
 using TinkeringConsoleApp.Interfaces;
 using TinkeringConsoleApp.Models;
@@ -16,7 +17,7 @@ namespace TinkeringConsoleApp
             Console.WriteLine(string.Join(",", array.Missing()));
             Console.WriteLine(string.Join(",", array.Missing1()));
 
-            Console.WriteLine(string.Join(",", PeopleList().MissingIdentifiers()));
+            AnsiConsole.MarkupLine($"[b]{string.Join(",", PeopleList().MissingIdentifiers())}[/]");
 
 
             Console.ReadLine();
@@ -28,9 +29,12 @@ namespace TinkeringConsoleApp
             new Employee() { Identifier = 2,  FirstName = "Mary", LastName = "Smith" },
             new Manager()  { Identifier = 3,  FirstName = "Frank", LastName = "O'Brien", 
                 Employees = new List<int>() { 2,5,6 } },
+
             new Employee() { Identifier = 5,  FirstName = "Lee", LastName = "Fux" },
+
             new Manager()  { Identifier = 6,  FirstName = "Sue", LastName = "Gallagher", 
                 Employees = new List<int>() { 1, 3, 8 , 10 } },
+
             new Employee() { Identifier = 8,  FirstName = "Bob", LastName = "Clime" },
             new Employee() { Identifier = 10, FirstName = "Nancy", LastName = "Burger" }
         };

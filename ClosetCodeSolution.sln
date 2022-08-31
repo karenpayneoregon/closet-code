@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32630.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net Core", "Net Core", "{4058082F-1CC9-4DED-B2C1-B99EF75DB851}"
 EndProject
@@ -97,7 +97,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{85EDE1FD-DE2
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ConsoleTricks", "ConsoleTricks\", "{D77E95F3-CE0D-4164-8B8E-82E878053BE2}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_30175"
 		Debug.AspNetCompiler.PhysicalPath = "ConsoleTricks\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_30175\"
@@ -377,9 +377,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsGetInvocationListForm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckedListBoxExtensionsApp1", "CheckedListBoxExtensionsApp1\CheckedListBoxExtensionsApp1.csproj", "{B04ACA07-F3B9-4480-B17C-347560467C1B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionStripPathsApp", "ExceptionStripPathsApp\ExceptionStripPathsApp.csproj", "{89F60D80-0036-404A-A680-3064088207F2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDynamicControls", "CreateDynamicControls\CreateDynamicControls.csproj", "{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DumpMe", "DumpMe\DumpMe.csproj", "{C0C0B75B-3E9F-452D-9CDA-63287CEE8A7E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IncrementSequenceDemos", "IncrementSequenceDemos\IncrementSequenceDemos.csproj", "{82970CD7-3B55-45C5-94BC-3544FA5486F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenFolderWinFormsApp", "OpenFolderWinFormsApp\OpenFolderWinFormsApp.csproj", "{C712E507-D94B-4738-87DF-9D46FE0F1FED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelToAndFromOADate", "ExcelToAndFromOADate\ExcelToAndFromOADate.csproj", "{974DEED6-9684-4868-9117-794593BCEF9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -998,14 +1004,26 @@ Global
 		{B04ACA07-F3B9-4480-B17C-347560467C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B04ACA07-F3B9-4480-B17C-347560467C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B04ACA07-F3B9-4480-B17C-347560467C1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{89F60D80-0036-404A-A680-3064088207F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{89F60D80-0036-404A-A680-3064088207F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{89F60D80-0036-404A-A680-3064088207F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{89F60D80-0036-404A-A680-3064088207F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C0B75B-3E9F-452D-9CDA-63287CEE8A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C0B75B-3E9F-452D-9CDA-63287CEE8A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C0B75B-3E9F-452D-9CDA-63287CEE8A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C0B75B-3E9F-452D-9CDA-63287CEE8A7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82970CD7-3B55-45C5-94BC-3544FA5486F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82970CD7-3B55-45C5-94BC-3544FA5486F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82970CD7-3B55-45C5-94BC-3544FA5486F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82970CD7-3B55-45C5-94BC-3544FA5486F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C712E507-D94B-4738-87DF-9D46FE0F1FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C712E507-D94B-4738-87DF-9D46FE0F1FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C712E507-D94B-4738-87DF-9D46FE0F1FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C712E507-D94B-4738-87DF-9D46FE0F1FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974DEED6-9684-4868-9117-794593BCEF9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974DEED6-9684-4868-9117-794593BCEF9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974DEED6-9684-4868-9117-794593BCEF9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974DEED6-9684-4868-9117-794593BCEF9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1181,8 +1199,11 @@ Global
 		{CB103F65-BC1D-4487-852B-06FB41613396} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{C7F28B47-EBC0-4098-B453-F09C36491099} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{B04ACA07-F3B9-4480-B17C-347560467C1B} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
-		{89F60D80-0036-404A-A680-3064088207F2} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
+		{C0C0B75B-3E9F-452D-9CDA-63287CEE8A7E} = {AC3B9674-F6F0-447D-A392-72344A74EB17}
+		{82970CD7-3B55-45C5-94BC-3544FA5486F2} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{C712E507-D94B-4738-87DF-9D46FE0F1FED} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{974DEED6-9684-4868-9117-794593BCEF9D} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
