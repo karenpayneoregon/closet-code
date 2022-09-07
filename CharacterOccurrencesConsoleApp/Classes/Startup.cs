@@ -1,5 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
-using D = ConsoleHelperLibrary.Classes.WindowUtility;
+
 namespace CharacterOccurrencesConsoleApp.Classes;
 
 internal class Startup
