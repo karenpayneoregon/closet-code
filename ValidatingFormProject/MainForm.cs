@@ -56,7 +56,7 @@ namespace ValidatingFormProject
         private void SetResultTextInChildWindow(string text = "")
         {
             var childForms = Application.OpenForms.Cast<Form>()
-                .Where(form => form.Name == nameof(SideForm));
+                .Where(form => form.Name == nameof(SideForm)).ToList();
 
             if (childForms.Any())
             {
