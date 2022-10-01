@@ -48,14 +48,16 @@ namespace ChangeImage
 
         private void NamesInResourceButton_Click(object sender, EventArgs e)
         {
-            var list = ImageHelper.ResourceImageNames();
-            if (list.Contains("chat", StringComparer.OrdinalIgnoreCase))
+            var resources = ImageHelper.ResourceItemList();
+            // In this case we are case sensitive
+            var imageItem = resources.FirstOrDefault(x => x.Name == "Chat");
+            if (imageItem is not null)
             {
-                
+                pictureBox1.Image = imageItem.Image;
             }
             else
             {
-                
+                // image not found
             }
         }
     }

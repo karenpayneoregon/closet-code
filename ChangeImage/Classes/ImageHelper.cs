@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+// change ChangeImage with your namespace
 using ChangeImage.Properties;
 
 namespace ChangeImage.Classes
@@ -44,7 +45,9 @@ namespace ChangeImage.Classes
             try
             {
                 var names = new List<string>();
-                var resourceSet = Resources.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+                var resourceSet = Resources.ResourceManager
+                    .GetResourceSet(CultureInfo.CurrentUICulture, 
+                        true, true);
                 names.AddRange(
                     from DictionaryEntry dictionaryEntry in resourceSet 
                     where dictionaryEntry.Value is Image || dictionaryEntry.Value is Icon 
