@@ -41,7 +41,8 @@ namespace CharacterOccurrencesApp
             /*
              * Way simple way to get char count
              */
-            var containers = "AaBbXzZ".GroupBy(c => c).Select(c => new Container(c.Key, c.Count()));
+            var containers = "AaBbXzZ".GroupBy(c => c).Select(c => 
+                new Container(c.Key, c.Count()));
 
             List<Item> items = Operations.GetAllItems(textBox1.Text);
 
@@ -83,5 +84,6 @@ namespace CharacterOccurrencesApp
             listView1.Items.Clear();
             listView2.Items.Clear();
         }
+
     }
 }
