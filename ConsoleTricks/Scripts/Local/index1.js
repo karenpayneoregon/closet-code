@@ -52,32 +52,32 @@ $(document).ready(function () {
         var value = parseInt($('#lblIncrement').text());
         var newValue = value + 1;
         $('#lblIncrement').text(newValue);
-        kendoConsole.log("Notification count is " + newValue, true);
+        //kendoConsole.log("Notification count " + newValue, true);
     });
 
-    $('#btnNotifications').click(function () {
-        let arr = ['Movies', 'Cars', 'Games', 'Hike'];
+    //$('#btnNotifications').click(function () {
+    //    let arr = ['Movies', 'Cars', 'Games', 'Hike'];
 
-        kendoConsole.log(arr.includes('games'));
-        kendoConsole.log(arr.includes('Games'));
+    //    kendoConsole.log(arr.includes('games'));
+    //    kendoConsole.log(arr.includes('Games'));
 
-    });
+    //});
 
     //
     // get count from #lblIncrement
     //
     $('#btnGetNotificationCount').click(function (event) {
 
-        //var value = parseInt($('#lblIncrement').text());
-        //kendoConsole.log("Notification count is " + value);
+        var value = parseInt($('#lblIncrement').text());
+        kendoConsole.log("Notification count " + value);
 
-        var countryArray = ["Usa", "Canada", "France"];
-        const countries = new CaseInsensitiveSet(countryArray);
+        //var countryArray = ["Usa", "Canada", "France"];
+        //const countries = new CaseInsensitiveSet(countryArray);
 
-        var country = "usa";
-        console.log(`countries contains '${country}' ${countries.has(country)}`);
-        country = "Russia";
-        console.log(`countries contains '${country}' ${countries.has(country)}`);
+        //var country = "usa";
+        //console.log(`countries contains '${country}' ${countries.has(country)}`);
+        //country = "Russia";
+        //console.log(`countries contains '${country}' ${countries.has(country)}`);
 
     });
 
