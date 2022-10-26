@@ -52,16 +52,9 @@ $(document).ready(function () {
         var value = parseInt($('#lblIncrement').text());
         var newValue = value + 1;
         $('#lblIncrement').text(newValue);
-        //kendoConsole.log("Notification count " + newValue, true);
     });
 
-    //$('#btnNotifications').click(function () {
-    //    let arr = ['Movies', 'Cars', 'Games', 'Hike'];
 
-    //    kendoConsole.log(arr.includes('games'));
-    //    kendoConsole.log(arr.includes('Games'));
-
-    //});
 
     //
     // get count from #lblIncrement
@@ -70,15 +63,6 @@ $(document).ready(function () {
 
         var value = parseInt($('#lblIncrement').text());
         kendoConsole.log("Notification count " + value);
-
-        //var countryArray = ["Usa", "Canada", "France"];
-        //const countries = new CaseInsensitiveSet(countryArray);
-
-        //var country = "usa";
-        //console.log(`countries contains '${country}' ${countries.has(country)}`);
-        //country = "Russia";
-        //console.log(`countries contains '${country}' ${countries.has(country)}`);
-
     });
 
     $('#badgeLikeUs').click(function (event) {

@@ -175,7 +175,7 @@ namespace IsYouCodeReadable
         {
             var days = CurrentInfo?.DayNames;
 
-            var wellDoneResult = days!
+            var wellDoneResult = days
                 .Select((name, index) => new
                 {
                     Name = name,
@@ -191,7 +191,7 @@ namespace IsYouCodeReadable
 
             Console.WriteLine();
 
-            var poorlyDoneResult = days!
+            var poorlyDoneResult = days
                 .Select((n, x) => new
                 {
                     Name = n,

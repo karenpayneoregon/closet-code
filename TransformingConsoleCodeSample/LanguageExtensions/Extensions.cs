@@ -26,8 +26,7 @@ namespace TransformingConsoleCodeSample.LanguageExtensions
         }
 
         public static string SplitCamelCase(this string sender) =>
-            Regex.Replace(Regex.Replace(sender,
-                    "(\\P{Ll})(\\P{Ll}\\p{Ll})", "$1 $2"),
-                "(\\p{Ll})(\\P{Ll})", "$1 $2");
+            string.Join(" ", Regex.Matches(sender, @"([A-Z][a-z]+)")
+                .Select(m => m.Value));
     }
 }
