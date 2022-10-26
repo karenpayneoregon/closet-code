@@ -38,6 +38,10 @@ $('#btnGetNotificationCount').click(function (event) {
 });
 ```
 
+Screenshot for this project
+
+![z](Images/demo.png)
+
 Screenshot taken from [this page](https://demos.telerik.com/kendo-ui/mvvm/types?autoRun=true&theme=default-purple).
 
 ![x](Images/console.png)
