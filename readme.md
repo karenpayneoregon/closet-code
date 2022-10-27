@@ -108,6 +108,19 @@ The majority of code has been done using .NET Core 5 while a handful use .NET Fr
 
 # Projects
 
+Many use `.NET Core 5` which is out of support. If are using `.NET Core 6` or higher, alter the project file to
+
+```xml
+<PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>net6.0</TargetFramework>
+   <ImplicitUsings>enable</ImplicitUsings>
+   <Nullable>enable</Nullable>
+</PropertyGroup>
+```
+
+---
+
 | Name        |   Description    |   Framework |
 |:------------- |:-------------|:-------------|
 | BooksConsoleApp | Example for EF Core `HasConversion` for `enum` | .NET Core 5 - console |
@@ -151,10 +164,22 @@ The majority of code has been done using .NET Core 5 while a handful use .NET Fr
 | IFormatProviderExample | Simple example for `IFormatProvider` which should not be used in a production | .NET Core 5 - console |
 | IncrementSequenceConsole | increment an alpha-numeric value | .NET Core 5 - console |
 | IncrementSequenceDemos | Continuation of `IncrementSequenceConsole` |  .NET Core 6 - console |
-| IndicesRanges | Using month names, provides a basic understanding of working with indices e.g. `CurrentInfo.MonthNames[..^1]`  | .NET Core 5 - console |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| IndicesRanges :heavy_check_mark: | Using month names, provides a basic understanding of working with indices e.g. `CurrentInfo.MonthNames[..^1]`  | .NET Core 5 - console |
+| InterfacesUsingAnimals :heavy_check_mark: | basic example for using `interfaces` | .NET Core 6 - console |
+| IsYouCodeReadable | talk with code samples on code readability | .NET Core 5 - console  |
+| LoopThroughFile | loop through file with exception handling | .NET Core 5 - console |
+| MarkOfTheWeb | A utility to remove `mark of the web` from a folder recursively to all sub-folders. see NuGet [package](https://www.nuget.org/packages/MarkOfTheWeb/) | .NET Core 5 - console |
+| MonthNamesDifferentLanguages | Display month names in several languages. | .NET Core 5 - console |
+| NullCoalescingOperatorApp | simple usage `??`  | .NET Core 5 - console |
+|  QueryHelpersConsoleApp | Basic samples for [QueryHelpers.AddQueryString](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.webutilities.queryhelpers.addquerystring?view=aspnetcore-6.0) | .NET Core 5 - console |
+| RandomNumbersApp | Show how to get random double and random int between min and max values. For double there is truncation to two for the fraction part | .NET Core 5 - console |
+| RangeForEach | `foreach (var index in 1..3)` | .NET Core 5 - console |
+| SimpleEmailValidationDataAnnotations | This code sample shows how to use data annotations without [[EmailAddress]](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.emailaddressattribute?view=net-6.0) used on a string property for Email. | .NET Core 5 - console |
+| SingletonSimple | Simple [Singleton](https://csharpindepth.com/articles/singleton) example. | .NET Core 5 - console |
+| SwitchExpressions | Ongoing switch expression samples | .NET Core 5 - console |
+| TinkeringConsoleApp | Code samples for finding missing int values in arrays. | .NET Core 5 - console |
+| TransformingConsoleCodeSample | Generic transformer which at the core uses `Array.ConvertAll`. | .NET Core 6 - console |
+|  TryGetNonEnumeratedCountConsoleApp | [TryGetNonEnumeratedCount](https://learn.microsoft.com/en-us/dotnet/api/system.linq.enumerable.trygetnonenumeratedcount?view=net-7.0) |   .NET Core 6 - console |
 |  |  |  |
 |  |  |  |
 |  |  |  |
@@ -162,3 +187,10 @@ The majority of code has been done using .NET Core 5 while a handful use .NET Fr
 :heavy_check_mark: Useful any time
 
 :balance_scale: With little effort `.NET Core 5` code can be used for `.NET Core 6` and higher
+
+
+# Great Visual Studio extensions
+
+- [ReSharper](https://marketplace.visualstudio.com/items?itemName=JetBrains.ReSharper) The legendary .NET productivity tool: find and fix errors and code smells; navigate and refactor; run unit tests and write quality code faster.
+- [EF Core Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EFCorePowerTools) Useful design-time DbContext features, added to the Visual Studio Solution Explorer context menu.
+- [Sql Tools](https://marketplace.visualstudio.com/items?itemName=Mojtabakaviani.SqlTools&ssr=false#overview) SQL syntax highlighting and completion (keywords, operators, functions and variables) to string literals
