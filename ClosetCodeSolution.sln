@@ -387,7 +387,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TinyHelpers", "TinyHelpers"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TinyHelpersApp", "TinyHelpersApp\TinyHelpersApp.csproj", "{420BB3C4-6076-49BD-9F5B-32249FF8DFD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryGetNonEnumeratedCountConsoleApp", "TryGetNonEnumeratedCountConsoleApp\TryGetNonEnumeratedCountConsoleApp.csproj", "{8AA3A3D5-F0AB-4D6C-8874-44B544706A1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryGetNonEnumeratedCountConsoleApp", "TryGetNonEnumeratedCountConsoleApp\TryGetNonEnumeratedCountConsoleApp.csproj", "{8AA3A3D5-F0AB-4D6C-8874-44B544706A1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlinkingTextApp", "BlinkingTextApp\BlinkingTextApp.csproj", "{CA6C27B9-4CD3-4BB0-819E-8485A76AD669}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeApp", "DateTimeApp\DateTimeApp.csproj", "{503B1FD9-94FA-4D73-AE75-F7C520DD94C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1026,6 +1030,14 @@ Global
 		{8AA3A3D5-F0AB-4D6C-8874-44B544706A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AA3A3D5-F0AB-4D6C-8874-44B544706A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AA3A3D5-F0AB-4D6C-8874-44B544706A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6C27B9-4CD3-4BB0-819E-8485A76AD669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6C27B9-4CD3-4BB0-819E-8485A76AD669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6C27B9-4CD3-4BB0-819E-8485A76AD669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6C27B9-4CD3-4BB0-819E-8485A76AD669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{503B1FD9-94FA-4D73-AE75-F7C520DD94C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{503B1FD9-94FA-4D73-AE75-F7C520DD94C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{503B1FD9-94FA-4D73-AE75-F7C520DD94C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{503B1FD9-94FA-4D73-AE75-F7C520DD94C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1207,6 +1219,8 @@ Global
 		{016C6C94-6D6E-40FF-A9CD-5E30D58E9CF1} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
 		{420BB3C4-6076-49BD-9F5B-32249FF8DFD4} = {016C6C94-6D6E-40FF-A9CD-5E30D58E9CF1}
 		{8AA3A3D5-F0AB-4D6C-8874-44B544706A1F} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{CA6C27B9-4CD3-4BB0-819E-8485A76AD669} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
+		{503B1FD9-94FA-4D73-AE75-F7C520DD94C9} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
