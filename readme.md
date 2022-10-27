@@ -144,13 +144,14 @@ The majority of code has been done using .NET Core 5 while a handful use .NET Fr
 | ExcelToAndFromOADate | `DateTime.FromOADate` and `ToOADate` examples | .NET Core 5 - console |
 | ExceptionsWhenApp :heavy_check_mark: | Samples for try/catch/when | .NET Core 5 - console |
 | FileNamesExamples :heavy_check_mark: | Code to create file names incrementally `Log_1.txt` `Log_2.txt` `Log_3.txt` `Log_4.txt` | .NET Core 5 - console  |
+| GetControlFormProject | Shows how to iterate controls on a form with various recursive extension methods | .NET Core 5 WinForms |
 | GetInformationForModel | Partly generic code to iterate an instance of a model/class | .NET Core 5 - console |
 | GetLastNumberInString :heavy_check_mark: | code to the last number in a string in the format of `some chars-a number` e.g. `ABC-09` | .NET Core 5 - console  |
 | GroupByMultiplePropertiesFindDuplicates | Simple `groupby` on several properties of a class to get distinct instances then place into a new list. | .NET Core 5 - console |
 | IFormatProviderExample | Simple example for `IFormatProvider` which should not be used in a production | .NET Core 5 - console |
 | IncrementSequenceConsole | increment an alpha-numeric value | .NET Core 5 - console |
 | IncrementSequenceDemos | Continuation of `IncrementSequenceConsole` |  .NET Core 6 - console |
-|  |  |  |
+| IndicesRanges | Using month names, provides a basic understanding of working with indices e.g. `CurrentInfo.MonthNames[..^1]`  | .NET Core 5 - console |
 |  |  |  |
 |  |  |  |
 |  |  |  |
@@ -159,3 +160,5 @@ The majority of code has been done using .NET Core 5 while a handful use .NET Fr
 |  |  |  |
 
 :heavy_check_mark: Useful any time
+
+:balance_scale: With little effort `.NET Core 5` code can be used for `.NET Core 6` and higher
