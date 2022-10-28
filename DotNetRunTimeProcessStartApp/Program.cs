@@ -6,7 +6,7 @@ internal partial class Program
 {
     static async Task Main(string[] args)
     {
-        AnsiConsole.MarkupLine("[yellow]Hello[/]");
+        AnsiConsole.MarkupLine("[yellow]dotnet --list-runtimes[/]");
         var (success, details, localException) = await Operations.Execute();
         if (success)
         {
