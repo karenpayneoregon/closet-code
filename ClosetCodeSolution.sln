@@ -397,6 +397,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingTimerApp", "Thread
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Temp", "Temp", "{FA095A08-05D4-48EF-8780-129F3C7BAF13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetRunTimeProcessStartApp", "DotNetRunTimeProcessStartApp\DotNetRunTimeProcessStartApp.csproj", "{3166D9CB-788C-4285-A254-E95F594925AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1046,6 +1048,10 @@ Global
 		{27186188-B763-4719-81C1-9BF3BD529C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27186188-B763-4719-81C1-9BF3BD529C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27186188-B763-4719-81C1-9BF3BD529C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3166D9CB-788C-4285-A254-E95F594925AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3166D9CB-788C-4285-A254-E95F594925AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3166D9CB-788C-4285-A254-E95F594925AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3166D9CB-788C-4285-A254-E95F594925AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1230,6 +1236,7 @@ Global
 		{CA6C27B9-4CD3-4BB0-819E-8485A76AD669} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{503B1FD9-94FA-4D73-AE75-F7C520DD94C9} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{27186188-B763-4719-81C1-9BF3BD529C2D} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{3166D9CB-788C-4285-A254-E95F594925AC} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

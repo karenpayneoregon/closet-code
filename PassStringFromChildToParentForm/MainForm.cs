@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace PassStringFromChildToParentForm
 {
     public partial class MainForm : Form
     {
+        public delegate void OnUpdate(string text);
+        public event OnUpdate UpdateData;
         public MainForm()
         {
             InitializeComponent();
@@ -13,18 +14,12 @@ namespace PassStringFromChildToParentForm
 
         private void ShowChildForm_Click(object sender, EventArgs e)
         {
-            ChildForm childForm = new ChildForm();
-
+            ChildForm childForm = new ChildForm() {Owner = this};
+   
             childForm.PassMonths += OnPassMonths;
 
-            try
-            {
-                childForm.ShowDialog();
-            }
-            finally
-            {
-                childForm.Dispose();
-            }
+            childForm.Show(this);
+            
         }
 
         private void OnPassMonths(string month)
@@ -34,14 +29,16 @@ namespace PassStringFromChildToParentForm
                 dataGridView1.Rows.Add(month);
             }
         }
+
+        private void SendButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 
-    public static class DataGridViewExtensions
+    public class DataOperations
     {
-        // in this case the cell is assumed to be 0, change if not 0
-        public static bool MonthNotExists(this DataGridView dgv, string month) => 
-            dgv.Rows.Cast<DataGridViewRow>()
-                .FirstOrDefault(row => row.Cells[0].Value.ToString()
-                    .Equals(month)) == null;
+        public delegate void OnUpdate(string text);
+        public event OnUpdate UpdateData;
     }
 }
