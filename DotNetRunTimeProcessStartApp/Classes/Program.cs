@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.CompilerServices;
 
 // ReSharper disable once CheckNamespace
 namespace DotNetRunTimeProcessStartApp
@@ -14,8 +9,19 @@ namespace DotNetRunTimeProcessStartApp
         public static void Init()
         {
             AnsiConsole.MarkupLine("");
-            Console.Title = "Code sample";
+            Console.Title = "PowerShell Code sample";
             WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
+        }
+        public static Table CreateTable()
+        {
+            var table = new Table()
+                .RoundedBorder()
+                .AddColumn("[white on blue]Product[/]")
+                .AddColumn("[white on blue]Version[/]")
+                .Alignment(Justify.Left)
+                .BorderColor(Color.LightSlateGrey)
+                .Title("[LightGreen]dotnet --list-runtimes[/]");
+            return table;
         }
     }
 }
