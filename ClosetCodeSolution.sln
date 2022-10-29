@@ -401,6 +401,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetRunTimeProcessStartAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendToMainForm", "SendToMainForm\SendToMainForm.csproj", "{F22EE0CA-FE8A-44AF-B1D6-DBADC6BCFA99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumQuestion1", "ForumQuestion1\ForumQuestion1.csproj", "{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1058,6 +1060,10 @@ Global
 		{F22EE0CA-FE8A-44AF-B1D6-DBADC6BCFA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F22EE0CA-FE8A-44AF-B1D6-DBADC6BCFA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F22EE0CA-FE8A-44AF-B1D6-DBADC6BCFA99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1244,6 +1250,7 @@ Global
 		{27186188-B763-4719-81C1-9BF3BD529C2D} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{3166D9CB-788C-4285-A254-E95F594925AC} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{F22EE0CA-FE8A-44AF-B1D6-DBADC6BCFA99} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{0D0C2499-EE66-4321-8AC6-98AEA17B7C51} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
