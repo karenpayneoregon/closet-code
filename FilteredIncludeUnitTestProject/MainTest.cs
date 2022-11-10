@@ -127,6 +127,44 @@ namespace FilteredIncludeUnitTestProject
             Console.WriteLine(builder);
 
         }
+        [TestMethod]
+        [TestTraits(Trait.IncludeFilter)]
+        public void GetOrdersShipCountyInFranceFilterIncludeTest()
+        {
+
+            using var context = new NorthWindContext(ConnectionOption.mssqllocaldb);
+
+            var countryName = "France";
+
+            List<IEnumerable<Orders>> filtered = context.Customers
+                .Where(customer => customer.Orders.Any(order => order.ShipCountry == countryName))
+                .Include(customer => customer.Orders.Where(order => order.ShipCountry == countryName))
+                .ThenInclude(order => order.OrderDetails)
+                .ThenInclude(orderDetails => orderDetails.Product)
+                .OrderBy(customer => customer.CustomerIdentifier)
+                .Select(customer => customer.Orders.Where(order => order.ShipCountry == countryName))
+                .ToList();
+
+            Console.WriteLine($"Count {filtered.Count}");
+            StringBuilder builder = new();
+
+            foreach (IEnumerable<Orders> orders in filtered)
+            {
+
+                foreach (Orders order in orders)
+                {
+
+                    builder.AppendLine(order.OrderID.ToString());
+                    foreach (OrderDetails detail in order.OrderDetails.OrderBy(od => od.Product.ProductName))
+                    {
+                        builder.AppendIndented($"{detail.Product.ProductName}");
+                    }
+                }
+            }
+
+            Console.WriteLine(builder);
+
+        }
 
         [TestMethod]
         [TestTraits(Trait.BetweenExtension)]

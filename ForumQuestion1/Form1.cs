@@ -33,7 +33,7 @@ namespace ForumQuestion1
             }
             catch
             {
-                MessageBox.Show("Must create first");
+                MessageBox.Show(@"Must create first");
             }
         }
 
@@ -43,6 +43,7 @@ namespace ForumQuestion1
             {
                 return;
             }
+
             // consider CompanyName coming from a TextBox
             var dataContainer = new DataContainer() { CompanyName = "Amazon" };
             Operations.Add(dataContainer);

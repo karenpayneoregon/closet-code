@@ -144,9 +144,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 319);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CompanyNameTextBox);
             this.Controls.Add(this.TryAddNewButton);
             this.Controls.Add(this.GetSelectedButton);

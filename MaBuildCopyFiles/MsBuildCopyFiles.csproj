@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Templates\Folder1\" />
+		<Folder Include="Templates\Folder2\" />
+	</ItemGroup>
+
+	<Target Name="MakeLogFolder" AfterTargets="Build">
+		<MakeDir Directories="$(OutDir)Logs" />
+	</Target>
+	<Target Name="MakeTempFolder" BeforeTargets ="Build">
+		<MakeDir Directories="c:\OED\MsDemo" />
+	</Target>
+
+	<Target Name="CopyFiles"  AfterTargets="Build">
+		<ItemGroup>
+			<!-- Because this ItemGroup is inside the target, this will enumerate
+                 all files just before calling Copy. If the ItemGroup were outside
+                 the target , it would enumerate the files during evaluation, before
+                 the build starts, which may miss files created during the build. -->
+			<MySourceFiles Include="$(ProjectDir)\Templates\**\*.*"/>
+		</ItemGroup>
+
+		<!--<Copy SourceFiles="@(MySourceFiles)" DestinationFiles="c:\OED\MsDemo\%(RecursiveDir)%(Filename)%(Extension)"/>-->
+		<Copy SourceFiles="@(MySourceFiles)" DestinationFolder="c:\OED\MsDemo\%(RecursiveDir)"/>
+	</Target>
+
+</Project>

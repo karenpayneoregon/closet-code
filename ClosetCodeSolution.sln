@@ -399,9 +399,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Temp", "Temp", "{FA095A08-0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetRunTimeProcessStartApp", "DotNetRunTimeProcessStartApp\DotNetRunTimeProcessStartApp.csproj", "{3166D9CB-788C-4285-A254-E95F594925AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendToMainForm", "SendToMainForm\SendToMainForm.csproj", "{F22EE0CA-FE8A-44AF-B1D6-DBADC6BCFA99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendToMainForm", "SendToMainForm\SendToMainForm.csproj", "{F22EE0CA-FE8A-44AF-B1D6-DBADC6BCFA99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumQuestion1", "ForumQuestion1\ForumQuestion1.csproj", "{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumQuestion1", "ForumQuestion1\ForumQuestion1.csproj", "{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsBuildCopyFiles", "MaBuildCopyFiles\MsBuildCopyFiles.csproj", "{EF7D415A-90F3-4104-A52F-0FD41F9682E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1064,6 +1066,10 @@ Global
 		{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7D415A-90F3-4104-A52F-0FD41F9682E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7D415A-90F3-4104-A52F-0FD41F9682E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7D415A-90F3-4104-A52F-0FD41F9682E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7D415A-90F3-4104-A52F-0FD41F9682E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1251,6 +1257,7 @@ Global
 		{3166D9CB-788C-4285-A254-E95F594925AC} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{F22EE0CA-FE8A-44AF-B1D6-DBADC6BCFA99} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{0D0C2499-EE66-4321-8AC6-98AEA17B7C51} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
+		{EF7D415A-90F3-4104-A52F-0FD41F9682E3} = {A8A38D35-7872-46C3-A4CF-B8DE2C518E95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
