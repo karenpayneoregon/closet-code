@@ -179,19 +179,20 @@ namespace EPPlus1.Classes
         }
         public static void ExportToJson()
         {
+            /*
+             * Points to a folder named ExcelFiles under bin\Debug in this case
+             */
             var filePath = FileUtil.GetFileInfo(_excelBaseFolder, "Customers.xlsx").FullName;
             FileInfo existingFile = new(filePath);
             using ExcelPackage package = new(existingFile);
 
             var dataTable = ExcelPackageToDataTable(package);
 
-            //create a WorkSheet
-            ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Customers imported");
 
-            //add all the content from the DataTable, starting at cell A1
-            worksheet.Cells["A1"].LoadFromDataTable(dataTable, true);
 
+            // uses json.net NuGet package
             string jsonString = JsonConvert.SerializeObject(dataTable, Formatting.Indented);
+            // write to json in the bin\Debug folder
             File.WriteAllText("Exported1.json", jsonString);
         }
 
