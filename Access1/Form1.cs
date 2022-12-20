@@ -46,5 +46,11 @@ namespace Access1
         {
             personTableAdapter.Fill(dataSet1.Person);
         }
+
+        private void CurrentButton_Click(object sender, EventArgs e)
+        {
+            DataSet1.PersonRow current = dataSet1.Person[personBindingSource.Position];
+            MessageBox.Show($"{current.FirstName} {current.LastName}\n{current.CreatedBy1:d}");
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace DateTimeApp
     {
         static void Main(string[] args)
         {
-            Operations.Example1();
+            Operations.Example2();
             Console.ReadLine();
         }
     }

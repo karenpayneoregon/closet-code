@@ -12,7 +12,7 @@ namespace EPPlus1
         {
             //StandardCodesSamples.CreateNewFile();
             //StandardCodesSamples.CreateNewFileWithData();
-            StandardCodesSamples.Sample1();
+            StandardCodesSamples.ExportToJson();
             //ReadAndImportBackInNewWorkSheet();
             Console.WriteLine("Done");
             Console.ReadLine();

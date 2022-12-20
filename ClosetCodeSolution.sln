@@ -405,6 +405,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumQuestion1", "ForumQues
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsBuildCopyFiles", "MaBuildCopyFiles\MsBuildCopyFiles.csproj", "{EF7D415A-90F3-4104-A52F-0FD41F9682E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonExample", "JsonExample\JsonExample.csproj", "{FBECCAC2-1FDC-4867-AA07-1791746966C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1070,6 +1072,10 @@ Global
 		{EF7D415A-90F3-4104-A52F-0FD41F9682E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF7D415A-90F3-4104-A52F-0FD41F9682E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF7D415A-90F3-4104-A52F-0FD41F9682E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBECCAC2-1FDC-4867-AA07-1791746966C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBECCAC2-1FDC-4867-AA07-1791746966C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBECCAC2-1FDC-4867-AA07-1791746966C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBECCAC2-1FDC-4867-AA07-1791746966C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1258,6 +1264,7 @@ Global
 		{F22EE0CA-FE8A-44AF-B1D6-DBADC6BCFA99} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{0D0C2499-EE66-4321-8AC6-98AEA17B7C51} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{EF7D415A-90F3-4104-A52F-0FD41F9682E3} = {A8A38D35-7872-46C3-A4CF-B8DE2C518E95}
+		{FBECCAC2-1FDC-4867-AA07-1791746966C6} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
