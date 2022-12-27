@@ -409,6 +409,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonExample", "JsonExample\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelDataReaderApp", "ExcelDataReaderApp\ExcelDataReaderApp.csproj", "{3C43A37A-0449-4049-9E30-E7147B4B7AA5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumComparisionApp", "EnumComparisionApp\EnumComparisionApp.csproj", "{2CD1E112-18C2-4055-820E-660B98188508}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1082,6 +1084,10 @@ Global
 		{3C43A37A-0449-4049-9E30-E7147B4B7AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C43A37A-0449-4049-9E30-E7147B4B7AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C43A37A-0449-4049-9E30-E7147B4B7AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD1E112-18C2-4055-820E-660B98188508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD1E112-18C2-4055-820E-660B98188508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD1E112-18C2-4055-820E-660B98188508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD1E112-18C2-4055-820E-660B98188508}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1272,6 +1278,7 @@ Global
 		{EF7D415A-90F3-4104-A52F-0FD41F9682E3} = {A8A38D35-7872-46C3-A4CF-B8DE2C518E95}
 		{FBECCAC2-1FDC-4867-AA07-1791746966C6} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
 		{3C43A37A-0449-4049-9E30-E7147B4B7AA5} = {B71422D3-E494-4BBD-9347-AB2F9A22460D}
+		{2CD1E112-18C2-4055-820E-660B98188508} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
