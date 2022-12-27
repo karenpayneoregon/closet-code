@@ -17,6 +17,10 @@ namespace DecimalFun
      
             Console.WriteLine($"{fraction.GetFraction()} from {fraction}");
 
+
+
+
+
             Console.ReadLine();
         }
         [ModuleInitializer]

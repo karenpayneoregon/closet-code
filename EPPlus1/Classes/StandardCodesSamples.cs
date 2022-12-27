@@ -187,9 +187,7 @@ namespace EPPlus1.Classes
             using ExcelPackage package = new(existingFile);
 
             var dataTable = ExcelPackageToDataTable(package);
-
-
-
+            
             // uses json.net NuGet package
             string jsonString = JsonConvert.SerializeObject(dataTable, Formatting.Indented);
             // write to json in the bin\Debug folder
