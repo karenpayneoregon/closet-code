@@ -177,6 +177,25 @@ namespace EPPlus1.Classes
 
             return dataTable;
         }
+
+        public static DataTable ReaDataTable(string fileName, string workSheetName = "")
+        {
+            FileInfo existingFile = new(fileName);
+            using ExcelPackage package = new(existingFile);
+
+            // by default EPPlus reads the first worksheet,
+            // the follow specifies which sheet to read if you don't want the first sheet.
+            if (!string.IsNullOrWhiteSpace(workSheetName))
+            {
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[workSheetName];
+            }
+            
+            var dataTable = ExcelPackageToDataTable(package);
+
+            return dataTable;
+
+        }
+
         public static void ExportToJson()
         {
             /*

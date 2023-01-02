@@ -8,8 +8,11 @@ namespace ForumQuestion1
 {
     public partial class Form1 : Form
     {
-        private BindingList<DataContainer> _bindingList;
-        private BindingSource _bindingSource = new ();
+        private BindingList<DataContainer> _bindingList1;
+        private BindingSource _bindingSource1 = new ();
+
+        private BindingList<DataContainer> _bindingList2;
+        private BindingSource _bindingSource2 = new();
         public Form1()
         {
             InitializeComponent();
@@ -26,10 +29,16 @@ namespace ForumQuestion1
             try
             {
                 listBox1.DataSource = null;
-                _bindingList = new BindingList<DataContainer>(Operations.ReadFile());
-                _bindingSource.DataSource = _bindingList;
-                listBox1.DataSource = _bindingSource;
-                listBox1.SelectedIndex = _bindingList.Count - 1;
+                _bindingList1 = new BindingList<DataContainer>(Operations.ReadFile());
+                _bindingSource1.DataSource = _bindingList1;
+                listBox1.DataSource = _bindingSource1;
+                listBox1.SelectedIndex = _bindingList1.Count - 1;
+
+
+                comboBox1.DataSource = null;
+                _bindingList2 = new BindingList<DataContainer>(Operations.ReadFile());
+                _bindingSource2.DataSource = _bindingList1;
+                comboBox1.DataSource = _bindingSource2;
             }
             catch
             {
@@ -39,7 +48,7 @@ namespace ForumQuestion1
 
         private void AddNewButton_Click(object sender, EventArgs e)
         {
-            if ((_bindingSource.Count == 0))
+            if ((_bindingSource1.Count == 0))
             {
                 return;
             }
@@ -47,15 +56,15 @@ namespace ForumQuestion1
             // consider CompanyName coming from a TextBox
             var dataContainer = new DataContainer() { CompanyName = "Amazon" };
             Operations.Add(dataContainer);
-            _bindingList.Add(dataContainer);
-            listBox1.SelectedIndex = _bindingList.Count - 1;
+            _bindingList1.Add(dataContainer);
+            listBox1.SelectedIndex = _bindingList1.Count - 1;
         }
 
         private void GetSelectedButton_Click(object sender, EventArgs e)
         {
-            if (_bindingSource.Count >0)
+            if (_bindingSource1.Count >0)
             {
-                DataContainer container = _bindingList[_bindingSource.Position];
+                DataContainer container = _bindingList1[_bindingSource1.Position];
                 MessageBox.Show($"{container}");
             }
             else
@@ -66,7 +75,7 @@ namespace ForumQuestion1
 
         private void TryAddNewButton_Click(object sender, EventArgs e)
         {
-            if ((_bindingSource.Count == 0))
+            if ((_bindingSource1.Count == 0))
             {
                 return;
             }
@@ -77,8 +86,10 @@ namespace ForumQuestion1
                 {
                     var dataContainer = new DataContainer() { CompanyName = CompanyNameTextBox.Text };
                     Operations.Add(dataContainer);
-                    _bindingList.Add(dataContainer);
-                    listBox1.SelectedIndex = _bindingList.Count - 1;
+                    _bindingList1.Add(dataContainer);
+                    listBox1.SelectedIndex = _bindingList1.Count - 1;
+
+                    _bindingList2.Add(dataContainer);
                 }
                 else
                 {

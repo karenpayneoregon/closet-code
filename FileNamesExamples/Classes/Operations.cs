@@ -99,13 +99,7 @@ namespace FileNamesExamples.Classes
             return string.Format(pattern, max);
         }
 
-        /// <summary>
-        /// Strip characters from string
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns>string with numbers only</returns>
-        public static string GetNumbers(string input) =>
-            new(input.Where(char.IsDigit).ToArray());
+
 
         /// <summary>
         /// Get all log files
@@ -114,6 +108,14 @@ namespace FileNamesExamples.Classes
             Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory,
                 $"{_baseFileName}*.txt");
 
+        /// <summary>
+        /// Strip characters from string
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>string with numbers only</returns>
+        public static string GetNumbers(string input) =>
+            new(input.Where(char.IsDigit).ToArray());
+            
         /// <summary>
         /// Get last log file by int value
         /// </summary>
