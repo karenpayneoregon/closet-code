@@ -6,15 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="assets\**" />
+    <EmbeddedResource Remove="assets\**" />
+    <None Remove="assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Models\readme.md" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Models\readme.md" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="assets\" />
   </ItemGroup>
 
 </Project>
