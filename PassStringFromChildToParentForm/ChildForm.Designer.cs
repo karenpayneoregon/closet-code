@@ -29,46 +29,73 @@ namespace PassStringFromChildToParentForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.PassDataButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.MaleRadioButton = new System.Windows.Forms.RadioButton();
+            this.FemaleRadioButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // listBox1
+            // textBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(151, 186);
-            this.listBox1.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(16, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "Karen";
             // 
-            // PassDataButton
+            // textBox2
             // 
-            this.PassDataButton.Location = new System.Drawing.Point(12, 204);
-            this.PassDataButton.Name = "PassDataButton";
-            this.PassDataButton.Size = new System.Drawing.Size(151, 23);
-            this.PassDataButton.TabIndex = 1;
-            this.PassDataButton.Text = "Pass to parent";
-            this.PassDataButton.UseVisualStyleBackColor = true;
-            this.PassDataButton.Click += new System.EventHandler(this.PassDataButton_Click);
+            this.textBox2.Location = new System.Drawing.Point(16, 40);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 3;
+            this.textBox2.Text = "Payne";
+            // 
+            // MaleRadioButton
+            // 
+            this.MaleRadioButton.AutoSize = true;
+            this.MaleRadioButton.Location = new System.Drawing.Point(12, 85);
+            this.MaleRadioButton.Name = "MaleRadioButton";
+            this.MaleRadioButton.Size = new System.Drawing.Size(58, 20);
+            this.MaleRadioButton.TabIndex = 4;
+            this.MaleRadioButton.TabStop = true;
+            this.MaleRadioButton.Text = "Male";
+            this.MaleRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // FemaleRadioButton
+            // 
+            this.FemaleRadioButton.AutoSize = true;
+            this.FemaleRadioButton.Location = new System.Drawing.Point(13, 111);
+            this.FemaleRadioButton.Name = "FemaleRadioButton";
+            this.FemaleRadioButton.Size = new System.Drawing.Size(77, 20);
+            this.FemaleRadioButton.TabIndex = 5;
+            this.FemaleRadioButton.TabStop = true;
+            this.FemaleRadioButton.Text = "Femaile";
+            this.FemaleRadioButton.UseVisualStyleBackColor = true;
             // 
             // ChildForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(175, 250);
-            this.Controls.Add(this.PassDataButton);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(233, 246);
+            this.Controls.Add(this.FemaleRadioButton);
+            this.Controls.Add(this.MaleRadioButton);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChildForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Child";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button PassDataButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RadioButton MaleRadioButton;
+        private System.Windows.Forms.RadioButton FemaleRadioButton;
     }
 }

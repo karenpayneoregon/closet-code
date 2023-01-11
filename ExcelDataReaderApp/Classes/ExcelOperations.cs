@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Data;
+using System.IO;
 using ExcelDataReader;
 using Newtonsoft.Json;
 
@@ -25,6 +26,26 @@ namespace ExcelDataReaderApp.Classes
                     });
 
                     File.WriteAllText(jsonFileName, JsonConvert.SerializeObject(dataSet.Tables[0], Formatting.Indented));
+                }
+            }
+        }
+
+        public static DataSet GetSheets(string excelFileName)
+        {
+            using (var stream = File.Open(excelFileName, FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = ExcelReaderFactory.CreateReader(stream))
+                {
+                    var dataSet = reader.AsDataSet(new ExcelDataSetConfiguration()
+                    {
+                        UseColumnDataType = true,
+                        ConfigureDataTable = (tableReader) => new ExcelDataTableConfiguration()
+                        {
+                            UseHeaderRow = true
+                        }
+                    });
+
+                    return dataSet;
                 }
             }
         }

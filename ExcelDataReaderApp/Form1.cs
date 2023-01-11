@@ -23,5 +23,10 @@ namespace ExcelDataReaderApp
         {
             ExcelOperations.ToJson( "Orders.xlsx", "Orders.json");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataSet dataSet = ExcelOperations.GetSheets("Customers.xlsx");
+        }
     }
 }

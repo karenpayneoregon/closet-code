@@ -7,7 +7,7 @@ namespace DecimalFun
     {
         static void Main(string[] args)
         {
-            decimal value = 111.1111m;
+            decimal value = 22_111.1111m;
             Console.WriteLine($"{value} has {value.CountDecimalPlaces()} places to the right");
 
             value = 111m;
@@ -16,10 +16,6 @@ namespace DecimalFun
             decimal fraction = 2.78m;
      
             Console.WriteLine($"{fraction.GetFraction()} from {fraction}");
-
-
-
-
 
             Console.ReadLine();
         }

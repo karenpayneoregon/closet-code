@@ -111,25 +111,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ConsoleTricks", "ConsoleTri
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "30175"
-		DefaultWebSiteLanguage = "Visual Basic"
-	EndProjectSection
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_30175"
-		Debug.AspNetCompiler.PhysicalPath = "ConsoleTricks\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_30175\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_30175"
-		Release.AspNetCompiler.PhysicalPath = "ConsoleTricks\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_30175\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "30175"
 		SlnRelativePath = "ConsoleTricks\"
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
@@ -360,8 +341,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerHelperLibrary", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StackoverFlow questions", "StackoverFlow questions", "{5A6FE928-4343-4B6B-95D7-BDE5432FE093}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppSettingsFormApp", "AppSettingsFormApp\AppSettingsFormApp.csproj", "{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewExportTextFile", "DataGridViewExportTextFile\DataGridViewExportTextFile.csproj", "{55366C09-EA91-4083-AA8F-CFDA3EFB95E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTaskProgress2", "AsyncTaskProgress2\AsyncTaskProgress2.csproj", "{52A39CDC-A965-4867-88C7-4131064B761F}"
@@ -412,8 +391,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeApp", "DateTimeApp\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadingTimerApp", "ThreadingTimerApp\ThreadingTimerApp.csproj", "{27186188-B763-4719-81C1-9BF3BD529C2D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Temp", "Temp", "{FA095A08-05D4-48EF-8780-129F3C7BAF13}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetRunTimeProcessStartApp", "DotNetRunTimeProcessStartApp\DotNetRunTimeProcessStartApp.csproj", "{3166D9CB-788C-4285-A254-E95F594925AC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendToMainForm", "SendToMainForm\SendToMainForm.csproj", "{F22EE0CA-FE8A-44AF-B1D6-DBADC6BCFA99}"
@@ -429,6 +406,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumComparisionApp", "EnumComparisionApp\EnumComparisionApp.csproj", "{2CD1E112-18C2-4055-820E-660B98188508}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{890DB6E4-B3DE-4B4C-A1C2-93926CB7EB6C}"
+EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "SimpleSqlInsert", "SimpleSqlInsert\SimpleSqlInsert.vbproj", "{79FD7663-78E0-4589-81AC-92D5E479D211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongToDateOnlyApp", "LongToDateOnlyApp\LongToDateOnlyApp.csproj", "{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -975,10 +956,6 @@ Global
 		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{55366C09-EA91-4083-AA8F-CFDA3EFB95E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{55366C09-EA91-4083-AA8F-CFDA3EFB95E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55366C09-EA91-4083-AA8F-CFDA3EFB95E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1107,6 +1084,14 @@ Global
 		{890DB6E4-B3DE-4B4C-A1C2-93926CB7EB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{890DB6E4-B3DE-4B4C-A1C2-93926CB7EB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{890DB6E4-B3DE-4B4C-A1C2-93926CB7EB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79FD7663-78E0-4589-81AC-92D5E479D211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79FD7663-78E0-4589-81AC-92D5E479D211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79FD7663-78E0-4589-81AC-92D5E479D211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79FD7663-78E0-4589-81AC-92D5E479D211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1264,7 +1249,6 @@ Global
 		{C9602891-9F73-4D8E-8C15-1961E4887B5D} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{931E0BD1-C959-44D1-B5B6-66AA812EB2EC} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{5A6FE928-4343-4B6B-95D7-BDE5432FE093} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
-		{8EDE0FC8-D548-4740-B403-0A3E69DD0D7E} = {5A6FE928-4343-4B6B-95D7-BDE5432FE093}
 		{55366C09-EA91-4083-AA8F-CFDA3EFB95E1} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{52A39CDC-A965-4867-88C7-4131064B761F} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{399B7843-65A8-4F08-878B-42EED4E46179} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
@@ -1297,6 +1281,8 @@ Global
 		{FBECCAC2-1FDC-4867-AA07-1791746966C6} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
 		{3C43A37A-0449-4049-9E30-E7147B4B7AA5} = {B71422D3-E494-4BBD-9347-AB2F9A22460D}
 		{2CD1E112-18C2-4055-820E-660B98188508} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{79FD7663-78E0-4589-81AC-92D5E479D211} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

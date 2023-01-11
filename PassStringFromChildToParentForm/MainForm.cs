@@ -1,44 +1,50 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PassStringFromChildToParentForm
 {
     public partial class MainForm : Form
     {
-        public delegate void OnUpdate(string text);
-        public event OnUpdate UpdateData;
+        private ChildForm _childForm;
         public MainForm()
         {
             InitializeComponent();
+            MaleRadioButton.CheckedChanged += RadioButton_CheckedChanged;
+            FemaleRadioButton.CheckedChanged += RadioButton_CheckedChanged;
+        }
+
+        /// <summary>
+        /// If child form is open, push change notification of which
+        /// RadioButton is selected
+        /// </summary>
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<ChildForm>().Count() != 1) return;
+            var radioButton = (RadioButton)sender;
+            if (!radioButton.Checked) return;
+            if (!radioButton.Checked) return;
+            _childForm.UpdateRadioButton(MaleRadioButton.Checked);
+
         }
 
         private void ShowChildForm_Click(object sender, EventArgs e)
         {
-            ChildForm childForm = new ChildForm() {Owner = this};
-   
-            childForm.PassMonths += OnPassMonths;
-
-            childForm.Show(this);
+            _childForm = new ChildForm();
+            _childForm.PassData += ChildForm_PassData; ;
+            _childForm.Show(this);
             
         }
-
-        private void OnPassMonths(string month)
+        private void ChildForm_PassData(bool isMale)
         {
-            if (dataGridView1.MonthNotExists(month))
+            if (isMale)
             {
-                dataGridView1.Rows.Add(month);
+                MaleRadioButton.Checked = true;
+            }
+            else
+            {
+                FemaleRadioButton.Checked = true;
             }
         }
-
-        private void SendButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-    }
-
-    public class DataOperations
-    {
-        public delegate void OnUpdate(string text);
-        public event OnUpdate UpdateData;
     }
 }
