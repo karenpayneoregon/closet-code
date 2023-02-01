@@ -6,7 +6,8 @@ namespace FileSystemWatcher1
 {
     public partial class Form1 : Form
     {
-        private readonly FileOperations _fileOperations = new ("Path to watch", "file name to trigger on");
+        private readonly FileOperations _fileOperations = 
+            new ("Path to watch", "file name to trigger on");
         public Form1()
         {
             InitializeComponent();

@@ -1,24 +1,81 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
-namespace DataGridViewExport.Models
+namespace DataGridViewExport.Models;
+
+public class Contact : INotifyPropertyChanged
 {
-    public class Contact
+    private string _firstName;
+    private string _lastName;
+    private string _phone;
+    private string _email;
+    private DateTime _birthDate;
+    public int Id { get; set; }
+
+    public string FirstName
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
-        public DateTime BirthDate { get; set; }
-
-        public Contact(int id)
+        get => _firstName;
+        set
         {
-            Id = id;
+            _firstName = value;
+            OnPropertyChanged();
         }
+    }
 
-        public Contact()
+    public string LastName
+    {
+        get => _lastName;
+        set
         {
+            _lastName = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public string Phone
+    {
+        get => _phone;
+        set
+        {
+            _phone = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public string Email
+    {
+        get => _email;
+        set
+        {
+            _email = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public DateTime BirthDate
+    {
+        get => _birthDate;
+        set
+        {
+            _birthDate = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public Contact(int id)
+    {
+        Id = id;
+    }
+
+    public Contact()
+    {
             
-        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

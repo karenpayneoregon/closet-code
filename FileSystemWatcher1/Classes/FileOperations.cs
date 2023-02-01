@@ -25,12 +25,18 @@ namespace FileSystemWatcher1.Classes
             MonitorPath = monitorPath;
 
             Created += OnCreated;
+            Deleted += OnDeleted;
 
             Path = MonitorPath;
             Filter = fileName;
             FileName = fileName;
             EnableRaisingEvents = true;
             NotifyFilter = NotifyFilters.FileName;
+        }
+
+        private void OnDeleted(object sender, FileSystemEventArgs e)
+        {
+            // TODO
         }
 
         private void OnCreated(object sender, FileSystemEventArgs e)

@@ -21,16 +21,17 @@ namespace DataGridViewExport
         /// We don't need this for the code sample but one should always consider using one
         /// </summary>
         private readonly BindingSource _bindingSource = new ();
+
+        private readonly BindingList<Contact> _bindingList;
         public Form1()
         {
             InitializeComponent();
 
             dataGridView1.AutoGenerateColumns = false;
 
-            BindingList<Contact> bindingList = new SortableBindingList<Contact>(
-                CreateOperations.Contacts(500));
+            _bindingList = new SortableBindingList<Contact>(CreateOperations.Contacts(500));
 
-            _bindingSource.DataSource = bindingList;
+            _bindingSource.DataSource = _bindingList;
             dataGridView1.DataSource = _bindingSource;
             
             dataGridView1.ExpandColumns();
@@ -41,7 +42,13 @@ namespace DataGridViewExport
         private void ExportButton_Click(object sender, EventArgs e)
         {
             dataGridView1.ExportRows("contacts.csv");
+            
             Shake(this);
+        }
+
+        private void UpdateFirstNameTextBox_Click(object sender, EventArgs e)
+        {
+            _bindingList[_bindingSource.Position].FirstName = FirstNameTextBox.Text;
         }
     }
 }

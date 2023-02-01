@@ -1,5 +1,4 @@
-﻿using System;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 
 namespace DecimalFun
 {
@@ -16,6 +15,7 @@ namespace DecimalFun
             decimal fraction = 2.78m;
      
             Console.WriteLine($"{fraction.GetFraction()} from {fraction}");
+
 
             Console.ReadLine();
         }
