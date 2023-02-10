@@ -63,9 +63,10 @@ namespace Access1
 
     public static class BindingSourceExtensions
     {
-        public static void RowFilterStartsWith(this BindingSource sender, string field, string value)
+        public static void RowFilterStartsWith(this BindingSource sender, string columnName, string value)
         {
-            sender.Filter = String.Format("{0} LIKE '{1}%' OR {0} LIKE '%{1}%' ", field, value.Replace("'", "''"));
+            sender.Filter = string.Format("{0} LIKE '{1}%' OR {0} LIKE '%{1}%' ", 
+                columnName, value.Replace("'", "''"));
         }
     }
 

@@ -1,16 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 
-	<PropertyGroup>
+	<!--<PropertyGroup>
 		<OutputType>WinExe</OutputType>
 		<LangVersion>9.0</LangVersion>
 		<TargetFramework>net5.0-windows</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>-->
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>disable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
 
 	<ItemGroup>
-	  <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
