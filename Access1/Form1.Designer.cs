@@ -30,7 +30,6 @@ namespace Access1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label createdBy1Label;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.personBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -51,27 +50,18 @@ namespace Access1
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreatedByColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreatedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CurrentButton = new System.Windows.Forms.Button();
             this.personTableAdapter = new Access1.DataSet1TableAdapters.PersonTableAdapter();
             this.tableAdapterManager = new Access1.DataSet1TableAdapters.TableAdapterManager();
-            this.createdBy1DateTimePicker = new System.Windows.Forms.DateTimePicker();
-            createdBy1Label = new System.Windows.Forms.Label();
+            this.StartsWithButton = new System.Windows.Forms.Button();
+            this.StartsWithTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).BeginInit();
             this.personBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // createdBy1Label
-            // 
-            createdBy1Label.AutoSize = true;
-            createdBy1Label.Location = new System.Drawing.Point(60, 219);
-            createdBy1Label.Name = "createdBy1Label";
-            createdBy1Label.Size = new System.Drawing.Size(77, 16);
-            createdBy1Label.TabIndex = 4;
-            createdBy1Label.Text = "Created By:";
             // 
             // personBindingNavigator
             // 
@@ -100,7 +90,7 @@ namespace Access1
             this.personBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.personBindingNavigator.Name = "personBindingNavigator";
             this.personBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.personBindingNavigator.Size = new System.Drawing.Size(597, 31);
+            this.personBindingNavigator.Size = new System.Drawing.Size(597, 27);
             this.personBindingNavigator.TabIndex = 0;
             this.personBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -110,7 +100,7 @@ namespace Access1
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // personBindingSource
@@ -126,7 +116,7 @@ namespace Access1
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -136,7 +126,7 @@ namespace Access1
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -145,7 +135,7 @@ namespace Access1
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -154,13 +144,13 @@ namespace Access1
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -175,7 +165,7 @@ namespace Access1
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -183,7 +173,7 @@ namespace Access1
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -192,20 +182,20 @@ namespace Access1
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // personBindingNavigatorSaveItem
             // 
             this.personBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.personBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("personBindingNavigatorSaveItem.Image")));
             this.personBindingNavigatorSaveItem.Name = "personBindingNavigatorSaveItem";
-            this.personBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
+            this.personBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.personBindingNavigatorSaveItem.Text = "Save Data";
             this.personBindingNavigatorSaveItem.Click += new System.EventHandler(this.personBindingNavigatorSaveItem_Click);
             // 
@@ -217,7 +207,7 @@ namespace Access1
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.CreatedByColumn});
+            this.CreatedBy});
             this.personDataGridView.DataSource = this.personBindingSource;
             this.personDataGridView.Location = new System.Drawing.Point(0, 31);
             this.personDataGridView.Margin = new System.Windows.Forms.Padding(4);
@@ -251,13 +241,13 @@ namespace Access1
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 125;
             // 
-            // CreatedByColumn
+            // CreatedBy
             // 
-            this.CreatedByColumn.DataPropertyName = "CreatedBy1";
-            this.CreatedByColumn.HeaderText = "CreatedBy";
-            this.CreatedByColumn.MinimumWidth = 6;
-            this.CreatedByColumn.Name = "CreatedByColumn";
-            this.CreatedByColumn.Width = 125;
+            this.CreatedBy.DataPropertyName = "CreatedBy";
+            this.CreatedBy.HeaderText = "CreatedBy";
+            this.CreatedBy.MinimumWidth = 6;
+            this.CreatedBy.Name = "CreatedBy";
+            this.CreatedBy.Width = 125;
             // 
             // CurrentButton
             // 
@@ -279,22 +269,31 @@ namespace Access1
             this.tableAdapterManager.PersonTableAdapter = this.personTableAdapter;
             this.tableAdapterManager.UpdateOrder = Access1.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // createdBy1DateTimePicker
+            // StartsWithButton
             // 
-            this.createdBy1DateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.personBindingSource, "CreatedBy1", true));
-            this.createdBy1DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.createdBy1DateTimePicker.Location = new System.Drawing.Point(143, 215);
-            this.createdBy1DateTimePicker.Name = "createdBy1DateTimePicker";
-            this.createdBy1DateTimePicker.Size = new System.Drawing.Size(121, 22);
-            this.createdBy1DateTimePicker.TabIndex = 5;
+            this.StartsWithButton.Location = new System.Drawing.Point(12, 308);
+            this.StartsWithButton.Name = "StartsWithButton";
+            this.StartsWithButton.Size = new System.Drawing.Size(141, 23);
+            this.StartsWithButton.TabIndex = 5;
+            this.StartsWithButton.Text = "Starts with";
+            this.StartsWithButton.UseVisualStyleBackColor = true;
+            this.StartsWithButton.Click += new System.EventHandler(this.StartsWithButton_Click);
+            // 
+            // StartsWithTextBox
+            // 
+            this.StartsWithTextBox.Location = new System.Drawing.Point(12, 280);
+            this.StartsWithTextBox.Name = "StartsWithTextBox";
+            this.StartsWithTextBox.Size = new System.Drawing.Size(100, 22);
+            this.StartsWithTextBox.TabIndex = 6;
+            this.StartsWithTextBox.Text = "Kar";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 275);
-            this.Controls.Add(createdBy1Label);
-            this.Controls.Add(this.createdBy1DateTimePicker);
+            this.ClientSize = new System.Drawing.Size(597, 361);
+            this.Controls.Add(this.StartsWithTextBox);
+            this.Controls.Add(this.StartsWithButton);
             this.Controls.Add(this.CurrentButton);
             this.Controls.Add(this.personDataGridView);
             this.Controls.Add(this.personBindingNavigator);
@@ -339,8 +338,9 @@ namespace Access1
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CreatedByColumn;
-        private System.Windows.Forms.DateTimePicker createdBy1DateTimePicker;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CreatedBy;
+        private System.Windows.Forms.Button StartsWithButton;
+        private System.Windows.Forms.TextBox StartsWithTextBox;
     }
 }
 
