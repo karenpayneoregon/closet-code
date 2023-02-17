@@ -409,7 +409,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "SimpleSqlInsert", "SimpleSqlInsert\SimpleSqlInsert.vbproj", "{79FD7663-78E0-4589-81AC-92D5E479D211}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongToDateOnlyApp", "LongToDateOnlyApp\LongToDateOnlyApp.csproj", "{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongToDateOnlyApp", "LongToDateOnlyApp\LongToDateOnlyApp.csproj", "{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewBasic", "ListViewBasic\ListViewBasic.csproj", "{B0999CDF-0FE9-4A0B-B907-F002601F04C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1092,6 +1094,10 @@ Global
 		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0999CDF-0FE9-4A0B-B907-F002601F04C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0999CDF-0FE9-4A0B-B907-F002601F04C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0999CDF-0FE9-4A0B-B907-F002601F04C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0999CDF-0FE9-4A0B-B907-F002601F04C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1283,6 +1289,7 @@ Global
 		{2CD1E112-18C2-4055-820E-660B98188508} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{79FD7663-78E0-4589-81AC-92D5E479D211} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{B0999CDF-0FE9-4A0B-B907-F002601F04C6} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
