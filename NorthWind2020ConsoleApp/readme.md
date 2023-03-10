@@ -1,13 +1,12 @@
 ﻿# About
 
-[![](https://img.shields.io/badge/EF%20Core-Code-green)]()
+
 
 EF Core code samples using a modified version of NorthWind database, script to create and populate is located in the script folder.
 
 - `EmployeeOperations.EmployeeReportsTo` is an example of a self-referencing table for managers and workers.
 
+
 ![Screenshot](assets/screenshot.png)
 
-| C1        |   C2    |   C3 |
-|:------------- |:-------------|:-------------|
-| q |w  | w |
+[![](https://img.shields.io/badge/EF%20Core-Code-green)]()

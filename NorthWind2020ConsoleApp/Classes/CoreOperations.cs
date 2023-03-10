@@ -2,6 +2,7 @@
 using NorthWind2020ConsoleApp.Data;
 using NorthWind2020ConsoleApp.Models;
 using Spectre.Console;
+// ReSharper disable PossibleInvalidOperationException
 
 namespace NorthWind2020ConsoleApp.Classes;
 
@@ -92,6 +93,25 @@ public class CoreOperations
             .ToList();
     }
 
+    public static List<Employees> GetManagers()
+    {
+        using var context = new Context();
+
+        List<Employees> employees = context.Employees.ToList();
+
+        List<IGrouping<int?, Employees>> groupedData = employees
+            .Where(employee => employee.ReportsTo.HasValue)
+            .ToList()
+            .OrderBy(employee => employee.LastName)
+            .GroupBy(employee => employee.ReportsTo)
+            .ToList();
+        
+        List<Employees> list = groupedData.Select(group => 
+            employees.Find(employee => employee.EmployeeId == group.Key.Value))
+            .ToList();
+
+        return list.OrderBy(x => x.LastName).ToList();
+    }
 
     /// <summary>
     /// Little extra work than above to perform an outer sort
