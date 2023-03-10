@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Windows.Forms;
 
 namespace ListViewBasic
@@ -40,7 +39,8 @@ namespace ListViewBasic
                 return;
             }
 
-            MessageBox.Show($"Key {listView1.SelectedItems[0].Text} Value {listView1.SelectedItems[0].SubItems[1].Text}");
+            MessageBox.Show(
+                $"Key {listView1.SelectedItems[0].Text} Value {listView1.SelectedItems[0].SubItems[1].Text}");
         }
 
         private void AddButton_Click(object sender, System.EventArgs e)
