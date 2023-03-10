@@ -107,8 +107,6 @@ public class CoreOperations
             .ToList().Select(group => 
             employees.Find(employee => employee.EmployeeId == group.Key.Value))
             .ToList().OrderBy(x => x.LastName).ToList();
-
-
     }
 
     /// <summary>
