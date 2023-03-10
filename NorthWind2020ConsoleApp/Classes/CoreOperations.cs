@@ -98,19 +98,17 @@ public class CoreOperations
         using var context = new Context();
 
         List<Employees> employees = context.Employees.ToList();
-
-        List<IGrouping<int?, Employees>> groupedData = employees
+        
+        return employees
             .Where(employee => employee.ReportsTo.HasValue)
             .ToList()
             .OrderBy(employee => employee.LastName)
             .GroupBy(employee => employee.ReportsTo)
-            .ToList();
-        
-        List<Employees> list = groupedData.Select(group => 
+            .ToList().Select(group => 
             employees.Find(employee => employee.EmployeeId == group.Key.Value))
-            .ToList();
+            .ToList().OrderBy(x => x.LastName).ToList();
 
-        return list.OrderBy(x => x.LastName).ToList();
+
     }
 
     /// <summary>
