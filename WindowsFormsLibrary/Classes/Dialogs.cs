@@ -9,7 +9,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Timer = System.Windows.Forms.Timer;
+#pragma warning disable CA2255
+#pragma warning disable CS8618
 
 
 namespace WindowsFormsLibrary.Classes
@@ -59,7 +61,7 @@ namespace WindowsFormsLibrary.Classes
 
             TaskDialogButton result = TaskDialog.ShowDialog(page);
 
-            return (DialogResult)result.Tag == DialogResult.Yes;
+            return (DialogResult)result.Tag! == DialogResult.Yes;
 
         }
 
@@ -105,7 +107,7 @@ namespace WindowsFormsLibrary.Classes
 
             var result = TaskDialog.ShowDialog(owner, page);
 
-            return (DialogResult)result.Tag == DialogResult.Yes;
+            return (DialogResult)result.Tag! == DialogResult.Yes;
 
         }
 
@@ -147,7 +149,7 @@ namespace WindowsFormsLibrary.Classes
 
             var result = TaskDialog.ShowDialog(owner, page);
 
-            return (DialogResult)result.Tag == DialogResult.Yes;
+            return (DialogResult)result.Tag! == DialogResult.Yes;
 
         }
         /// <summary>
@@ -226,7 +228,7 @@ namespace WindowsFormsLibrary.Classes
             
             var result = TaskDialog.ShowDialog(owner, page);
 
-            if ((DialogResult)result.Tag == DialogResult.Yes)
+            if ((DialogResult)result.Tag! == DialogResult.Yes)
             {
                 yesAction?.Invoke();
             }
@@ -273,7 +275,7 @@ namespace WindowsFormsLibrary.Classes
 
             var result = TaskDialog.ShowDialog(page);
 
-            return (DialogResult)result.Tag == DialogResult.Yes;
+            return (DialogResult)result.Tag! == DialogResult.Yes;
 
         }
 

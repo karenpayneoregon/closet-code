@@ -15,6 +15,8 @@ using ShadowProperties.Classes;
 using ShadowProperties.Models;
 using WindowsFormsLibrary.Classes;
 using WindowsFormsLibrary.LanguageExtensions;
+#pragma warning disable CS8618
+#pragma warning disable CS8622
 
 namespace HasQueryFilterApp
 {
@@ -45,6 +47,7 @@ namespace HasQueryFilterApp
 
             UnDeleteButton.Enabled = true;
             DeleteButton.Enabled = true;
+            UpdateFirstNameButton.Enabled = true;
             ContactCountsButton.Enabled = true;
 
 
@@ -89,12 +92,14 @@ namespace HasQueryFilterApp
             Dialogs.Information(this, $"All: {all} Filtered: {filter}");
         }
 
-        [ModuleInitializer]
-        public static void Init()
+
+        private void UpdateCurrentContactNameButton_Click(object sender, EventArgs e)
         {
-            //Console.Title = "Code sample for EF Core";
+            if (!string.IsNullOrWhiteSpace(FirstNameTextBox.Text))
+            {
+                _bindingList[_bindingSource.Position].FirstName = FirstNameTextBox.Text;
+                Operations.Update(_bindingList[_bindingSource.Position]);
+            }
         }
-
-
     }
 }
