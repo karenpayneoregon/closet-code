@@ -39,7 +39,7 @@ public class CoreOperations
             Employees current = employees.Find(employee => employee.EmployeeId == group.Key.Value);
             table.AddRow(current!.FullName);
 
-            Manager manager = new() {Employee = current };
+            Manager manager = new() { Employee = current };
 
             foreach (var groupedItem in group)
             {
@@ -73,7 +73,7 @@ public class CoreOperations
         Random rand = new();
         int skipper = rand.Next(1, context.Set<TModel>().Count());
         return context.Set<TModel>().ToList()
-            .OrderBy( _ => Guid.NewGuid())
+            .OrderBy(_ => Guid.NewGuid())
             .Skip(skipper)
             .Take(count).ToList();
     }
@@ -98,14 +98,14 @@ public class CoreOperations
         using var context = new Context();
 
         List<Employees> employees = context.Employees.ToList();
-        
+
         return employees
             .Where(employee => employee.ReportsTo.HasValue)
             .ToList()
             .OrderBy(employee => employee.LastName)
             .GroupBy(employee => employee.ReportsTo)
-            .ToList().Select(group => 
-            employees.Find(employee => employee.EmployeeId == group.Key.Value))
+            .ToList().Select(group =>
+                employees.Find(employee => employee.EmployeeId == group.Key.Value))
             .ToList().OrderBy(x => x.LastName).ToList();
     }
 
@@ -118,7 +118,7 @@ public class CoreOperations
         using var context = new Context();
 
         List<Employees> employees = context.Employees.ToList();
-            
+
         List<IGrouping<int?, Employees>> groupedData = employees
             .Where(employee => employee.ReportsTo.HasValue)
             .ToList()

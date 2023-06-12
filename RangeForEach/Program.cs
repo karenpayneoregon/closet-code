@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using RangeForEach.Extensions;
+//using RangeForEach.Extensions;
 using static System.Globalization.DateTimeFormatInfo;
 
 namespace RangeForEach
@@ -17,8 +18,8 @@ namespace RangeForEach
             //ForEachConventional();
             //ForEachIndexing();
             //ForEachIndexingForumQuestion();
-            //ForZip();
-            ForEachIndexingForumQuestion3();
+            ForZip();
+            //ForEachIndexingForumQuestion3();
         }
 
         private static void ForEachIndexingForumQuestion3()

@@ -26,5 +26,21 @@ namespace DirectoryHelpersLibrary.Classes
                         path, 
                         item, 
                         SearchOption.AllDirectories));
+
+        public static void Demo()
+        {
+            var options = new EnumerationOptions
+            {
+                IgnoreInaccessible = true,
+                RecurseSubdirectories = true,
+
+            };
+            foreach (string file in Directory.EnumerateFiles("C:\\", "*.*", options))
+            {
+                Console.WriteLine(file);
+            }
+        }
     }
+
+
 }
