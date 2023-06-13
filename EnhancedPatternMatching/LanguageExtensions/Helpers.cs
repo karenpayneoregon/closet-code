@@ -22,7 +22,7 @@ namespace EnhancedPatternMatching.LanguageExtensions
             { Country: "USA" } => "Hello",
             { Country: "Germany" } => "hallo",
             { Country: "Mexico" } => "Hola",
-            _ => "Whazzup"
+            _ => throw new ArgumentOutOfRangeException(nameof(visitor), visitor, null)
         };
     }
 }

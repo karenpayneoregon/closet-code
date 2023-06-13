@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#pragma warning disable CS8618
+namespace EnhancedPatternMatching.Models;
 
-namespace EnhancedPatternMatching.Models
+public class Visitor
 {
-    public class Visitor
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
+    public string FirstName { get; set; }
+    public string Country { get; set; }
 }
