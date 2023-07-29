@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -44,6 +45,18 @@ namespace PassStringFromChildToParentForm
             else
             {
                 FemaleRadioButton.Checked = true;
+            }
+        }
+
+        private void DisplayButton_Click(object sender, EventArgs e)
+        {
+            using (ChildForm form = new ChildForm())
+            {
+                form.PassInformation += delegate(string s)
+                {
+                    Debug.WriteLine(s);
+                };
+                form.ShowDialog(this);
             }
         }
     }

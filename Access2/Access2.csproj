@@ -2,26 +2,24 @@
 
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFramework>net7.0</TargetFramework>
 		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
 		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
-
 	<ItemGroup>
-	  <None Remove="readme.md" />
+	  <None Remove="Database1.accdb" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="readme.md" />
+	  <Content Include="Database1.accdb">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Bogus" Version="34.0.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\BindingListLibrary\BindingListLibrary.csproj" />
+		<PackageReference Include="System.Data.OleDb" Version="7.0.0" />
 	</ItemGroup>
 
 </Project>

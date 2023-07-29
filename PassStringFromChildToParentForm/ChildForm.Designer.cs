@@ -29,27 +29,28 @@ namespace PassStringFromChildToParentForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.FirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.MaleRadioButton = new System.Windows.Forms.RadioButton();
             this.FemaleRadioButton = new System.Windows.Forms.RadioButton();
+            this.SubmitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // FirstNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Karen";
+            this.FirstNameTextBox.Location = new System.Drawing.Point(16, 12);
+            this.FirstNameTextBox.Name = "FirstNameTextBox";
+            this.FirstNameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.FirstNameTextBox.TabIndex = 2;
+            this.FirstNameTextBox.Text = "Karen";
             // 
-            // textBox2
+            // LastNameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "Payne";
+            this.LastNameTextBox.Location = new System.Drawing.Point(16, 40);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.LastNameTextBox.TabIndex = 3;
+            this.LastNameTextBox.Text = "Payne";
             // 
             // MaleRadioButton
             // 
@@ -73,15 +74,26 @@ namespace PassStringFromChildToParentForm
             this.FemaleRadioButton.Text = "Femaile";
             this.FemaleRadioButton.UseVisualStyleBackColor = true;
             // 
+            // SubmitButton
+            // 
+            this.SubmitButton.Location = new System.Drawing.Point(25, 165);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(99, 32);
+            this.SubmitButton.TabIndex = 6;
+            this.SubmitButton.Text = "Submit";
+            this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+            // 
             // ChildForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(233, 246);
+            this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.FemaleRadioButton);
             this.Controls.Add(this.MaleRadioButton);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LastNameTextBox);
+            this.Controls.Add(this.FirstNameTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChildForm";
@@ -93,9 +105,10 @@ namespace PassStringFromChildToParentForm
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox FirstNameTextBox;
+        private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.RadioButton MaleRadioButton;
         private System.Windows.Forms.RadioButton FemaleRadioButton;
+        private System.Windows.Forms.Button SubmitButton;
     }
 }

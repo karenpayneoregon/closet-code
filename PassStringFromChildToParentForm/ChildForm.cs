@@ -8,6 +8,10 @@ namespace PassStringFromChildToParentForm
         public delegate void OnPassData(bool isMale);
         public event OnPassData PassData;
 
+
+        public delegate void OnPassInformation(string sender);
+        public event OnPassInformation PassInformation;
+
         /// <summary>
         /// Note we could create an overload of this constructor
         /// and pass Male or Female
@@ -48,6 +52,19 @@ namespace PassStringFromChildToParentForm
             else
             {
                 FemaleRadioButton.Checked = true;
+            }
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(FirstNameTextBox.Text))
+            {
+                PassInformation?.Invoke(FirstNameTextBox.Text);
+                DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("Need a first name");
             }
         }
     }

@@ -7,8 +7,8 @@ namespace TinyHelpersApp
         static void Main(string[] args)
         {
             AnsiConsole.MarkupLine("[yellow]Hello[/]");
-            var people = GetPeople();
-
+            var people = GetPeople().ToList();
+            
             foreach (var (person, index) in people.WithIndex())
             {
                 AnsiConsole.MarkupLine($"[cyan]{index,-5}[/]{person!.FirstName}");

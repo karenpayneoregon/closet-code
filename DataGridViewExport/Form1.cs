@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BindingListLibrary;
 using DataGridViewExport.Classes;
@@ -49,6 +44,13 @@ namespace DataGridViewExport
         private void UpdateFirstNameTextBox_Click(object sender, EventArgs e)
         {
             _bindingList[_bindingSource.Position].FirstName = FirstNameTextBox.Text;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Contact contact = _bindingSource.List.OfType<Contact>().ToList().Find( x => x.FirstName == textBox1.Text);
+
+            contact.FirstName = "Karen";
         }
     }
 }

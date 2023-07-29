@@ -42,6 +42,8 @@ namespace DataGridViewExport
             this.IdLabel = new System.Windows.Forms.Label();
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.UpdateFirstNameTextBox = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +63,7 @@ namespace DataGridViewExport
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(807, 507);
+            this.dataGridView1.Size = new System.Drawing.Size(807, 465);
             this.dataGridView1.TabIndex = 0;
             // 
             // IdColumn
@@ -162,11 +164,30 @@ namespace DataGridViewExport
             this.UpdateFirstNameTextBox.UseVisualStyleBackColor = true;
             this.UpdateFirstNameTextBox.Click += new System.EventHandler(this.UpdateFirstNameTextBox_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(14, 488);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(129, 490);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 600);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.UpdateFirstNameTextBox);
             this.Controls.Add(this.FirstNameTextBox);
             this.Controls.Add(this.IdLabel);
@@ -198,6 +219,8 @@ namespace DataGridViewExport
         private System.Windows.Forms.Label IdLabel;
         private System.Windows.Forms.TextBox FirstNameTextBox;
         private System.Windows.Forms.Button UpdateFirstNameTextBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

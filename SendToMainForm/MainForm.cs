@@ -4,6 +4,7 @@ namespace SendToMainForm
 {
     public partial class MainForm : Form
     {
+        private ChildForm childForm = new() ;
         public MainForm()
         {
             InitializeComponent();
@@ -11,7 +12,7 @@ namespace SendToMainForm
 
         private void OpenChildFormButton_Click(object sender, EventArgs e)
         {
-            ChildForm childForm = new() { Owner = this };
+            childForm.Owner = this;
 
             childForm.PassData += ChildFormOnPassData;
             childForm.Show(this);
@@ -22,6 +23,11 @@ namespace SendToMainForm
         private void ChildFormOnPassData(int[] data)
         {
             listBox1.Items.AddRange(ConvertAll(data, x => x.ToString("D2")));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = childForm.textBox1.Text;
         }
     }
 }
