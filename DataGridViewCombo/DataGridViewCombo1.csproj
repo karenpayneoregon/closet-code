@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CoreBindingNavigator.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\DataGridViewExtensions.cs" />
     <Compile Include="Classes\DataOperations.cs" />
     <Compile Include="MainForm.cs">
