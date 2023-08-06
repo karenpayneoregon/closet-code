@@ -1,15 +1,14 @@
 using DataGridViewComboBoxCore.Classes;
 using System.Data;
 using System.Diagnostics;
-#pragma warning disable CS8604 // Possible null reference argument.
-#pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
+// ReSharper disable LocalizableElement
 
 namespace DataGridViewComboBoxCore;
 
 public partial class Form1 : Form
 {
-    private readonly BindingSource _customerBindingSource = new();
-    private readonly BindingSource _colorBindingSource = new();
+    private readonly BindingSource _mainBindingSource = new();
+    private readonly BindingSource _comboBoxBindingSource = new();
 
     private DataTable _colorsDataTable;
     public Form1()
@@ -21,37 +20,68 @@ public partial class Form1 : Form
     private void Form1_Shown(object? sender, EventArgs e)
     {
         Setup();
-        CustomersDataGridView.AllowUserToAddRows = false;
+        ProductsDataGridView.AllowUserToAddRows = false;
     }
 
     private void Setup()
     {
 
-        CustomersDataGridView.AutoGenerateColumns = false;
+        ProductsDataGridView.AutoGenerateColumns = false;
 
-        var (customerTable, colorTable) = DataOperations.LoadData();
+        var (productsTable, colorTable) = DataOperations.LoadData();
 
         _colorsDataTable = colorTable;
-        _colorBindingSource.DataSource = colorTable;
+        _comboBoxBindingSource.DataSource = colorTable;
 
         ColorComboBoxColumn.DisplayMember = "ColorText";
         ColorComboBoxColumn.ValueMember = "ColorId";
         ColorComboBoxColumn.DataPropertyName = "ColorId";
 
-        ColorComboBoxColumn.DataSource = _colorBindingSource;
+        ColorComboBoxColumn.DataSource = _comboBoxBindingSource;
 
         ColorComboBoxColumn.DisplayStyle = DataGridViewComboBoxDisplayStyle.Nothing;
 
         ItemTextBoxColumn.DataPropertyName = "Item";
-        _customerBindingSource.DataSource = customerTable;
+        _mainBindingSource.DataSource = productsTable;
 
-        coreBindingNavigator1.BindingSource = _customerBindingSource;
+        coreBindingNavigator1.BindingSource = _mainBindingSource;
         coreBindingNavigator1.DisableAddNewItems();
         coreBindingNavigator1.DisableRemoveItems();
 
-        CustomersDataGridView.DataSource = _customerBindingSource;
+        ProductsDataGridView.DataSource = _mainBindingSource;
 
+        productsTable.RowChanged += ProductsTable_RowChanged;
     }
+    /// <summary>
+    /// Update current row on leave row
+    /// - If ColorId = -1 abort
+    /// - If Item is empty so be it, feel free to add assertion
+    ///   as Item column is setup as null is permitted.
+    /// </summary>
+    /// <remarks>
+    /// For more on DataTable events see my GitHub repository
+    /// https://github.com/karenpayneoregon/DataTablesOperationsEvents
+    /// </remarks>
+    private void ProductsTable_RowChanged(object sender, DataRowChangeEventArgs e)
+    {
+        
+        if (e.Action == DataRowAction.Change)
+        {
+            if (e.Row.Field<int>("ColorId") == -1)
+            {
+                // no color selected
+                return;
+            }
+            var (success, exception) = DataOperations.UpdateRow(e.Row);
+            if (!success)
+            {
+                // should really write to a log file and not show the exception
+                MessageBox.Show($"Failed to update\n{exception.Message}");
+            }
+        }
+    }
+
+
 
 
     /// <summary>
@@ -59,10 +89,10 @@ public partial class Form1 : Form
     /// </summary>
     private void CurrentButton_Click(object sender, EventArgs e)
     {
-        DataRow customerRow = ((DataRowView)_customerBindingSource.Current).Row;
+        DataRow currentRow = _mainBindingSource.DataRow();
         
-        int colorIdentifier = (_colorBindingSource.DataSource as DataTable).AsEnumerable()
-            .FirstOrDefault(row => row.Field<int>("ColorId") == customerRow.Field<int>("ColorId"))
+        int colorIdentifier = _comboBoxBindingSource.DataTable().AsEnumerable()
+            .FirstOrDefault(row => row.Field<int>("ColorId") == currentRow.Field<int>("ColorId"))
             .Field<int>("ColorId");
 
         string? colorName =_colorsDataTable.AsEnumerable().FirstOrDefault(row => 
@@ -74,13 +104,13 @@ public partial class Form1 : Form
 
     private void SetCurrentColorButton_Click(object sender, EventArgs e)
     {
-        DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
+        DataRow currentRow = _mainBindingSource.DataRow();
         currentRow.SetField("ColorId", 4); // set to white
     }
 
     private void SetCurrentColorToSelectButton_Click(object sender, EventArgs e)
     {
-        DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
+        DataRow currentRow = _mainBindingSource.DataRow();
         currentRow.SetField("ColorId", -1); // set to Select
     }
 
@@ -89,8 +119,8 @@ public partial class Form1 : Form
     /// </summary>
     private void IterateRowsButton_Click(object sender, EventArgs e)
     {
-        var productTable = (DataTable)_customerBindingSource.DataSource;
-        var colorTable = (DataTable)_colorBindingSource.DataSource;
+        DataTable productTable = _mainBindingSource.DataTable();
+        DataTable colorTable = _comboBoxBindingSource.DataTable(); ;
 
         for (int rowIndex = 0; rowIndex < productTable.Rows.Count; rowIndex++)
         {

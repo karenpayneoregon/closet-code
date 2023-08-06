@@ -28,7 +28,7 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-            this.CustomersDataGridView = new System.Windows.Forms.DataGridView();
+            this.ProductsDataGridView = new System.Windows.Forms.DataGridView();
             this.ItemTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.CurrentButton = new System.Windows.Forms.Button();
@@ -36,22 +36,22 @@ partial class Form1
             this.IterateRowsButton = new System.Windows.Forms.Button();
             this.coreBindingNavigator1 = new DataGridViewComboBoxCore.Classes.CoreBindingNavigator();
             this.SetCurrentColorToSelectButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coreBindingNavigator1)).BeginInit();
             this.SuspendLayout();
             // 
-            // CustomersDataGridView
+            // ProductsDataGridView
             // 
-            this.CustomersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemTextBoxColumn,
             this.ColorComboBoxColumn});
-            this.CustomersDataGridView.Location = new System.Drawing.Point(4, 58);
-            this.CustomersDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.CustomersDataGridView.Name = "CustomersDataGridView";
-            this.CustomersDataGridView.RowHeadersWidth = 51;
-            this.CustomersDataGridView.Size = new System.Drawing.Size(437, 238);
-            this.CustomersDataGridView.TabIndex = 4;
+            this.ProductsDataGridView.Location = new System.Drawing.Point(4, 58);
+            this.ProductsDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ProductsDataGridView.Name = "ProductsDataGridView";
+            this.ProductsDataGridView.RowHeadersWidth = 51;
+            this.ProductsDataGridView.Size = new System.Drawing.Size(437, 238);
+            this.ProductsDataGridView.TabIndex = 4;
             // 
             // ItemTextBoxColumn
             // 
@@ -131,19 +131,19 @@ partial class Form1
             this.Controls.Add(this.IterateRowsButton);
             this.Controls.Add(this.SetCurrentColorButton);
             this.Controls.Add(this.CurrentButton);
-            this.Controls.Add(this.CustomersDataGridView);
+            this.Controls.Add(this.ProductsDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code Sample";
-            ((System.ComponentModel.ISupportInitialize)(this.CustomersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coreBindingNavigator1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
     }
-    internal System.Windows.Forms.DataGridView CustomersDataGridView;
+    internal System.Windows.Forms.DataGridView ProductsDataGridView;
     private System.Windows.Forms.Button CurrentButton;
     private System.Windows.Forms.Button SetCurrentColorButton;
     private System.Windows.Forms.Button IterateRowsButton;

@@ -37,4 +37,32 @@ public class DataOperations
         return (productsDataTable, colorsDataTable);
 
     }
+
+    public static (bool success, Exception exception) UpdateRow(DataRow row)
+    {
+        using SqlConnection cn = new() { ConnectionString = _connectionString };
+        using SqlCommand cmd = new() { Connection = cn };
+
+        cmd.CommandText = 
+            """
+            UPDATE dbo.Product 
+            SET Item = @Item,ColorId = @ColorId 
+            WHERE id = @Id;
+            """;
+
+        cmd.Parameters.Add("@Item", SqlDbType.NVarChar).Value = row.Field<string>("Item");
+        cmd.Parameters.Add("@ColorId", SqlDbType.Int).Value = row.Field<int>("ColorId");
+        cmd.Parameters.Add("@Id", SqlDbType.Int).Value = row.Field<int>("Id");
+
+        try
+        {
+            cn.Open();
+            var affected = cmd.ExecuteNonQuery();
+            return (cmd.ExecuteNonQuery() == 1, null)!;
+        }
+        catch (Exception localException)
+        {
+            return (false,localException);
+        }
+    }
 }
