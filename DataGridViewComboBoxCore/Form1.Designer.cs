@@ -32,11 +32,10 @@ partial class Form1
             this.ItemTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.CurrentButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ColorIdLabel = new System.Windows.Forms.Label();
             this.SetCurrentColorButton = new System.Windows.Forms.Button();
             this.IterateRowsButton = new System.Windows.Forms.Button();
             this.coreBindingNavigator1 = new DataGridViewComboBoxCore.Classes.CoreBindingNavigator();
+            this.SetCurrentColorToSelectButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coreBindingNavigator1)).BeginInit();
             this.SuspendLayout();
@@ -59,15 +58,15 @@ partial class Form1
             this.ItemTextBoxColumn.HeaderText = "Item";
             this.ItemTextBoxColumn.MinimumWidth = 6;
             this.ItemTextBoxColumn.Name = "ItemTextBoxColumn";
-            this.ItemTextBoxColumn.Width = 125;
+            this.ItemTextBoxColumn.Width = 200;
             // 
             // ColorComboBoxColumn
             // 
+            this.ColorComboBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColorComboBoxColumn.HeaderText = "Color";
             this.ColorComboBoxColumn.MinimumWidth = 6;
             this.ColorComboBoxColumn.Name = "ColorComboBoxColumn";
             this.ColorComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColorComboBoxColumn.Width = 125;
             // 
             // CurrentButton
             // 
@@ -80,29 +79,9 @@ partial class Form1
             this.CurrentButton.UseVisualStyleBackColor = true;
             this.CurrentButton.Click += new System.EventHandler(this.CurrentButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 372);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Current color id";
-            // 
-            // ColorIdLabel
-            // 
-            this.ColorIdLabel.AutoSize = true;
-            this.ColorIdLabel.Location = new System.Drawing.Point(128, 372);
-            this.ColorIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ColorIdLabel.Name = "ColorIdLabel";
-            this.ColorIdLabel.Size = new System.Drawing.Size(17, 20);
-            this.ColorIdLabel.TabIndex = 8;
-            this.ColorIdLabel.Text = "0";
-            // 
             // SetCurrentColorButton
             // 
-            this.SetCurrentColorButton.Location = new System.Drawing.Point(327, 326);
+            this.SetCurrentColorButton.Location = new System.Drawing.Point(340, 326);
             this.SetCurrentColorButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SetCurrentColorButton.Name = "SetCurrentColorButton";
             this.SetCurrentColorButton.Size = new System.Drawing.Size(100, 35);
@@ -131,16 +110,26 @@ partial class Form1
             this.coreBindingNavigator1.TabIndex = 11;
             this.coreBindingNavigator1.Text = "coreBindingNavigator1";
             // 
+            // SetCurrentColorToSelectButton
+            // 
+            this.SetCurrentColorToSelectButton.Location = new System.Drawing.Point(232, 326);
+            this.SetCurrentColorToSelectButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SetCurrentColorToSelectButton.Name = "SetCurrentColorToSelectButton";
+            this.SetCurrentColorToSelectButton.Size = new System.Drawing.Size(100, 35);
+            this.SetCurrentColorToSelectButton.TabIndex = 12;
+            this.SetCurrentColorToSelectButton.Text = "Set none";
+            this.SetCurrentColorToSelectButton.UseVisualStyleBackColor = true;
+            this.SetCurrentColorToSelectButton.Click += new System.EventHandler(this.SetCurrentColorToSelectButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 406);
+            this.ClientSize = new System.Drawing.Size(443, 379);
+            this.Controls.Add(this.SetCurrentColorToSelectButton);
             this.Controls.Add(this.coreBindingNavigator1);
             this.Controls.Add(this.IterateRowsButton);
             this.Controls.Add(this.SetCurrentColorButton);
-            this.Controls.Add(this.ColorIdLabel);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.CurrentButton);
             this.Controls.Add(this.CustomersDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -155,15 +144,14 @@ partial class Form1
 
     }
     internal System.Windows.Forms.DataGridView CustomersDataGridView;
-    private System.Windows.Forms.DataGridViewTextBoxColumn ItemTextBoxColumn;
-    private System.Windows.Forms.DataGridViewComboBoxColumn ColorComboBoxColumn;
     private System.Windows.Forms.Button CurrentButton;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.Label ColorIdLabel;
     private System.Windows.Forms.Button SetCurrentColorButton;
     private System.Windows.Forms.Button IterateRowsButton;
 
     #endregion
 
     private Classes.CoreBindingNavigator coreBindingNavigator1;
+    private DataGridViewTextBoxColumn ItemTextBoxColumn;
+    private DataGridViewComboBoxColumn ColorComboBoxColumn;
+    private Button SetCurrentColorToSelectButton;
 }

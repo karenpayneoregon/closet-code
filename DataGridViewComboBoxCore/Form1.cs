@@ -8,8 +8,10 @@ namespace DataGridViewComboBoxCore;
 
 public partial class Form1 : Form
 {
-    readonly BindingSource _customerBindingSource = new();
-    readonly BindingSource _colorBindingSource = new();
+    private readonly BindingSource _customerBindingSource = new();
+    private readonly BindingSource _colorBindingSource = new();
+
+    private DataTable _colorsDataTable;
     public Form1()
     {
         InitializeComponent();
@@ -29,6 +31,7 @@ public partial class Form1 : Form
 
         var (customerTable, colorTable) = DataOperations.LoadData();
 
+        _colorsDataTable = colorTable;
         _colorBindingSource.DataSource = colorTable;
 
         ColorComboBoxColumn.DisplayMember = "ColorText";
@@ -45,50 +48,45 @@ public partial class Form1 : Form
         coreBindingNavigator1.BindingSource = _customerBindingSource;
         coreBindingNavigator1.DisableAddNewItems();
         coreBindingNavigator1.DisableRemoveItems();
+
         CustomersDataGridView.DataSource = _customerBindingSource;
 
-        CustomersDataGridView.EditingControlShowing += CustomersDataGridViewOnEditingControlShowing!;
-
-        ColorIdLabel.DataBindings.Add("Text", _customerBindingSource, "ColorId", true);
-
-
-    }
-    private void CustomersDataGridViewOnEditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-    {
-        if (!CustomersDataGridView.CurrentCell.IsComboBoxCell()) return;
-        if (CustomersDataGridView.Columns[CustomersDataGridView.CurrentCell.ColumnIndex].Name != nameof(ColorComboBoxColumn)) return;
-        if (!(e is { Control: ComboBox cb })) return;
-        cb.SelectionChangeCommitted -= SelectionChangeCommitted;
-        cb.SelectionChangeCommitted += SelectionChangeCommitted;
     }
 
-    private void SelectionChangeCommitted(object sender, EventArgs e)
-    {
-        if (_customerBindingSource.Current == null) return;
-        if (!string.IsNullOrWhiteSpace(((DataGridViewComboBoxEditingControl)sender).Text))
-        {
-            DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
 
-            ColorIdLabel.Text = currentRow.Field<int>("ColorId").ToString();
-        }
-    }
-
+    /// <summary>
+    /// Code to get at the current DataGridView row
+    /// </summary>
     private void CurrentButton_Click(object sender, EventArgs e)
     {
-        var customerRow = ((DataRowView)_customerBindingSource.Current).Row;
-
-        var colorName = (_colorBindingSource.DataSource as DataTable).AsEnumerable()
+        DataRow customerRow = ((DataRowView)_customerBindingSource.Current).Row;
+        
+        int colorIdentifier = (_colorBindingSource.DataSource as DataTable).AsEnumerable()
             .FirstOrDefault(row => row.Field<int>("ColorId") == customerRow.Field<int>("ColorId"))
-            .Field<string>("ColorText");
-        Debug.WriteLine(colorName);
+            .Field<int>("ColorId");
+
+        string? colorName =_colorsDataTable.AsEnumerable().FirstOrDefault(row => 
+            row.Field<int>("ColorId") == colorIdentifier).Field<string>("ColorText");
+
+        Debug.WriteLine($"Current color Id: {colorIdentifier, -4} Name: {colorName}");
+
     }
 
     private void SetCurrentColorButton_Click(object sender, EventArgs e)
     {
         DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
-        currentRow.SetField("ColorId", -1);
+        currentRow.SetField("ColorId", 4); // set to white
     }
 
+    private void SetCurrentColorToSelectButton_Click(object sender, EventArgs e)
+    {
+        DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
+        currentRow.SetField("ColorId", -1); // set to Select
+    }
+
+    /// <summary>
+    /// demonstrates iterating rows in the DataGridView
+    /// </summary>
     private void IterateRowsButton_Click(object sender, EventArgs e)
     {
         var productTable = (DataTable)_customerBindingSource.DataSource;
