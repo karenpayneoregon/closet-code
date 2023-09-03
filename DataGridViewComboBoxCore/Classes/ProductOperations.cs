@@ -3,7 +3,7 @@ using Microsoft.Data.SqlClient;
 
 namespace DataGridViewComboBoxCore.Classes;
 
-public class DataOperations
+public class ProductOperations
 {
     private static string _connectionString =
         """

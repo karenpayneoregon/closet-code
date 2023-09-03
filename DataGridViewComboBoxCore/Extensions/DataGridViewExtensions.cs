@@ -1,4 +1,4 @@
-﻿namespace DataGridViewComboBoxCore.Classes;
+﻿namespace DataGridViewComboBoxCore.Extensions;
 
 public static class DataGridViewExtensions
 {

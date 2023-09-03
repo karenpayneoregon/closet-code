@@ -19,18 +19,31 @@
 	<ItemGroup>
 	  <None Remove="assets\figure1.png" />
 	  <None Remove="assets\figure2.png" />
+	  <None Remove="scripts\selectProductsJoineWithColors.sql" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Content Include="assets\figure1.png" />
 	  <Content Include="assets\figure2.png" />
+	  <Content Include="scripts\selectProductsJoineWithColors.sql" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Compile Update="Classes\CoreBindingNavigator.cs">
+	  <Compile Update="Controls\CoreBindingNavigator.cs">
 	    <SubType>Component</SubType>
 	  </Compile>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	</ItemGroup>
 </Project>

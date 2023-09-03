@@ -1,4 +1,4 @@
-﻿namespace DataGridViewComboBoxCore.Classes;
+﻿namespace DataGridViewComboBoxCore.Controls;
 
 /// <summary>
 /// VS2019 there is no BindingNavigator, here you go :-)

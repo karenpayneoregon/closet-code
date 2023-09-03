@@ -1,6 +1,9 @@
 using DataGridViewComboBoxCore.Classes;
+using DataGridViewComboBoxCore.Extensions;
 using System.Data;
 using System.Diagnostics;
+using static DataGridViewComboBoxCore.Classes.Dialogs;
+
 // ReSharper disable LocalizableElement
 
 namespace DataGridViewComboBoxCore;
@@ -15,6 +18,12 @@ public partial class Form1 : Form
     {
         InitializeComponent();
         Shown += Form1_Shown;
+        toolStripButtonAbout.Click += ToolStripButton1_Click;
+    }
+
+    private void ToolStripButton1_Click(object? sender, EventArgs e)
+    {
+        Information(this,"Code sample by Karen Payne");
     }
 
     private void Form1_Shown(object? sender, EventArgs e)
@@ -28,7 +37,7 @@ public partial class Form1 : Form
 
         ProductsDataGridView.AutoGenerateColumns = false;
 
-        var (productsTable, colorTable) = DataOperations.LoadData();
+        var (productsTable, colorTable) = ProductOperations.LoadData();
 
         _colorsDataTable = colorTable;
         _comboBoxBindingSource.DataSource = colorTable;
@@ -72,7 +81,7 @@ public partial class Form1 : Form
                 // no color selected
                 return;
             }
-            var (success, exception) = DataOperations.UpdateRow(e.Row);
+            var (success, exception) = ProductOperations.UpdateRow(e.Row);
             if (!success)
             {
                 // should really write to a log file and not show the exception

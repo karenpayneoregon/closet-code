@@ -29,11 +29,11 @@
 	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
+	<!--<ItemGroup>
 		<Reference Include="CoreExtensions">
 			<HintPath>C:\OED\Dotnetland\VS2019\LearningVisualStudio\WindowsFormsSolution\CoreExtensions\bin\Debug\net5.0\CoreExtensions.dll</HintPath>
 		</Reference>
-	</ItemGroup>
+	</ItemGroup>-->
 
 	<ItemGroup>
 	  <Folder Include="assets\" />

@@ -1,4 +1,6 @@
-﻿namespace DataGridViewComboBoxCore;
+﻿using DataGridViewComboBoxCore.Controls;
+
+namespace DataGridViewComboBoxCore;
 
 partial class Form1
 {
@@ -28,16 +30,19 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ProductsDataGridView = new System.Windows.Forms.DataGridView();
             this.ItemTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorComboBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.CurrentButton = new System.Windows.Forms.Button();
             this.SetCurrentColorButton = new System.Windows.Forms.Button();
             this.IterateRowsButton = new System.Windows.Forms.Button();
-            this.coreBindingNavigator1 = new DataGridViewComboBoxCore.Classes.CoreBindingNavigator();
+            this.coreBindingNavigator1 = new DataGridViewComboBoxCore.Controls.CoreBindingNavigator();
+            this.toolStripButtonAbout = new System.Windows.Forms.ToolStripButton();
             this.SetCurrentColorToSelectButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coreBindingNavigator1)).BeginInit();
+            this.coreBindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ProductsDataGridView
@@ -104,11 +109,22 @@ partial class Form1
             // coreBindingNavigator1
             // 
             this.coreBindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.coreBindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonAbout});
             this.coreBindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.coreBindingNavigator1.Name = "coreBindingNavigator1";
             this.coreBindingNavigator1.Size = new System.Drawing.Size(443, 27);
             this.coreBindingNavigator1.TabIndex = 11;
             this.coreBindingNavigator1.Text = "coreBindingNavigator1";
+            // 
+            // toolStripButtonAbout
+            // 
+            this.toolStripButtonAbout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonAbout.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonAbout.Image")));
+            this.toolStripButtonAbout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonAbout.Name = "toolStripButtonAbout";
+            this.toolStripButtonAbout.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButtonAbout.Text = "About";
             // 
             // SetCurrentColorToSelectButton
             // 
@@ -139,6 +155,8 @@ partial class Form1
             this.Text = "Code Sample";
             ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coreBindingNavigator1)).EndInit();
+            this.coreBindingNavigator1.ResumeLayout(false);
+            this.coreBindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,8 +168,9 @@ partial class Form1
 
     #endregion
 
-    private Classes.CoreBindingNavigator coreBindingNavigator1;
+    private CoreBindingNavigator coreBindingNavigator1;
     private DataGridViewTextBoxColumn ItemTextBoxColumn;
     private DataGridViewComboBoxColumn ColorComboBoxColumn;
     private Button SetCurrentColorToSelectButton;
+    private ToolStripButton toolStripButtonAbout;
 }

@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace DataGridViewComboBoxCore.Classes;
+namespace DataGridViewComboBoxCore.Extensions;
 public static class BindingSourceExtensions
 {
     /// <summary>
@@ -13,7 +13,7 @@ public static class BindingSourceExtensions
     /// <summary>
     /// Given Current is not null return a DataRow
     /// </summary>
-    public static DataRow DataRow(this BindingSource sender) 
+    public static DataRow DataRow(this BindingSource sender)
         => ((DataRowView)sender.Current).Row;
 
 }
