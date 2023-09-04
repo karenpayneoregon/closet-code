@@ -1,0 +1,78 @@
+ProductID	CategoryName	ProductName	SupplierID	Supplier	CategoryID	QuantityPerUnit	UnitPrice	UnitsInStock	UnitsOnOrder	ReorderLevel
+38	Beverages	Côte de Blaye	18	Aux joyeux ecclésiastiques	1	12 - 75 cl bottles	263.5	17	0	15
+1	Beverages	Chai	1	Exotic Liquids	1	10 boxes x 20 bags	1	39	0	10
+2	Beverages	Chang	6	Red car	1	24 - 12 oz bottles	19	17	40	25
+39	Beverages	Chartreuse verte	18	Aux joyeux ecclésiastiques	1	750 cc per bottle	18	69	0	5
+24	Beverages	Guaraná Fantástica	10	Refrescos Americanas LTDA	1	12 - 355 ml cans	4.5	20	0	0
+43	Beverages	Ipoh Coffee	20	Leka Trading	1	16 - 500 g tins	46	17	10	25
+76	Beverages	Lakkalikööri	23	Karkki Oy	1	500 ml	18	57	0	20
+67	Beverages	Laughing Lumberjack Lager	16	Bigfoot Breweries	1	24 - 12 oz bottles	14	52	0	10
+70	Beverages	Outback Lager	7	"Pavlova, Ltd."	1	24 - 355 ml bottles	15	15	10	30
+75	Beverages	Rhonbräu Klosterbier	12	Plutzer Lebensmittelgroßmärkte AG	1	24 - 0.5 l bottles	7.75	125	0	25
+34	Beverages	Sasquatch Ale	16	Bigfoot Breweries	1	24 - 12 oz bottles	14	111	0	15
+35	Beverages	Steeleye Stout	16	Bigfoot Breweries	1	24 - 12 oz bottles	18	20	0	15
+3	Condiments	Aniseed Syrup	1	Exotic Liquids	2	12 - 550 ml bottles	10	13	70	25
+4	Condiments	Chef Anton's Cajun Seasoning	2	New Orleans Cajun Delights	2	48 - 6 oz jars	22	53	0	0
+5	Condiments	Chef Anton's Gumbo Mix	2	New Orleans Cajun Delights	2	36 boxes	21.35	0	0	0
+15	Condiments	Genen Shouyu	6	Red car	2	24 - 250 ml bottles	15.5	39	0	5
+6	Condiments	Grandma's Boysenberry Spread	3	Grandma Kelly's Homestead	2	12 - 8 oz jars	25	120	0	25
+44	Condiments	Gula Malacca	20	Leka Trading	2	20 - 2 kg bags	19.45	27	0	15
+65	Condiments	Louisiana Fiery Hot Pepper Sauce	2	New Orleans Cajun Delights	2	32 - 8 oz bottles	21.05	76	0	0
+66	Condiments	Louisiana Hot Spiced Okra	2	New Orleans Cajun Delights	2	24 - 8 oz jars	17	4	100	20
+8	Condiments	Northwoods Cranberry Sauce	3	Grandma Kelly's Homestead	2	12 - 12 oz jars	40	6	0	0
+77	Condiments	Original Frankfurter grüne Soße	12	Plutzer Lebensmittelgroßmärkte AG	2	12 boxes	13	32	0	15
+61	Condiments	Sirop d'érable	29	Forêts d'érables	2	99 - 500 ml bottles	28.5	113	0	25
+63	Condiments	Vegie-spread	7	"Pavlova, Ltd."	2	15 - 625 g jars	43.9	24	0	5
+48	Confections	Chocolade	22	Zaanse Snoepfabriek	3	10 pkgs.	12.75	15	70	25
+26	Confections	Gumbär Gummibärchen	11	Heli Süßwaren GmbH & Co. KG	3	100 - 250 g bags	31.23	15	0	0
+49	Confections	Maxilaku	23	Karkki Oy	3	24 - 50 g pkgs.	20	10	60	15
+25	Confections	NuNuCa Nuß-Nougat-Creme	11	Heli Süßwaren GmbH & Co. KG	3	20 - 450 g glasses	14	76	0	30
+16	Confections	Pavlova	7	"Pavlova, Ltd."	3	32 - 500 g boxes	17.45	29	0	10
+27	Confections	Schoggi Schokolade	11	Heli Süßwaren GmbH & Co. KG	3	100 - 100 g pieces	43.9	49	0	30
+68	Confections	Scottish Longbreads	8	"Specialty Biscuits, Ltd."	3	10 boxes x 8 pieces	12.5	6	10	15
+20	Confections	Sir Rodney's Marmalade	8	"Specialty Biscuits, Ltd."	3	30 gift boxes	81	40	0	0
+21	Confections	Sir Rodney's Scones	8	"Specialty Biscuits, Ltd."	3	24 pkgs. x 4 pieces	10	3	40	5
+62	Confections	Tarte au sucre	29	Forêts d'érables	3	48 pies	49.3	17	0	0
+19	Confections	Teatime Chocolate Biscuits	8	"Specialty Biscuits, Ltd."	3	10 boxes x 12 pieces	9.2	25	0	5
+50	Confections	Valkoinen suklaa	23	Karkki Oy	3	12 - 100 g bars	16.25	65	0	30
+47	Confections	Zaanse koeken	22	Zaanse Snoepfabriek	3	10 - 4 oz boxes	9.5	36	0	0
+60	Dairy Products	Camembert Pierrot	28	Gai pâturage	4	15 - 300 g rounds	34	19	0	0
+71	Dairy Products	Flotemysost	15	Norske Meierier	4	10 - 500 g pkgs.	21.5	26	0	0
+33	Dairy Products	Geitost	15	Norske Meierier	4	500 g	2.5	112	0	20
+69	Dairy Products	Gudbrandsdalsost	15	Norske Meierier	4	10 kg pkg.	36	26	0	15
+32	Dairy Products	Mascarpone Fabioli	14	Formaggi Fortini s.r.l.	4	24 - 200 g pkgs.	32	9	40	25
+72	Dairy Products	Mozzarella di Giovanni	14	Formaggi Fortini s.r.l.	4	24 - 200 g pkgs.	34.8	14	0	0
+11	Dairy Products	Queso Cabrales	5	Cooperativa de Quesos 'Las Cabras'	4	1 kg pkg.	21	22	30	30
+12	Dairy Products	Queso Manche La Pastora	5	Cooperativa de Quesos 'Las Cabras'	4	10 - 500 g pkgs.	38	86	0	0
+59	Dairy Products	Raclette Courdavault	28	Gai pâturage	4	5 kg pkg.	55	79	0	0
+31	Dairy Products	rnzola Telino	14	Formaggi Fortini s.r.l.	4	12 - 100 g pkgs	12.5	0	70	20
+52	Grains/Cereals	Filo Mix	24	"G'day, Mate"	5	16 - 2 kg boxes	7	38	0	25
+56	Grains/Cereals	Gnocchi di nonna Alice	26	Pasta Buttini s.r.l.	5	24 - 250 g pkgs.	38	21	10	30
+22	Grains/Cereals	Gustaf's Knäckebröd	9	PB Knäckebröd AB	5	24 - 500 g pkgs.	21	104	0	25
+57	Grains/Cereals	Ravioli Angelo	26	Pasta Buttini s.r.l.	5	24 - 250 g pkgs.	19.5	36	0	20
+42	Grains/Cereals	Singaporean Hokkien Fried Mee	20	Leka Trading	5	32 - 1 kg pkgs.	14	26	0	0
+23	Grains/Cereals	Tunnbröd	9	PB Knäckebröd AB	5	12 - 250 g pkgs.	9	61	0	25
+64	Grains/Cereals	Wimmers gute Semmelknödel	12	Plutzer Lebensmittelgroßmärkte AG	5	20 bags x 4 pieces	33.25	22	80	30
+17	Meat/Poultry	Alice Mutton	7	"Pavlova, Ltd."	6	20 - 1 kg tins	39	0	0	0
+9	Meat/Poultry	Mishi Kobe Niku	4	Big Traders	6	18 - 500 g pkgs.	97	29	0	0
+55	Meat/Poultry	Pâté chinois	25	Ma Maison	6	24 boxes x 2 pies	24	115	0	20
+53	Meat/Poultry	Perth Pastie	24	"G'day, Mate"	6	48 pieces	32.8	0	0	0
+29	Meat/Poultry	Thüringer Rostbratwurst	12	Plutzer Lebensmittelgroßmärkte AG	6	50 bags x 30 sausgs.	123.79	0	0	0
+54	Meat/Poultry	Tourt	25	Ma Maison	6	16 pies	7.45	21	0	10
+74	Produce	Longlife Tofu	4	Big Traders	7	5 kg pkg.	10	4	20	5
+51	Produce	Manjimup Dried Apples	24	"G'day, Mate"	7	50 - 300 g pkgs.	53	20	0	10
+28	Produce	Rössle Sauerkraut	12	Plutzer Lebensmittelgroßmärkte AG	7	25 - 825 g cans	45.6	26	0	0
+14	Produce	Tofu	6	Red car	7	40 - 100 g pkgs.	23.25	99	0	0
+7	Produce	Uncle Bob's Organic Dried Pears	3	Grandma Kelly's Homestead	7	12 - 1 lb pkgs.	30	15	0	10
+40	Seafood	Boston Crab Meat	19	New England Seafood Cannery	8	24 - 4 oz tins	18.4	123	0	30
+18	Seafood	Carnarvon Tigers	7	"Pavlova, Ltd."	8	16 kg pkg.	62.5	42	0	0
+58	Seafood	Escarts de Bourgne	27	Escarts Nouveaux	8	24 pieces	13.25	62	0	20
+37	Seafood	Gravad lax	17	Svensk Sjöföda AB	8	12 - 500 g pkgs.	26	11	50	25
+10	Seafood	Ikura	4	Big Traders	8	12 - 200 ml jars	31	31	0	0
+36	Seafood	Inlagd Sill	17	Svensk Sjöföda AB	8	24 - 250 g  jars	19	112	0	20
+41	Seafood	Jack's New England Clam Chowder	19	New England Seafood Cannery	8	12 - 12 oz cans	9.65	85	0	10
+13	Seafood	Konbu	6	Red car	8	2 kg box	6	24	0	5
+30	Seafood	Nord-Ost Matjeshering	13	Nord-Ost-Fisch Handelsgesellschaft mbH	8	10 - 200 g glasses	25.89	10	0	15
+73	Seafood	Röd Kaviar	17	Svensk Sjöföda AB	8	24 - 150 g jars	15	101	0	5
+45	Seafood	Rogede sild	21	Lyngbysild	8	1k pkg.	9.5	5	99	15
+46	Seafood	Spegesild	21	Lyngbysild	8	4 - 450 g glasses	12	95	0	0
