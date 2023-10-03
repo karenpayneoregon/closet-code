@@ -7,7 +7,7 @@ namespace Access2;
 /// Examples for insert and update
 /// No exception handling, feel free to add
 /// </summary>
-internal class DataOperations
+internal class PeopleOperations
 {
     /*
      * Points to a database in the same folder as the executable
@@ -25,18 +25,13 @@ internal class DataOperations
         table.Load(cmd.ExecuteReader());
         return table;
     }
-    public static (bool success, int) InsertRow(string firstName, string lastName)
+
+    public static (bool success, int identifier) InsertRow(string firstName, string lastName)
     {
 
         using OleDbConnection cn = new() { ConnectionString = ConnectionString };
         using OleDbCommand cmd = new() { Connection = cn };
 
-        /*
-         * MS-Access parameters are ordinal position,
-         * not named but we can still name them which
-         * in a larger query makes it easy to identify
-         * the parameters
-         */
         cmd.Parameters.Add(new OleDbParameter
         {
             ParameterName = "@FirstName",
@@ -50,8 +45,10 @@ internal class DataOperations
         }).Value = lastName;
             
         cmd.CommandText = 
-            @"INSERT INTO Person (FirstName,LastName) 
-                  VALUES (@FirstName, @LastName)";
+            """
+            INSERT INTO Person (FirstName,LastName)
+            VALUES (@FirstName, @LastName)
+            """;
 
 
         cn.Open();
@@ -99,9 +96,11 @@ internal class DataOperations
         }).Value = identifier;
 
         cmd.CommandText =
-            @"UPDATE Person 
-              SET FirstName = @FirstName, LastName = @LastName 
-              WHERE id = @Id";
+            """
+            UPDATE Person
+            SET FirstName = @FirstName, LastName = @LastName
+            WHERE id = @Id
+            """;
 
 
         cn.Open();

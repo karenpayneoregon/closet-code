@@ -25,6 +25,7 @@ namespace FileNamesExamples
                 .ForEach(x => Console.WriteLine(x.FileName));
 
             Operations.GetLast();
+            Operations.RemoveAllFiles();
         }
 
         [ModuleInitializer]

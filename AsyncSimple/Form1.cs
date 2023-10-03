@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AsyncSimple.Classes;
 using WindowsFormsLibrary.Classes;
+//using WindowsFormsLibrary.Classes;
 using static System.Threading.Thread;
 
 namespace AsyncSimple
@@ -88,7 +89,7 @@ namespace AsyncSimple
                 }
             }
 
-            if (Dialogs.Question(this,"Question", "Do you really, really want to wait?","Yep","Nope", DialogResult.No))
+            if (WindowsFormsLibrary.Classes.Dialogs.Question(this,"Question", "Do you really, really want to wait?","Yep","Nope", DialogResult.No))
             {
                 for (int index = 0; index < 10; index++)
                 {

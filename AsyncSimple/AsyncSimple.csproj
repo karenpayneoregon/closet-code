@@ -17,9 +17,6 @@
 		<Content Include="readme.md" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\WindowsFormsLibrary\WindowsFormsLibrary.csproj" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Update="Properties\Resources.Designer.cs">
@@ -38,6 +35,10 @@
 
 	<ItemGroup>
 		<Folder Include="assets\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\WindowsFormsLibrary\WindowsFormsLibrary.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -73,7 +73,7 @@ namespace DataGridViewLibrary.Extensions
             // Iterate through the columns.
             for (int index = 0; index < gridTable.Columns.Count; index++)
             {
-                var test = gridTable.Columns[index];
+                
                 if (includeColumns.Contains(gridTable.Columns[index].ColumnName))
                 {
                     // Leverage Linq enumerator to rapidly collect all the rows into a string array, making sure to exclude null values.

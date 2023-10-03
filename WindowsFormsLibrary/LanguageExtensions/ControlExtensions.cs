@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Windows.Forms;
+﻿using System.ComponentModel;
 
 namespace WindowsFormsLibrary.LanguageExtensions
 {
@@ -63,6 +59,10 @@ namespace WindowsFormsLibrary.LanguageExtensions
                 }
             }
         }
+
+        public static List<Control> ParentLevelOnly(this Control control) 
+            => control.Descendants<Control>().Where(x => x.Parent == control).ToList();
+
         /// <summary>
         /// Get all TextBox controls from specified control
         /// </summary>
@@ -142,6 +142,6 @@ namespace WindowsFormsLibrary.LanguageExtensions
         /// <param name="checked">True false, defaults to true</param>
         /// <returns>One checked Radio button or a empty value</returns>
         public static RadioButton RadioButtonChecked(this Control control, bool @checked = true) 
-            => control.Descendants<RadioButton>().ToList().FirstOrDefault((radioButton) => radioButton.Checked == @checked);
+            => control.Descendants<RadioButton>().ToList().FirstOrDefault((radioButton) => radioButton.Checked == @checked)!;
     }
 }
