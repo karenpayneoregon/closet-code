@@ -35,6 +35,39 @@ namespace WindowsFormsLibrary.LanguageExtensions
                 action(control);
             }
         }
+
+        /// <summary>
+        /// Disable all controls on a form
+        /// </summary>
+        /// <param name="parentControl">Form to work with</param>
+        /// <param name="exclude">list of controls to exclude</param>
+        public static void DisableControls(this Control parentControl, params string[] exclude)
+        {
+            var controls = parentControl.Descendants<Control>().ToList();
+            if (exclude.Any())
+            {
+                foreach (var control in controls.Where(control => !exclude.Contains(control.Name)))
+                {
+                    control.Enabled = false;
+                }
+            }
+            else
+            {
+                foreach (var control in controls)
+                {
+                    control.Enabled = false;
+                }
+            }
+        }
+        /// <summary>
+        /// Enable all controls on a form
+        /// </summary>
+        /// <param name="parentControl"></param>
+        public static void EnableControls(this Control parentControl)
+        {
+            parentControl.Descendants<Control>().ToList().ForEach(c => c.Enabled = true);
+        }
+
         /// <summary>
         /// Base method for obtaining controls on a form or within a container like a panel or group box
         /// </summary>
