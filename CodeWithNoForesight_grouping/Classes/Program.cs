@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using Spectre.Console;
 using W = ConsoleHelperLibrary.Classes.WindowUtility;
+// ReSharper disable EqualExpressionComparison
 
 // ReSharper disable once CheckNamespace
 namespace CodeWithNoForesight_grouping
@@ -36,9 +37,8 @@ namespace CodeWithNoForesight_grouping
         {
             int[] values = { 10, 11, 12, 13 };
 
-            // ReSharper disable All
-            Console.WriteLine(values[^1] == values[values.Length - 1]);
-            // ReSharper restore All
+      
+            Console.WriteLine(values[^1] == values[^1]);
             Console.WriteLine(values[^1] == values[values.Length - 1]);
             Console.WriteLine($"{values[^1]}\t{values[values.Length - 1]}");
 

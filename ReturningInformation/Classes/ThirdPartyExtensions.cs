@@ -10,13 +10,20 @@ namespace ReturningInformation.Classes
             companyName = customer.CompanyName;
         }
 
-        public static void Deconstruct(this Customer customer, out int id, out string companyName, out int? contactIdentifier, out int? countryIdentifier)
+
+        public static void Deconstruct(
+            this Customer customer, 
+            out int id, 
+            out string companyName, 
+            out int? contactIdentifier, 
+            out int? countryIdentifier)
         {
             id = customer.CustomerIdentifier;
             companyName = customer.CompanyName;
             contactIdentifier = customer.ContactId;
             countryIdentifier = customer.CountryIdentifier;
         }
+
 
         public static void Deconstruct(this Customer customer, out int id, out string street, out string city, out string postalCode, out int? countryCode)
         {

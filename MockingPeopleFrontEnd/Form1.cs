@@ -21,6 +21,7 @@ namespace MockingPeopleFrontEnd
 
             ReadOperations.Peek += ReadOperationsOnPeek;
 
+
         }
 
         private void ReadOperationsOnPeek(string sender)

@@ -8,7 +8,7 @@ partial class Program
 {
     static void Main(string[] args)
     {
-        BooksFromDatabase();
+        //BooksFromDatabase();
         //BooksFromJson();
 
         BooksFromEntityFrameworkCore();
@@ -23,7 +23,9 @@ partial class Program
         var books = context.Books.ToList();
 
         var result1 = books
-            .GroupBy(book => book.Price < 10 ? 10 : (book.Price < 20 ? 20 : 30))
+            .GroupBy(book => book.Price < 10 ? 
+                10 : 
+                (book.Price < 20 ? 20 : 30))
             .OrderBy(grouping => grouping.Key)
             .ToList();
 
@@ -45,9 +47,11 @@ partial class Program
         decimal expensive = 30;
 
         var result2 = books
-            .GroupBy(book => book.Price <= cheap ? cheap : (book.Price > cheap && book.Price <= middle ? middle : expensive))
+            .GroupBy(book => book.Price <= cheap ? 
+                cheap : 
+                (book.Price > cheap && book.Price <= middle ? middle : expensive))
             .Select(group => (@group.Key, @group.ToList()))
-            .OrderBy(x => x.Key)
+            .OrderBy(kvp => kvp.Key)
             .ToList();
 
         AnsiConsole.MarkupLine("[b]Example [cyan]basic with select[/][/]");

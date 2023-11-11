@@ -145,6 +145,16 @@ namespace FilteredIncludeUnitTestProject
                 .Select(customer => customer.Orders.Where(order => order.ShipCountry == countryName))
                 .ToList();
 
+            IQueryable<IEnumerable<Orders>> filtered1 = context.Customers
+                .Where(customer => customer.Orders.Any(order => order.ShipCountry == countryName))
+                .Include(customer => customer.Orders.Where(order => order.ShipCountry == countryName))
+                .ThenInclude(order => order.OrderDetails)
+                .ThenInclude(orderDetails => orderDetails.Product)
+                .OrderBy(customer => customer.CustomerIdentifier)
+                .Select(customer => customer.Orders.Where(order => order.ShipCountry == countryName));
+
+            Console.WriteLine(filtered1.ToQueryString());
+
             Console.WriteLine($"Count {filtered.Count}");
             StringBuilder builder = new();
 

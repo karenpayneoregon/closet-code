@@ -8,7 +8,27 @@ public class DataOperations
     private static readonly string ConnectionString =
         "Data Source=.\\sqlexpress;Initial Catalog=NorthWind2020;Integrated Security=True;Encrypt=False";
 
+    public static DataTable GetCustomers()
+    {
+        var cn = new SqlConnection(ConnectionString);
+        var cmd = new SqlCommand { 
+            Connection = cn, 
+            CommandText = 
+                """
+                SELECT C.CompanyName,
+                       CT.FirstName,
+                       CT.LastName
+                FROM dbo.Customers AS C
+                    INNER JOIN dbo.Contacts AS CT
+                        ON C.ContactId = CT.ContactId;
+                """ };
 
+        cn.Open();
+        DataTable table = new DataTable();
+        table.Load(cmd.ExecuteReader());
+        return table;
+
+    }
     public static async Task<DataTable> ReadProductsTask(CancellationToken cancellationToken)
     {
 
