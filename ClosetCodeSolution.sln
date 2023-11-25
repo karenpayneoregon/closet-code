@@ -433,8 +433,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp2", "WinFormsApp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Questions", "Questions", "{83761E10-2969-495F-BF26-0A2DAEC9C644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterQuestions", "TwitterQuestions\TwitterQuestions.csproj", "{1E4C3DBB-CA2B-49EE-88B0-42F03AC81EF3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1152,10 +1150,6 @@ Global
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E4C3DBB-CA2B-49EE-88B0-42F03AC81EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E4C3DBB-CA2B-49EE-88B0-42F03AC81EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E4C3DBB-CA2B-49EE-88B0-42F03AC81EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E4C3DBB-CA2B-49EE-88B0-42F03AC81EF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1357,7 +1351,6 @@ Global
 		{67262DB7-2F7F-4FDC-B074-D170EAE5C8EF} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{CD56F58B-0644-4467-B238-0BA3C5A850E5} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1} = {CD56F58B-0644-4467-B238-0BA3C5A850E5}
-		{1E4C3DBB-CA2B-49EE-88B0-42F03AC81EF3} = {83761E10-2969-495F-BF26-0A2DAEC9C644}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}
