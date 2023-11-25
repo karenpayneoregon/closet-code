@@ -1,11 +1,8 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Kendo console</title>
-
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <script src="Scripts/jquery/dist/jquery.min.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -19,35 +16,39 @@
 
     <div class="topAlert">
         <div class="alert alert-primary" role="alert">
-            Peek
+            <h1 style="font-size: 12px">Peek</h1>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" role="main">
 
-        <img class="oops mt-4" src="Images/oops.png" />
+        <img class="oops mt-4" alt="oops" src="Images/oops.png" />
+
+        <div class="row">
+            <div class="col-auto">Press <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>1</kbd> for kendo console</div>
+        </div>
 
         <div class="well-container">
-            
+
             <div class="col text-center">
-                <button type="button" class="btn btn-primary w-100" id="btnNotifications">
+                <button type="button" class="btn btn-dark w-100" id="btnNotifications">
                     Email Notifications <span class="badge badge-light" id="lblIncrement">0</span>
                 </button>
             </div>
 
             <div class="col text-center mt-1">
-                <button class="btn btn-primary w-100" id="btnGetNotificationCount">Get notification count</button>
+                <button class="btn btn-dark w-100" id="btnGetNotificationCount">Get notification count</button>
             </div>
 
             <div class="col text-center mt-1">
-                <button type="button" class="btn btn-primary w-100" id="btnShowCurrentTime">
+                <button type="button" class="btn btn-dark w-100" id="btnShowCurrentTime">
                     Now
                 </button>
             </div>
 
         </div>
-        
-        <div class="row">
+
+        <div id="kendoDisplay" class="row" style="display:none">
             <div class="well-container">
                 <div class="col text-center">
                     <div class="console" style="overflow-y: scroll; height:100px;"></div>

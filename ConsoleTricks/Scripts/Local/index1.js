@@ -25,6 +25,14 @@
 
 });
 
+document.addEventListener('keydown', function (event) {
+
+    if (event.key === '1' && event.altKey && event.ctrlKey) {
+        var x = document.getElementById('kendoDisplay');
+        x.style.display = x.style.display === 'block' ? 'none' : 'block';
+    }
+
+});
 function showDateTime() {
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];

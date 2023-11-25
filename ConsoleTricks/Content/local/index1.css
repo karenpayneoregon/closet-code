@@ -13,12 +13,16 @@
 }
 
 .well-container {
-    padding: 35px;
+    padding: 30px;
     padding-left: 30px;
     box-shadow: 0 0 15px #666666;
     margin: 2% auto 0;
     width: 475px;
-    background: floralwhite;
+    background: rgb(2,0,36);
+    background: -moz-linear-gradient(353deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(0,212,255,0.5410539215686274) 75%);
+    background: -webkit-linear-gradient(353deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(0,212,255,0.5410539215686274) 75%);
+    background: linear-gradient(353deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(0,212,255,0.5410539215686274) 75%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1);
 }
 
 .well-header {
