@@ -1,7 +1,6 @@
-﻿namespace RecursivePatterns.Interfaces
+﻿namespace RecursivePatterns.Interfaces;
+
+public interface IPerson
 {
-    public interface IPerson
-    {
-        int Id { get; set; }
-    }
+    int Id { get; set; }
 }

@@ -14,7 +14,9 @@ internal partial class Program
 
         foreach (var value in list)
         {
-            var dateOnly = DateOnly.FromDateTime(DateTimeOffset.FromUnixTimeMilliseconds(long.Parse(value)).Date);
+            var dateOnly = DateOnly.FromDateTime(
+                DateTimeOffset.FromUnixTimeMilliseconds(long.Parse(value)).Date);
+
             Console.WriteLine(dateOnly);
             DateTimeOffset dateTime = DateTimeOffset.FromUnixTimeMilliseconds(long.Parse(value));
             Console.WriteLine(dateTime);

@@ -32,7 +32,7 @@ namespace PassStringFromChildToParentForm
             this.ShowChildForm = new System.Windows.Forms.Button();
             this.FemaleRadioButton = new System.Windows.Forms.RadioButton();
             this.MaleRadioButton = new System.Windows.Forms.RadioButton();
-            this.DisplayButton = new System.Windows.Forms.Button();
+            this.DummyButtton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ShowChildForm
@@ -68,22 +68,23 @@ namespace PassStringFromChildToParentForm
             this.MaleRadioButton.Text = "Male";
             this.MaleRadioButton.UseVisualStyleBackColor = true;
             // 
-            // DisplayButton
+            // DummyButtton
             // 
-            this.DisplayButton.Location = new System.Drawing.Point(12, 133);
-            this.DisplayButton.Name = "DisplayButton";
-            this.DisplayButton.Size = new System.Drawing.Size(320, 23);
-            this.DisplayButton.TabIndex = 8;
-            this.DisplayButton.Text = "Display";
-            this.DisplayButton.UseVisualStyleBackColor = true;
-            this.DisplayButton.Click += new System.EventHandler(this.DisplayButton_Click);
+            this.DummyButtton.Location = new System.Drawing.Point(14, 117);
+            this.DummyButtton.Margin = new System.Windows.Forms.Padding(4);
+            this.DummyButtton.Name = "DummyButtton";
+            this.DummyButtton.Size = new System.Drawing.Size(320, 28);
+            this.DummyButtton.TabIndex = 8;
+            this.DummyButtton.Text = "Dummy";
+            this.DummyButtton.UseVisualStyleBackColor = true;
+            this.DummyButtton.Click += new System.EventHandler(this.DummyButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 223);
-            this.Controls.Add(this.DisplayButton);
+            this.Controls.Add(this.DummyButtton);
             this.Controls.Add(this.FemaleRadioButton);
             this.Controls.Add(this.MaleRadioButton);
             this.Controls.Add(this.ShowChildForm);
@@ -101,7 +102,7 @@ namespace PassStringFromChildToParentForm
         private System.Windows.Forms.Button ShowChildForm;
         private System.Windows.Forms.RadioButton FemaleRadioButton;
         private System.Windows.Forms.RadioButton MaleRadioButton;
-        private System.Windows.Forms.Button DisplayButton;
+        private System.Windows.Forms.Button DummyButtton;
     }
 }
 

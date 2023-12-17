@@ -34,6 +34,7 @@ namespace PassStringFromChildToParentForm
             this.MaleRadioButton = new System.Windows.Forms.RadioButton();
             this.FemaleRadioButton = new System.Windows.Forms.RadioButton();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.InvokeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstNameTextBox
@@ -84,11 +85,22 @@ namespace PassStringFromChildToParentForm
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
+            // InvokeButton
+            // 
+            this.InvokeButton.Location = new System.Drawing.Point(130, 165);
+            this.InvokeButton.Name = "InvokeButton";
+            this.InvokeButton.Size = new System.Drawing.Size(99, 32);
+            this.InvokeButton.TabIndex = 7;
+            this.InvokeButton.Text = "Invoke";
+            this.InvokeButton.UseVisualStyleBackColor = true;
+            this.InvokeButton.Click += new System.EventHandler(this.InvokeButton_Click);
+            // 
             // ChildForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(233, 246);
+            this.ClientSize = new System.Drawing.Size(297, 246);
+            this.Controls.Add(this.InvokeButton);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.FemaleRadioButton);
             this.Controls.Add(this.MaleRadioButton);
@@ -97,7 +109,7 @@ namespace PassStringFromChildToParentForm
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ChildForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Child";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,5 +122,6 @@ namespace PassStringFromChildToParentForm
         private System.Windows.Forms.RadioButton MaleRadioButton;
         private System.Windows.Forms.RadioButton FemaleRadioButton;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Button InvokeButton;
     }
 }

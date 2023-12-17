@@ -12,6 +12,10 @@ namespace PassStringFromChildToParentForm
         public delegate void OnPassInformation(string sender);
         public event OnPassInformation PassInformation;
 
+        public delegate void OnClickSomeButton();
+
+        public event OnClickSomeButton ClickSomeButton;
+
         /// <summary>
         /// Note we could create an overload of this constructor
         /// and pass Male or Female
@@ -66,6 +70,11 @@ namespace PassStringFromChildToParentForm
             {
                 MessageBox.Show("Need a first name");
             }
+        }
+
+        private void InvokeButton_Click(object sender, EventArgs e)
+        {
+            ClickSomeButton?.Invoke();
         }
     }
 }

@@ -33,9 +33,18 @@ namespace PassStringFromChildToParentForm
         {
             _childForm = new ChildForm();
             _childForm.PassData += ChildForm_PassData; ;
+            _childForm.ClickSomeButton += _childForm_ClickSomeButton;
             _childForm.Show(this);
-            
+            _childForm.Left = (this.Left + this.Width) + 10;
+            _childForm.Top = Top;
+
         }
+
+        private void _childForm_ClickSomeButton()
+        {
+            DoSomething();
+        }
+
         private void ChildForm_PassData(bool isMale)
         {
             if (isMale)
@@ -48,16 +57,16 @@ namespace PassStringFromChildToParentForm
             }
         }
 
-        private void DisplayButton_Click(object sender, EventArgs e)
+        private void DummyButton_Click(object sender, EventArgs e)
         {
-            using (ChildForm form = new ChildForm())
-            {
-                form.PassInformation += delegate(string s)
-                {
-                    Debug.WriteLine(s);
-                };
-                form.ShowDialog(this);
-            }
+            DoSomething();
+        }
+        private void DoSomething()
+
+        {
+
+            MessageBox.Show("Do some work");
+
         }
     }
 }

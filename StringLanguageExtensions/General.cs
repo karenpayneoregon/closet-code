@@ -147,7 +147,7 @@ namespace StringLanguageExtensions
                 .Aggregate((value1, value2) => value1 + value2);
 
         /// <summary>
-        /// Replace string case insensitive
+        /// Replace string case-insensitive
         /// </summary>
         /// <param name="sender">String to work on</param>
         /// <param name="from">Find string</param>
@@ -190,7 +190,7 @@ namespace StringLanguageExtensions
         }
 
         /// <summary>
-        /// Use to split on upper cased characters and separate with a single space.
+        /// Use to split on upper-cased characters and separate with a single space.
         /// </summary>
         public static string SplitCamelCase(this string sender) =>
             string.Join(" ", Regex.Matches(sender, @"([A-Z][a-z]+)")

@@ -1,7 +1,6 @@
-﻿namespace RecursivePatterns.Classes
+﻿namespace RecursivePatterns.Classes;
+
+public class Employee : Person
 {
-    public class Employee : Person
-    {
-        public int ReportsTo { get; set; }
-    }
+    public int ReportsTo { get; set; }
 }
