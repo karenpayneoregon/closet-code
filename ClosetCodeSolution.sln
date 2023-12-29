@@ -405,8 +405,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelDataReaderApp", "Excel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumComparisionApp", "EnumComparisionApp\EnumComparisionApp.csproj", "{2CD1E112-18C2-4055-820E-660B98188508}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{890DB6E4-B3DE-4B4C-A1C2-93926CB7EB6C}"
-EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "SimpleSqlInsert", "SimpleSqlInsert\SimpleSqlInsert.vbproj", "{79FD7663-78E0-4589-81AC-92D5E479D211}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongToDateOnlyApp", "LongToDateOnlyApp\LongToDateOnlyApp.csproj", "{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}"
@@ -433,7 +431,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp2", "WinFormsApp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Questions", "Questions", "{83761E10-2969-495F-BF26-0A2DAEC9C644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{645E31AF-AAA2-472A-82FE-FB8A559D1554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{645E31AF-AAA2-472A-82FE-FB8A559D1554}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1104,10 +1102,6 @@ Global
 		{2CD1E112-18C2-4055-820E-660B98188508}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CD1E112-18C2-4055-820E-660B98188508}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CD1E112-18C2-4055-820E-660B98188508}.Release|Any CPU.Build.0 = Release|Any CPU
-		{890DB6E4-B3DE-4B4C-A1C2-93926CB7EB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{890DB6E4-B3DE-4B4C-A1C2-93926CB7EB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{890DB6E4-B3DE-4B4C-A1C2-93926CB7EB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{890DB6E4-B3DE-4B4C-A1C2-93926CB7EB6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{79FD7663-78E0-4589-81AC-92D5E479D211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79FD7663-78E0-4589-81AC-92D5E479D211}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79FD7663-78E0-4589-81AC-92D5E479D211}.Release|Any CPU.ActiveCfg = Release|Any CPU
