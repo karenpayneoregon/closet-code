@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-	  <TargetFramework>net7.0-windows10.0.19041.0</TargetFramework>
-	  <Nullable>enable</Nullable>
+	  <TargetFramework>net8.0-windows</TargetFramework>
+	  <Nullable>disable</Nullable>
 	  <UseWindowsForms>true</UseWindowsForms>
 	  <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>ValidationRule_16x.ico</ApplicationIcon>
@@ -46,6 +46,10 @@
     <None Update="CustomerSettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -62,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
   </ItemGroup>
 

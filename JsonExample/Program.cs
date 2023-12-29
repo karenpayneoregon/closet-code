@@ -9,7 +9,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        TryThis();
+        //TryThis();
         if (File.Exists(PeopleOperations.FileName))
         {
             NewtonOperations.ConvertJsonToXml();
