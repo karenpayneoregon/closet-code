@@ -431,6 +431,28 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp2", "WinFormsApp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Questions", "Questions", "{83761E10-2969-495F-BF26-0A2DAEC9C644}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LanguageDropdownsSamples", "LanguageDropdownsSamples\", "{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_60977"
+		Debug.AspNetCompiler.PhysicalPath = "LanguageDropdownsSamples\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60977\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_60977"
+		Release.AspNetCompiler.PhysicalPath = "LanguageDropdownsSamples\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60977\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60977"
+		SlnRelativePath = "LanguageDropdownsSamples\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1144,6 +1166,10 @@ Global
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1345,6 +1371,7 @@ Global
 		{67262DB7-2F7F-4FDC-B074-D170EAE5C8EF} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{CD56F58B-0644-4467-B238-0BA3C5A850E5} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1} = {CD56F58B-0644-4467-B238-0BA3C5A850E5}
+		{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E} = {85EDE1FD-DE28-4B56-96F9-76D0D1836E32}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Dropdown of spoken languages</title>
+    <link href="libraries/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="data/spokenLanguages.js"></script>
+    <!--suppress no favicon-->
+    <link rel="shortcut icon" href="#">
+</head>
+<body style="margin-right: 10px;">
+
+    <div class="container">
+
+        <div class="alert alert-primary mt-4" role="alert">
+            <h1 class="fs-4">Dropdown of spoken languages</h1>
+        </div>
+
+        <div class="row mt-2 ms-2">
+
+            <fieldset class="border border-dark-subtle rounded-3 p-3 mt-3 mb-3">
+
+                <legend class="float-none w-auto fs-6 px-1  ledgend-special">
+                    <span class="fw-bold">Details</span>
+                </legend>
+
+                <div class="d-flex justify-content-between">
+                    <label for="spoken_language" class="required">Language</label>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        <select id="spoken_language"
+                                name="spoken_language"
+                                class="form-select mb-2"
+                                style="width: 15em"
+                                aria-label="spoken language"
+                                required>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-auto">
+                        <button id="getButton" class="btn btn-primary">Get</button>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset class="border border-dark-subtle rounded-3 p-3 mt-3 mb-3" style="width: 22em;">
+                <legend class="float-none w-auto fs-6 px-1  ledgend-special">
+                    <span class="fw-bold">Selected</span>
+                </legend>
+                <div class="row">
+                    <div id="results"></div>
+                </div>
+            </fieldset>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        /*
+         * Consider refactoring in a real application to place some code in classes.
+         */
+        document.addEventListener("DOMContentLoaded", () => {
+            //
+            // This is the equivalent of the JavaScript code under the commented code below to load
+            // spoken languages into a select element.
+            //
+            //$(function () {
+
+            //    $.each(spokenLanguageList(),
+            //        function (i, option) {
+            //            $('#spoken_language').append($('<option/>')
+            //                .attr("value", option.code).text(option.name));
+            //        });
+
+            //});
+
+            // element to load the spoken languages into
+            var selectElement = document.getElementById('spoken_language');
+
+            // the .map prototype function is used to create a new array of objects that contain the name and code to
+            // populate the select element
+
+            spokenLanguageList()
+                .map(item => selectElement.appendChild(new Option(item.name, item.code))
+                    .cloneNode(true));
+
+            // set the default value
+            selectElement.value = 'en';
+            // trigger the change event
+            selectElement.dispatchEvent(new Event("change"));
+
+        });
+
+        /*
+         * This is the event handler for obtaining the spoken_language dropdown value.
+         */
+        document.getElementById("getButton").addEventListener("click", function () {
+            var value = document.getElementById("spoken_language").value;
+        });
+
+        /*
+         * This is the event handler for the spoken_language dropdown on selection change.
+         * On selection change the text and code are written to an element below the select.
+         */
+        document.getElementById("spoken_language").addEventListener("change", (e) => {
+            // visual text
+            let innerText = e.target[e.target.options.selectedIndex].innerText;
+            // underlying code
+            let value = e.target.value;
+            document.getElementById("results").innerHTML =
+                "<span style='font-weight: bold;color:green'>innerText</span>: " +
+                innerText +
+                "<br /><span style='font-weight: bold;color:green'>value:</span> " +
+                value;
+        });
+
+
+    </script>
+</body>
+</html>
