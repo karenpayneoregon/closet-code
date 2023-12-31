@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using DataGridViewButtonApp.Controls;
 using DataGridViewButtonApp.Extensions;
 using static System.Windows.Forms.DataFormats;
+#pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
 
 namespace DataGridViewButtonApp;
 
@@ -17,7 +18,8 @@ public partial class Form1 : Form
     /// Name of the edit DataGridViewButton
     /// </summary>
     public string EditButtonName { get; set; } = "EditColumn";
-    private string removeButtonName = "RemoveColumn";
+
+    public string _removeButtonName = "RemoveColumn";
     private string editButtonName = "EditColumn";
     private int mIdentifier = 0;
 

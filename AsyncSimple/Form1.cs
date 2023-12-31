@@ -1,13 +1,9 @@
-﻿using System;
-
-using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
 using AsyncSimple.Classes;
 using WindowsFormsLibrary.Classes;
 //using WindowsFormsLibrary.Classes;
 using static System.Threading.Thread;
+#pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
 
 namespace AsyncSimple
 {

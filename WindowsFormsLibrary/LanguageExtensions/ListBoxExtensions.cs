@@ -1,8 +1,9 @@
-﻿using System;
+﻿using System.ComponentModel;
 using System.Data;
-using System.IO;
-using System.Linq;
-using System.Windows.Forms;
+using System.Text.Json;
+using WindowsFormsLibrary.Classes;
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+
 // ReSharper disable CoVariantArrayConversion
 
 namespace WindowsFormsLibrary.LanguageExtensions
@@ -18,6 +19,40 @@ namespace WindowsFormsLibrary.LanguageExtensions
         public static void SaveToFile(this ListBox.ObjectCollection sender, string FileName)
         {
             File.WriteAllLines(FileName, sender.Cast<string>().Select(Row => Row).ToArray());
+        }
+
+
+        public static void SaveToFile<T>(this BindingList<T> sender, string FileName)
+        {
+            File.WriteAllText(FileName, JsonSerializer.Serialize(sender, new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Converters = { new FixedDecimalJsonConverter() }
+            }));
+        }
+        public static void SaveToFile<T>(this Control sender, string FileName)
+        {
+
+            List<T>? list;
+            if (sender.IsComboBox())
+            {
+                list = (List<T>)((ComboBox)sender).DataSource;
+            }
+            else if (sender.IsListBox())
+            {
+                list = (List<T>)((ListBox)sender).DataSource;
+            }
+            else
+            {
+                throw new Exception("Control must be a ComboBox or ListBox");
+            }
+
+            File.WriteAllText(FileName, JsonSerializer.Serialize(list, new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Converters = { new FixedDecimalJsonConverter() }
+            }));
+
         }
 
         /// <summary>

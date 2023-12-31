@@ -32,6 +32,9 @@ partial class Form1
         button2 = new Button();
         button3 = new Button();
         button4 = new Button();
+        BooksListBox1 = new ListBox();
+        button5 = new Button();
+        BooksListBox2 = new ListBox();
         SuspendLayout();
         // 
         // button1
@@ -72,11 +75,40 @@ partial class Form1
         button4.UseVisualStyleBackColor = true;
         button4.Click += button4_Click;
         // 
+        // BooksListBox1
+        // 
+        BooksListBox1.FormattingEnabled = true;
+        BooksListBox1.Location = new Point(265, 45);
+        BooksListBox1.Name = "BooksListBox1";
+        BooksListBox1.Size = new Size(325, 184);
+        BooksListBox1.TabIndex = 4;
+        // 
+        // button5
+        // 
+        button5.Location = new Point(616, 45);
+        button5.Name = "button5";
+        button5.Size = new Size(94, 29);
+        button5.TabIndex = 5;
+        button5.Text = "button5";
+        button5.UseVisualStyleBackColor = true;
+        button5.Click += button5_Click;
+        // 
+        // BooksListBox2
+        // 
+        BooksListBox2.FormattingEnabled = true;
+        BooksListBox2.Location = new Point(265, 235);
+        BooksListBox2.Name = "BooksListBox2";
+        BooksListBox2.Size = new Size(325, 184);
+        BooksListBox2.TabIndex = 6;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(BooksListBox2);
+        Controls.Add(button5);
+        Controls.Add(BooksListBox1);
         Controls.Add(button4);
         Controls.Add(button3);
         Controls.Add(button2);
@@ -92,4 +124,7 @@ partial class Form1
     private Button button2;
     private Button button3;
     private Button button4;
+    private ListBox BooksListBox1;
+    private Button button5;
+    private ListBox BooksListBox2;
 }
