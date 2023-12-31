@@ -2,8 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFramework>net5.0-windows</TargetFramework>
-		<LangVersion>9.0</LangVersion>
+		<TargetFramework>net8.0-windows</TargetFramework>
 		<UseWPF>true</UseWPF>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 	</PropertyGroup>

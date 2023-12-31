@@ -5,42 +5,22 @@ using System.Windows.Data;
 using ThirdPartyLibrary.Classes;
 using ThirdPartyLibrary.Models;
 
-namespace VendorsApp.Models
+namespace VendorsApp.Models;
+
+public class VendorModel : INotifyPropertyChanged
 {
-    public class VendorModel : INotifyPropertyChanged
+
+    public VendorModel()
     {
-        private readonly CollectionView _vendorEntries;
-        private string _vendorEntry;
+        IReadOnlyList<Vendor> list = References.Vendors();
+        VendorEntries = new CollectionView(list);
+    }
 
-        public VendorModel()
-        {
-            IReadOnlyList<Vendor> list = References.Vendors();
-            _vendorEntries = new CollectionView(list);
-        }
+    public CollectionView VendorEntries { get; }
 
-        public CollectionView VendorEntries => _vendorEntries;
-
-        public string VendorEntry
-        {
-            get => _vendorEntry;
-            set
-            {
-
-                if (_vendorEntry == value)
-                {
-                    return;
-                }
-
-                _vendorEntry = value;
-
-                OnPropertyChanged();
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+    public event PropertyChangedEventHandler PropertyChanged;
+    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
