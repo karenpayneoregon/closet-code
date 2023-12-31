@@ -184,6 +184,16 @@ namespace IsYouCodeReadable
 
 
 
+
+
+
+
+
+
+
+
+
+
             for (int index = 0; index < wellDoneResult.Count(); index++)
             {
                 Console.WriteLine($"{wellDoneResult[index].Index,-3}{wellDoneResult[index].Name}");
@@ -197,6 +207,10 @@ namespace IsYouCodeReadable
                     Name = n,
                     Index = x + 1
                 }).ToArray();
+
+
+
+
 
             for (int index = 0; index < poorlyDoneResult.Count(); index++)
             {
