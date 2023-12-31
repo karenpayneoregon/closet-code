@@ -30,7 +30,7 @@ namespace WindowsFormsLibrary.Classes
         /// </summary>
         /// <returns></returns>
         public static ApplicationSettings GetSetting => 
-            JsonConvert.DeserializeObject<ApplicationSettings>(File.ReadAllText(FileName));
+            JsonConvert.DeserializeObject<ApplicationSettings>(File.ReadAllText(FileName))!;
 
         /// <summary>
         /// Indicates whether to show or not show the dialog 

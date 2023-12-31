@@ -12,7 +12,7 @@ namespace WindowsFormsLibrary.Controls
         /// <summary>
         /// Subscribe to be notified when ENTER was pressed.
         /// </summary>
-        public event TriggerDelegate TriggerEvent;
+        public event TriggerDelegate? TriggerEvent;
         protected override void OnKeyDown(KeyEventArgs e)
         {
             if (e.KeyCode == (Keys.Return))

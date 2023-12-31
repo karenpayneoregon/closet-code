@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore.Query.Internal;
+#pragma warning disable CS0169 // Field is never used
 
 namespace ShadowProperties.Models
 {

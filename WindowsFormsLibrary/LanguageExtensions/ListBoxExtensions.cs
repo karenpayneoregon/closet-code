@@ -3,6 +3,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+// ReSharper disable CoVariantArrayConversion
 
 namespace WindowsFormsLibrary.LanguageExtensions
 {
@@ -51,7 +52,7 @@ namespace WindowsFormsLibrary.LanguageExtensions
         /// <remarks></remarks>
         public static void SaveToFile(this ListBox.ObjectCollection sender, string FileName, string ColumnName)
         {
-            File.WriteAllLines(FileName, sender.Cast<DataRowView>().Select(Row => Convert.ToString(Row[ColumnName])).ToArray());
+            File.WriteAllLines(FileName, sender.Cast<DataRowView>().Select(Row => Convert.ToString(Row[ColumnName])).ToArray()!);
         }
 
         /// <summary>
@@ -63,7 +64,7 @@ namespace WindowsFormsLibrary.LanguageExtensions
         /// <remarks></remarks>
         public static void SaveToFile(this ListBox.ObjectCollection sender, string FileName, int ColumnIndex)
         {
-            File.WriteAllLines(FileName, sender.Cast<DataRowView>().Select(Row => Convert.ToString(Row[ColumnIndex])).ToArray());
+            File.WriteAllLines(FileName, sender.Cast<DataRowView>().Select(Row => Convert.ToString(Row[ColumnIndex])).ToArray()!);
         }
 
         public static void LoadFromFile(this ListBox.ObjectCollection sender, string FileName)

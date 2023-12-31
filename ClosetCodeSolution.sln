@@ -93,28 +93,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreateDynamicButtons", "Cre
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{85EDE1FD-DE28-4B56-96F9-76D0D1836E32}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ConsoleTricks", "ConsoleTricks\", "{D77E95F3-CE0D-4164-8B8E-82E878053BE2}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_30175"
-		Debug.AspNetCompiler.PhysicalPath = "ConsoleTricks\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_30175\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_30175"
-		Release.AspNetCompiler.PhysicalPath = "ConsoleTricks\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_30175\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "30175"
-		SlnRelativePath = "ConsoleTricks\"
-		DefaultWebSiteLanguage = "Visual Basic"
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationLibrary", "FluentValidationLibrary\FluentValidationLibrary.csproj", "{B6B85A2E-3DEC-401E-BC87-E1E43CB13AF4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseDataValidatorLibrary", "BaseDataValidatorLibrary\BaseDataValidatorLibrary.csproj", "{63ECAC78-A065-4A1B-952F-B2D8F602BC25}"
@@ -170,8 +148,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewCheckSelectAll", "DataGridViewCheckAllCodeProject\DataGridViewCheckSelectAll.csproj", "{5D6FF39E-44E7-4B68-933D-558C9CA45D9C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobbingProject", "GlobbingProject\GlobbingProject.csproj", "{CFC14BF0-9C82-484F-B739-D77428018C26}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelerikSampleApp", "TelerikSampleApp\TelerikSampleApp.csproj", "{C29BBCDA-866F-4317-B383-6CD05726833E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuSimpleApp", "MenuSimpleApp\MenuSimpleApp.csproj", "{C43C8A6E-DBA7-4185-899C-ADF86FDC568C}"
 EndProject
@@ -403,8 +379,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonExample", "JsonExample\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelDataReaderApp", "ExcelDataReaderApp\ExcelDataReaderApp.csproj", "{3C43A37A-0449-4049-9E30-E7147B4B7AA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumComparisionApp", "EnumComparisionApp\EnumComparisionApp.csproj", "{2CD1E112-18C2-4055-820E-660B98188508}"
-EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "SimpleSqlInsert", "SimpleSqlInsert\SimpleSqlInsert.vbproj", "{79FD7663-78E0-4589-81AC-92D5E479D211}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LongToDateOnlyApp", "LongToDateOnlyApp\LongToDateOnlyApp.csproj", "{C3D2FB42-FE19-4CFB-8EFD-86B60272D410}"
@@ -430,28 +404,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp2", "WinFormsApp2\WinFormsApp2.csproj", "{A1E8AA91-0DFA-457C-8FA0-984815F663B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Questions", "Questions", "{83761E10-2969-495F-BF26-0A2DAEC9C644}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LanguageDropdownsSamples", "LanguageDropdownsSamples\", "{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_60977"
-		Debug.AspNetCompiler.PhysicalPath = "LanguageDropdownsSamples\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60977\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_60977"
-		Release.AspNetCompiler.PhysicalPath = "LanguageDropdownsSamples\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60977\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "60977"
-		SlnRelativePath = "LanguageDropdownsSamples\"
-		DefaultWebSiteLanguage = "Visual Basic"
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -595,10 +547,6 @@ Global
 		{F3821257-918C-4129-A3AD-50D341654699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3821257-918C-4129-A3AD-50D341654699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3821257-918C-4129-A3AD-50D341654699}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D77E95F3-CE0D-4164-8B8E-82E878053BE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D77E95F3-CE0D-4164-8B8E-82E878053BE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D77E95F3-CE0D-4164-8B8E-82E878053BE2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{D77E95F3-CE0D-4164-8B8E-82E878053BE2}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{B6B85A2E-3DEC-401E-BC87-E1E43CB13AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B6B85A2E-3DEC-401E-BC87-E1E43CB13AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6B85A2E-3DEC-401E-BC87-E1E43CB13AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -699,10 +647,6 @@ Global
 		{CFC14BF0-9C82-484F-B739-D77428018C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFC14BF0-9C82-484F-B739-D77428018C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFC14BF0-9C82-484F-B739-D77428018C26}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C29BBCDA-866F-4317-B383-6CD05726833E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C29BBCDA-866F-4317-B383-6CD05726833E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C29BBCDA-866F-4317-B383-6CD05726833E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C29BBCDA-866F-4317-B383-6CD05726833E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C43C8A6E-DBA7-4185-899C-ADF86FDC568C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C43C8A6E-DBA7-4185-899C-ADF86FDC568C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C43C8A6E-DBA7-4185-899C-ADF86FDC568C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1118,10 +1062,6 @@ Global
 		{3C43A37A-0449-4049-9E30-E7147B4B7AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C43A37A-0449-4049-9E30-E7147B4B7AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C43A37A-0449-4049-9E30-E7147B4B7AA5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CD1E112-18C2-4055-820E-660B98188508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CD1E112-18C2-4055-820E-660B98188508}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CD1E112-18C2-4055-820E-660B98188508}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CD1E112-18C2-4055-820E-660B98188508}.Release|Any CPU.Build.0 = Release|Any CPU
 		{79FD7663-78E0-4589-81AC-92D5E479D211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79FD7663-78E0-4589-81AC-92D5E479D211}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79FD7663-78E0-4589-81AC-92D5E479D211}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -1166,10 +1106,6 @@ Global
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1214,7 +1150,6 @@ Global
 		{C5021363-5B24-4219-B87E-8191DED7501D} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{9822B8FD-F289-4769-BB5E-DC8EE8094C19} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{F3821257-918C-4129-A3AD-50D341654699} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
-		{D77E95F3-CE0D-4164-8B8E-82E878053BE2} = {85EDE1FD-DE28-4B56-96F9-76D0D1836E32}
 		{B6B85A2E-3DEC-401E-BC87-E1E43CB13AF4} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{63ECAC78-A065-4A1B-952F-B2D8F602BC25} = {4FAE65DC-D6EA-47C5-A4A5-497A9552216D}
 		{A5E4E004-67DB-4E16-92AA-B60AC6CD31D2} = {244EAEB2-F968-4793-A47C-78FE0351165F}
@@ -1242,7 +1177,6 @@ Global
 		{D5BD589B-AB7D-4B42-B449-73D356787235} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{5D6FF39E-44E7-4B68-933D-558C9CA45D9C} = {53CF6F8F-2F95-4793-979D-D51F5AAFE938}
 		{CFC14BF0-9C82-484F-B739-D77428018C26} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
-		{C29BBCDA-866F-4317-B383-6CD05726833E} = {85EDE1FD-DE28-4B56-96F9-76D0D1836E32}
 		{C43C8A6E-DBA7-4185-899C-ADF86FDC568C} = {AA044A45-19A3-436D-8D59-FD96D1C876EC}
 		{BD26A4C3-125F-42D5-A1F1-727E45F66A6C} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{4B9EBBFD-62D9-4979-948F-12D02ED6D471} = {AC3B9674-F6F0-447D-A392-72344A74EB17}
@@ -1358,7 +1292,6 @@ Global
 		{EF7D415A-90F3-4104-A52F-0FD41F9682E3} = {A8A38D35-7872-46C3-A4CF-B8DE2C518E95}
 		{FBECCAC2-1FDC-4867-AA07-1791746966C6} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
 		{3C43A37A-0449-4049-9E30-E7147B4B7AA5} = {B71422D3-E494-4BBD-9347-AB2F9A22460D}
-		{2CD1E112-18C2-4055-820E-660B98188508} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{79FD7663-78E0-4589-81AC-92D5E479D211} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{B0999CDF-0FE9-4A0B-B907-F002601F04C6} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
@@ -1371,7 +1304,6 @@ Global
 		{67262DB7-2F7F-4FDC-B074-D170EAE5C8EF} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{CD56F58B-0644-4467-B238-0BA3C5A850E5} = {0D9831FB-491A-48F3-B8E9-8D54017E7A58}
 		{A1E8AA91-0DFA-457C-8FA0-984815F663B1} = {CD56F58B-0644-4467-B238-0BA3C5A850E5}
-		{FD9609EA-3F7E-475D-A0B8-4EAFC42DED3E} = {85EDE1FD-DE28-4B56-96F9-76D0D1836E32}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4220561F-023E-4F8E-8893-1A0DBFDF1B0C}

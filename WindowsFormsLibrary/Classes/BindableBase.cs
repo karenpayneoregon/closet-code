@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+#pragma warning disable CS8612 // Nullability of reference types in type doesn't match implicitly implemented member.
 
 namespace WindowsFormsLibrary.Classes
 {
@@ -20,7 +21,7 @@ namespace WindowsFormsLibrary.Classes
         /// <param name="propertyName">Name of the property used to notify listeners. This
         /// value is optional and can be provided automatically when invoked from compilers
         /// that support <see cref="CallerMemberNameAttribute"/>.</param>
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null) =>
+        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         /// <summary>
@@ -36,7 +37,7 @@ namespace WindowsFormsLibrary.Classes
         /// <returns>True if the value was changed, false if the existing value matched the
         /// desired value.</returns>
         protected bool Set<T>(ref T storage, T value,
-            [CallerMemberName] string propertyName = null)
+            [CallerMemberName] string? propertyName = null)
         {
             if (Equals(storage, value))
             {
