@@ -1,4 +1,4 @@
 // Global using directives
 
-global using ConsoleHelperLibrary.Classes;
+global using System.Runtime.CompilerServices;
 global using Spectre.Console;

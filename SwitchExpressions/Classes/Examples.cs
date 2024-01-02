@@ -51,7 +51,7 @@ namespace SwitchExpressions.Classes
                     return 2;
                 case Manager:
                     return 3;
-                case { }:
+                case not null:
                     return 1;
                 case null:
                     throw new ArgumentNullException(nameof(sender));
@@ -73,7 +73,7 @@ namespace SwitchExpressions.Classes
                 Developer { Experience: Experience.Guru } => 10,
                 Developer { Experience: Experience.Novice } => 1,
                 Developer { Experience: Experience.Professional } => 8,
-                { } => 0,
+                not null => 0,
                 null => throw new ArgumentNullException(nameof(sender))
             };
         }
@@ -173,5 +173,7 @@ namespace SwitchExpressions.Classes
 
             Console.WriteLine(message);
         }
+
+
     }
 }
