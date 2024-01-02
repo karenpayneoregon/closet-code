@@ -1,12 +1,11 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Diagnostics;
 
 namespace Setters.Classes
 {
     /// <summary>
     ///  Intent is to show differences between a class and record which are immutable such as
-    ///  shown in the last two week's classes.
+    ///  shown in the last two weeks' classes.
     ///
     ///  PersonClass is generally used for a container of data with read/write capabilities
     ///  PersonRecord is a quick upgrade from a class as in PersonClass
@@ -53,7 +52,8 @@ namespace Setters.Classes
             /*
              * True record deconstructed 
              */
-            (string firstName, string middleName, string lastName) = new PersonRecordReadOnly("Karen", "","Payne");
+            
+            (int id, string firstName, string middleName, string lastName, List<string> list) = new Models.PersonRecord(1, "Karen", "", "Payne", ["(999) 999-2222", "(333) 888-9999"]);
 
             Person1 person1 = new("Karen", "","Payne");
             Person1 person2 = new("Karen", "","Payne");
@@ -95,12 +95,6 @@ namespace Setters.Classes
         public string MiddleName { get; init; }
         public string LastName { get; init; }
     }
-
-    public record PersonRecordReadOnly(
-        [property: Description("First Name")] string FirstName,
-        [property: Description("Middle Name")] string MiddleName,
-        [property: Description("Last Name")] string LastName
-    );
 
     public record Person1(string FirstName, string MiddleName, string LastName);
 

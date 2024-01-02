@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Data;
 using ThirdPartyLibrary.Classes;
@@ -12,8 +13,9 @@ public class VendorModel : INotifyPropertyChanged
 
     public VendorModel()
     {
-        IReadOnlyList<Vendor> list = References.Vendors();
+        var list = References.Vendors();
         VendorEntries = new CollectionView(list);
+        Debug.WriteLine(ObjectDumper.Dump(list, DumpStyle.CSharp));
     }
 
     public CollectionView VendorEntries { get; }

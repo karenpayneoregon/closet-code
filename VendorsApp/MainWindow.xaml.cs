@@ -5,44 +5,48 @@ using ThirdPartyLibrary.Models;
 using VendorsApp.Classes;
 using VendorsApp.Models;
 
-namespace VendorsApp
+namespace VendorsApp;
+
+public partial class MainWindow : Window
 {
+    private IntPtr _intPtr;
+    private bool _shown;
 
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        private IntPtr _intPtr;
-        private bool _shown;
+        InitializeComponent();
 
-        public MainWindow()
+        VendorModel vendorModel = new();
+        DataContext = vendorModel;
+    }
+
+    protected override void OnContentRendered(EventArgs e)
+    {
+        base.OnContentRendered(e);
+
+        if (_shown)
         {
-            InitializeComponent();
-
-            VendorModel vendorModel = new();
-            DataContext = vendorModel;
+            return;
         }
 
-        protected override void OnContentRendered(EventArgs e)
-        {
-            base.OnContentRendered(e);
+        _shown = true;
+        Window window = GetWindow(this);
 
-            if (_shown)
-            {
-                return;
-            }
+        var windowInterop = new WindowInteropHelper(window ?? throw new InvalidOperationException());
+        _intPtr = windowInterop.Handle;
+    }
 
-            _shown = true;
-            Window window = GetWindow(this);
-            var windowInterop = new WindowInteropHelper(window ?? throw new InvalidOperationException());
-            _intPtr = windowInterop.Handle;
-        }
+    private void SelectedVendorButton_Click(object sender, RoutedEventArgs e)
+    {
+        Vendor current = (Vendor)VendorsCombobox.SelectedItem;
 
-        private void SelectedVendorButton_Click(object sender, RoutedEventArgs e)
-        {
-            Vendor current = (Vendor)VendorsCombobox.SelectedItem;
+        var text = current.Id == 0 ?
+            "Please make a selection" : 
+            $"Id {current.Id}\n" +
+            $"{current.DisplayName}\n{current.AccountNumber}\n{current.CreditRating}";
 
-            var text = current.Id == 0 ? "Please make a selection" : $"Id {current.Id}\n{current.DisplayName}\n{current.AccountNumber}\n{current.CreditRating}";
-            var heading = current.Id == 0 ? "" : "Current selection";
-            Dialogs.Information(_intPtr, heading, text,"Got it!!!");
-        }
+        var heading = current.Id == 0 ? "" : "Current selection";
+        Dialogs.Information(_intPtr, heading, text,"Got it!!!");
+
     }
 }

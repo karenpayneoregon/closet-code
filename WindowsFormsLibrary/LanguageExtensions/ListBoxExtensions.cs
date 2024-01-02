@@ -30,6 +30,8 @@ namespace WindowsFormsLibrary.LanguageExtensions
                 Converters = { new FixedDecimalJsonConverter() }
             }));
         }
+
+
         public static void SaveToFile<T>(this Control sender, string FileName)
         {
 
