@@ -2,8 +2,9 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net5.0</TargetFramework>
-		<LangVersion>9.0</LangVersion>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
 		<ApplicationIcon>csharp.ico</ApplicationIcon>
 	</PropertyGroup>
 
@@ -19,10 +20,12 @@
 
 	<ItemGroup>
 		<PackageReference Include="ConfigurationLibrary" Version="1.0.1" />
+		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.2" />
 		<PackageReference Include="Spectre.Console" Version="0.44.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<!-- ReSharper disable once VulnerablePackage -->
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
 	</ItemGroup>
 
@@ -30,9 +33,7 @@
 	  <Folder Include="Scripts\" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
-	</ItemGroup>
+
 
 	<ItemGroup>
 	  <None Update="appsettings.json">

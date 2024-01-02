@@ -1,11 +1,9 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using HasConversion.Classes;
 using HasConversion.Data;
 using HasConversion.Models;
-using Newtonsoft.Json;
 using Spectre.Console;
 using W = ConsoleHelperLibrary.Classes.WindowUtility;
 
@@ -31,8 +29,7 @@ namespace HasConversion
                 }
             };
 
-            return JsonConvert.DeserializeObject<Account>(
-                JsonConvert.SerializeObject(account, Formatting.Indented));
+            return account; 
         }
 
         private static void ViewAccounts()
