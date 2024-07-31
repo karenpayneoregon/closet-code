@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -6,42 +7,66 @@ namespace PassStringFromChildToParentForm
 {
     public partial class MainForm : Form
     {
+        private ChildForm _childForm;
         public MainForm()
         {
             InitializeComponent();
+            MaleRadioButton.CheckedChanged += RadioButton_CheckedChanged;
+            FemaleRadioButton.CheckedChanged += RadioButton_CheckedChanged;
+        }
+
+        /// <summary>
+        /// If child form is open, push change notification of which
+        /// RadioButton is selected
+        /// </summary>
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<ChildForm>().Count() != 1) return;
+            var radioButton = (RadioButton)sender;
+            if (!radioButton.Checked) return;
+            if (!radioButton.Checked) return;
+            _childForm.UpdateRadioButton(MaleRadioButton.Checked);
+
         }
 
         private void ShowChildForm_Click(object sender, EventArgs e)
         {
-            ChildForm childForm = new ChildForm();
+            _childForm = new ChildForm();
+            _childForm.PassData += ChildForm_PassData; ;
+            _childForm.ClickSomeButton += _childForm_ClickSomeButton;
+            _childForm.Show(this);
+            _childForm.Left = (this.Left + this.Width) + 10;
+            _childForm.Top = Top;
 
-            childForm.PassMonths += OnPassMonths;
-
-            try
-            {
-                childForm.ShowDialog();
-            }
-            finally
-            {
-                childForm.Dispose();
-            }
         }
 
-        private void OnPassMonths(string month)
+        private void _childForm_ClickSomeButton()
         {
-            if (dataGridView1.MonthNotExists(month))
+            DoSomething();
+        }
+
+        private void ChildForm_PassData(bool isMale)
+        {
+            if (isMale)
             {
-                dataGridView1.Rows.Add(month);
+                MaleRadioButton.Checked = true;
+            }
+            else
+            {
+                FemaleRadioButton.Checked = true;
             }
         }
-    }
 
-    public static class DataGridViewExtensions
-    {
-        // in this case the cell is assumed to be 0, change if not 0
-        public static bool MonthNotExists(this DataGridView dgv, string month) => 
-            dgv.Rows.Cast<DataGridViewRow>()
-                .FirstOrDefault(row => row.Cells[0].Value.ToString()
-                    .Equals(month)) == null;
+        private void DummyButton_Click(object sender, EventArgs e)
+        {
+            DoSomething();
+        }
+        private void DoSomething()
+
+        {
+
+            MessageBox.Show("Do some work");
+
+        }
     }
 }

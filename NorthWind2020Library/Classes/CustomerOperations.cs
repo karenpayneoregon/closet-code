@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using NorthWind2020ConsoleApp.Data;
+using NorthWind2020Library.Data;
 using NorthWind2020Library.Models;
 
 namespace NorthWind2020Library.Classes

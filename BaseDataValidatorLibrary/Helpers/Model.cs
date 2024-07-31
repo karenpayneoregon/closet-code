@@ -1,10 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Reflection;
-using BaseDataValidatorLibrary.Classes;
-using BaseDataValidatorLibrary.CommonRules;
-
-namespace BaseDataValidatorLibrary.Helpers
+﻿namespace BaseDataValidatorLibrary.Helpers
 {
     public partial class Model
     {

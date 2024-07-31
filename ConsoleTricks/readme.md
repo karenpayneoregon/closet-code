@@ -1,6 +1,5 @@
-﻿Simple example for using 
+﻿# About
 
-- Progress/Kendo console
-- Media breakpoints
+This project is an example of using kendo’s JavaScript console class to display information similar to developer tools in a browser.
 
-Use `Bootstrap v4.2.1` and plan to upgrade to 5.x
+![screenshot](assets/screenshot.png)

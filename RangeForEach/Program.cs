@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using RangeForEach.Extensions;
+//using RangeForEach.Extensions;
 using static System.Globalization.DateTimeFormatInfo;
 
 namespace RangeForEach
@@ -24,12 +25,12 @@ namespace RangeForEach
         private static void ForEachIndexingForumQuestion3()
         {
 
-            var intList = Enumerable.Range(10, 11).ToList();
-            for (int index = intList.Count; index != 0; index--)
-            {
-                var currentIndex = new Index(index, true);
-                Console.WriteLine($"{currentIndex,-5}{intList[currentIndex]}");
-            }
+            //var intList = Enumerable.Range(10, 11).ToList();
+            //for (int index = intList.Count; index != 0; index--)
+            //{
+            //    var currentIndex = new Index(index, true);
+            //    Console.WriteLine($"{currentIndex,-5}{intList[currentIndex]}");
+            //}
 
             Console.WriteLine();
 

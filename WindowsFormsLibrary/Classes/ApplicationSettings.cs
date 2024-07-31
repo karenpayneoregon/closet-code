@@ -1,4 +1,5 @@
-﻿namespace WindowsFormsLibrary.Classes
+﻿#pragma warning disable CS8618
+namespace WindowsFormsLibrary.Classes
 {
 	public class ApplicationSettings
 	{

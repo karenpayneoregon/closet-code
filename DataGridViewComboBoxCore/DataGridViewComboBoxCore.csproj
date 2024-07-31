@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <NoWarn>1701;1702;CS8618;CS8604;CS8622</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <NoWarn>1701;1702;CS8618;CS8604;CS8622</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="assets\figure1.png" />
+	  <None Remove="assets\figure2.png" />
+	  <None Remove="scripts\selectProductsJoineWithColors.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="assets\figure1.png" />
+	  <Content Include="assets\figure2.png" />
+	  <Content Include="scripts\selectProductsJoineWithColors.sql" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Controls\CoreBindingNavigator.cs">
+	    <SubType>Component</SubType>
+	  </Compile>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+</Project>

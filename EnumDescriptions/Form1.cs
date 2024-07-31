@@ -12,6 +12,7 @@ using EnumDescriptions.Classes;
 using EnumDescriptions.Extensions;
 using EnumerationLibrary.Classes;
 using WindowsFormsLibrary.Classes;
+#pragma warning disable CS8622
 
 namespace EnumDescriptions
 {

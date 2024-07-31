@@ -12,8 +12,9 @@ namespace EPPlus1
         {
             //StandardCodesSamples.CreateNewFile();
             //StandardCodesSamples.CreateNewFileWithData();
-            StandardCodesSamples.Sample1();
+            //StandardCodesSamples.ExportToJson();
             //ReadAndImportBackInNewWorkSheet();
+            ReadAndImportBackInNewWorkSheet();
             Console.WriteLine("Done");
             Console.ReadLine();
         }
@@ -26,8 +27,10 @@ namespace EPPlus1
         /// </summary>
         private static void ReadAndImportBackInNewWorkSheet()
         {
-            var table = StandardCodesSamples.Export();
-            StandardCodesSamples.Import(table);
+            // "Orders_7_2021"
+            var fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ExcelFiles", "Orders.xlsx");
+            var table = StandardCodesSamples.ReaDataTable(fileName, "Orders_7_2021");
+            //StandardCodesSamples.Import(table);
         }
 
 

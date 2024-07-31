@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Windows.Forms;
+﻿using System.ComponentModel;
 
 namespace WindowsFormsLibrary.LanguageExtensions
 {
@@ -39,6 +35,39 @@ namespace WindowsFormsLibrary.LanguageExtensions
                 action(control);
             }
         }
+
+        /// <summary>
+        /// Disable all controls on a form
+        /// </summary>
+        /// <param name="parentControl">Form to work with</param>
+        /// <param name="exclude">list of controls to exclude</param>
+        public static void DisableControls(this Control parentControl, params string[] exclude)
+        {
+            var controls = parentControl.Descendants<Control>().ToList();
+            if (exclude.Any())
+            {
+                foreach (var control in controls.Where(control => !exclude.Contains(control.Name)))
+                {
+                    control.Enabled = false;
+                }
+            }
+            else
+            {
+                foreach (var control in controls)
+                {
+                    control.Enabled = false;
+                }
+            }
+        }
+        /// <summary>
+        /// Enable all controls on a form
+        /// </summary>
+        /// <param name="parentControl"></param>
+        public static void EnableControls(this Control parentControl)
+        {
+            parentControl.Descendants<Control>().ToList().ForEach(c => c.Enabled = true);
+        }
+
         /// <summary>
         /// Base method for obtaining controls on a form or within a container like a panel or group box
         /// </summary>
@@ -63,6 +92,10 @@ namespace WindowsFormsLibrary.LanguageExtensions
                 }
             }
         }
+
+        public static List<Control> ParentLevelOnly(this Control control) 
+            => control.Descendants<Control>().Where(x => x.Parent == control).ToList();
+
         /// <summary>
         /// Get all TextBox controls from specified control
         /// </summary>
@@ -142,6 +175,6 @@ namespace WindowsFormsLibrary.LanguageExtensions
         /// <param name="checked">True false, defaults to true</param>
         /// <returns>One checked Radio button or a empty value</returns>
         public static RadioButton RadioButtonChecked(this Control control, bool @checked = true) 
-            => control.Descendants<RadioButton>().ToList().FirstOrDefault((radioButton) => radioButton.Checked == @checked);
+            => control.Descendants<RadioButton>().ToList().FirstOrDefault((radioButton) => radioButton.Checked == @checked)!;
     }
 }

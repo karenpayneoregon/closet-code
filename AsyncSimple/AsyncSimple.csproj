@@ -4,6 +4,7 @@
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net8.0-windows</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
 		<ApplicationIcon>csharp1.ico</ApplicationIcon>
 	</PropertyGroup>
 	<ItemGroup>
@@ -15,9 +16,6 @@
 		<Content Include="readme.md" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\WindowsFormsLibrary\WindowsFormsLibrary.csproj" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Update="Properties\Resources.Designer.cs">
@@ -36,6 +34,10 @@
 
 	<ItemGroup>
 		<Folder Include="assets\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\WindowsFormsLibrary\WindowsFormsLibrary.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -29,7 +29,7 @@ namespace CharacterOccurrencesApp.Classes
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
-        private static IOrderedEnumerable<Item> ProcessData(string values)
+        public static IOrderedEnumerable<Item> ProcessData(string values)
         {
             
             if (string.IsNullOrWhiteSpace(values))
@@ -44,6 +44,7 @@ namespace CharacterOccurrencesApp.Classes
                     select new Item
                     {
                         Character = grp.Key,
+                        IsUpper = char.IsUpper(grp.Key),
                         Occurrences = grp.Count(),
                         Code = Convert.ToInt32((int)grp.Key)
                     })
@@ -52,6 +53,7 @@ namespace CharacterOccurrencesApp.Classes
 
             return itemsGroup;
         }
+
 
         /// <summary>
         /// Get occurrences for <see cref="findChar"/>

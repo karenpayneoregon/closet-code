@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System;
+using System.IO;
+using Microsoft.Extensions.Logging;
 using NLogForms1.Interfaces;
 
 namespace NLogForms1.Classes
@@ -29,6 +31,17 @@ namespace NLogForms1.Classes
             EventId eventId = new EventId(11, "KP2");
 
             _logger.LogCritical(eventId, "Message");
+
+            try
+            {
+                File.ReadAllText("z.txt");
+            }
+            catch (Exception e)
+            {
+                eventId = new EventId(11, "KP3");
+
+                _logger.LogCritical(eventId, e.ToString());
+            }
         }
     }
 }

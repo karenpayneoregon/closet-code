@@ -116,7 +116,7 @@ namespace CharacterOccurrencesApp
             this.GetFromTextBoxsTextBox.TabIndex = 4;
             this.GetFromTextBoxsTextBox.Text = "Get from Textboxes";
             this.GetFromTextBoxsTextBox.UseVisualStyleBackColor = true;
-            this.GetFromTextBoxsTextBox.Click += new System.EventHandler(this.GetFromTextBoxsTextBox_Click);
+            this.GetFromTextBoxsTextBox.Click += new System.EventHandler(this.GetFromTextBoxesTextBox_Click);
             // 
             // ReadFromFileButton
             // 

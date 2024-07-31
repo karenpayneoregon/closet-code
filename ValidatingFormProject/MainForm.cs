@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
+using System.Reflection;
 using DirectoryHelpersLibrary.Classes;
 using ValidatingFormProject.Classes;
 using ValidatingFormProject.Extensions;
@@ -56,7 +48,7 @@ namespace ValidatingFormProject
         private void SetResultTextInChildWindow(string text = "")
         {
             var childForms = Application.OpenForms.Cast<Form>()
-                .Where(form => form.Name == nameof(SideForm));
+                .Where(form => form.Name == nameof(SideForm)).ToList();
 
             if (childForms.Any())
             {
@@ -75,8 +67,12 @@ namespace ValidatingFormProject
             }
         }
 
-
-
+        public static List<Color> ColorStructToList()
+        {
+            return typeof(Color).GetProperties(BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public)
+                .Select(c => (Color)c.GetValue(null, null))
+                .ToList();
+        }
         private void MainForm_Shown(object sender, EventArgs e)
         {
             CountryComboBox.DataSource = Operations.Countries();
@@ -122,7 +118,8 @@ namespace ValidatingFormProject
             }
             else
             {
-                var customer = _customerBindingSource.Customer();
+                Customer customer = _customerBindingSource.Customer();
+                customer.Color = ColorsListBox.Text;
 
                 customer.NotesList = Operations.CreateNotes(Convert.ToInt32(NotesComboBox.Text));
                 var (success, errorMessages) = IsValidEntity(customer);

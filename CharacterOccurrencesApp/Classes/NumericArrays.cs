@@ -15,8 +15,8 @@ namespace CharacterOccurrencesApp.Classes
             => sender.SelectMany(item => item.ToCharArray()).All(char.IsNumber);
 
         /// <summary>
-        /// Given a string array, convert to a int array.
-        /// If a element can not be converted the default value is 0.
+        /// Given a string array, convert to an int array.
+        /// If an element can not be converted the default value is 0.
         /// </summary>
         /// <param name="sender"></param>
         /// <returns></returns>

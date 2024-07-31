@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
-using System.IO;
-using System.Linq;
+﻿using System.Globalization;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Text.RegularExpressions;
 using BetweenCodeSample.Extensions;
 //using CoreExtensions.LanguageExtensions;
 using Spectre.Console;
@@ -23,11 +16,17 @@ namespace BetweenCodeSample
 
         static void Main(string[] args)
         {
+            
+            decimal value1 =  10.5m;
+            Console.WriteLine(value1.Clamp(10m, 10.25m));
+            int value2 = 10;
+            Console.WriteLine(value2.Clamp(8,9));
+
             //IComparableExtensionExamples();
             //SwitchExpression();
             //BetweenTwoItemsInStringList();
             //BetweenTwoItemsInIntList();
-            BetweenTwoNumbers();
+            //BetweenTwoNumbers();
             Console.ReadLine();
         }
 
@@ -165,14 +164,13 @@ namespace BetweenCodeSample
         /// <param name="upperValue"></param>
         private static void BetweenTwoNumbers(double firstAssertion, double lowerValue, double upperValue)
         {
-
             string[] doubleValues = {
                 "8^10", "16^18", "24^34", "32^63", "40^116", "48^215",
                 "56^397", "64^733", "72^1354", "80^2500" };
 
-            for (var index = 0; index < doubleValues.Length; index++)
+            foreach (var item in doubleValues)
             {
-                var parts = doubleValues[index].Split('^');
+                var parts = item.Split('^');
                 var part1 = Convert.ToDouble(parts[0]);
                 var part2 = Convert.ToDouble(parts[1]);
 
@@ -181,9 +179,8 @@ namespace BetweenCodeSample
                     Console.WriteLine($"[{part1}], [{part2}]");
                 }
             }
-
         }
-
+        
         [ModuleInitializer]
         public static void Init()
         {

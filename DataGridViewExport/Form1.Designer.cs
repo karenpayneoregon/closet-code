@@ -73,6 +73,7 @@ namespace DataGridViewExport
             FirstNameColumn.MinimumWidth = 6;
             FirstNameColumn.Name = "FirstNameColumn";
             FirstNameColumn.Width = 125;
+            this.FirstNameColumn.Width = 125;
             // 
             // LastColumn
             // 
@@ -81,6 +82,7 @@ namespace DataGridViewExport
             LastColumn.MinimumWidth = 6;
             LastColumn.Name = "LastColumn";
             LastColumn.Width = 125;
+            this.LastColumn.Width = 125;
             // 
             // PhoneColumn
             // 
@@ -89,6 +91,7 @@ namespace DataGridViewExport
             PhoneColumn.MinimumWidth = 6;
             PhoneColumn.Name = "PhoneColumn";
             PhoneColumn.Width = 125;
+            this.PhoneColumn.Width = 125;
             // 
             // EmailColumn
             // 
@@ -97,6 +100,7 @@ namespace DataGridViewExport
             EmailColumn.MinimumWidth = 6;
             EmailColumn.Name = "EmailColumn";
             EmailColumn.Width = 125;
+            this.EmailColumn.Width = 125;
             // 
             // BirthDateColumn
             // 
@@ -108,6 +112,7 @@ namespace DataGridViewExport
             BirthDateColumn.MinimumWidth = 6;
             BirthDateColumn.Name = "BirthDateColumn";
             BirthDateColumn.Width = 125;
+            this.BirthDateColumn.Width = 125;
             // 
             // ExportButton
             // 
@@ -147,6 +152,40 @@ namespace DataGridViewExport
             EditCurrentButton.Text = "Edit current";
             EditCurrentButton.UseVisualStyleBackColor = true;
             EditCurrentButton.Click += EditCurrentButton_Click;
+            // 
+            // FirstNameTextBox
+            // 
+            this.FirstNameTextBox.Location = new System.Drawing.Point(336, 545);
+            this.FirstNameTextBox.Name = "FirstNameTextBox";
+            this.FirstNameTextBox.Size = new System.Drawing.Size(162, 27);
+            this.FirstNameTextBox.TabIndex = 4;
+            // 
+            // UpdateFirstNameTextBox
+            // 
+            this.UpdateFirstNameTextBox.Location = new System.Drawing.Point(540, 545);
+            this.UpdateFirstNameTextBox.Name = "UpdateFirstNameTextBox";
+            this.UpdateFirstNameTextBox.Size = new System.Drawing.Size(94, 29);
+            this.UpdateFirstNameTextBox.TabIndex = 5;
+            this.UpdateFirstNameTextBox.Text = "Update";
+            this.UpdateFirstNameTextBox.UseVisualStyleBackColor = true;
+            this.UpdateFirstNameTextBox.Click += new System.EventHandler(this.UpdateFirstNameTextBox_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(14, 488);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(129, 490);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.TabIndex = 7;
             // 
             // Form1
             // 

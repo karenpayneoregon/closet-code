@@ -1,7 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using RandomNumbersApp.Classes;
-using Spectre.Console;
 
 namespace RandomNumbersApp
 {
@@ -9,20 +8,34 @@ namespace RandomNumbersApp
     {
         static void Main(string[] args)
         {
-            AnsiConsole.MarkupLine("[cyan]Random doubles[/]");
-            for (int index = 0; index < 10; index++)
+
+            var result = GetData();
+            foreach (var kvp in result)
             {
-                Console.WriteLine($"{NumberHelpers.GetRandomDouble(1, 200),9:F2}");
+                Console.WriteLine($"{kvp.Key, -5}{kvp.Value}");
             }
 
-            AnsiConsole.MarkupLine("[cyan]Random integers[/]");
-            for (int index = 0; index < 10; index++)
-            {
-                Console.WriteLine($"{NumberHelpers.GetRandomInt(1, 200),6}");
-            }
-
-            AnsiConsole.MarkupLine("[cyan]Press a key to close[/]");
             Console.ReadLine();
+        }
+
+        private static Dictionary<int, int> GetData()
+        {
+            Dictionary<int, int> dictionary = new();
+
+            List<int> list = new() { 101, 221, 324, 471, 114, 233, 341, 443, 101, 324 };
+            List<int> interested = new() { 324, 341, 471 };
+
+            foreach (var dataItem in list.GroupBy(item => item).Select(group => new { Value = group.Key, Count = group.Count() }).OrderBy(x => x.Value))
+            {
+
+                if (interested.Contains(dataItem.Value))
+                {
+                    dictionary.Add(dataItem.Value, dataItem.Count);
+                }
+
+            }
+
+            return dictionary;
         }
     }
 }

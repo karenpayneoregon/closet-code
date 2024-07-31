@@ -19,9 +19,30 @@ namespace CharacterOccurrencesApp
             InitializeComponent();
         }
 
-        private void GetFromTextBoxsTextBox_Click(object sender, EventArgs e)
+        public new class Container
+        {
+            public char Char { get; }
+            public int Count { get; }
+
+            public Container(char c, int count)
+            {
+                Char = c;
+                Count = count;
+            }
+
+            public override string ToString() => $"{Char,-3}{Count}";
+
+        }
+
+        private void GetFromTextBoxesTextBox_Click(object sender, EventArgs e)
         {
             ClearListViews();
+
+            /*
+             * Way simple way to get char count
+             */
+            var containers = "AaBbXzZ".GroupBy(c => c).Select(c => 
+                new Container(c.Key, c.Count()));
 
             List<Item> items = Operations.GetAllItems(textBox1.Text);
 
@@ -63,5 +84,6 @@ namespace CharacterOccurrencesApp
             listView1.Items.Clear();
             listView2.Items.Clear();
         }
+
     }
 }

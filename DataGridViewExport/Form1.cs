@@ -36,6 +36,7 @@ namespace DataGridViewExport
         private void ExportButton_Click(object sender, EventArgs e)
         {
             dataGridView1.ExportRows("contacts.csv");
+            
             Shake(this);
         }
 

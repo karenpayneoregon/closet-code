@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using BaseDataValidatorLibrary.CommonRules;
 using ValidatingFormProject.Rules;
-//c:\OED\Dotnetland\VS2019\DataAnnotationsValidationSolution\
+
+
 namespace ValidatingFormProject.Models
 {
+    [DebuggerDisplay("FirstName={FirstName}, LastName={LastName}")]
     public class Customer : INotifyPropertyChanged
     {
         private Country _country;
@@ -17,7 +18,7 @@ namespace ValidatingFormProject.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "{0} is required"), DataType(DataType.Text)]
-        [StringLength(12,MinimumLength = 3,  ErrorMessage = "{0} {2} min {1} max and not empty")]
+        [StringLength(12, MinimumLength = 3, ErrorMessage = "{0} {2} min {1} max and not empty")]
         [Display(Name = "First name")]
         public string FirstName { get; set; }
 
@@ -64,14 +65,14 @@ namespace ValidatingFormProject.Models
                 OnPropertyChanged();
             }
         }
-        [ValidCountryName(ErrorMessage = "Country name is required")]
-        public string CountryName => Country.CountryName;
+
+
 
         [ValidPin]
         [Display(Prompt = "Security pin")]
         public string Pin { get; set; }
 
-        [SocialSecurityAttribute]
+        [SocialSecurity]
         [Display(Prompt = "SSN")]
         public string SocialSecurity { get; set; }
 
@@ -84,14 +85,26 @@ namespace ValidatingFormProject.Models
             {
                 _birthDate = value;
                 OnPropertyChanged();
+                
             }
+            
         }
+
+
+        [ValidCountryName(ErrorMessage = "Country name is required")]
+        public string CountryName => Country.CountryName;
 
         [ListMustContainFewerThan(5)]
         public List<string> NotesList { get; set; }
 
-        public override string ToString() => $"{FirstName} {LastName}";
+        //[AllowedValues("Bisque", "LightBlue", "Tomato", "Aquamarine", "DarkKhaki", ErrorMessage = "Invalid color")]
+        [DeniedValues("OrangeRed", "SlateBlue", "IndianRed", "AliceBlue", "Silver", ErrorMessage = "Denied color")]
+        public string Color { get; set; }
 
+
+
+
+        public override string ToString() => $"{FirstName} {LastName}";
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

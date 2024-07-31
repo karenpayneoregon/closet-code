@@ -1,5 +1,8 @@
 ﻿using System.Windows.Forms;
 using EnumDescriptions.Classes;
+#pragma warning disable CS8600
+#pragma warning disable CS8619
+#pragma warning disable CS8605
 
 namespace EnumDescriptions.Extensions
 {

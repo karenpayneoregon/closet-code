@@ -29,7 +29,7 @@ namespace BaseDataValidatorLibrary.Helpers
                 StringBuilder builder = new();
                 if (result.Errors.Count == 1)
                 {
-                    return (false, result.Errors.FirstOrDefault().ErrorMessage);
+                    return (false, result.Errors.FirstOrDefault()!.ErrorMessage);
                 }
                 else
                 {

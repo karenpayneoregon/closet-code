@@ -79,13 +79,13 @@ namespace DataGridViewExport.Models
             }
         }
 
-        public Contact(int id)
-        {
-            Id = id;
-        }
+    public Contact(int id)
+    {
+        Id = id;
+    }
 
-        public Contact()
-        {
+    public Contact()
+    {
             
         }
         public event PropertyChangedEventHandler? PropertyChanged;

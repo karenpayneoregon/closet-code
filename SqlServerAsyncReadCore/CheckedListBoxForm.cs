@@ -31,6 +31,16 @@ namespace SqlServerAsyncReadCore
             {
                 DataTable table = await DataOperations.ReadProductsTask(_cancellationTokenSource.Token);
 
+                DataView view = table.DefaultView;
+                foreach (DataRowView rowView in view)
+                {
+                    Debug.WriteLine($"{rowView.Row.RowId()}");
+                }
+
+                foreach (DataRow row in table.Rows)
+                {
+                    //Debug.WriteLine($"{row.RowId(),-4}{row.Field<string>("Productname")}");
+                }
                 ProductCheckedListBox.DataSource = table;
                 ProductCheckedListBox.DisplayMember = DataOperations.DisplayColumn;
                 GetCheckedButton.Enabled = table.Rows.Count > 0;

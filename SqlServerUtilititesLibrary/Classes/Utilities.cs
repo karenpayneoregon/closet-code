@@ -17,14 +17,12 @@ namespace SqlServerHelperLibrary.Classes
 
             try
             {
-                using var cn = new SqlConnection
+                using SqlConnection cn = new()
                 {
                     ConnectionString = 
-                        ("Data Source=" + 
-                         (server + 
-                          ";Initial Catalog=master;Integrated Security=True;"))
+                        ("Data Source=" + (server + ";Initial Catalog=master;Integrated Security=True;"))
                 };
-                using var cmd = new SqlCommand
+                using SqlCommand cmd = new()
                 {
                     Connection = cn, 
                     CommandText = ("select * from master.dbo.sysdatabases where name='" + (database + "'"))

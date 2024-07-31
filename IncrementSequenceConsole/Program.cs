@@ -25,6 +25,16 @@ namespace IncrementSequenceConsole
             Console.WriteLine($"       1278-120   {H.NextValue("1278-120")}");
             Console.WriteLine($"           F102   {H.NextValue("F102")}");
             Console.WriteLine($"3999/IKL/VII/21   {H.NextValue("3999/IKL/VII/21")}");
+
+            int someValue = 0;
+            int maxValue = 110;
+
+            while (someValue < maxValue)
+            {
+                Console.WriteLine($"{someValue,-18}{H.NextValue($"{someValue:D3}")}/{maxValue}");
+                someValue++;
+            }
+
         }
 
         [ModuleInitializer]

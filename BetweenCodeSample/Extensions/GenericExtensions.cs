@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BetweenCodeSample.Extensions
+﻿namespace BetweenCodeSample.Extensions
 {
 
     public static class GenericExtensions

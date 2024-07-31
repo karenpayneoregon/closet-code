@@ -1,5 +1,10 @@
 ﻿# About
 
+> **Note**
+> 11/11/2023 added a filter DataGridView code sample
+
+![Filter](assets/filter.png)
+
 Working with [CheckedListBox](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.checkedlistbox?view=net-5.0) in windows forms.
 
 - Reads data from SQL-Server into a DataTable and presented in a CheckedListBox.

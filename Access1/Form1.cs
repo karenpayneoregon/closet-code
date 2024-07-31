@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Data;
 using System.Windows.Forms;
 using Access1.Classes;
 using static Access1.Classes.Dialogs;
@@ -46,5 +47,27 @@ namespace Access1
         {
             personTableAdapter.Fill(dataSet1.Person);
         }
+
+        private void CurrentButton_Click(object sender, EventArgs e)
+        {
+            DataSet1.PersonRow current = dataSet1.Person[personBindingSource.Position];
+            MessageBox.Show($"{current.FirstName} {current.LastName}\n{current.CreatedBy:d}");
+        }
+
+        private void StartsWithButton_Click(object sender, EventArgs e)
+        {
+            personBindingSource.RowFilterStartsWith("FirstName", StartsWithTextBox.Text);
+
+        }
     }
+
+    public static class BindingSourceExtensions
+    {
+        public static void RowFilterStartsWith(this BindingSource sender, string columnName, string value)
+        {
+            sender.Filter = string.Format("{0} LIKE '{1}%' OR {0} LIKE '%{1}%' ", 
+                columnName, value.Replace("'", "''"));
+        }
+    }
+
 }
