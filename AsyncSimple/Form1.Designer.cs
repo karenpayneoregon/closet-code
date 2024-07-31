@@ -30,142 +30,161 @@ namespace AsyncSimple
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.StartButton = new System.Windows.Forms.Button();
-            this.CancelItButton = new System.Windows.Forms.Button();
-            this.StatusLabel = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.NoviceButton = new System.Windows.Forms.Button();
-            this.FakeWorkButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.groupBox1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.SuspendLayout();
+            StartButton = new System.Windows.Forms.Button();
+            CancelItButton = new System.Windows.Forms.Button();
+            StatusLabel = new System.Windows.Forms.Label();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            NoviceButton = new System.Windows.Forms.Button();
+            FakeWorkButton = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            statusStrip1 = new System.Windows.Forms.StatusStrip();
+            toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            button1 = new System.Windows.Forms.Button();
+            groupBox1.SuspendLayout();
+            statusStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // StartButton
             // 
-            this.StartButton.Image = global::AsyncSimple.Properties.Resources.ASX_Run_blue_16x;
-            this.StartButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StartButton.Location = new System.Drawing.Point(29, 22);
-            this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(75, 23);
-            this.StartButton.TabIndex = 0;
-            this.StartButton.Text = "Start";
-            this.StartButton.UseVisualStyleBackColor = true;
-            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
+            StartButton.Image = Properties.Resources.ASX_Run_blue_16x;
+            StartButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            StartButton.Location = new System.Drawing.Point(33, 29);
+            StartButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            StartButton.Name = "StartButton";
+            StartButton.Size = new System.Drawing.Size(86, 31);
+            StartButton.TabIndex = 0;
+            StartButton.Text = "Start";
+            StartButton.UseVisualStyleBackColor = true;
+            StartButton.Click += StartButton_Click;
             // 
             // CancelItButton
             // 
-            this.CancelItButton.Image = global::AsyncSimple.Properties.Resources.Cancel_7x_16x;
-            this.CancelItButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelItButton.Location = new System.Drawing.Point(110, 22);
-            this.CancelItButton.Name = "CancelItButton";
-            this.CancelItButton.Size = new System.Drawing.Size(75, 23);
-            this.CancelItButton.TabIndex = 1;
-            this.CancelItButton.Text = "Cancel";
-            this.CancelItButton.UseVisualStyleBackColor = true;
-            this.CancelItButton.Click += new System.EventHandler(this.CancelButton_Click);
+            CancelItButton.Image = Properties.Resources.Cancel_7x_16x;
+            CancelItButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            CancelItButton.Location = new System.Drawing.Point(126, 29);
+            CancelItButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            CancelItButton.Name = "CancelItButton";
+            CancelItButton.Size = new System.Drawing.Size(86, 31);
+            CancelItButton.TabIndex = 1;
+            CancelItButton.Text = "Cancel";
+            CancelItButton.UseVisualStyleBackColor = true;
+            CancelItButton.Click += CancelButton_Click;
             // 
             // StatusLabel
             // 
-            this.StatusLabel.AutoSize = true;
-            this.StatusLabel.Location = new System.Drawing.Point(221, 26);
-            this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(38, 15);
-            this.StatusLabel.TabIndex = 3;
-            this.StatusLabel.Text = "label1";
+            StatusLabel.AutoSize = true;
+            StatusLabel.Location = new System.Drawing.Point(253, 35);
+            StatusLabel.Name = "StatusLabel";
+            StatusLabel.Size = new System.Drawing.Size(50, 20);
+            StatusLabel.TabIndex = 3;
+            StatusLabel.Text = "label1";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.StatusLabel);
-            this.groupBox1.Controls.Add(this.CancelItButton);
-            this.groupBox1.Controls.Add(this.StartButton);
-            this.groupBox1.Location = new System.Drawing.Point(7, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(407, 101);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Resonsive";
+            groupBox1.Controls.Add(StatusLabel);
+            groupBox1.Controls.Add(CancelItButton);
+            groupBox1.Controls.Add(StartButton);
+            groupBox1.Location = new System.Drawing.Point(8, 3);
+            groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            groupBox1.Size = new System.Drawing.Size(465, 135);
+            groupBox1.TabIndex = 4;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Resonsive";
             // 
             // NoviceButton
             // 
-            this.NoviceButton.Location = new System.Drawing.Point(36, 142);
-            this.NoviceButton.Name = "NoviceButton";
-            this.NoviceButton.Size = new System.Drawing.Size(89, 23);
-            this.NoviceButton.TabIndex = 5;
-            this.NoviceButton.Text = "Novice";
-            this.NoviceButton.UseVisualStyleBackColor = true;
-            this.NoviceButton.Click += new System.EventHandler(this.NoviceButton_Click);
+            NoviceButton.Location = new System.Drawing.Point(41, 189);
+            NoviceButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            NoviceButton.Name = "NoviceButton";
+            NoviceButton.Size = new System.Drawing.Size(102, 31);
+            NoviceButton.TabIndex = 5;
+            NoviceButton.Text = "Novice";
+            NoviceButton.UseVisualStyleBackColor = true;
+            NoviceButton.Click += NoviceButton_Click;
             // 
             // FakeWorkButton
             // 
-            this.FakeWorkButton.Location = new System.Drawing.Point(36, 171);
-            this.FakeWorkButton.Name = "FakeWorkButton";
-            this.FakeWorkButton.Size = new System.Drawing.Size(89, 23);
-            this.FakeWorkButton.TabIndex = 6;
-            this.FakeWorkButton.Text = "Do fake work";
-            this.FakeWorkButton.UseVisualStyleBackColor = true;
-            this.FakeWorkButton.Click += new System.EventHandler(this.FakeWorkButton_Click);
+            FakeWorkButton.Location = new System.Drawing.Point(41, 228);
+            FakeWorkButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            FakeWorkButton.Name = "FakeWorkButton";
+            FakeWorkButton.Size = new System.Drawing.Size(102, 31);
+            FakeWorkButton.TabIndex = 6;
+            FakeWorkButton.Text = "Do fake work";
+            FakeWorkButton.UseVisualStyleBackColor = true;
+            FakeWorkButton.Click += FakeWorkButton_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(133, 176);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 15);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Good";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(152, 235);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(46, 20);
+            label1.TabIndex = 7;
+            label1.Text = "Good";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(133, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 15);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Bad";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(152, 200);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(35, 20);
+            label2.TabIndex = 8;
+            label2.Text = "Bad";
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 257);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(454, 22);
-            this.statusStrip1.TabIndex = 9;
-            this.statusStrip1.Text = "statusStrip1";
+            statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripProgressBar1 });
+            statusStrip1.Location = new System.Drawing.Point(0, 345);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            statusStrip1.Size = new System.Drawing.Size(519, 27);
+            statusStrip1.TabIndex = 9;
+            statusStrip1.Text = "statusStrip1";
             // 
             // toolStripProgressBar1
             // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            toolStripProgressBar1.Name = "toolStripProgressBar1";
+            toolStripProgressBar1.Size = new System.Drawing.Size(114, 19);
+            // 
+            // button1
+            // 
+            button1.Location = new System.Drawing.Point(379, 145);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(94, 29);
+            button1.TabIndex = 10;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += PerformWorkButton_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 279);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.FakeWorkButton);
-            this.Controls.Add(this.NoviceButton);
-            this.Controls.Add(this.groupBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Responsive";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(519, 372);
+            Controls.Add(button1);
+            Controls.Add(statusStrip1);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(FakeWorkButton);
+            Controls.Add(NoviceButton);
+            Controls.Add(groupBox1);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Form1";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Responsive";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -180,6 +199,7 @@ namespace AsyncSimple
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

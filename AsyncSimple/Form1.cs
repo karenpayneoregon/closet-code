@@ -5,14 +5,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AsyncSimple.Classes;
-using WindowsFormsLibrary.Classes;
 using static System.Threading.Thread;
+using static WindowsFormsLibrary.Classes.Dialogs;
+
 
 namespace AsyncSimple
 {
     public partial class Form1 : Form
     {
-        private CancellationTokenSource cancellationTokenSource = new ();
+        private CancellationTokenSource cancellationTokenSource = new();
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +22,18 @@ namespace AsyncSimple
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            cancellationTokenSource.Cancel();
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                if (Question(this, "Are you sure you want to really exit ?"))
+                {
+                    cancellationTokenSource.Cancel();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+
         }
 
         private async void StartButton_Click(object sender, EventArgs e)
@@ -72,6 +84,10 @@ namespace AsyncSimple
 
         private void ReportProgress(int value)
         {
+
+            if (cancellationTokenSource.IsCancellationRequested)
+                return;
+
             StatusLabel.Text = value.ToString();
             toolStripProgressBar1.Value = value;
         }
@@ -88,7 +104,7 @@ namespace AsyncSimple
                 }
             }
 
-            if (Dialogs.Question(this,"Question", "Do you really, really want to wait?","Yep","Nope", DialogResult.No))
+            if (Question(this, "Question", "Do you really, really want to wait?", "Yep", "Nope", DialogResult.No))
             {
                 for (int index = 0; index < 10; index++)
                 {
@@ -103,7 +119,26 @@ namespace AsyncSimple
         {
             var service = new SomeService();
             await Task.Run(() => service.Calculate());
-            Dialogs.Information(this,"Done","Woohoo");
+            Information(this, "Done", "Woohoo");
+        }
+
+        private void PerformWorkButton_Click(object sender, EventArgs e)
+        {
+            var waitForm = new PleaseWaitForm();
+            waitForm.CancelEvent += WaitForm_CancelEvent;
+            waitForm.Show();
+        }
+
+        private void WaitForm_CancelEvent(bool cancel)
+        {
+            if (cancel)
+            {
+                // user decided to cancel
+            }
+            else
+            {
+                // user decided to continue
+            }
         }
     }
 

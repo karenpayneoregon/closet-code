@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace RecursivePatterns.Classes;
 
-namespace RecursivePatterns.Classes
-{
     public class Helpers
     {
         public static IEnumerable<List<Employee>> GetEmployeesWhereManagerHasThreeYearsAsManager(List<Person> people)
@@ -20,10 +16,9 @@ namespace RecursivePatterns.Classes
                  */
                 if (person is Manager { YearsAsManager: years, Employees: { } employees })
                 {
+                    // https://tinyurl.com/ye7x4zxx
                     yield return employees;
                 }
             }
         }
-
     }
-}

@@ -29,122 +29,143 @@ namespace DataGridViewExport
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BirthDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExportButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.IdLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            dataGridView1 = new DataGridView();
+            IdColumn = new DataGridViewTextBoxColumn();
+            FirstNameColumn = new DataGridViewTextBoxColumn();
+            LastColumn = new DataGridViewTextBoxColumn();
+            PhoneColumn = new DataGridViewTextBoxColumn();
+            EmailColumn = new DataGridViewTextBoxColumn();
+            BirthDateColumn = new DataGridViewTextBoxColumn();
+            ExportButton = new Button();
+            label1 = new Label();
+            IdLabel = new Label();
+            EditCurrentButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IdColumn,
-            this.FirstNameColumn,
-            this.LastColumn,
-            this.PhoneColumn,
-            this.EmailColumn,
-            this.BirthDateColumn});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(706, 380);
-            this.dataGridView1.TabIndex = 0;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { IdColumn, FirstNameColumn, LastColumn, PhoneColumn, EmailColumn, BirthDateColumn });
+            dataGridView1.Location = new Point(14, 16);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(807, 507);
+            dataGridView1.TabIndex = 0;
             // 
             // IdColumn
             // 
-            this.IdColumn.DataPropertyName = "Id";
-            this.IdColumn.HeaderText = "Id";
-            this.IdColumn.Name = "IdColumn";
-            this.IdColumn.Visible = false;
+            IdColumn.DataPropertyName = "Id";
+            IdColumn.HeaderText = "Id";
+            IdColumn.MinimumWidth = 6;
+            IdColumn.Name = "IdColumn";
+            IdColumn.Visible = false;
+            IdColumn.Width = 125;
             // 
             // FirstNameColumn
             // 
-            this.FirstNameColumn.DataPropertyName = "FirstName";
-            this.FirstNameColumn.HeaderText = "First";
-            this.FirstNameColumn.Name = "FirstNameColumn";
+            FirstNameColumn.DataPropertyName = "FirstName";
+            FirstNameColumn.HeaderText = "First";
+            FirstNameColumn.MinimumWidth = 6;
+            FirstNameColumn.Name = "FirstNameColumn";
+            FirstNameColumn.Width = 125;
             // 
             // LastColumn
             // 
-            this.LastColumn.DataPropertyName = "LastName";
-            this.LastColumn.HeaderText = "Last";
-            this.LastColumn.Name = "LastColumn";
+            LastColumn.DataPropertyName = "LastName";
+            LastColumn.HeaderText = "Last";
+            LastColumn.MinimumWidth = 6;
+            LastColumn.Name = "LastColumn";
+            LastColumn.Width = 125;
             // 
             // PhoneColumn
             // 
-            this.PhoneColumn.DataPropertyName = "Phone";
-            this.PhoneColumn.HeaderText = "Phone";
-            this.PhoneColumn.Name = "PhoneColumn";
+            PhoneColumn.DataPropertyName = "Phone";
+            PhoneColumn.HeaderText = "Phone";
+            PhoneColumn.MinimumWidth = 6;
+            PhoneColumn.Name = "PhoneColumn";
+            PhoneColumn.Width = 125;
             // 
             // EmailColumn
             // 
-            this.EmailColumn.DataPropertyName = "Email";
-            this.EmailColumn.HeaderText = "Mail";
-            this.EmailColumn.Name = "EmailColumn";
+            EmailColumn.DataPropertyName = "Email";
+            EmailColumn.HeaderText = "Mail";
+            EmailColumn.MinimumWidth = 6;
+            EmailColumn.Name = "EmailColumn";
+            EmailColumn.Width = 125;
             // 
             // BirthDateColumn
             // 
-            this.BirthDateColumn.DataPropertyName = "BirthDate";
+            BirthDateColumn.DataPropertyName = "BirthDate";
             dataGridViewCellStyle1.Format = "d";
             dataGridViewCellStyle1.NullValue = null;
-            this.BirthDateColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.BirthDateColumn.HeaderText = "Birth";
-            this.BirthDateColumn.Name = "BirthDateColumn";
+            BirthDateColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            BirthDateColumn.HeaderText = "Birth";
+            BirthDateColumn.MinimumWidth = 6;
+            BirthDateColumn.Name = "BirthDateColumn";
+            BirthDateColumn.Width = 125;
             // 
             // ExportButton
             // 
-            this.ExportButton.Location = new System.Drawing.Point(12, 405);
-            this.ExportButton.Name = "ExportButton";
-            this.ExportButton.Size = new System.Drawing.Size(75, 23);
-            this.ExportButton.TabIndex = 1;
-            this.ExportButton.Text = "Export";
-            this.ExportButton.UseVisualStyleBackColor = true;
-            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
+            ExportButton.Location = new Point(14, 540);
+            ExportButton.Margin = new Padding(3, 4, 3, 4);
+            ExportButton.Name = "ExportButton";
+            ExportButton.Size = new Size(86, 31);
+            ExportButton.TabIndex = 1;
+            ExportButton.Text = "Export";
+            ExportButton.UseVisualStyleBackColor = true;
+            ExportButton.Click += ExportButton_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 409);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Current id";
+            label1.AutoSize = true;
+            label1.Location = new Point(145, 545);
+            label1.Name = "label1";
+            label1.Size = new Size(74, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Current id";
             // 
             // IdLabel
             // 
-            this.IdLabel.AutoSize = true;
-            this.IdLabel.Location = new System.Drawing.Point(193, 409);
-            this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(25, 15);
-            this.IdLabel.TabIndex = 3;
-            this.IdLabel.Text = "000";
+            IdLabel.AutoSize = true;
+            IdLabel.Location = new Point(221, 545);
+            IdLabel.Name = "IdLabel";
+            IdLabel.Size = new Size(33, 20);
+            IdLabel.TabIndex = 3;
+            IdLabel.Text = "000";
+            // 
+            // EditCurrentButton
+            // 
+            EditCurrentButton.Location = new Point(668, 545);
+            EditCurrentButton.Name = "EditCurrentButton";
+            EditCurrentButton.Size = new Size(153, 29);
+            EditCurrentButton.TabIndex = 4;
+            EditCurrentButton.Text = "Edit current";
+            EditCurrentButton.UseVisualStyleBackColor = true;
+            EditCurrentButton.Click += EditCurrentButton_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 450);
-            this.Controls.Add(this.IdLabel);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ExportButton);
-            this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Export to file";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(834, 600);
+            Controls.Add(EditCurrentButton);
+            Controls.Add(IdLabel);
+            Controls.Add(label1);
+            Controls.Add(ExportButton);
+            Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Export to file";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -159,6 +180,7 @@ namespace DataGridViewExport
         private System.Windows.Forms.DataGridViewTextBoxColumn BirthDateColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label IdLabel;
+        private Button EditCurrentButton;
     }
 }
 
