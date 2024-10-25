@@ -94,7 +94,7 @@ namespace AsyncSimple
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripProgressBar1 });
-            statusStrip1.Location = new Point(0, 345);
+            statusStrip1.Location = new Point(0, 234);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Padding = new Padding(1, 0, 16, 0);
             statusStrip1.Size = new Size(519, 27);
@@ -108,11 +108,11 @@ namespace AsyncSimple
             // 
             // button1
             // 
-            button1.Location = new Point(379, 145);
+            button1.Location = new Point(8, 145);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 10;
-            button1.Text = "button1";
+            button1.Text = "Child form";
             button1.UseVisualStyleBackColor = true;
             button1.Click += PerformWorkButton_Click;
             // 
@@ -120,7 +120,7 @@ namespace AsyncSimple
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(519, 372);
+            ClientSize = new Size(519, 261);
             Controls.Add(button1);
             Controls.Add(statusStrip1);
             Controls.Add(groupBox1);
