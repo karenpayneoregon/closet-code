@@ -32,11 +32,12 @@ partial class PleaseWaitForm
         // 
         // PleaseWaitForm
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-        AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(555, 196);
+        AutoScaleDimensions = new SizeF(8F, 20F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(320, 172);
         Name = "PleaseWaitForm";
-        Text = "PleaseWaitForm";
+        StartPosition = FormStartPosition.CenterParent;
+        Text = "Please Wait";
         ResumeLayout(false);
     }
 

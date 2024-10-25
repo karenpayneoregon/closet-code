@@ -1,19 +1,11 @@
-﻿using System;
-
-using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using AsyncSimple.Classes;
-using static System.Threading.Thread;
-using static WindowsFormsLibrary.Classes.Dialogs;
+﻿using static WindowsFormsLibrary.Classes.Dialogs;
 
 
 namespace AsyncSimple
 {
     public partial class Form1 : Form
     {
-        private CancellationTokenSource cancellationTokenSource = new();
+        private CancellationTokenSource cancellationTokenSource; // = new();
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +14,10 @@ namespace AsyncSimple
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
+            // check if we even started the async operation
+            if (cancellationTokenSource is null) return;
+
+            if (e.CloseReason == CloseReason.UserClosing && cancellationTokenSource.IsCancellationRequested == false)
             {
                 if (Question(this, "Are you sure you want to really exit ?"))
                 {
@@ -34,11 +29,15 @@ namespace AsyncSimple
                 }
             }
 
+
         }
 
         private async void StartButton_Click(object sender, EventArgs e)
         {
             var cancelled = false;
+
+            cancellationTokenSource ??= new CancellationTokenSource();
+
             if (cancellationTokenSource.IsCancellationRequested)
             {
                 cancellationTokenSource.Dispose();
@@ -66,7 +65,10 @@ namespace AsyncSimple
 
         private void CancelButton_Click(object sender, EventArgs egEventArgs)
         {
-            cancellationTokenSource.Cancel();
+            if (Question(this, "Are you sure you want to really exit ?"))
+            {
+                cancellationTokenSource.Cancel();
+            }
         }
         private static async Task AsyncMethod(IProgress<int> progress, CancellationToken ct)
         {
@@ -92,41 +94,11 @@ namespace AsyncSimple
             toolStripProgressBar1.Value = value;
         }
 
-        private void NoviceButton_Click(object sender, EventArgs e)
-        {
-            static void BusyWait(int milliseconds)
-            {
-                var sw = Stopwatch.StartNew();
-
-                while (sw.ElapsedMilliseconds < milliseconds)
-                {
-                    SpinWait(1000);
-                }
-            }
-
-            if (Question(this, "Question", "Do you really, really want to wait?", "Yep", "Nope", DialogResult.No))
-            {
-                for (int index = 0; index < 10; index++)
-                {
-                    BusyWait(1000);
-                }
-            }
-
-
-        }
-
-        private async void FakeWorkButton_Click(object sender, EventArgs e)
-        {
-            var service = new SomeService();
-            await Task.Run(() => service.Calculate());
-            Information(this, "Done", "Woohoo");
-        }
-
         private void PerformWorkButton_Click(object sender, EventArgs e)
         {
             var waitForm = new PleaseWaitForm();
             waitForm.CancelEvent += WaitForm_CancelEvent;
-            waitForm.Show();
+            waitForm.ShowDialog();
         }
 
         private void WaitForm_CancelEvent(bool cancel)

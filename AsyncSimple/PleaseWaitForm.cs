@@ -1,5 +1,4 @@
-﻿using System.Windows.Forms;
-using WindowsFormsLibrary.Classes;
+﻿using WindowsFormsLibrary.Classes;
 
 namespace AsyncSimple;
 public partial class PleaseWaitForm : Form

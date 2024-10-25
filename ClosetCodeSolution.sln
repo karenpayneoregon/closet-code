@@ -369,13 +369,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDynamicControls", "Cr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IncrementSequenceDemos", "IncrementSequenceDemos\IncrementSequenceDemos.csproj", "{82970CD7-3B55-45C5-94BC-3544FA5486F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenFolderWinFormsApp", "OpenFolderWinFormsApp\OpenFolderWinFormsApp.csproj", "{C712E507-D94B-4738-87DF-9D46FE0F1FED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenFolderWinFormsApp", "OpenFolderWinFormsApp\OpenFolderWinFormsApp.csproj", "{C712E507-D94B-4738-87DF-9D46FE0F1FED}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelToAndFromOADate", "ExcelToAndFromOADate\ExcelToAndFromOADate.csproj", "{974DEED6-9684-4868-9117-794593BCEF9D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CharacterOccurrencesConsoleApp", "CharacterOccurrencesConsoleApp\CharacterOccurrencesConsoleApp.csproj", "{2DC5FAF5-EC1A-4E05-A9CE-22E1CAD36043}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatePersonAges", "CalculatePersonAges\CalculatePersonAges.csproj", "{E7E772AC-3464-4E31-BEBF-0867D77B189F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatePersonAges", "CalculatePersonAges\CalculatePersonAges.csproj", "{E7E772AC-3464-4E31-BEBF-0867D77B189F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeImage", "ChangeImage\ChangeImage.csproj", "{E142BB0E-AE62-4BFE-A390-89F6A1F80D04}"
 EndProject
@@ -397,7 +397,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendToMainForm", "SendToMai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumQuestion1", "ForumQuestion1\ForumQuestion1.csproj", "{0D0C2499-EE66-4321-8AC6-98AEA17B7C51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsBuildCopyFiles", "MaBuildCopyFiles\MsBuildCopyFiles.csproj", "{EF7D415A-90F3-4104-A52F-0FD41F9682E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsBuildCopyFiles", "MaBuildCopyFiles\MsBuildCopyFiles.csproj", "{EF7D415A-90F3-4104-A52F-0FD41F9682E3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonExample", "JsonExample\JsonExample.csproj", "{FBECCAC2-1FDC-4867-AA07-1791746966C6}"
 EndProject
@@ -421,7 +421,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGridViewComboBoxCore", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommaDelimitedStringCollectionSampleApp", "CommaDelimitedStringCollectionSampleApp\CommaDelimitedStringCollectionSampleApp.csproj", "{50380D80-0DF1-4F63-A67D-913384776181}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugger1", "Debugger1\Debugger1.csproj", "{F446B6B4-58ED-4D35-A74D-DC40D23549E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debugger1", "Debugger1\Debugger1.csproj", "{F446B6B4-58ED-4D35-A74D-DC40D23549E8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGridViewButtonApp", "DataGridViewButtonApp\DataGridViewButtonApp.csproj", "{0828EFC0-2142-40D5-8C1D-9CD7225753C5}"
 EndProject
@@ -433,7 +433,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp2", "WinFormsApp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Questions", "Questions", "{83761E10-2969-495F-BF26-0A2DAEC9C644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{645E31AF-AAA2-472A-82FE-FB8A559D1554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{645E31AF-AAA2-472A-82FE-FB8A559D1554}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1345,6 +1345,7 @@ Global
 		{FBECCAC2-1FDC-4867-AA07-1791746966C6} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
 		{3C43A37A-0449-4049-9E30-E7147B4B7AA5} = {B71422D3-E494-4BBD-9347-AB2F9A22460D}
 		{2CD1E112-18C2-4055-820E-660B98188508} = {21597D3E-40FD-432D-9B15-C69910719D8F}
+		{890DB6E4-B3DE-4B4C-A1C2-93926CB7EB6C} = {4058082F-1CC9-4DED-B2C1-B99EF75DB851}
 		{79FD7663-78E0-4589-81AC-92D5E479D211} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{C3D2FB42-FE19-4CFB-8EFD-86B60272D410} = {21597D3E-40FD-432D-9B15-C69910719D8F}
 		{B0999CDF-0FE9-4A0B-B907-F002601F04C6} = {193DDF7E-DAC3-49DF-8436-1E1B0B878092}
